@@ -185,6 +185,14 @@ component `Heading`
 | `children`    | `undefined` | required, any content                           |
 | `className`   | `undefined` | add custom or additional css class you'd need   |
 | `data-shadow` | `undefined` | add text as a shadow decoration of the element  |
+
+<summary><b>Logo</b></summary>
+
+<br/>
+| Prop          | Default     | Description                                     |
+| --------------| ----------- | ----------------------------------------------- |
+| `className`   | `undefined` | add custom or additional css class you'd need   |
+| `onClick`     | `undefined` | add onClick function you'd need                 |
 </details>
 ---
 ```
