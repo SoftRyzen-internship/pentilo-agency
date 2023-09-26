@@ -168,8 +168,10 @@ Open [http://localhost:3000](http://localhost:3000).
 ---
 
 ## 📚 Components API
-Each component has its own API. You can find it in the component's folder. This is a list of more common components and their API.
-This is example of API for component `Heading`
+
+Each component has its own API. You can find it in the component's folder. This
+is a list of more common components and their API. This is example of API for
+component `Heading`
 
 <details>
 <summary><b>Heading</b></summary>
