@@ -1,6 +1,5 @@
-import { ExampleSection } from "@/views/ExampleSection";
+import { ExampleSection } from '@/views/ExampleSection';
 
 export default function Home() {
-
-  return <ExampleSection/>;
+  return <ExampleSection />;
 }
