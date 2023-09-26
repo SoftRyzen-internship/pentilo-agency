@@ -1,0 +1,21 @@
+{
+  "header": { "buttonText": "" },
+  "footer": {},
+  "mobileMenu": {
+    "menuBtnAriaText": "Зображення кпопки мобільного меню",
+    "closeBtnAriaText": "Зображення кпопки закриття мобільного меню"
+  },
+
+  "logoAriaLabelText": "Посилання із логотипом компанії",
+  "socials": [
+    {
+      "link": "",
+      "icon": "",
+      "ariaLabelText": ""
+    }
+  ],
+  "contacts": {
+    "title": "",
+    "email": ""
+  }
+}
