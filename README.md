@@ -65,7 +65,6 @@ shooting, advertising, account moderation).
 
 [Design Layout on Figma](https://www.figma.com/file/6sZXbMHRLl7lzcZykvfDNO/Pentilo-Agency-Website?type=design&node-id=323-8&mode=design&t=YxWCtpz2RaH0VYH3-0)
 
-
 ---
 
 ## 🥁 Getting Started
@@ -143,8 +142,11 @@ Open [http://localhost:3000](http://localhost:3000).
 **💁‍♀️ Description of object structure**
 
 <details>
+
 <summary><b>💡 Structure: </b></summary>
+
 <br/>
+
 ```
 |-- components -> folder with reusable components
   |-- NameComponent -> folders for each component
@@ -156,15 +158,15 @@ Open [http://localhost:3000](http://localhost:3000).
 |-- styles -> global styles
 
 <!-- You can create these folders already in work -->
-
-|-- data -> data for the project ( from graphql, json, etc.) |-- hooks -> custom
-users hooks |-- utils -> helpers, functions, etc.
-
+|-- data -> data for the project ( from graphql, json, etc.)
+|-- hooks -> custom users hooks
+|-- utils -> helpers, functions, etc.
 ```
 
 </details>
 
 ---
+
 ## 📚 Components API
 Each component has its own API. You can find it in the component's folder. This is a list of more common components and their API.
 This is example of API for component `Heading`
