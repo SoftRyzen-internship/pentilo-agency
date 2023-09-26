@@ -61,14 +61,10 @@ shooting, advertising, account moderation).
 
 - Ukrainian
 
-### Design / Design Layout
+### Design
 
 [Design Layout on Figma](https://www.figma.com/file/6sZXbMHRLl7lzcZykvfDNO/Pentilo-Agency-Website?type=design&node-id=323-8&mode=design&t=YxWCtpz2RaH0VYH3-0)
 
-## Functional Requirements
-
-(Here, you can list down the detailed functional requirements as provided, such
-as HEADER, BODY, FOOTER, etc.)
 
 ---
 
