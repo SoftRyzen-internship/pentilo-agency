@@ -174,7 +174,9 @@ is a list of more common components and their API. This is example of API for
 component `Heading`
 
 <details>
+
 <summary><b>Heading</b></summary>
+
 <br/>
 | Prop          | Default     | Description                                     |
 | --------------| ----------- | ----------------------------------------------- |
