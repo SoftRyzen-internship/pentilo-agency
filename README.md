@@ -1,60 +1,97 @@
 # Pentilo Agency Website
+
 ## Vision
+
 A business card website for the SMM agency "Pentilo Agency".
+
 ## Project Name
+
 Pentilo Agency
+
 ## Project Goal
+
 To create a positive image for the agency and attract clients/partners.
+
 ## Advantages
-- Serious approach (regular monthly reporting for clients, quality strategy selection).
+
+- Serious approach (regular monthly reporting for clients, quality strategy
+  selection).
 - Responsibility towards deadlines.
-- Flexibility and consideration of client's wishes (sometimes even if it might affect the result).
+- Flexibility and consideration of client's wishes (sometimes even if it might
+  affect the result).
+
 ## Target Audience
+
 - Age: 20-35, 35-45, 45-65
 - Gender: Male, Female
 - Income Level: Medium, High
+
 ## Product Scope
-Development of a single-page business card website for the SMM agency "Pentilo Agency", whose main area of activity is social media marketing (content, shooting, advertising, account moderation).
+
+Development of a single-page business card website for the SMM agency "Pentilo
+Agency", whose main area of activity is social media marketing (content,
+shooting, advertising, account moderation).
+
 ## Technical Stack
+
 - Front-end: Next.js
 - CSS framework: Tailwind
+
 ## Non-functional Requirements
+
 ### Accessibility
+
 - Intuitive design.
 - Mobile-friendly.
+
 ### Performance
+
 - Web resource available for any internet connection.
+
 ### Security
+
 - SSL connection.
 - No public access to private system components.
 - Rate limits.
 - Check for common attack types (sqli, xss, etc.).
 - All passwords must be hashed.
 - User access via sessions.
+
 ### Supported Languages
+
 - Ukrainian
+
 ### Design / Design Layout
+
 [Design Layout on Figma](https://www.figma.com/file/6sZXbMHRLl7lzcZykvfDNO/Pentilo-Agency-Website?type=design&node-id=323-8&mode=design&t=YxWCtpz2RaH0VYH3-0)
 
 ## Functional Requirements
-(Here, you can list down the detailed functional requirements as provided, such as HEADER, BODY, FOOTER, etc.)
+
+(Here, you can list down the detailed functional requirements as provided, such
+as HEADER, BODY, FOOTER, etc.)
 
 ---
 
 ## 🥁 Getting Started
+
 1. **Clone the repo**
+
 ```bash
 git@github.com:SoftRyzen-internship/pentilo-agency.git
 ```
-2. **Install dependencies**
-It's recommended to use npm:
+
+2. **Install dependencies** It's recommended to use npm:
+
 ```
 npm install
 ```
+
 3. **Run the project**
+
 ```
 npm run dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000).
 
 ## Project structure
@@ -123,9 +160,10 @@ Open [http://localhost:3000](http://localhost:3000).
 |-- styles -> global styles
 
 <!-- You can create these folders already in work -->
-|-- data -> data for the project ( from graphql, json, etc.)
-|-- hooks -> custom users hooks
-|-- utils -> helpers, functions, etc.
+
+|-- data -> data for the project ( from graphql, json, etc.) |-- hooks -> custom
+users hooks |-- utils -> helpers, functions, etc.
+
 ```
 
 </details>
@@ -147,3 +185,4 @@ This is example of API for component `Heading`
 | `data-shadow` | `undefined` | add text as a shadow decoration of the element  |
 </details>
 ---
+```
