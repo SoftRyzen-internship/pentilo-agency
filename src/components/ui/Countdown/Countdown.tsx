@@ -1,11 +1,16 @@
 'use client';
 
+import classNames from 'classnames';
+
 import React, { useState, useEffect } from 'react';
 import data from '@/data/common.json';
 import { getFormattedTime } from '@/utils';
 import { CountdownProps } from './types';
 
-export const Countdown: React.FC<CountdownProps> = ({ className }) => {
+export const Countdown: React.FC<CountdownProps> = ({
+  into = 'hero',
+  className,
+}) => {
   const [time, setTime] = useState<number>(0);
 
   useEffect(() => {
@@ -23,9 +28,24 @@ export const Countdown: React.FC<CountdownProps> = ({ className }) => {
     return () => clearInterval(interval);
   }, []);
 
+  const timerStyle = classNames('', {
+    '': into === 'hero',
+    'text-[#B454FF] text-lg leading-normal font-bold': into === 'form',
+  });
+
   return (
-    <div className={`text-5xl text-slate-300 ${className}`}>
-      {getFormattedTime(time)}
+    <div className={`${timerStyle} ${className}`}>
+      {into === 'hero'
+        ? getFormattedTime(time)
+        : getFormattedTime(time).slice(0, 5)}
+      <p className="text-[#B454FF] text-lg leading-normal font-bold"></p>
     </div>
   );
 };
+
+// color: var(--Dasha-main, #B454FF);
+// font-family: Google Sans;
+// font-size: 18px;
+// font-style: normal;
+// font-weight: 700;
+// line-height: 150%;
