@@ -1,42 +1,31 @@
 'use client';
 
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import data from '@/data/common.json';
+import { getFormattedTime } from '@/utils';
+import { CountdownProps } from './types';
 
-export const Countdown = () => {
+export const Countdown: React.FC<CountdownProps> = ({ className }) => {
   const [time, setTime] = useState<number>(0);
-  const [finalDate, setFinalDate] = useState<number>(0);
 
   useEffect(() => {
     if (!localStorage.getItem('timer')) {
-      localStorage.setItem(
-        'timer',
-        JSON.stringify(Date.now() + 24 * 60 * 60 * 1000 - 1),
-      );
+      const offerTime = Date.now() + data.countdown * 60 * 60 * 1000 - 1;
+      localStorage.setItem('timer', JSON.stringify(offerTime));
     }
 
-    setFinalDate(Number(localStorage.getItem('timer')));
-    const interval: ReturnType<typeof setTimeout> = setInterval(() => {
-      setTime(finalDate - Date.now());
-      if (finalDate <= Date.now()) clearInterval(interval);
+    const offerTime = Number(localStorage.getItem('timer'));
+    const interval: ReturnType<typeof setInterval> = setInterval(() => {
+      setTime(offerTime - Date.now());
+      if (offerTime <= Date.now()) clearInterval(interval);
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [finalDate]);
+  }, []);
 
-  const calculateTime = (time: number) => {
-    if (time <= 0) return `00:00:00`;
-
-    const hours = Math.floor(time / (60 * 60 * 1000));
-    const mins = Math.floor((time % (60 * 60 * 1000)) / (60 * 1000));
-    const seconds = Math.floor(
-      ((time % (60 * 60 * 1000)) % (60 * 1000)) / 1000,
-    );
-
-    return `${hours.toString().padStart(2, '0')}:${mins
-      .toString()
-      .padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-  };
-
-  return <div className=" text-5xl">{calculateTime(time)}</div>;
+  return (
+    <div className={`text-5xl text-slate-300 ${className}`}>
+      {getFormattedTime(time)}
+    </div>
+  );
 };
