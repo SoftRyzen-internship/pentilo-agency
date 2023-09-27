@@ -65,15 +65,15 @@ const config: Config = {
       colors: {
         body: '#131313',
         black: {
-          base: '#1F1F1F',
-          middleL: '#40455F',
-          light: '#141414',
+          dark: '#141414',
+          middle: '#1F1F1F',
+          light: '#40455F',
         },
         white: '#FFF',
         purple: {
-          base: '#8430AC',
-          middle: '#B454FF',
-          light: '#AB40FF',
+          dark: '#8430AC',
+          middle: '#AB40FF',
+          light: '#B454FF',
         },
 
         grey: '#D3D3D3',
