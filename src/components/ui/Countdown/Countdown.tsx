@@ -28,7 +28,7 @@ export const Countdown: React.FC<CountdownProps> = ({ into, className }) => {
   }, []);
 
   const timerStyle = classNames('text-[#B454FF]', {
-    'font-sans text-[30px] leading-[1.2] font-normal md:text-[32px] xl:text-[39px] xl:text-black':
+    'font-dela_gothic text-[30px] leading-[1.2] font-normal md:text-[32px] xl:text-[39px] xl:text-black':
       into === 'hero',
     'text-[18px] leading-[1.5] font-bold': into === 'form',
   });
