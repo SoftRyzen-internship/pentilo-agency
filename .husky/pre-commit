@@ -9,6 +9,7 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 # Formatting
 npm run format
 
+git add .
 
 # Check Prettier standards
 npm run check-format ||
