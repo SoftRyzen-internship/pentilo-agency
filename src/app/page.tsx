@@ -5,8 +5,6 @@ export default function Home() {
   return (
     <>
       <Countdown into="hero" />
-      <Countdown into="form" />
-
       <ExampleSection />
     </>
   );

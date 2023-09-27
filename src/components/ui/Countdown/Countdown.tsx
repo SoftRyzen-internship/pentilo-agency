@@ -27,16 +27,17 @@ export const Countdown: React.FC<CountdownProps> = ({ into, className }) => {
     return () => clearInterval(interval);
   }, []);
 
-  const timerStyle = classNames('text-[#B454FF]', {
-    'font-dela_gothic text-[30px] leading-[1.2] font-normal md:text-[32px] xl:text-[39px] xl:text-black':
+  const timerStyle = classNames('text-purple-middle', {
+    'font-dela_gothic text-xxl_middle md:text-timer_small xl:text-timer xl:text-black-light':
       into === 'hero',
-    'text-[18px] leading-[1.5] font-bold': into === 'form',
+    'text-l_middle font-bold': into === 'form',
   });
 
   return (
     <div
       className={`${timerStyle} ${into === 'hero' && css.stroke} ${className}`}
     >
+      <p className=" text-black-light"></p>
       {into === 'hero'
         ? getFormattedTime(time)
         : getFormattedTime(time).slice(0, 5)}
