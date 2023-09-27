@@ -11,14 +11,12 @@ export const Countdown = () => {
     if (!localStorage.getItem('timer')) {
       localStorage.setItem(
         'timer',
-        // JSON.stringify(Date.now() + 24 * 60 * 60 * 1000 - 1),
-        JSON.stringify(Date.now() + 10000 - 1),
+        JSON.stringify(Date.now() + 24 * 60 * 60 * 1000 - 1),
       );
     }
 
     setFinalDate(Number(localStorage.getItem('timer')));
-
-    let interval: ReturnType<typeof setTimeout> = setInterval(() => {
+    const interval: ReturnType<typeof setTimeout> = setInterval(() => {
       setTime(finalDate - Date.now());
       if (finalDate <= Date.now()) clearInterval(interval);
     }, 1000);
@@ -40,5 +38,5 @@ export const Countdown = () => {
       .padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   };
 
-  return <p className=" text-5xl">{calculateTime(time)}</p>;
+  return <div className=" text-5xl">{calculateTime(time)}</div>;
 };
