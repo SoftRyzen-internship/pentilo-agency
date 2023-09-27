@@ -40,7 +40,6 @@ export const Countdown: React.FC<CountdownProps> = ({
     <div
       className={`${timerStyle} ${into === 'hero' && css.stroke} ${className}`}
     >
-      <p className=" "></p>
       {into === 'hero'
         ? getFormattedTime(time)
         : getFormattedTime(time).slice(0, 5)}
