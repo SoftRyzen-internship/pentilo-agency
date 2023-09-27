@@ -148,10 +148,21 @@ Open [http://localhost:3000](http://localhost:3000).
 <br/>
 
 ```
-|-- components -> folder with reusable components
+src
+|-- components -> folder with components
   |-- NameComponent -> folders for each component
     |-- NameComponent.tsx -> main component
+    |-- NameComponent.module.css -> css styles for component
     |-- index.ts -> file for re-export
+    |-- type.ts -> file for type and interface
+    |--variants.ts -> file for animation
+ |-- components/ui -> folder with reusable components
+  |-- NameComponent -> folders for each component
+    |-- NameComponent.tsx -> main component
+    |-- NameComponent.module.css -> css styles for component
+    |-- index.ts -> file for re-export
+    |-- type.ts -> file for type and interface
+    |--variants.ts -> file for animation
 |-- layout -> components that are used as a main template
 |-- app -> pages and routing
 |-- public -> static files
@@ -173,26 +184,18 @@ Each component has its own API. You can find it in the component's folder. This
 is a list of more common components and their API. This is example of API for
 component `Heading`
 
-<details>
+- ### Heading
 
-<summary><b>Heading</b></summary>
-
-<br/>
 | Prop          | Default     | Description                                     |
-| --------------| ----------- | ----------------------------------------------- |
+| ------------- | ----------- | ----------------------------------------------- |
 | `tag`         | `h2`        | choose the tag of title you'd need: `h1` - `h3` |
 | `variant`     | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
 | `children`    | `undefined` | required, any content                           |
 | `className`   | `undefined` | add custom or additional css class you'd need   |
 | `data-shadow` | `undefined` | add text as a shadow decoration of the element  |
 
-<summary><b>Logo</b></summary>
-
-<br/>
-| Prop          | Default     | Description                                     |
-| --------------| ----------- | ----------------------------------------------- |
-| `className`   | `undefined` | add custom or additional css class you'd need   |
-| `onClick`     | `undefined` | add onClick function you'd need                 |
-</details>
 ---
+
+```
+
 ```
