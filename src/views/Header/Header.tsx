@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useScroll, useMotionValueEvent, motion } from 'framer-motion';
 
-import { Logo } from '@/components/Logo';
+import { Logo } from '@/components/ui/Logo';
 import { blur } from './variants';
 
 export const Header = () => {
