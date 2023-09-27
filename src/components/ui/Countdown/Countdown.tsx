@@ -9,7 +9,10 @@ import css from './Countdown.module.css';
 import { getFormattedTime } from '@/utils';
 import { CountdownProps } from './types';
 
-export const Countdown: React.FC<CountdownProps> = ({ into, className }) => {
+export const Countdown: React.FC<CountdownProps> = ({
+  into = 'form',
+  className,
+}) => {
   const [time, setTime] = useState<number>(0);
 
   useEffect(() => {
@@ -37,7 +40,6 @@ export const Countdown: React.FC<CountdownProps> = ({ into, className }) => {
     <div
       className={`${timerStyle} ${into === 'hero' && css.stroke} ${className}`}
     >
-      <p className=" text-black-light"></p>
       {into === 'hero'
         ? getFormattedTime(time)
         : getFormattedTime(time).slice(0, 5)}
