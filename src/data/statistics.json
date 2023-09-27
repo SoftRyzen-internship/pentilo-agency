@@ -1,0 +1,12 @@
+{
+  "hiddenTitle": "Статистика",
+  "statistics": [
+    { "textAccent": "3 роки", "description": "у сфері Social media marketing" },
+    {
+      "textAccent": "$120K",
+      "description": "середній прибуток наших клієнтів в місяць"
+    },
+    { "textAccent": "7 міс", "description": "середій час співпраці з нами" },
+    { "textAccent": "120+", "description": "реальних кейсів" }
+  ]
+}
