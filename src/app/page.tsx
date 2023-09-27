@@ -4,7 +4,7 @@ import { Countdown } from '@/components/ui/Countdown';
 export default function Home() {
   return (
     <>
-      <Countdown />
+      <Countdown into="hero" />
       <ExampleSection />
     </>
   );

@@ -1,11 +1,18 @@
 'use client';
 
+import classNames from 'classnames';
+
 import React, { useState, useEffect } from 'react';
+
 import data from '@/data/common.json';
+import css from './Countdown.module.css';
 import { getFormattedTime } from '@/utils';
 import { CountdownProps } from './types';
 
-export const Countdown: React.FC<CountdownProps> = ({ className }) => {
+export const Countdown: React.FC<CountdownProps> = ({
+  into = 'form',
+  className,
+}) => {
   const [time, setTime] = useState<number>(0);
 
   useEffect(() => {
@@ -23,9 +30,19 @@ export const Countdown: React.FC<CountdownProps> = ({ className }) => {
     return () => clearInterval(interval);
   }, []);
 
+  const timerStyle = classNames('text-purple-middle', {
+    'font-dela_gothic text-xxl_middle md:text-timer_small xl:text-timer xl:text-black-light xl:text-shadow-timer':
+      into === 'hero',
+    'text-l_middle font-bold': into === 'form',
+  });
+
   return (
-    <div className={`text-5xl text-slate-300 ${className}`}>
-      {getFormattedTime(time)}
+    <div
+      className={`${timerStyle} ${into === 'hero' && css.stroke} ${className}`}
+    >
+      {into === 'hero'
+        ? getFormattedTime(time)
+        : getFormattedTime(time).slice(0, 5)}
     </div>
   );
 };
