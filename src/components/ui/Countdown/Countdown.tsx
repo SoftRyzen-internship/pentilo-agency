@@ -31,7 +31,7 @@ export const Countdown: React.FC<CountdownProps> = ({
   }, []);
 
   const timerStyle = classNames('text-purple-middle', {
-    'font-dela_gothic text-xxl_middle md:text-timer_small xl:text-timer xl:text-black-light':
+    'font-dela_gothic text-xxl_middle md:text-timer_small xl:text-timer xl:text-black-light xl:text-shadow-timer':
       into === 'hero',
     'text-l_middle font-bold': into === 'form',
   });
@@ -40,6 +40,7 @@ export const Countdown: React.FC<CountdownProps> = ({
     <div
       className={`${timerStyle} ${into === 'hero' && css.stroke} ${className}`}
     >
+      <p className=" "></p>
       {into === 'hero'
         ? getFormattedTime(time)
         : getFormattedTime(time).slice(0, 5)}
