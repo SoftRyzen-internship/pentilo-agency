@@ -3,14 +3,13 @@
 import classNames from 'classnames';
 
 import React, { useState, useEffect } from 'react';
+
 import data from '@/data/common.json';
+import css from './Countdown.module.css';
 import { getFormattedTime } from '@/utils';
 import { CountdownProps } from './types';
 
-export const Countdown: React.FC<CountdownProps> = ({
-  into = 'hero',
-  className,
-}) => {
+export const Countdown: React.FC<CountdownProps> = ({ into, className }) => {
   const [time, setTime] = useState<number>(0);
 
   useEffect(() => {
@@ -28,24 +27,19 @@ export const Countdown: React.FC<CountdownProps> = ({
     return () => clearInterval(interval);
   }, []);
 
-  const timerStyle = classNames('', {
-    '': into === 'hero',
-    'text-[#B454FF] text-lg leading-normal font-bold': into === 'form',
+  const timerStyle = classNames('text-[#B454FF]', {
+    'font-sans text-[30px] leading-[1.2] font-normal md:text-[32px] xl:text-[39px] xl:text-black':
+      into === 'hero',
+    'text-[18px] leading-[1.5] font-bold': into === 'form',
   });
 
   return (
-    <div className={`${timerStyle} ${className}`}>
+    <div
+      className={`${timerStyle} ${into === 'hero' && css.stroke} ${className}`}
+    >
       {into === 'hero'
         ? getFormattedTime(time)
         : getFormattedTime(time).slice(0, 5)}
-      <p className="text-[#B454FF] text-lg leading-normal font-bold"></p>
     </div>
   );
 };
-
-// color: var(--Dasha-main, #B454FF);
-// font-family: Google Sans;
-// font-size: 18px;
-// font-style: normal;
-// font-weight: 700;
-// line-height: 150%;

@@ -1,0 +1,7 @@
+@media (min-width: 1280px) {
+  .stroke {
+    -webkit-text-stroke-color: #ab40ff;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 0px 0px 31.860158920288086px #ab40ff;
+  }
+}

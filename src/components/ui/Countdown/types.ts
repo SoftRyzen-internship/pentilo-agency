@@ -1,4 +1,4 @@
 export interface CountdownProps {
-  into?: 'hero' | 'form';
+  into: 'hero' | 'form';
   className?: string;
 }
