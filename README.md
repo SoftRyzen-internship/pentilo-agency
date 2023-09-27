@@ -150,12 +150,19 @@ Open [http://localhost:3000](http://localhost:3000).
 ```
 src
 |-- components -> folder with components
- |-- ui -> folder with reusable components
   |-- NameComponent -> folders for each component
     |-- NameComponent.tsx -> main component
+    |-- NameComponent.module.css -> css styles for component
     |-- index.ts -> file for re-export
     |-- type.ts -> file for type and interface
-    |--variants.ts -> file for
+    |--variants.ts -> file for animation
+ |-- components/ui -> folder with reusable components
+  |-- NameComponent -> folders for each component
+    |-- NameComponent.tsx -> main component
+    |-- NameComponent.module.css -> css styles for component
+    |-- index.ts -> file for re-export
+    |-- type.ts -> file for type and interface
+    |--variants.ts -> file for animation
 |-- layout -> components that are used as a main template
 |-- app -> pages and routing
 |-- public -> static files
