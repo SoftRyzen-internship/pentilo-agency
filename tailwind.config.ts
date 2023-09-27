@@ -17,6 +17,10 @@ const config: Config = {
       container: {
         center: true,
       },
+      fontFamily: {
+        open_sans: ['var(--font-open-sans)'],
+        dela_gothic: ['var(--font-dela-gothic)'],
+      },
     },
   },
   plugins: [],
