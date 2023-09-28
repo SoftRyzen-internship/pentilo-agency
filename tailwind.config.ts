@@ -75,9 +75,17 @@ const config: Config = {
           dark: '#8430AC',
           middle: '#AB40FF',
           light: '#B454FF',
+          hover: '#9030DB',
+          active: '#781EBF',
+          hoverSec: '#b454ff33',
+          activeSec: '#b454ff80',
         },
 
         grey: '#D3D3D3',
+      },
+      borderRadius: {
+        button: '32px',
+        buttonSec: '24px',
       },
       backgroundImage: {
         grad_100:
