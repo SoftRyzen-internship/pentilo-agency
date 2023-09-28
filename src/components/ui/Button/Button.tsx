@@ -16,13 +16,13 @@ export const Button: React.FC<ButtonProps> = ({
   fontStyle,
 }) => {
   const btnStyles = classNames('cursor-pointer block text-center w-full', {
-    'rounded-button shadow-button py-[12px] px-[10px] max-w-[328px] bg-purple-middle md:py-[16px] xl:max-w-[279px]':
+    'rounded-button shadow-button py-[12px] px-[10px] max-w-[328px] bg-purple-light md:py-[16px] xl:max-w-[279px]':
       accent === true,
-    ' hover:bg-purple-hover focus:bg-purple-hover active:bg-purple-clicked transition-colors duration-300':
+    ' hover:bg-purple-hover focus:bg-purple-hover active:bg-purple-active btn-transition':
       accent === true,
     'rounded-buttonSec shadow-input py-[7.5px] px-[26px] max-w-[280px] bg-black-dark border border-purple-dark':
       accent === false,
-    'hover:bg-purple-hoverSec focus:bg-purple-hoverSec active:bg-purple-clickedSec transition-colors duration-300':
+    'hover:bg-purple-hoverSec focus:bg-purple-hoverSec active:bg-purple-activeSec btn-transition':
       accent === false,
   });
 
