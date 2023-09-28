@@ -3,7 +3,7 @@
   "massages": [
     {
       "avatar": "anhelinaAvatar",
-      "name": { "username": "Ангеліна", "job_title": "Пекарня" },
+      "username": "АНГЕЛІНА – Пекарня",
       "icon": "anhelinaIcon",
       "time": "10m ago",
       "message": [
@@ -19,7 +19,7 @@
     },
     {
       "avatar": "stasAvatar",
-      "name": { "username": "Стас", "job_title": "Бренд одягу" },
+      "username": "СТАС – Бренд одягу",
       "icon": "stasIcon",
       "time": "35m ago",
       "message": [
@@ -32,7 +32,7 @@
     },
     {
       "avatar": "oksanaAvatar",
-      "name": { "username": "Оксана", "job_title": "Юрист" },
+      "username": "ОКСАНА – Юрист",
       "icon": "oksanaIcon",
       "time": "1h ago",
       "message": [
@@ -48,7 +48,7 @@
     },
     {
       "avatar": "hrystynaAvatar",
-      "name": { "username": "Христина", "job_title": "Нейл майстер" },
+      "username": "ХРИСТИНА – Нейл майстер",
       "icon": "hrystynaIcon",
       "time": "2h ago",
       "message": [
@@ -64,7 +64,7 @@
     },
     {
       "avatar": "romanAvatar",
-      "name": { "username": "Роман", "job_title": "Будівельний бізнес" },
+      "username": "РОМАН – Будівельний бізнес",
       "icon": "romanIcon",
       "time": "4h ago",
       "message": [
