@@ -75,6 +75,8 @@ const config: Config = {
           dark: '#8430AC',
           middle: '#AB40FF',
           light: '#B454FF',
+          hover: '#9030DB',
+          active: '#781EBF'
         },
 
         grey: '#D3D3D3',
