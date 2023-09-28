@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import iconMap from '@/data/iconmap.json';
-import { IconProps } from '@/components/SocialsMenu/types';
+import { IconProps } from '@/components/ui/Icon/types';
 import Image from 'next/image';
 
 export const Icon: React.FC<IconProps> = ({

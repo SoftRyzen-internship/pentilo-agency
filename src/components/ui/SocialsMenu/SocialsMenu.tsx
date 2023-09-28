@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 
-import { SocialButton } from '@/components/SocialsMenu/SocialButton';
-import { Icon } from '@/components/Icon';
+import { SocialButton } from '@/components/ui/SocialsMenu/SocialButton';
+import { Icon } from '@/components/ui/Icon';
 
 import {
   SocialsMenuProps,
   SocialContact,
-} from '@/components/SocialsMenu/types';
+} from '@/components/ui/SocialsMenu/types';
 import data from '@/data/common.json';
 
 export const SocialsMenu: React.FC<SocialsMenuProps> = ({
@@ -44,7 +44,6 @@ export const SocialsMenu: React.FC<SocialsMenuProps> = ({
             aria_label={ariaLabelText}
             onClick={onClick}
           >
-            {/* <Icon icon={icon} variant={variant} /> */}
             <Icon
               icon={icon}
               variant={variant}

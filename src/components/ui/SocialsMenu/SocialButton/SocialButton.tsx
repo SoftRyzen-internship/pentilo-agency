@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { SocialButtonProps } from '@/components/SocialsMenu/types';
+import { SocialButtonProps } from '@/components/ui/SocialsMenu/types';
 
 export const SocialButton: React.FC<SocialButtonProps> = ({
   link,

@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/Button';
 import Arrow from '@/../public/icons/icon_arrowdown.svg';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
+import { SocialsMenu } from '@/components/ui/SocialsMenu';
+import { Icon } from '@/components/ui/Icon';
 
 export const ExampleSection = () => (
   <section
@@ -66,5 +68,9 @@ export const ExampleSection = () => (
       content="І разом з ними ми досягли ось таких результатів в проектах"
       icon={Arrow}
     />
+    {/* Кнопки соціальні із свг */}
+    <SocialsMenu />
+    {/* Кнопки усі із свг icon="назва"*/}
+    <Icon icon="arrowDown" width={24} height={24} />
   </section>
 );
