@@ -41,7 +41,7 @@ export const Button: React.FC<ButtonProps> = ({
       <span className={`${textStyles} ${fontStyle}`}>
         {content}
         {Icon ? (
-          <Icon width={8} height={8} className="inline-block ml-1" />
+          <Icon width={8} height={8} className="inline-block ml-[5px]" />
         ) : null}
       </span>
     </Tag>

@@ -1,5 +1,6 @@
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
+import Arrow from '@/../public/icons/iconarrowdown.svg';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
 
@@ -62,6 +63,7 @@ export const ExampleSection = () => (
       tag="button"
       accent={false}
       content="І разом з ними ми досягли ось таких результатів в проектах"
+      icon={Arrow}
     />
   </section>
 );
