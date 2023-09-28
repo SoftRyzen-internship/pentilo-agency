@@ -33,6 +33,7 @@ const config: Config = {
       fontSize: {
         xs: ['12px', '1.27'],
 
+        s_xs: ['16px', '1.3'],
         s_small: ['16px', '1.4'],
         s_middle: ['16px', '1.5'],
         s_big: ['16px', '1.6'],
@@ -86,6 +87,7 @@ const config: Config = {
       borderRadius: {
         button: '32px',
         buttonSec: '24px',
+        card: '24px',
       },
       backgroundImage: {
         grad_100:

@@ -1,6 +1,8 @@
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import Arrow from '@/../public/icons/iconarrowdown.svg';
+import { CaseCard } from '@/components/CaseCard';
+import data from '@/data/cases.json';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
 
@@ -64,6 +66,9 @@ export const ExampleSection = () => (
       accent={false}
       content="І разом з ними ми досягли ось таких результатів в проектах"
       icon={Arrow}
+      className="mb-[10px]"
     />
+
+    <CaseCard cardProps={data.cases[1]} />
   </section>
 );
