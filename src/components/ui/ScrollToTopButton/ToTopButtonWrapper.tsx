@@ -1,8 +1,10 @@
-import { ScrollToTopButton } from "./ScrollToTopButton"
+import { ScrollToTopButton } from './ScrollToTopButton';
 
-export const ToTopButtonWrapper = ({children}) => {
-    return <div className="relative">
-        <ScrollToTopButton/>
-        {children}
+export const ToTopButtonWrapper = ({ children }) => {
+  return (
+    <div className="relative">
+      <ScrollToTopButton />
+      {children}
     </div>
-}
+  );
+};

@@ -6,6 +6,6 @@ body {
   @apply bg-body font-open_sans;
 }
 
-.btn-transition{
- @apply transition duration-300 ease-in-out
+.btn-transition {
+  @apply transition duration-300 ease-in-out;
 }
