@@ -77,7 +77,10 @@ const config: Config = {
           light: '#B454FF',
         },
 
-        grey: '#D3D3D3',
+        grey: {
+          light: '#EAEAEA',
+          dark: '#D3D3D3',
+        },
       },
       backgroundImage: {
         grad_100:
