@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-export const useScrollVisibility = () => {
+export const useScrollVisibility = (sectionIdStart: string) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const thirdSection = document.getElementById('expertise');
+      const thirdSection = document.getElementById(sectionIdStart);
       if (!thirdSection) return;
 
       const thirdSectionPosition = thirdSection.getBoundingClientRect().top;

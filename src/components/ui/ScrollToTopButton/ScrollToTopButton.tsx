@@ -4,8 +4,8 @@ import { scrollToTop } from '@/utils/scrollToTop';
 import { useScrollVisibility } from '@/utils/useScrollVisibility';
 import Link from 'next/link';
 
-export const ScrollToTopButton = () => {
-  const isVisible = useScrollVisibility();
+export const ScrollToTopButton = ({sectionIdStart}) => {
+  const isVisible = useScrollVisibility(sectionIdStart);
 
   return (
     <Link

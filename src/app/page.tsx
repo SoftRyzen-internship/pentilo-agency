@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <ExampleSection />
-      <ScrollToTopButton />
+      <ScrollToTopButton sectionIdStart="expertise"/>
     </>
   );
 }
