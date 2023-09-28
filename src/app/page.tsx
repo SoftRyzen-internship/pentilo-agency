@@ -2,8 +2,8 @@ import { ExampleSection } from '@/views/ExampleSection';
 
 import { Countdown } from '@/components/ui/Countdown';
 import {
-  ScrollToTopButton,
-  ToTopButtonWrapper,
+  ScrollToTopButton
+
 } from '@/components/ui/ScrollToTopButton';
 
 export default function Home() {
@@ -15,6 +15,7 @@ export default function Home() {
 
       <Countdown into="hero" />
       <ExampleSection />
+
       {/* </ToTopButtonWrapper> */}
       <ScrollToTopButton />
     </>
