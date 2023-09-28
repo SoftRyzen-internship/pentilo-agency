@@ -79,6 +79,10 @@ const config: Config = {
 
         grey: '#D3D3D3',
       },
+      borderRadius: {
+        button: '32px',
+        buttonSec: '24px',
+      },
       backgroundImage: {
         grad_100:
           'linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%)',
