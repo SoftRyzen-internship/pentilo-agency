@@ -196,6 +196,13 @@ component `Heading`
 
 ---
 
+- ### Countdown
+
+| Prop        | Default     | Description                                      |
+| ----------- | ----------- | ------------------------------------------------ |
+| `into`      | `form`      | choose the position you'd need: `hero` or `form` |
+| `className` | `undefined` | add custom or additional css class you'd need    |
+
 ```
 
 ```

@@ -1,0 +1,40 @@
+{
+  "title": "Залишай свою заявку",
+  "timerText": "Безкоштовна косультація",
+  "form": {
+    "inputs": [
+      {
+        "id": "i01",
+        "type": "text",
+        "label": "",
+        "placeholder": "",
+        "name": "userName"
+      },
+      {
+        "id": "i02",
+        "type": "text",
+        "label": "",
+        "placeholder": "",
+        "name": "socialLink"
+      },
+      {
+        "id": "i03",
+        "type": "tel",
+        "label": "",
+        "placeholder": "",
+        "name": "phoneNumber"
+      }
+    ],
+    "textarea": {}
+  },
+  "notifications": {
+    "onSuccess": {
+      "r1": "Дякуємо за заявку!",
+      "r2": "Ми з тобою звʼяжемось якомога скоріше"
+    },
+    "onError": {
+      "r1": "Здається щось пішло не так.",
+      "r2": "Спробуй ще раз"
+    }
+  }
+}

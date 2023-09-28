@@ -11,7 +11,7 @@ export default function Home() {
     <div className="h-[800px] bg-stone-400" ></div>
     
       
-        <Countdown />
+    <Countdown into="hero" />
         <ExampleSection />
       {/* </ToTopButtonWrapper> */}
       <ScrollToTopButton/>

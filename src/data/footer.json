@@ -1,0 +1,23 @@
+{
+  "terms": {
+    "text": "Terms of use",
+    "href": ""
+  },
+  "policy": {
+    "text": "Privacy Policy",
+    "href": ""
+  },
+  "rights": {
+    "title": "All rights Reserved",
+    "list": [
+      {
+        "text": "© Design by @illiabear",
+        "href": "https://www.instagram.com/illiabear/"
+      },
+      {
+        "text": "Created by SoftRyzen",
+        "href": "https://softryzen.com/"
+      }
+    ]
+  }
+}

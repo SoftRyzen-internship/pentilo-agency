@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Open_Sans, Dela_Gothic_One } from 'next/font/google';
+
 import './globals.css';
 import { Header } from '@/views/Header';
 
-const inter = Inter({ subsets: ['latin'] });
+const open_sans = Open_Sans({
+  subsets: ['cyrillic', 'latin'],
+  display: 'swap',
+  variable: '--font-open-sans',
+});
+
+const dela_gothic = Dela_Gothic_One({
+  weight: '400',
+  subsets: ['cyrillic', 'latin'],
+  display: 'swap',
+  variable: '--font-dela-gothic',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${open_sans.variable} ${dela_gothic.variable}`}>
         <Header />
         <main>{children}</main>
       </body>
