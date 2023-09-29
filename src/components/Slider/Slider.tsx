@@ -31,6 +31,7 @@ export const Slider: React.FC<SliderProps> = ({ section, data, element: Element,
 //     }
 //   }, [width]);
   return (
+    // <div className="w-[1000px]">
     <Swiper
     ref={swiperRef}
     // updateOnWindowResize={true}
@@ -86,13 +87,12 @@ export const Slider: React.FC<SliderProps> = ({ section, data, element: Element,
       </SwiperSlide>
     );
 })}
-      
-
       <div className="slider-controller">
         <div className="swiper-button-prev slider-arrow"></div>
-        <div className="swiper-button-next slider-arrow">→</div>
+        <div className="swiper-button-next slider-arrow"></div>
         <div className="swiper-pagination"></div>
        </div>
   </Swiper>
+//   </div>
   );
 };

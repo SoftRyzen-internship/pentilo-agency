@@ -21,7 +21,7 @@ body {
   width: 12px;
   height: 12px;
   transform: rotate(135deg);
-  background-image: url('/icons/icon_arrowdown.svg');
+  background-image: url('/icons/icon_iconarrowleft.svg');
   background-size: cover;
   display: inline-block;
   display: flex;
@@ -36,21 +36,7 @@ body {
 --swiper-navigation-color: var(--swiper-theme-color);
 } */
 
-.swiper .swiper-wrapper {
-  /* overflow: hidden;
-  width: 750px; */
-  /* padding-top: 50px;
-  padding-bottom: 50px; */
-}
-.swiper-slide.swiper-slide-visible {
-  /* width: auto !important; */
-}
 
-.swiper-button-prev.slider-arrow::after {
-  content: '←';
-  top: 0;
-  left: 0;
-}
 
 .swiper-button-next.slider-arrow{
   width: 20px;
@@ -58,13 +44,17 @@ body {
 
 }
 .swiper-button-next.slider-arrow::after {
-  content: url('/icons/iconarrowup.svg');
+  content: url('/icons/icon_arrowright.svg');
   position: absolute;
-  width: 15px;
-  height: 15px;
   top: 0;
   left: 0;  
-  fill: white
+}
+
+.swiper-button-prev.slider-arrow::after {
+  content: url('/icons/icon_arrowleft.svg');
+  position: absolute;
+  top: 0;
+  right: 0;  
 }
 
 
