@@ -9,6 +9,7 @@ import data from '@/data/cases.json';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
 import { SocialsMenu } from '@/components/ui/SocialsMenu';
+import NavigationRow from '@/components/ui/NavigationRow/NavigationRow';
 // import { Icon } from '@/components/ui/Icon';
 
 export const ExampleSection = () => (
@@ -16,6 +17,7 @@ export const ExampleSection = () => (
     id="expertise"
     className={`${s.section}  h-[150vh] text-shadow-xxs container relative`}
   >
+    <NavigationRow />
     <h2 className="mt-[100px]">This is example of section</h2>
     <Countdown into="hero" />
     {/* Кнопка консультації */}
@@ -71,17 +73,14 @@ export const ExampleSection = () => (
     <SocialsMenu />
     {/* Кнопки усі із свг icon="назва"*/}
     {/* <Icon icon="star" width={24} height={24} />; */}
-
     {/* Приклад списку кейсів, пропси на картку без назви, просто розпилити */}
     <ul className="flex flex-wrap gap-5">
       {data.cases.slice(-3).map((cardProps, idx) => (
         <CaseCard key={idx} {...cardProps} />
       ))}
     </ul>
-
     {/* аккoрдeon */}
     <Accordion />
-
     {/* Елемент для тестування скролу */}
     <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>
   </section>
