@@ -1,35 +1,46 @@
-import React from 'react';
-import Image from 'next/image';
-import classNames from 'classnames';
+import arrowDown from 'public/icons/icon_arrowdown.svg';
+import arrowUp from 'public/icons/icon_arrowup.svg';
+import burger from 'public/icons/icon_burger.svg';
+import checkbox from 'public/icons/icon_checked.svg';
+import cross from 'public/icons/icon_cross.svg';
+import instagram from 'public/icons/icon_instagram.svg';
+import star from 'public/icons/icon_star.svg';
+import telegram from 'public/icons/icon_telegram.svg';
+import tick from 'public/icons/icon_tick.svg';
+import caseArrowLeft from 'public/images/cases/icon_arrowleft.svg';
+import caseArrowRight from 'public/images/cases/icon_arrowright.svg';
+import tickGroup from 'public/images/expertise/icon_dublemark.svg';
+import lock from 'public/images/expertise/icon_lock.svg';
+import questionMark from 'public/images/services/icon_questionmark.svg';
+import starGroup from 'public/images/services/icon_threestar.svg';
 
-import { IconProps } from '@/components/ui/Icon/types';
-import iconMap from '@/data/iconmap.json';
+import { SocialIconProps } from '@/components/ui/Icon/types';
 
-export const Icon: React.FC<IconProps> = ({
+const icons = {
+  arrowDown,
+  arrowUp,
+  burger,
+  checkbox,
+  cross,
+  instagram,
+  star,
+  telegram,
+  tick,
+  caseArrowLeft,
+  caseArrowRight,
+  tickGroup,
+  lock,
+  questionMark,
+  starGroup,
+};
+
+export const Icon: React.FC<SocialIconProps> = ({
   icon,
-  className,
-  width,
-  height,
-  onClick,
+  className = '',
+  width = 20,
+  height = 20,
 }) => {
-  const iconPath = iconMap[icon];
+  const Icon = icons[icon];
 
-  if (!iconPath) {
-    console.error(`Path for icon "${icon}" not found.`);
-    return null;
-  }
-
-  const iconStyles = classNames(className);
-
-  return (
-    <Image
-      src={iconPath}
-      className={iconStyles}
-      width={width}
-      height={height}
-      onClick={onClick}
-      alt={icon}
-      priority
-    />
-  );
+  return <Icon className={className} width={width} height={height} />;
 };
