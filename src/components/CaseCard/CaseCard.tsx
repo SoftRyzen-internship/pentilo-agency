@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 import React from 'react';
 
-import Instagram from '/public/icons/iconinstagram.svg';
-import Up from '/public/icons/iconarrowup.svg';
+import Instagram from '/public/icons/icon_instagram.svg';
+import Up from '/public/icons/icon_arrowup.svg';
 import css from './CaseCard.module.css';
 
 import { CasePriceList } from '../CasePriceList';
