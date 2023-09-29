@@ -31,8 +31,8 @@ export const ExampleSection = () => (
     <Button
       tag="a"
       accent={false}
-      href="/"
-      content="Детальніше"
+      href="customId"
+      content="TEST SCROLL"
       className="mb-[10px] hidden xl:block xl:w-[150px] xl:py-[15px] "
     />
 
@@ -56,7 +56,7 @@ export const ExampleSection = () => (
 
     {/* Кнопка із свг */}
     <Button
-      tag="button"
+      tag="a"
       accent={false}
       content="І разом з ними ми досягли ось таких результатів в проектах"
       icon={Arrow}
@@ -69,5 +69,6 @@ export const ExampleSection = () => (
         <CaseCard key={idx} {...cardProps} />
       ))}
     </ul>
+    <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>
   </section>
 );
