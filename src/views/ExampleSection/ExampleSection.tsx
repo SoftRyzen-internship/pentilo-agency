@@ -77,5 +77,8 @@ export const ExampleSection = () => (
 
     {/* Елемент для тестування скролу */}
     <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>
+    
+     <Slider section="cases" data={data.cases} element={CaseCard} navigation={true}/>
   </section>
+ 
 );

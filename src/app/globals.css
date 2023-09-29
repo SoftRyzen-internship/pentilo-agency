@@ -52,6 +52,21 @@ body {
   left: 0;
 }
 
+.swiper-button-next.slider-arrow{
+  width: 20px;
+  height: 20px;
+
+}
+.swiper-button-next.slider-arrow::after {
+  content: url('/icons/iconarrowup.svg');
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  left: 0;  
+  fill: white
+}
+
 
 .servicesSlide {
   @apply h-full w-full;
@@ -60,22 +75,11 @@ body {
   width: auto !important;
 }
 
-/* .swiper-slide.gallerySlide::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75));
-  z-index: 1;
-} */
-
-/* .swiper-slide-active.gallerySlide::before {
-  background-image: none;
-} */
-
 .swiper{
   width: 1000px
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right{
+  background-image: none !important
 }
