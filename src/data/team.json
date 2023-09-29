@@ -1,0 +1,10 @@
+{
+  "title": "Над твоїм результатом працюватимуть:",
+  "team": [
+    { "icon": "productAvatar", "name": "проджект-менеджер" },
+    { "icon": "project1Avatar", "name": "контент-менеджер" },
+    { "icon": "project2Avatar", "name": "контент-менеджер" },
+    { "icon": "ceoAvatar", "name": "CEO" },
+    { "icon": "targetologAvatar", "name": "таргетолог" }
+  ]
+}

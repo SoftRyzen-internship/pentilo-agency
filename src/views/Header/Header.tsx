@@ -3,18 +3,18 @@
 import { useState } from 'react';
 import { useScroll, useMotionValueEvent, motion } from 'framer-motion';
 
+import { SCROLL_HEIGHT } from '@/constants/scroll';
+
 import { Logo } from '@/components/ui/Logo';
 import { blur } from './variants';
 
-const MIN_SCROLL_HEIGHT = 50;
-
 export const Header = () => {
-  const { scrollY } = useScroll();
   const [isBlur, setIsBlur] = useState(false);
+  const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, 'change', latest => {
-    if (latest > MIN_SCROLL_HEIGHT) setIsBlur(true);
-    if (latest < MIN_SCROLL_HEIGHT) setIsBlur(false);
+    if (latest > SCROLL_HEIGHT) setIsBlur(true);
+    if (latest < SCROLL_HEIGHT) setIsBlur(false);
   });
 
   return (

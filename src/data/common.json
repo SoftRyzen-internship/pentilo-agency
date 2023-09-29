@@ -1,22 +1,36 @@
 {
-  "header": { "buttonText": "" },
-  "footer": {},
   "mobileMenu": {
     "menuBtnAriaText": "Зображення кпопки мобільного меню",
     "closeBtnAriaText": "Зображення кпопки закриття мобільного меню"
   },
-
   "logoAriaLabelText": "Посилання із логотипом компанії",
   "socials": [
     {
-      "link": "",
-      "icon": "",
-      "ariaLabelText": ""
+      "name": "instagram",
+      "link": "https://www.instagram.com/pentilova/",
+      "icon": "instagram",
+      "ariaLabelText": "Зв'яжися з нами у instagram"
+    },
+    {
+      "name": "telegram",
+      "link": "https://t.me/d_pentilo",
+      "icon": "telegram",
+      "ariaLabelText": "Зв'яжися з нами у telegram"
     }
   ],
   "contacts": {
-    "title": "",
-    "email": ""
+    "title": "Звʼяжися з нами",
+    "email": {
+      "text": "pentilosmm@gmail.com",
+      "href": "mailto:pentilosmm@gmail.com"
+    }
+  },
+  "buttonsText": {
+    "v1": "Консультація",
+    "v2": "Детальніше",
+    "v3": "Залишити заявку",
+    "v4": "Обговорити запит",
+    "v5": "І разом з ними ми досягли ось таких результатів в проектах"
   },
   "countdown": 24
 }

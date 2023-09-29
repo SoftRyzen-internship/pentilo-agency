@@ -1,0 +1,6 @@
+@media (min-width: 1280px) {
+  .stroke {
+    -webkit-text-stroke-color: #ab40ff;
+    -webkit-text-stroke-width: 1px;
+  }
+}
