@@ -82,7 +82,6 @@ const config: Config = {
           hoverSec: '#b454ff33',
           activeSec: '#b454ff80',
         },
-
         lightGray: '#EAEAEA',
         grey: '#D3D3D3',
       },
