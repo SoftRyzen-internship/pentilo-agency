@@ -20,15 +20,43 @@ body {
 .swiper .swiper-wrapper {
   /* overflow: hidden;
   width: 750px; */
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
 }
 .swiper-slide.swiper-slide-visible {
-  width: 380px !important;
+  /* width: auto !important; */
 }
 
 .swiper-button-prev.slider-arrow::after {
   content: '←';
   top: 0;
   left: 0;
+}
+
+
+.servicesSlide {
+  @apply h-full w-full;
+}
+.gallerySlide {
+  width: auto !important;
+}
+
+/* .swiper-slide.gallerySlide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75));
+  z-index: 1;
+} */
+
+/* .swiper-slide-active.gallerySlide::before {
+  background-image: none;
+} */
+
+.swiper{
+  width: 1000px
 }
