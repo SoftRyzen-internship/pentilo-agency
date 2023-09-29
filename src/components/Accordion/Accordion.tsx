@@ -36,59 +36,57 @@ export const Accordion = () => {
     <ul className="md:w-[508px] xl:w-[580px] text-s_middle flex flex-col gap-10">
       {accordeon.map(({ title, description }, ind) => (
         <li key={ind}>
-          <div className="flex justify-between items-center">
-            <h2 className="uppercase font-dela_gothic mb-[18px] xl:mb-6">
-              {title}
-            </h2>
-            <button
-              type="button"
-              onClick={() => {
-                onClickShow(ind);
-              }}
-            >
-              <AnimatePresence mode="wait" initial={false}>
-                {ind === 0 && (
-                  <>
-                    {firstShown ? (
-                      <AccordionButtonIcon ind={ind}>
-                        <Active className="w-3 h-3 stroke-purple-light" />
-                      </AccordionButtonIcon>
-                    ) : (
-                      <AccordionButtonIcon ind={ind}>
-                        <Passive className="w-3 h-3 " />
-                      </AccordionButtonIcon>
-                    )}
-                  </>
-                )}
-                {ind === 1 && (
-                  <>
-                    {secondShown ? (
-                      <AccordionButtonIcon ind={ind}>
-                        <Active className="w-3 h-3 stroke-purple-light" />
-                      </AccordionButtonIcon>
-                    ) : (
-                      <AccordionButtonIcon ind={ind}>
-                        <Passive className="w-3 h-3 " />
-                      </AccordionButtonIcon>
-                    )}
-                  </>
-                )}
-                {ind === 2 && (
-                  <>
-                    {thirdShown ? (
-                      <AccordionButtonIcon ind={ind}>
-                        <Active className="w-3 h-3 stroke-purple-light" />
-                      </AccordionButtonIcon>
-                    ) : (
-                      <AccordionButtonIcon ind={ind}>
-                        <Passive className="w-3 h-3 " />
-                      </AccordionButtonIcon>
-                    )}
-                  </>
-                )}
-              </AnimatePresence>
-            </button>
-          </div>
+          <button
+            className="w-[100%] mb-[18px] xl:mb-6 flex justify-between items-center"
+            type="button"
+            onClick={() => {
+              onClickShow(ind);
+            }}
+          >
+            <h2 className="uppercase font-dela_gothic ">{title}</h2>
+            <AnimatePresence mode="wait" initial={false}>
+              {ind === 0 && (
+                <>
+                  {firstShown ? (
+                    <AccordionButtonIcon ind={ind}>
+                      <Active className="w-3 h-3 stroke-purple-light" />
+                    </AccordionButtonIcon>
+                  ) : (
+                    <AccordionButtonIcon ind={ind}>
+                      <Passive className="w-3 h-3 " />
+                    </AccordionButtonIcon>
+                  )}
+                </>
+              )}
+              {ind === 1 && (
+                <>
+                  {secondShown ? (
+                    <AccordionButtonIcon ind={ind}>
+                      <Active className="w-3 h-3 stroke-purple-light" />
+                    </AccordionButtonIcon>
+                  ) : (
+                    <AccordionButtonIcon ind={ind}>
+                      <Passive className="w-3 h-3 " />
+                    </AccordionButtonIcon>
+                  )}
+                </>
+              )}
+              {ind === 2 && (
+                <>
+                  {thirdShown ? (
+                    <AccordionButtonIcon ind={ind}>
+                      <Active className="w-3 h-3 stroke-purple-light" />
+                    </AccordionButtonIcon>
+                  ) : (
+                    <AccordionButtonIcon ind={ind}>
+                      <Passive className="w-3 h-3 " />
+                    </AccordionButtonIcon>
+                  )}
+                </>
+              )}
+            </AnimatePresence>
+          </button>
+
           <AnimatePresence initial={false}>
             {ind === 0 && firstShown && (
               <ElementAccordion description={description} ind={ind} />
