@@ -1,0 +1,38 @@
+/* Form */
+
+.field {
+  @apply relative w-full rounded-3xl bg-black-dark bg-grad_300 p-[2px] shadow-input;
+}
+
+.field-input {
+  @apply h-full w-full rounded-3xl border-none bg-black-dark px-[23px] py-3 text-inherit;
+}
+
+.field-input::placeholder {
+  color: transparent;
+}
+
+.field-label {
+  @apply absolute left-[25px] top-1/2 -translate-y-1/2 transition duration-300 ease-in-out;
+}
+
+textarea + .field-label {
+  @apply top-[20px];
+}
+
+.field-label::before {
+  content: '';
+  @apply absolute left-[-8px] top-0 z-[-1] h-[19px] w-[calc(100%+16px)] rounded-[10px] bg-[#1C1720] opacity-0;
+}
+
+/* when label is focused or the user has entered some text */
+
+.field:focus-within > label,
+.field input:not(:placeholder-shown) + label {
+  @apply absolute left-[33px] -translate-y-[30px] text-[12px] leading-[18px];
+}
+
+.field:focus-within > label::before,
+.field input:not(:placeholder-shown) + label::before {
+  opacity: 1;
+}

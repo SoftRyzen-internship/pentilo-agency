@@ -33,27 +33,27 @@ export const Accordion = () => {
   };
 
   return (
-    <ul className="md:w-[508px] xl:w-[580px] text-s_middle flex flex-col gap-10">
+    <ul className="flex flex-col gap-10 text-s_middle md:w-[508px] xl:w-[580px]">
       {accordeon.map(({ title, description }, ind) => (
         <li key={ind}>
           <button
-            className="w-[100%] mb-[18px] xl:mb-6 flex justify-between items-center"
+            className="mb-[18px] flex w-[100%] items-center justify-between xl:mb-6"
             type="button"
             onClick={() => {
               onClickShow(ind);
             }}
           >
-            <h2 className="uppercase font-dela_gothic ">{title}</h2>
+            <h2 className="font-dela_gothic uppercase ">{title}</h2>
             <AnimatePresence mode="wait" initial={false}>
               {ind === 0 && (
                 <>
                   {firstShown ? (
                     <AccordionButtonIcon ind={ind}>
-                      <Active className="w-3 h-3 stroke-purple-light" />
+                      <Active className="h-3 w-3 stroke-purple-light" />
                     </AccordionButtonIcon>
                   ) : (
                     <AccordionButtonIcon ind={ind}>
-                      <Passive className="w-3 h-3 " />
+                      <Passive className="h-3 w-3 " />
                     </AccordionButtonIcon>
                   )}
                 </>
@@ -62,11 +62,11 @@ export const Accordion = () => {
                 <>
                   {secondShown ? (
                     <AccordionButtonIcon ind={ind}>
-                      <Active className="w-3 h-3 stroke-purple-light" />
+                      <Active className="h-3 w-3 stroke-purple-light" />
                     </AccordionButtonIcon>
                   ) : (
                     <AccordionButtonIcon ind={ind}>
-                      <Passive className="w-3 h-3 " />
+                      <Passive className="h-3 w-3 " />
                     </AccordionButtonIcon>
                   )}
                 </>
@@ -75,11 +75,11 @@ export const Accordion = () => {
                 <>
                   {thirdShown ? (
                     <AccordionButtonIcon ind={ind}>
-                      <Active className="w-3 h-3 stroke-purple-light" />
+                      <Active className="h-3 w-3 stroke-purple-light" />
                     </AccordionButtonIcon>
                   ) : (
                     <AccordionButtonIcon ind={ind}>
-                      <Passive className="w-3 h-3 " />
+                      <Passive className="h-3 w-3 " />
                     </AccordionButtonIcon>
                   )}
                 </>
