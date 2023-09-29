@@ -47,6 +47,7 @@ const config: Config = {
         xl_mobile: ['20px', '1.4'],
 
         xxl: ['32px', '1.4'],
+        xxl_xs: ['24px', '1.3'],
         xxl_small: ['24px', '1.5'],
         xxl_middle: ['30px', '1.2'],
         xxl_big: ['30px', '1.4'],
@@ -82,6 +83,7 @@ const config: Config = {
           activeSec: '#b454ff80',
         },
 
+        lightGray: '#EAEAEA',
         grey: '#D3D3D3',
       },
       borderRadius: {

@@ -6,57 +6,35 @@ import Instagram from '/public/icons/iconinstagram.svg';
 import Up from '/public/icons/iconarrowup.svg';
 import css from './CaseCard.module.css';
 
-interface CaseCardProps {
-  cardProps: {
-    title: string[];
-    link: string;
-    list: {
-      text: string;
-      number: string;
-    }[];
-  };
-}
+import { CasePriceList } from '../CasePriceList';
+import { CaseCardProps } from './types';
 
-export const CaseCard: React.FC<CaseCardProps> = ({ cardProps }) => {
-  const { title, link, list } = cardProps;
+export const CaseCard: React.FC<CaseCardProps> = ({ title, link, list }) => {
   return (
-    //TODO: remove sizes in bottom div
-    <div className=" w-[328px] h-[311px] rounded-card shadow-input border border-purple-dark pt-[29px] pb-[32px] px-[32px]">
+    <div
+      className=" w-full max-w-[328px] h-[311px] rounded-card shadow-input border border-purple-dark 
+    pt-[29px] pb-[32px] px-[32px] bg-black-dark xl:max-w-[380px] xl:h-[384px] xl:pt-[32px] xl:pb-[39px]"
+    >
       <Link
         href={link}
-        className="flex justify-between mb-6"
+        className="flex justify-between mb-6 xl:mb-[26px]"
         rel="noopener noreferrer nofollow"
         target="_blank"
       >
-        <h3 className="uppercase font-dela_gothic text-s_xs text-left max-w-[150px]">
+        <h3 className="uppercase font-dela_gothic text-s_xs text-left max-w-[150px] xl:text-xxl_xs xl:max-w-[200px]">
           {title.map((row, idx) => (
             <span key={idx} className={`inline-block relative ${css.cardline}`}>
               {row}
             </span>
           ))}
-          <Up width={10} height={10} className="inline-block ml-[5px]" />
+          <Up className=" w-[10px] h-[10px] inline-block ml-[5px] xl:w-[15px] xl:h-[15px] xl:ml-[7px]" />
         </h3>
-        <Instagram height={20} width={20} className=" mt-2" />
+        <Instagram
+          className=" w-5 h-5 mt-2 hover:text-lightGray focus:text-lightGray 
+        active:text-grey btn-transition "
+        />
       </Link>
-
-      <ul className="grid gap-2">
-        {list.map(({ text, number }, idx) => (
-          <li key={idx} className="flex justify-between items-center">
-            <span className="text-s_middle">{text}</span>
-            <span className=" font-dela_gothic text-base leading-none text-purple-light">
-              {number}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <CasePriceList list={list} />
     </div>
   );
 };
-
-// color: #FFF;
-// font-family: Dela Gothic One;
-// font-size: 16px;
-// font-style: normal;
-// font-weight: 400;
-// line-height: 130%; /* 20.8px */
-// text-transform: uppercase;

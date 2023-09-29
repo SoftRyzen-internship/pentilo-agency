@@ -70,6 +70,11 @@ export const ExampleSection = () => (
       className="mb-[10px]"
     />
 
-    <CaseCard cardProps={data.cases[1]} />
+    {/* Приклад списку кейсів, пропси на картку без назви, просто розпилити */}
+    <ul className="flex flex-wrap gap-5">
+      {data.cases.slice(-3).map((cardProps, idx) => (
+        <CaseCard key={idx} {...cardProps} />
+      ))}
+    </ul>
   </section>
 );
