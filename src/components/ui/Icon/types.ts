@@ -1,4 +1,4 @@
-type SocialMenuVariants = 'header' | 'footer' | 'mobile-menu';
+type SocialMenuVariants = 'mobile-menu' | 'default';
 export type IconNames =
   | 'arrowDown'
   | 'arrowUp'
