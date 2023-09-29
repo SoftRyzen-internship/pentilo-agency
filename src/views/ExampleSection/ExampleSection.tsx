@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import Arrow from '@/../public/icons/icon_arrowdown.svg';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
+import { Advantages } from '@/components/Advantages';
 import data from '@/data/cases.json';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
@@ -81,6 +82,8 @@ export const ExampleSection = () => (
 
     {/* аккoрдeon */}
     <Accordion />
+
+    <Advantages />
 
     {/* Елемент для тестування скролу */}
     <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>

@@ -6,14 +6,17 @@
   "advantages": [
     {
       "icon": "medal",
+      "path": "/images/advantages/medal.webp",
       "text": "В команді всі з синдромом \"відмінника\", тому не можемо працювати без системності і звітів"
     },
     {
       "icon": "calendar",
+      "path": "/images/advantages/calendar.webp",
       "text": "Не витрачаємо твій час та гроші на зайве – нам важливо, щоб ти отримав результат за найменшу ціну"
     },
     {
       "icon": "calculatorSmall",
+      "path": "/images/advantages/calculate.webp",
       "text": "Беремо всю роботу над просуванням в свої руки, щоб ти не витрачав сили на пошук і адаптацію спеціалістів"
     }
   ]
