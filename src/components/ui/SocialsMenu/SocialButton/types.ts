@@ -1,5 +1,3 @@
-// import { Dispatch, HTMLAttributes, ReactNode, SetStateAction } from 'react';
-
 type SocialMenuVariants = 'fixed' | 'footer' | 'mobile-menu';
 
 export interface SocialButtonProps {
