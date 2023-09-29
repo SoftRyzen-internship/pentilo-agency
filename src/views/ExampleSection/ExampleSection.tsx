@@ -49,7 +49,7 @@ export const ExampleSection = () => (
       accent={true}
       buttonType="submit"
       content="Обговорити запит"
-      className="xl:w-[279px] mb-[10px]"
+      className="mb-[10px] xl:w-[279px]"
     />
     {/* Кнопка для форми, як баттон */}
     <Button
