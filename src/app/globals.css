@@ -9,3 +9,26 @@ body {
 .btn-transition {
   @apply transition duration-300 ease-in-out;
 }
+
+/* .swiper{
+  --swiper-navigation-size: 44px;
+--swiper-navigation-top-offset: 50%;
+--swiper-navigation-sides-offset: 10px;
+--swiper-navigation-color: var(--swiper-theme-color);
+} */
+
+.swiper .swiper-wrapper {
+  /* overflow: hidden;
+  width: 750px; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide.swiper-slide-visible {
+  width: 380px !important;
+}
+
+.swiper-button-prev.slider-arrow::after {
+  content: '←';
+  top: 0;
+  left: 0;
+}
