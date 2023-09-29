@@ -9,6 +9,7 @@ import css from './CaseCard.module.css';
 import { CasePriceList } from '../CasePriceList';
 import { CaseCardProps } from './types';
 
+// Just spread props on CaseCard component like <CaseCardProps {...props}/>
 export const CaseCard: React.FC<CaseCardProps> = ({ title, link, list }) => {
   return (
     <div
