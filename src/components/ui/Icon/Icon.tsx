@@ -1,8 +1,9 @@
 import React from 'react';
-import classNames from 'classnames';
-import iconMap from '@/data/iconmap.json';
-import { IconProps } from '@/components/ui/Icon/types';
 import Image from 'next/image';
+import classNames from 'classnames';
+
+import { IconProps } from '@/components/ui/Icon/types';
+import iconMap from '@/data/iconmap.json';
 
 export const Icon: React.FC<IconProps> = ({
   icon,
