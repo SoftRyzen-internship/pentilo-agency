@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { Open_Sans, Dela_Gothic_One } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 
 import './globals.css';
 import { Header } from '@/views/Header';
@@ -10,10 +11,8 @@ const open_sans = Open_Sans({
   variable: '--font-open-sans',
 });
 
-const dela_gothic = Dela_Gothic_One({
-  weight: '400',
-  subsets: ['cyrillic', 'latin'],
-  display: 'swap',
+const dela_gothic = localFont({
+  src: './DelaGothicOne-Regular.woff2',
   variable: '--font-dela-gothic',
 });
 
@@ -29,7 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${open_sans.variable} ${dela_gothic.variable}`}>
+      <body
+        className={`${open_sans.variable} ${dela_gothic.variable} text-white`}
+      >
         <Header />
         <main>{children}</main>
       </body>

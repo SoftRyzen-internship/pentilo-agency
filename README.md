@@ -217,12 +217,12 @@ component `Heading`
 | `className`  | `undefined` | add custom or additional css class you'd need                                  |
 | `fontStyle`  | `undefined` | add custom or additional css to text                                           |
 
-
 - ### ScrollToTopButton
 
-| Prop            | Default     | Description                                      |
-| ----------------| ----------- | ------------------------------------------------ |
-| `sectionIdStart`| `undefined` | id of section where button should appear from    |
+| Prop             | Default     | Description                                   |
+| ---------------- | ----------- | --------------------------------------------- |
+| `sectionIdStart` | `undefined` | id of section where button should appear from |
+
 ```
 
 ```

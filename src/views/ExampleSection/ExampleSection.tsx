@@ -1,6 +1,8 @@
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import Arrow from '@/../public/icons/iconarrowdown.svg';
+import { CaseCard } from '@/components/CaseCard';
+import data from '@/data/cases.json';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
 
@@ -65,6 +67,14 @@ export const ExampleSection = () => (
       accent={false}
       content="І разом з ними ми досягли ось таких результатів в проектах"
       icon={Arrow}
+      className="mb-[10px]"
     />
+
+    {/* Приклад списку кейсів, пропси на картку без назви, просто розпилити */}
+    <ul className="flex flex-wrap gap-5">
+      {data.cases.slice(-3).map((cardProps, idx) => (
+        <CaseCard key={idx} {...cardProps} />
+      ))}
+    </ul>
   </section>
 );

@@ -33,6 +33,7 @@ const config: Config = {
       fontSize: {
         xs: ['12px', '1.27'],
 
+        s_xs: ['16px', '1.3'],
         s_small: ['16px', '1.4'],
         s_middle: ['16px', '1.5'],
         s_big: ['16px', '1.6'],
@@ -46,6 +47,7 @@ const config: Config = {
         xl_mobile: ['20px', '1.4'],
 
         xxl: ['32px', '1.4'],
+        xxl_xs: ['24px', '1.3'],
         xxl_small: ['24px', '1.5'],
         xxl_middle: ['30px', '1.2'],
         xxl_big: ['30px', '1.4'],
@@ -81,11 +83,13 @@ const config: Config = {
           activeSec: '#b454ff80',
         },
 
+        lightGray: '#EAEAEA',
         grey: '#D3D3D3',
       },
       borderRadius: {
         button: '32px',
         buttonSec: '24px',
+        card: '24px',
       },
       backgroundImage: {
         grad_100:

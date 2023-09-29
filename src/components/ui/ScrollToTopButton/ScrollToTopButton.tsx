@@ -4,7 +4,7 @@ import { scrollToTop } from '@/utils/scrollToTop';
 import { useScrollVisibility } from '@/utils/useScrollVisibility';
 import Link from 'next/link';
 
-export const ScrollToTopButton = ({sectionIdStart}) => {
+export const ScrollToTopButton = ({ sectionIdStart }) => {
   const isVisible = useScrollVisibility(sectionIdStart);
 
   return (
@@ -17,7 +17,6 @@ export const ScrollToTopButton = ({sectionIdStart}) => {
       onClick={scrollToTop}
       aria-label="Повернутись догори"
       role="button"
-    >
-    </Link>
+    ></Link>
   );
 };
