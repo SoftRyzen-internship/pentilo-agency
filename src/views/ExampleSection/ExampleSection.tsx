@@ -1,3 +1,5 @@
+'use client';
+
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import Arrow from '@/../public/icons/iconarrowdown.svg';
@@ -41,15 +43,6 @@ export const ExampleSection = () => (
       href="/"
       content="Залишити заявку"
       className="xl:w-[180px] mb-[10px]"
-    />
-
-    {/* Кнопка Залишити заявку */}
-    <Button
-      tag="button"
-      accent={true}
-      buttonType="submit"
-      content="Обговорити запит"
-      className="xl:w-[279px] mb-[10px]"
     />
 
     {/* Кнопка для форми, як баттон */}

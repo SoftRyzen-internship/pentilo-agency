@@ -1,8 +1,23 @@
+'use client';
 import classNames from 'classnames';
 
 import React from 'react';
 
 import { ButtonProps } from './types';
+
+const handleScroll = (e: React.MouseEvent, href: string | undefined) => {
+  e.preventDefault();
+
+  let elem: HTMLElement | null = null;
+
+  if (href) {
+    elem = document.getElementById(href.replace(/.*#/, ''));
+  }
+  window.scrollTo({
+    top: href ? elem?.getBoundingClientRect().top : 0,
+    behavior: 'smooth',
+  });
+};
 
 export const Button: React.FC<ButtonProps> = ({
   tag: Tag = 'a',
@@ -33,7 +48,10 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <Tag
-      onClick={onClick}
+      onClick={(e: React.MouseEvent) => {
+        if (href) handleScroll(e, href);
+        if (buttonType && onClick) onClick();
+      }}
       href={href}
       type={buttonType}
       className={`${btnStyles} ${className}`}
