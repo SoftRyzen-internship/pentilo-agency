@@ -4,6 +4,7 @@ import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import Arrow from '@/../public/icons/iconarrowdown.svg';
 import { CaseCard } from '@/components/CaseCard';
+import { Accordion } from '@/components/Accordion';
 import data from '@/data/cases.json';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
@@ -11,7 +12,7 @@ import s from '@/views/ExampleSection/ExampleSection.module.css';
 export const ExampleSection = () => (
   <section
     id="expertise"
-    className={`${s.section} text-center h-[150vh] text-shadow-xxs container relative`}
+    className={`${s.section}  h-[150vh] text-shadow-xxs container relative`}
   >
     <h2 className="mt-[100px]">This is example of section</h2>
 
@@ -69,6 +70,11 @@ export const ExampleSection = () => (
         <CaseCard key={idx} {...cardProps} />
       ))}
     </ul>
+
+    {/* аккoрдeon */}
+    <Accordion />
+
+    {/* Елемент для тестування скролу */}
     <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>
   </section>
 );
