@@ -2,6 +2,7 @@ import classNames from 'classnames';
 
 import React from 'react';
 
+import { smoothScroll } from '@/utils';
 import { ButtonProps } from './types';
 
 export const Button: React.FC<ButtonProps> = ({
@@ -33,7 +34,10 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <Tag
-      onClick={onClick}
+      onClick={(e: React.MouseEvent) => {
+        if (href) smoothScroll(e, href);
+        if (buttonType && onClick) onClick();
+      }}
       href={href}
       type={buttonType}
       className={`${btnStyles} ${className}`}
