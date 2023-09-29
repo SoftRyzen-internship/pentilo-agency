@@ -6,7 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import data from '@/data/qa.json';
 
 import Passive from 'public/icons/icon_arrowdown.svg';
-import Active from 'public/icons/icon_arrowup.svg';
+import Active from 'public/icons/icon_uparrow.svg';
 
 import { ElementAccordion } from '@/components/ElementAccordion';
 import { AccordionButtonIcon } from '../AccordionButtonIcon';
