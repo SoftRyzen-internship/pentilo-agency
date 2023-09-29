@@ -23,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
       accent === true,
     ' hover:bg-purple-hover focus:bg-purple-hover active:bg-purple-active btn-transition':
       accent === true,
-    'rounded-buttonSec shadow-input py-[7.5px] px-[26px] max-w-[280px]':
+    'rounded-buttonSec shadow-input py-[8.5px] px-[26px] max-w-[280px]':
       accent === false,
     'hover:bg-purple-hoverSec focus:bg-purple-hoverSec active:bg-purple-activeSec btn-transition':
       accent === false,
@@ -43,7 +43,7 @@ export const Button: React.FC<ButtonProps> = ({
       }}
       href={href}
       type={buttonType}
-      className={`${btnStyles} ${className}`}
+      className={`${btnStyles} ${className} `}
     >
       <span className={`${textStyles} ${fontStyle}`}>
         {content}

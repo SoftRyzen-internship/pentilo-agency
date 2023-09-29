@@ -24,7 +24,9 @@ export const ExampleSection = () => (
       accent={false}
       href="/"
       content="КОНСУЛЬТАЦІЯ"
-      className="mb-[10px] hidden xl:block xl:w-[129px] xl:px-[10px] xl:py-[2.5px]"
+
+      className="mb-[10px] hidden xl:block xl:w-[129px] xl:px-[10px] xl:py-[3.5px]"
+
       fontStyle="xl:text-xs"
     />
     {/* Кнопка детальніше */}
@@ -33,7 +35,7 @@ export const ExampleSection = () => (
       accent={false}
       href="customId"
       content="TEST SCROLL"
-      className="mb-[10px] hidden xl:block xl:w-[150px] xl:py-[15px] "
+      className="mb-[10px] hidden xl:block xl:w-[150px] xl:py-[16px] "
     />
     {/* Кнопка Залишити заявку */}
     <Button
