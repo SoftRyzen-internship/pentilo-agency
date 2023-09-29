@@ -7,12 +7,12 @@ import instagram from 'public/icons/icon_instagram.svg';
 import star from 'public/icons/icon_star.svg';
 import telegram from 'public/icons/icon_telegram.svg';
 import tick from 'public/icons/icon_tick.svg';
-import caseArrowLeft from 'public/images/cases/icon_arrowleft.svg';
-import caseArrowRight from 'public/images/cases/icon_arrowright.svg';
-import tickGroup from 'public/images/expertise/icon_dublemark.svg';
-import lock from 'public/images/expertise/icon_lock.svg';
-import questionMark from 'public/images/services/icon_questionmark.svg';
-import starGroup from 'public/images/services/icon_threestar.svg';
+import caseArrowLeft from 'public/icons/icon_arrowleft.svg';
+import caseArrowRight from 'public/icons/icon_arrowright.svg';
+import tickGroup from 'public/icons/icon_dublemark.svg';
+import lock from 'public/icons/icon_lock.svg';
+import questionMark from 'public/icons/icon_questionmark.svg';
+import starGroup from 'public/icons/icon_threestar.svg';
 
 import { SocialIconProps } from '@/components/ui/Icon/types';
 
