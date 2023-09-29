@@ -13,8 +13,8 @@ import { CaseCardProps } from './types';
 export const CaseCard: React.FC<CaseCardProps> = ({ title, link, list }) => {
   return (
     <div
-      className=" w-full max-w-[328px] h-[311px] rounded-card shadow-input border border-purple-dark 
-    pt-[29px] pb-[32px] px-[32px] bg-black-dark xl:max-w-[380px] xl:h-[384px] xl:pt-[32px] xl:pb-[39px]"
+      className={`w-full max-w-[328px] h-[311px] rounded-card shadow-input 
+    pt-[29px] pb-[32px] px-[32px]  xl:max-w-[380px] xl:h-[384px] xl:pt-[32px] xl:pb-[39px] ${css.border}`}
     >
       <Link
         href={link}
