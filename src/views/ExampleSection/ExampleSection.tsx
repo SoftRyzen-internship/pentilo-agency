@@ -14,7 +14,7 @@ import { SocialsMenu } from '@/components/ui/SocialsMenu';
 export const ExampleSection = () => (
   <section
     id="expertise"
-    className={`${s.section}  h-[150vh] text-shadow-xxs container relative`}
+    className={`${s.section}  text-shadow-xxs container relative h-[150vh]`}
   >
     <h2 className="mt-[100px]">This is example of section</h2>
     <Countdown into="hero" />
@@ -24,7 +24,7 @@ export const ExampleSection = () => (
       accent={false}
       href="/"
       content="КОНСУЛЬТАЦІЯ"
-      className="mb-[10px] hidden xl:block xl:py-[2.5px] xl:px-[10px] xl:w-[129px]"
+      className="mb-[10px] hidden xl:block xl:w-[129px] xl:px-[10px] xl:py-[2.5px]"
       fontStyle="xl:text-xs"
     />
     {/* Кнопка детальніше */}
@@ -41,7 +41,7 @@ export const ExampleSection = () => (
       accent={true}
       href="/"
       content="Залишити заявку"
-      className="xl:w-[180px] mb-[10px]"
+      className="mb-[10px] xl:w-[180px]"
     />
     {/* Кнопка Залишити заявку */}
     <Button
@@ -49,7 +49,7 @@ export const ExampleSection = () => (
       accent={true}
       buttonType="submit"
       content="Обговорити запит"
-      className="xl:w-[279px] mb-[10px]"
+      className="mb-[10px] xl:w-[279px]"
     />
     {/* Кнопка для форми, як баттон */}
     <Button
@@ -57,7 +57,7 @@ export const ExampleSection = () => (
       accent={true}
       buttonType="submit"
       content="Залишити заявку"
-      className="xl:w-[279px] mb-[10px]"
+      className="mb-[10px] xl:w-[279px]"
     />
     {/* Кнопка із свг */}
     <Button
@@ -83,6 +83,6 @@ export const ExampleSection = () => (
     <Accordion />
 
     {/* Елемент для тестування скролу */}
-    <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>
+    <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
   </section>
 );
