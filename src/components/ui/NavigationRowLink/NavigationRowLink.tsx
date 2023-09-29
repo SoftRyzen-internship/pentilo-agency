@@ -11,7 +11,6 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
   href,
 }) => {
   const isVisible = useScrollVisibility(title);
-
   const handleClick = () => {
     const sectionElement = document.querySelector(href);
     if (sectionElement) {
@@ -22,7 +21,7 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
   return (
     <li
       onClick={handleClick}
-      className={`text-white text-s_xs text-center font-normal font-inter cursor-pointer hover:text-purple-500 focus:text-purple-500 transition ${
+      className={`text-white gap-6 text-s_xs text-center font-normal font-inter cursor-pointer hover:text-purple-500 focus:text-purple-500 transition xl:text-grey xl:gap-8 xl:text-xs ${
         isVisible ? 'active' : ''
       }`}
     >

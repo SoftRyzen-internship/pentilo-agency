@@ -83,5 +83,11 @@ export const ExampleSection = () => (
     <Accordion />
     {/* Елемент для тестування скролу */}
     <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>
+    <div
+      id="about"
+      className={`${s.div} bg-[url('/images/bg/bgdesk.webp')] w-[100%] h-[350vh]  text-shadow-xxs container relative`}
+    >
+      Тестовий сектор id=about для перевірки роботи навігації
+    </div>
   </section>
 );
