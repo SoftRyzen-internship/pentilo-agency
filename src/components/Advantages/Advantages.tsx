@@ -5,11 +5,12 @@ import css from './Advantages.module.css';
 
 import { Parallax } from '../ui/Parallax';
 import { AdvantagesList } from '../AdvantagesList';
+import { ScrollToTopButton } from '../ui/ScrollToTopButton';
 import { AdvantagesProps } from './types';
 
 export const Advantages: React.FC<AdvantagesProps> = ({ className }) => {
   return (
-    <div className={`${className}`}>
+    <div className={`${className}`} id="advantages">
       <h2
         className=" mx-auto mb-4 max-w-[287px] text-center font-dela_gothic uppercase 
       text-shadow-text md:mb-6 md:max-w-[486px] xl:mb-[15px] xl:w-full  xl:max-w-none xl:text-left"
@@ -27,6 +28,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({ className }) => {
         </span>
       </h2>
       <AdvantagesList />
+      <ScrollToTopButton sectionIdStart="advantages" />
     </div>
   );
 };
