@@ -5,32 +5,17 @@ import React from 'react';
 
 import data from '@/data/advantages.json';
 import css from './AdvantagesList.module.css';
+import { fadeInUp } from './variants';
 
 import { Icon } from '../ui/Icon';
-
-const fadeInUp = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      staggerChildren: 0.3,
-      type: 'spring',
-      stiffness: 35,
-    },
-  },
-};
 
 export const AdvantagesList: React.FC = () => {
   return (
     <motion.ul
       variants={fadeInUp}
-      initial="initial"
-      whileInView="animate"
-      viewport={{ amount: 0.25, once: false }}
+      initial="hide"
+      whileInView="show"
+      viewport={{ amount: 0.25, once: true }}
       className="mx-auto grid max-w-[328px] gap-4 md:max-w-[380px] md:gap-6 
     xl:max-w-max xl:grid-cols-3 xl:gap-5"
     >
