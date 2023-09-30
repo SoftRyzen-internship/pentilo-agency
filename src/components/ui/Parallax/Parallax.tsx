@@ -1,4 +1,3 @@
-import { useState, useRef, useLayoutEffect, ReactNode } from 'react';
 import {
   motion,
   useScroll,
@@ -7,10 +6,9 @@ import {
   useReducedMotion,
 } from 'framer-motion';
 
-type ParallaxProps = {
-  children: ReactNode;
-  offset?: number;
-};
+import { useState, useRef, useLayoutEffect } from 'react';
+
+import { ParallaxProps } from './types';
 
 export const Parallax: React.FC<ParallaxProps> = ({
   children,

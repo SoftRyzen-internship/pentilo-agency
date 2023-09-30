@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 import React from 'react';
@@ -7,14 +8,35 @@ import css from './AdvantagesList.module.css';
 
 import { Icon } from '../ui/Icon';
 
+const fadeInUp = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.3,
+      type: 'spring',
+      stiffness: 35,
+    },
+  },
+};
+
 export const AdvantagesList: React.FC = () => {
   return (
-    <ul
+    <motion.ul
+      variants={fadeInUp}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ amount: 0.25, once: false }}
       className="mx-auto grid max-w-[328px] gap-4 md:max-w-[380px] md:gap-6 
     xl:max-w-max xl:grid-cols-3 xl:gap-5"
     >
       {data.advantages.map(({ icon, text, path }, idx) => (
-        <li
+        <motion.li
+          variants={fadeInUp}
           key={idx}
           className={`w-full max-w-[328px] rounded-[16px] px-[30px] pb-[30px] 
           pt-[22px] md:h-[207px] md:max-w-[380px] md:pr-6 ${css.border}`}
@@ -30,8 +52,8 @@ export const AdvantagesList: React.FC = () => {
             <Icon icon="arrowDown" className="h-[12px] w-[12px]" />
           </div>
           <p className=" text-s_big md:text-l_big">{text}</p>
-        </li>
+        </motion.li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };

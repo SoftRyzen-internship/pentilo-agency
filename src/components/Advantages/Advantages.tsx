@@ -5,10 +5,11 @@ import css from './Advantages.module.css';
 
 import { Parallax } from '../ui/Parallax';
 import { AdvantagesList } from '../AdvantagesList';
+import { AdvantagesProps } from './types';
 
-export const Advantages: React.FC = () => {
+export const Advantages: React.FC<AdvantagesProps> = ({ className }) => {
   return (
-    <div className=" w-full">
+    <div className={`${className}`}>
       <h2
         className=" mx-auto mb-4 max-w-[287px] text-center font-dela_gothic uppercase 
       text-shadow-text md:mb-6 md:max-w-[486px] xl:mb-[15px] xl:w-full  xl:max-w-none xl:text-left"
