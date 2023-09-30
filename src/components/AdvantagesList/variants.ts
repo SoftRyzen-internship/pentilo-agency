@@ -1,7 +1,7 @@
 export const fadeInUp = {
   hide: {
     opacity: 0,
-    y: 100,
+    y: 50,
   },
   show: {
     opacity: 1,
