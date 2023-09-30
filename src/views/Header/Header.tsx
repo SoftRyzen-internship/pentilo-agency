@@ -22,7 +22,7 @@ export const Header = () => {
       variants={isBlur ? blur : {}}
       initial="initial"
       animate="animate"
-      className="fixed top-0 left-1/2 -translate-x-1/2 container w-full pt-[10px] pb-[8px]"
+      className="container fixed left-1/2 top-0 w-full -translate-x-1/2 pb-[8px] pt-[10px]"
     >
       <Logo />
     </motion.header>

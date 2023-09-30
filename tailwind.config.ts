@@ -3,6 +3,7 @@ import plugin from 'tailwindcss/plugin';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  mode: 'jit',
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
@@ -84,6 +85,7 @@ const config: Config = {
         },
         lightGray: '#EAEAEA',
         grey: '#D3D3D3',
+        error: '#B65947',
       },
       borderRadius: {
         button: '32px',
@@ -95,6 +97,7 @@ const config: Config = {
           'linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%)',
         grad_200:
           'linear-gradient(0deg, rgba(20, 20, 20, 0.49) 29.34%, rgba(20, 20, 20, 0.00) 43.69%)',
+        grad_300: 'linear-gradient(271.75deg, #8430AC 2.23%, #FAC4FF 92.14%)',
       },
       // CONTAINER
       container: {

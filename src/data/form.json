@@ -6,26 +6,31 @@
       {
         "id": "i01",
         "type": "text",
-        "label": "",
-        "placeholder": "",
-        "name": "userName"
+        "name": "userName",
+        "label": "Імʼя*",
+        "placeholder": "Імʼя*"
       },
       {
         "id": "i02",
         "type": "text",
-        "label": "",
-        "placeholder": "",
-        "name": "socialLink"
+        "name": "socialLink",
+        "label": "Telegram or Instagram*",
+        "placeholder": "Telegram or Instagram*"
       },
       {
         "id": "i03",
         "type": "tel",
-        "label": "",
-        "placeholder": "",
-        "name": "phoneNumber"
+        "name": "phoneNumber",
+        "label": "Телефон",
+        "placeholder": "Телефон"
       }
     ],
-    "textarea": {}
+    "textarea": {
+      "id": "t01",
+      "label": "Твоє питання",
+      "placeholder": "Твоє питання",
+      "name": "question"
+    }
   },
   "notifications": {
     "onSuccess": {
