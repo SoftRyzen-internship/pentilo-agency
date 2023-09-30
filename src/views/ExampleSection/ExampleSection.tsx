@@ -25,9 +25,7 @@ export const ExampleSection = () => (
       accent={false}
       href="/"
       content="КОНСУЛЬТАЦІЯ"
-
       className="mb-[10px] hidden xl:block xl:w-[129px] xl:px-[10px] xl:py-[3.5px]"
-
       fontStyle="xl:text-xs"
     />
     {/* Кнопка детальніше */}

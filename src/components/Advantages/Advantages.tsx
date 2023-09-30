@@ -7,36 +7,35 @@ import css from './Advantages.module.css';
 
 import { Icon } from '../ui/Icon';
 
-// color: #FFF;
-// text-align: center;
-// text-shadow: 0px 0px 14.859999656677246px rgba(171, 64, 255, 0.92);
-// font-family: Dela Gothic One;
-// font-size: 30px;
-// font-style: normal;
-// font-weight: 400;
-// line-height: 120%; /* 36px */
-// text-transform: uppercase;
-
 export const Advantages = () => {
   return (
     <div className=" w-full">
-      <h2 className=" mb-4 mx-auto uppercase text-center text-shadow-text font-dela_gothic  max-w-[287px]">
-        <span className="block text-[34px] leading-[1.2] blur-[2.5px]">
+      <h2 className=" mx-auto mb-4 max-w-[287px] text-center font-dela_gothic uppercase text-shadow-text md:mb-6 md:max-w-[486px] xl:mb-[15px] xl:w-full  xl:max-w-none xl:text-left">
+        <span className="block text-[34px] leading-[1.2] blur-[2.5px] xl:text-[52px] xl:blur-[3.43px]">
           {data.title.blur}
         </span>
-        <span className="block ml-1 text-xxl_middle -translate-y-[16px] -translate-x-1">
+        <span
+          className={`ml-1 block -translate-x-1 -translate-y-[16px] text-xxl_middle md:mx-auto md:max-w-[391px] 
+        xl:max-w-none xl:-translate-x-0 xl:-translate-y-[25px] xl:text-xxxl_small ${css.focusTitle}`}
+        >
           {data.title.focus}
         </span>
       </h2>
-      <ul className="grid gap-4 mx-auto max-w-[328px] md:max-w-[380px] md:gap-6 xl:gap-5 xl:grid-cols-3 xl:max-w-max">
+      <ul className="mx-auto grid max-w-[328px] gap-4 md:max-w-[380px] md:gap-6 xl:max-w-max xl:grid-cols-3 xl:gap-5">
         {data.advantages.map(({ icon, text, path }, idx) => (
           <li
             key={idx}
-            className={`pt-[22px] px-[30px] pb-[30px] w-full max-w-[328px] rounded-[16px] md:pr-6 md:max-w-[380px] md:h-[207px] ${css.border}`}
+            className={`w-full max-w-[328px] rounded-[16px] px-[30px] pb-[30px] pt-[22px] md:h-[207px] md:max-w-[380px] md:pr-6 ${css.border}`}
           >
-            <div className="flex justify-between items-center mb-4">
-              <Image src={path} width={48} height={48} alt={icon} />
-              <Icon icon="arrowDown" className="w-[12px] h-[12px]" />
+            <div className="mb-4 flex items-center justify-between">
+              <Image
+                src={path}
+                width={48}
+                height={48}
+                alt={icon}
+                className=" h-[48px] w-[48px]"
+              />
+              <Icon icon="arrowDown" className="h-[12px] w-[12px]" />
             </div>
             <p className=" text-s_big md:text-l_big">{text}</p>
           </li>
