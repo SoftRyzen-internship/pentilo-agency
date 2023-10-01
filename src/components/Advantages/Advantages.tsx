@@ -5,7 +5,6 @@ import css from './Advantages.module.css';
 
 import { Parallax } from '../ui/Parallax';
 import { AdvantagesList } from '../AdvantagesList';
-import { ScrollToTopButton } from '../ui/ScrollToTopButton';
 import { AdvantagesProps } from './types';
 
 export const Advantages: React.FC<AdvantagesProps> = ({ className }) => {
@@ -28,7 +27,6 @@ export const Advantages: React.FC<AdvantagesProps> = ({ className }) => {
         </span>
       </h2>
       <AdvantagesList />
-      <ScrollToTopButton sectionIdStart="advantages" />
     </div>
   );
 };
