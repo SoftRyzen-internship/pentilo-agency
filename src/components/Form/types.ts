@@ -3,3 +3,5 @@ export interface FormProps {
 }
 
 export type PopUpType = 'default' | 'success' | 'error';
+
+export type StatusVariants = 'success' | 'error';

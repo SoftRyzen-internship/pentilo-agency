@@ -1,15 +1,23 @@
 'use client';
 
+import classNames from 'classnames';
+
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
-import Arrow from '@/../public/icons/icon_arrowdown.svg';
+import { SocialsMenu } from '@/components/ui/SocialsMenu';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
-import data from '@/data/cases.json';
+import { Form } from '@/components/Form';
 
+import data from '@/data/cases.json';
+import expertiseData from '@/data/expertise.json';
+
+import Arrow from 'public/icons/icon_arrowdown.svg';
 import s from '@/views/ExampleSection/ExampleSection.module.css';
-import { SocialsMenu } from '@/components/ui/SocialsMenu';
-// import { Icon } from '@/components/ui/Icon';
+
+const { messages } = expertiseData;
+
+const mnemocode = ['🥐', '👔', '⚖️', '💅', '🏠'];
 
 export const ExampleSection = () => (
   <section
@@ -24,9 +32,7 @@ export const ExampleSection = () => (
       accent={false}
       href="/"
       content="КОНСУЛЬТАЦІЯ"
-
       className="mb-[10px] hidden xl:block xl:w-[129px] xl:px-[10px] xl:py-[3.5px]"
-
       fontStyle="xl:text-xs"
     />
     {/* Кнопка детальніше */}
@@ -83,6 +89,38 @@ export const ExampleSection = () => (
 
     {/* аккoрдeon */}
     <Accordion />
+
+    {/* Form */}
+
+    <Form className="mx-auto mt-10" />
+
+    {/* мнемокод vs png */}
+
+    <p className="mt-10 text-center">PNG</p>
+
+    <ul className="mx-auto mt-10 flex justify-center gap-4">
+      {messages.map(({ decorImage, username }) => {
+        const styles = { backgroundImage: `url(${decorImage})` };
+
+        const className = classNames('h-6 w-6 bg-cover bg-center bg-no-repeat');
+
+        return (
+          <li key={username}>
+            <div className={className} style={styles}></div>
+          </li>
+        );
+      })}
+    </ul>
+
+    <p className="mt-10 text-center">Мнемокод</p>
+
+    <ul className="mx-auto mt-10 flex justify-center gap-4">
+      {mnemocode.map(decorImageCode => (
+        <li key={decorImageCode}>
+          <p className="text-xl">{decorImageCode}</p>
+        </li>
+      ))}
+    </ul>
 
     {/* Елемент для тестування скролу */}
     <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>

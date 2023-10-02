@@ -1,11 +1,41 @@
 {
   "title": "Нам довіряють",
   "partners": [
-    "softryzen",
-    "pipitto",
-    "prime",
-    "kvyatkovskyy",
-    "nizhno",
-    "tandyr"
+    {
+      "src": "/images/partners/softryzen.webp",
+      "alt": "компанія SoftRyzen",
+      "width": "199",
+      "height": "40"
+    },
+    {
+      "src": "/images/partners/pipitto.webp",
+      "alt": "Дитяча перукарня Pippito",
+      "width": "72",
+      "height": "89"
+    },
+    {
+      "src": "/images/partners/prime.webp",
+      "alt": "компанія prime",
+      "width": "152",
+      "height": "38"
+    },
+    {
+      "src": "/images/partners/fondkvyatkovsky.webp",
+      "alt": "Фонд родин Квятковських",
+      "width": "89",
+      "height": "89"
+    },
+    {
+      "src": "/images/partners/nizhno.webp",
+      "alt": "Український бренд комфорту Ніжно",
+      "width": "144",
+      "height": "46"
+    },
+    {
+      "src": "/images/partners/tandyr.webp",
+      "alt": "Сімейний ресторан Tandyr House",
+      "width": "236",
+      "height": "91"
+    }
   ]
 }
