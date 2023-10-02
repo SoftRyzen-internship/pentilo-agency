@@ -28,11 +28,15 @@ export const CaseCard: React.FC<CaseCardProps> = ({ title, link, list }) => {
             </span>
           ))}
           <Icon
+            height={10}
+            width={10}
             icon="arrowUp"
             className=" ml-[5px] inline-block h-[10px] w-[10px] xl:ml-[7px] xl:h-[15px] xl:w-[15px]"
           />
         </h3>
         <Icon
+          height={20}
+          width={20}
           icon="instagram"
           className=" btn-transition mt-2 h-5 w-5 hover:text-lightGray focus:text-lightGray active:text-grey "
         />

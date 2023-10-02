@@ -14,6 +14,7 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   buttonType,
   onClick,
+  disabled = false,
   className,
 }) => {
   const btnStyles = classNames(
@@ -40,6 +41,7 @@ export const Button: React.FC<ButtonProps> = ({
       href={href}
       type={buttonType}
       className={`${btnStyles} ${className} `}
+      disabled={disabled}
     >
       {children}
     </Tag>
