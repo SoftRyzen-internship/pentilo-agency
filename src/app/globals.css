@@ -10,25 +10,6 @@ body {
   @apply transition duration-300 ease-in-out;
 }
 
-.scroll-to-top-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.scroll-to-top-button::before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  transform: rotate(135deg);
-  background-image: url('/icons/icon_arrowdown.svg');
-  background-size: cover;
-  display: inline-block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .advant0::before {
   background-image: url('/images/advantages/medal.webp');
 }
