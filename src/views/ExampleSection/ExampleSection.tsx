@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import { SocialsMenu } from '@/components/ui/SocialsMenu';
-import NavigationRow from '@/components/ui/NavigationRow/NavigationRow';
 import { Icon } from '@/components/ui/Icon';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
@@ -27,19 +26,8 @@ export const ExampleSection = () => (
     id="expertise"
     className={`${s.section}  text-shadow-xxs container relative h-[150vh]`}
   >
-    <NavigationRow variant="header" />
     <h2 className="mt-[100px]">This is example of section</h2>
     <Countdown into="hero" />
-
-    {/* Кнопка консультації */}
-    <Button
-      tag="a"
-      accent={false}
-      href="/"
-      className="mb-[10px] hidden uppercase xl:block xl:w-[129px] xl:px-[10px] xl:py-[8px] xl:text-xs"
-    >
-      {common.buttonsText.v1}
-    </Button>
 
     {/* Кнопка детальніше */}
     <Button
@@ -59,16 +47,6 @@ export const ExampleSection = () => (
     {/* Кнопка Обговорити запит */}
     <Button tag="a" href="/" accent={true} className="mb-[10px] xl:w-[279px]">
       {common.buttonsText.v4}
-    </Button>
-
-    {/* Кнопка для форми, як баттон */}
-    <Button
-      tag="button"
-      accent={true}
-      buttonType="submit"
-      className="mb-[10px] xl:w-[279px]"
-    >
-      {common.buttonsText.v3}
     </Button>
 
     {/* Кнопка із свг */}
