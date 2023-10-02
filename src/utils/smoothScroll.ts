@@ -1,4 +1,7 @@
-export const smoothScroll = (e: React.MouseEvent, href: string | undefined) => {
+export const smoothScroll = (
+  e: React.MouseEvent,
+  href?: string | undefined,
+) => {
   e.preventDefault();
 
   let elem: HTMLElement | null = null;
