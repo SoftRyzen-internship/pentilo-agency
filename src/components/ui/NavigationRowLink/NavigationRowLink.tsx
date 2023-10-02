@@ -1,16 +1,14 @@
 import React from 'react';
-import { useScrollVisibility } from '@/utils/useScrollVisibility';
 
-interface NavigationRowLinkProps {
-  title: string;
-  href: string;
-}
+import { useScrollVisibility } from '@/utils/useScrollVisibility';
+import { NavigationRowLinkProps } from '@/components/ui/NavigationRowLink/types';
 
 export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
   title,
   href,
 }) => {
   const isVisible = useScrollVisibility(title);
+
   const handleClick = () => {
     const sectionElement = document.querySelector(href);
     if (sectionElement) {
@@ -21,8 +19,8 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
   return (
     <li
       onClick={handleClick}
-      className={`text-white gap-6 text-s_xs text-center font-normal font-inter cursor-pointer hover:text-purple-500 focus:text-purple-500 transition xl:text-grey xl:gap-8 xl:text-xs ${
-        isVisible ? 'active' : ''
+      className={`font-normal font-inter cursor-pointer hover:text-purple-light focus:text-purple-light transition ${
+        isVisible ? 'text-purple-light' : 'text-grey'
       }`}
     >
       {title}
