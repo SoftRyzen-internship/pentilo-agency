@@ -18,7 +18,7 @@ export const useScrollVisibility = (sectionIdStart: string) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [sectionIdStart]);
 
   return isVisible;
 };

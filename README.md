@@ -209,13 +209,12 @@ component `Heading`
 | ------------ | ----------- | ------------------------------------------------------------------------------ |
 | `tag`        | `a`         | required,choose the tag of button you'd need: `a` or `button`                  |
 | `accent`     | `true`      | required,if you need purple button set accent ot true, or set false to another |
-| `content`    | `undefined` | required,text content for button or link                                       |
-| `icon`       | `undefined` | set reference to icon component if you need it                                 |
+| `children`   | `undefined` | required, add text content & icon                                              |
 | `href`       | `undefined` | set link href if you use tag `a`                                               |
 | `buttonType` | `undefined` | add button type 'button' or 'submit' if you use tag 'button'                   |
 | `onClick`    | `undefined` | click handler                                                                  |
+| `disabled`   | `false`     | boolean, if you'd need to disable button                                       |
 | `className`  | `undefined` | add custom or additional css class you'd need                                  |
-| `fontStyle`  | `undefined` | add custom or additional css to text                                           |
 
 - ### ScrollToTopButton
 

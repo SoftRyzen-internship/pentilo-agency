@@ -9,3 +9,13 @@ body {
 .btn-transition {
   @apply transition duration-300 ease-in-out;
 }
+
+.advant0::before {
+  background-image: url('/images/advantages/medal.webp');
+}
+.advant1::before {
+  background-image: url('/images/advantages/calendar.webp');
+}
+.advant2::before {
+  background-image: url('/images/advantages/calculate.webp');
+}

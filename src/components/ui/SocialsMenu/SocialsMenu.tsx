@@ -10,15 +10,14 @@ import {
 import data from '@/data/common.json';
 
 export const SocialsMenu: React.FC<SocialsMenuProps> = ({
-  variant = 'footer',
+  variant = 'default',
   className,
   onClick,
 }) => {
   const socialData = data.socials;
 
   const iconSizes = {
-    header: { width: 20, height: 20 },
-    footer: { width: 20, height: 20 },
+    default: { width: 20, height: 20 },
     'mobile-menu': { width: 24, height: 24 },
   };
 
@@ -27,8 +26,7 @@ export const SocialsMenu: React.FC<SocialsMenuProps> = ({
   const menuStyles = classNames(
     {
       'fixed bottom-[80px] right-0 z-10 xl:hidden flex flex-row gap-4':
-        variant === 'header',
-      'flex gap-4': variant === 'footer',
+        variant === 'default',
       'flex gap-5': variant === 'mobile-menu',
     },
     className,
