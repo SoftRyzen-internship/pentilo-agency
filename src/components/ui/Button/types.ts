@@ -5,5 +5,6 @@ export interface ButtonProps {
   href?: string;
   buttonType?: 'button' | 'submit';
   onClick?: () => void;
+  disabled?: boolean;
   className?: string;
 }
