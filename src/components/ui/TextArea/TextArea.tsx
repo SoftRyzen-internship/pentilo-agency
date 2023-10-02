@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { FieldError } from '../FieldError';
 import { TextAreaProps } from './types';
 
@@ -11,9 +12,13 @@ export const TextArea: React.FC<TextAreaProps> = ({
 }) => {
   const isError = errors[name];
 
+  const fieldClasses = classNames('field h-[111px]', {
+    error: isError,
+  });
+
   return (
     <>
-      <div className="field h-[111px]">
+      <div className={fieldClasses}>
         <textarea
           className="field-input resize-none px-[23px]"
           id={id}

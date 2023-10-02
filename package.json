@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
+    "@hookform/resolvers": "^3.3.1",
+    "axios": "^1.5.1",
     "classnames": "^2.3.2",
     "framer-motion": "^10.16.4",
     "next": "13.5.2",

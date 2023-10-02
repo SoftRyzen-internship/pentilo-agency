@@ -1,10 +1,10 @@
 {
   "title": "Над твоїм результатом працюватимуть:",
   "team": [
-    { "icon": "productAvatar", "name": "проджект-менеджер" },
-    { "icon": "project1Avatar", "name": "контент-менеджер" },
-    { "icon": "project2Avatar", "name": "контент-менеджер" },
-    { "icon": "ceoAvatar", "name": "CEO" },
-    { "icon": "targetologAvatar", "name": "таргетолог" }
+    { "decorImage": "/images/team/project.webp", "name": "проджект-менеджер" },
+    { "decorImage": "/images/team/content1.webp", "name": "контент-менеджер" },
+    { "decorImage": "/images/team/content2.webp", "name": "контент-менеджер" },
+    { "decorImage": "/images/team/ceo.webp", "name": "сео" },
+    { "decorImage": "/images/team/targetolog.webp", "name": "таргетолог" }
   ]
 }

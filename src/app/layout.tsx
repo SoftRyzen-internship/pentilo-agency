@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 
 import './globals.css';
 import { Header } from '@/views/Header';
+import { Toaster } from 'react-hot-toast';
 
 const open_sans = Open_Sans({
   subsets: ['cyrillic', 'latin'],
@@ -38,6 +39,7 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
+        <Toaster position="top-right" reverseOrder={true} />
       </body>
     </html>
   );
