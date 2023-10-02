@@ -6,35 +6,67 @@
       {
         "id": "i01",
         "type": "text",
-        "label": "",
-        "placeholder": "",
-        "name": "userName"
+        "name": "userName",
+        "label": "Імʼя*",
+        "placeholder": "Імʼя*"
       },
       {
         "id": "i02",
         "type": "text",
-        "label": "",
-        "placeholder": "",
-        "name": "socialLink"
+        "name": "socialLink",
+        "label": "Telegram or Instagram*",
+        "placeholder": "Telegram or Instagram*"
       },
       {
         "id": "i03",
         "type": "tel",
-        "label": "",
-        "placeholder": "",
-        "name": "phoneNumber"
+        "name": "phoneNumber",
+        "label": "Телефон",
+        "placeholder": "Телефон"
       }
     ],
-    "textarea": {}
+    "textarea": {
+      "id": "t01",
+      "name": "question",
+      "label": "Твоє питання",
+      "placeholder": "Твоє питання"
+    },
+    "validation": {
+      "userName": {
+        "format": {
+          "reg": "^(?![\\s-]*[\\s-])(?!.*--)(?!.*- )(?!.*'-)(?=.*[A-Za-zА-Яа-яЇїІіЄєҐґ])[A-Za-zА-Яа-яЇїІіЄєҐґ' -]+$",
+          "message": "Невірно введене ім’я"
+        },
+        "minLength": { "value": 3, "message": "Не менше 3 символів" },
+        "maxLength": { "value": 70, "message": "Не більше 70 символів" }
+      },
+      "phoneNumber": {
+        "format": {
+          "reg": "^\\+[0-9]+$",
+          "message": "Невірно введений номер"
+        },
+        "minLength": { "value": 12, "message": "Не менше 12 символів" },
+        "maxLength": { "value": 13, "message": "Не більше 13 символів" }
+      },
+      "question": {
+        "format": {
+          "reg": "^[A-Za-zА-Яа-яЇїІіЄєҐґ0-9()s',.!? \n-]+$",
+          "message": "Присутні недопустимі символи"
+        },
+        "minLength": { "value": 3, "message": "Не менше 3 символів" },
+        "maxLength": { "value": 1000, "message": "Не більше 1000 символів" }
+      },
+      "common": {
+        "required": "Обовʼязкове поле"
+      }
+    }
   },
   "notifications": {
-    "onSuccess": {
-      "r1": "Дякуємо за заявку!",
-      "r2": "Ми з тобою звʼяжемось якомога скоріше"
-    },
-    "onError": {
-      "r1": "Здається щось пішло не так.",
-      "r2": "Спробуй ще раз"
-    }
-  }
+    "onSuccess": [
+      "Дякуємо за заявку!",
+      "Ми з тобою звʼяжемось якомога скоріше"
+    ],
+    "onError": ["Здається щось пішло не так.", "Спробуй ще раз"]
+  },
+  "onLoadingMessage": "Відправка"
 }

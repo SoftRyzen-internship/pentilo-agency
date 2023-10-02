@@ -10,30 +10,27 @@ import { ButtonProps } from './types';
 export const Button: React.FC<ButtonProps> = ({
   tag: Tag = 'a',
   accent = true,
-  content,
-  icon: Icon,
+  children,
   href,
   buttonType,
   onClick,
+  disabled = false,
   className,
-  fontStyle,
 }) => {
-  const btnStyles = classNames('cursor-pointer block text-center w-full', {
-    'rounded-button shadow-button py-[12px] px-[10px] max-w-[328px] bg-purple-light md:py-[16px] xl:max-w-[279px]':
-      accent === true,
-    ' hover:bg-purple-hover focus:bg-purple-hover active:bg-purple-active btn-transition':
-      accent === true,
-    'rounded-buttonSec shadow-input py-[8.5px] px-[26px] max-w-[280px]':
-      accent === false,
-    'hover:bg-purple-hoverSec focus:bg-purple-hoverSec active:bg-purple-activeSec btn-transition':
-      accent === false,
-    [css.border]: accent === false,
-  });
-
-  const textStyles = classNames('text-white', {
-    'text-l_small': accent === true,
-    'text-s_middle': accent === false,
-  });
+  const btnStyles = classNames(
+    'cursor-pointer block text-center w-full text-white',
+    {
+      'rounded-button shadow-button py-[12.5px] px-[10px] max-w-[328px] bg-purple-light md:py-[16.5px] xl:max-w-[279px]':
+        accent === true,
+      ' hover:bg-purple-hover focus:bg-purple-hover active:bg-purple-active btn-transition text-l_small':
+        accent === true,
+      'rounded-buttonSec shadow-input py-[8.5px] px-[20px] max-w-[280px] text-s_middle':
+        accent === false,
+      'hover:bg-purple-hoverSec focus:bg-purple-hoverSec active:bg-purple-activeSec btn-transition':
+        accent === false,
+      [css.border]: accent === false,
+    },
+  );
 
   return (
     <Tag
@@ -44,13 +41,9 @@ export const Button: React.FC<ButtonProps> = ({
       href={href}
       type={buttonType}
       className={`${btnStyles} ${className} `}
+      disabled={disabled}
     >
-      <span className={`${textStyles} ${fontStyle}`}>
-        {content}
-        {Icon ? (
-          <Icon width={8} height={8} className="ml-[5px] inline-block" />
-        ) : null}
-      </span>
+      {children}
     </Tag>
   );
 };

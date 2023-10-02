@@ -1,10 +1,9 @@
 export const variants = {
-  collapsed: { scale: 0.8, opacity: 0, height: 0 },
-  open: { opacity: 1, height: 'auto', scale: 1 },
+  up: { stroke: '#B454FF', rotate: -45 },
+  down: { stroke: 'white', rotate: -135 },
 };
 
 export const transition = {
-  duration: 0.8,
-  delay: 0.5,
+  duration: 0.5,
   ease: [0.04, 0.62, 0.23, 0.98],
 };

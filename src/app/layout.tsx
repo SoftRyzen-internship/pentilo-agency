@@ -1,14 +1,20 @@
 import type { Metadata } from 'next';
-import { Open_Sans } from 'next/font/google';
+import { Open_Sans, Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import './globals.css';
 import { Header } from '@/views/Header';
+import { Toaster } from 'react-hot-toast';
 
 const open_sans = Open_Sans({
   subsets: ['cyrillic', 'latin'],
   display: 'swap',
   variable: '--font-open-sans',
+});
+const inter = Inter({
+  subsets: ['cyrillic', 'latin'],
+  display: 'swap',
+  variable: '--font-inter',
 });
 
 const dela_gothic = localFont({
@@ -29,10 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${open_sans.variable} ${dela_gothic.variable} text-white`}
+        className={`${open_sans.variable} ${inter.variable} ${dela_gothic.variable} text-white`}
       >
         <Header />
         <main>{children}</main>
+        <Toaster position="top-right" reverseOrder={true} />
       </body>
     </html>
   );

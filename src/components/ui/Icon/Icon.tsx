@@ -1,4 +1,5 @@
 import arrowDown from 'public/icons/icon_arrowdown.svg';
+import arrow from 'public/icons/icon_arrow.svg';
 import arrowUp from 'public/icons/icon_arrowup.svg';
 import burger from 'public/icons/icon_burger.svg';
 import checkbox from 'public/icons/icon_checked.svg';
@@ -17,6 +18,7 @@ import starGroup from 'public/icons/icon_threestar.svg';
 import { SocialIconProps } from '@/components/ui/Icon/types';
 
 const icons = {
+  arrow,
   arrowDown,
   arrowUp,
   burger,
