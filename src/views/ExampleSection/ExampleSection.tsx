@@ -10,6 +10,7 @@ import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
 import { Form } from '@/components/Form';
 import { Advantages } from '@/components/Advantages';
+import { Statistics } from '@/components/Statistics';
 
 import cases from '@/data/cases.json';
 import common from '@/data/common.json';
@@ -59,6 +60,7 @@ export const ExampleSection = () => (
         className="ml-[5px] inline-block -rotate-[135deg]"
       />
     </Button>
+    <Statistics />
 
     {/* Кнопки соціальні із свг */}
     <SocialsMenu />
@@ -106,6 +108,7 @@ export const ExampleSection = () => (
     </ul>
 
     <Advantages />
+
     {/* Елемент для тестування скролу */}
     <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
     <div
