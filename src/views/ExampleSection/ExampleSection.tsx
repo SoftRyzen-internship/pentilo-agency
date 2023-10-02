@@ -6,6 +6,7 @@ import Arrow from '@/../public/icons/icon_arrowdown.svg';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
 import data from '@/data/cases.json';
+import hero from '@/data/hero.json';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
 import { Slider } from '@/components/Slider';
@@ -86,7 +87,12 @@ export const ExampleSection = () => (
     {/* Елемент для тестування скролу */}
     <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>
     
-     <Slider section="cases" data={data.cases} element={CaseCard} navigation={true}/>
+
+    {/* Slider in cases section */}
+     <Slider section="cases" data={data.cases} element={CaseCard} navigation={true} className='cases'/>
+     
+     {/* Prototype of slider in services section */}
+     {/* <Slider section="services" data={data.cases} element={CaseCard} navigation={false} className='services'/> */}
   </section>
  
 );

@@ -1,6 +1,10 @@
+// export interface SectionProps {
+//   section: 'cases' | 'services' | 'expertise';
+// }
+
 export interface SliderProps {
-  section?: 'cases' | 'services';
-  // pagination?: boolean;
+  section: 'cases' | 'services' | 'expertise';
+  pagination?: boolean;
   navigation?: boolean;
   autoplay?: boolean;
   data: any;
