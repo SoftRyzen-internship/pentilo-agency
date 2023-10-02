@@ -1,22 +1,23 @@
 'use client';
 
-import { scrollToTop } from '@/utils/scrollToTop';
 import { useScrollVisibility } from '@/utils/useScrollVisibility';
-import Link from 'next/link';
+import { smoothScroll } from '@/utils';
+
+import css from './ScrollToTopButton.module.css';
 
 export const ScrollToTopButton = ({ sectionIdStart }) => {
   const isVisible = useScrollVisibility(sectionIdStart);
 
   return (
-    <Link
+    <a
       href="#top"
-      className={`btn-transition scroll-to-top-button fixed bottom-10 right-10 h-14 w-14 cursor-pointer rounded-full bg-purple-light
-         text-white shadow-button transition-opacity hover:bg-purple-hover ${
+      className={`${css.scrollBtn} fixed bottom-10 right-10 bg-purple-light text-white rounded-full w-14 h-14 cursor-pointer hover:bg-purple-hover
+         shadow-button transition-opacity btn-transition ${
            isVisible ? 'opacity-100' : 'opacity-0'
          }`}
-      onClick={scrollToTop}
+      onClick={(e: React.MouseEvent) => smoothScroll(e)}
       aria-label="Повернутись догори"
       role="button"
-    ></Link>
+    ></a>
   );
 };
