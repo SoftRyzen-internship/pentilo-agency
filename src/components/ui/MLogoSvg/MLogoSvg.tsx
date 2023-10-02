@@ -242,7 +242,7 @@ export const MLogoSvg: React.FC = () => {
           61.0535 36.2267C61.0535 36.35 61.0859 36.4527 61.1508 36.5349C61.2238 36.6171 61.3577 36.6787 
           61.5523 36.7198C61.7551 36.7609 62.0512 36.7815 62.4406 36.7815Z"
         fill="white"
-        strokeWidth="1"
+        // strokeWidth="1"
         variants={isInView ? pathVariants : {}}
         // variants={pathVariants}
         initial="initial"
@@ -263,7 +263,7 @@ export const MLogoSvg: React.FC = () => {
           31.2585 69.3562 31.2585C68.8452 31.2585 68.5086 31.3489 68.3463 31.5297C68.1922 31.7023 68.1151 
           31.9324 68.1151 32.2201H70.5974Z"
         fill="white"
-        strokeWidth="1"
+        // strokeWidth="1"
         variants={isInView ? pathVariants : {}}
         // variants={pathVariants}
         initial="initial"
@@ -278,7 +278,7 @@ export const MLogoSvg: React.FC = () => {
           76.3778 31.616C76.0209 31.616 75.7694 31.7064 75.6234 31.8872C75.4774 32.0598 75.4003 
           32.3598 75.3922 32.7872V35.8815Z"
         fill="white"
-        strokeWidth="1"
+        // strokeWidth="1"
         variants={isInView ? pathVariants : {}}
         // variants={pathVariants}
         initial="initial"
@@ -299,7 +299,7 @@ export const MLogoSvg: React.FC = () => {
           34.2296 83.7 34.2296C83.9839 34.2296 84.2557 34.2172 84.5153 34.1926C84.7748 34.1679 85.0506 
           34.1392 85.3427 34.1063L85.3913 34.1433Z"
         fill="white"
-        strokeWidth="1"
+        // strokeWidth="1"
         variants={isInView ? pathVariants : {}}
         // variants={pathVariants}
         initial="initial"
@@ -312,7 +312,7 @@ export const MLogoSvg: React.FC = () => {
           33.1776 89.4726 32.5077 89.6592 31.8503C89.8539 31.1928 90.0729 30.5353 
           90.3162 29.8778H92.4091V29.9148L89.282 38.1745H87.2865V38.1499Z"
         fill="white"
-        strokeWidth="1"
+        // strokeWidth="1"
         variants={isInView ? pathVariants : {}}
         // variants={pathVariants}
         initial="initial"
@@ -327,7 +327,7 @@ export const MLogoSvg: React.FC = () => {
           34.1038 94.8557 33.9468L93.9745 33.7768C93.5437 33.6937 93.5427 33.0691 93.9733 32.9847L94.8614 
           32.8106C95.6725 32.6517 96.3024 32.0015 96.4442 31.1769L96.7026 29.6739Z"
         fill="white"
-        strokeWidth="1"
+        // strokeWidth="1"
         variants={isInView ? pathVariants : {}}
         // variants={pathVariants}
         initial="initial"

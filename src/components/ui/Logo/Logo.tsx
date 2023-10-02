@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 import LogoIcon from 'public/icons/logo.svg';
 import { home } from '@/constants/links';
@@ -9,7 +9,7 @@ import { LogoProps } from './types';
 
 export const Logo: React.FC<LogoProps> = ({ className = '', onClick }) => {
   return (
-    <Link
+    <a
       href={home}
       onClick={onClick}
       className={className}
@@ -17,6 +17,6 @@ export const Logo: React.FC<LogoProps> = ({ className = '', onClick }) => {
     >
       <LogoIcon width={101} height={38} onClick={onClick} />
       <MLogoSvg />
-    </Link>
+    </a>
   );
 };
