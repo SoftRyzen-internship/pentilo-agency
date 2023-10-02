@@ -2,6 +2,9 @@ import classNames from 'classnames';
 
 import React from 'react';
 
+import css from './Button.module.css';
+
+import { smoothScroll } from '@/utils';
 import { ButtonProps } from './types';
 
 export const Button: React.FC<ButtonProps> = ({
@@ -20,10 +23,11 @@ export const Button: React.FC<ButtonProps> = ({
       accent === true,
     ' hover:bg-purple-hover focus:bg-purple-hover active:bg-purple-active btn-transition':
       accent === true,
-    'rounded-buttonSec shadow-input py-[7.5px] px-[26px] max-w-[280px] bg-black-dark border border-purple-dark':
+    'rounded-buttonSec shadow-input py-[8.5px] px-[26px] max-w-[280px]':
       accent === false,
     'hover:bg-purple-hoverSec focus:bg-purple-hoverSec active:bg-purple-activeSec btn-transition':
       accent === false,
+    [css.border]: accent === false,
   });
 
   const textStyles = classNames('text-white', {
@@ -33,15 +37,18 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <Tag
-      onClick={onClick}
+      onClick={(e: React.MouseEvent) => {
+        if (href) smoothScroll(e, href);
+        if (buttonType && onClick) onClick();
+      }}
       href={href}
       type={buttonType}
-      className={`${btnStyles} ${className}`}
+      className={`${btnStyles} ${className} `}
     >
       <span className={`${textStyles} ${fontStyle}`}>
         {content}
         {Icon ? (
-          <Icon width={8} height={8} className="inline-block ml-[5px]" />
+          <Icon width={8} height={8} className="ml-[5px] inline-block" />
         ) : null}
       </span>
     </Tag>

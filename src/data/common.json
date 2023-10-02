@@ -6,12 +6,14 @@
   "logoAriaLabelText": "Посилання із логотипом компанії",
   "socials": [
     {
-      "href": "https://www.instagram.com/pentilova/",
+      "name": "instagram",
+      "link": "https://www.instagram.com/pentilova/",
       "icon": "instagram",
       "ariaLabelText": "Зв'яжися з нами у instagram"
     },
     {
-      "href": "https://t.me/d_pentilo",
+      "name": "telegram",
+      "link": "https://t.me/d_pentilo",
       "icon": "telegram",
       "ariaLabelText": "Зв'яжися з нами у telegram"
     }
