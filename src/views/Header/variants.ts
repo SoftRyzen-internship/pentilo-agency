@@ -16,9 +16,6 @@ export const headerVariants = {
     transition: {
       type: 'spring',
       stiffness: 35,
-      // duration: 0.5,
-      // type: 'linear',
-      // ease: 'easeInOut',
     },
   },
 };
