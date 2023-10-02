@@ -1,28 +1,44 @@
-/* Form */
+/* === Form === */
 
 .field {
-  @apply relative w-full rounded-3xl bg-black-dark bg-grad_300 p-[2px] shadow-input;
+  @apply relative w-full rounded-3xl bg-grad_300 shadow-input;
 }
 
+.field.error {
+  background-image: none;
+  @apply bg-error;
+}
+
+.field::before {
+  content: '';
+  @apply absolute left-1/2 top-1/2 h-[calc(100%-4px)] w-[calc(100%-4px)] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-body;
+}
+
+/* input */
+
 .field-input {
-  @apply h-full w-full rounded-3xl border-none bg-black-dark px-[23px] py-3 text-inherit;
+  @apply absolute left-1/2 top-1/2 z-[1] h-[calc(100%-4px)] w-[calc(100%-4px)] -translate-x-1/2 -translate-y-1/2 rounded-3xl border-none bg-transparent px-[23px] py-3 font-bold text-inherit outline-none hover:bg-[#b454ff1a] focus:bg-[#b454ff33];
 }
 
 .field-input::placeholder {
   color: transparent;
 }
 
-.field-label {
-  @apply absolute left-[25px] top-1/2 -translate-y-1/2 transition duration-300 ease-in-out;
-}
+/* label */
 
-textarea + .field-label {
-  @apply top-[20px];
+.field-label {
+  @apply absolute left-[25px] top-1/2 z-[2] -translate-y-1/2 transition duration-300 ease-in-out;
 }
 
 .field-label::before {
   content: '';
-  @apply absolute left-[-8px] top-0 z-[-1] h-[19px] w-[calc(100%+16px)] rounded-[10px] bg-[#1C1720] opacity-0;
+  @apply absolute left-[-8px] top-0 z-[-1] h-[18px] w-[calc(100%+16px)] rounded-[10px] bg-[#1C1720] opacity-0;
+}
+
+/* textarea */
+
+textarea + .field-label {
+  @apply top-[20px];
 }
 
 /* when label is focused or the user has entered some text */

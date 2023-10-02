@@ -1,16 +1,25 @@
 'use client';
 
+import classNames from 'classnames';
+
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
-import { CaseCard } from '@/components/CaseCard';
-import { Accordion } from '@/components/Accordion';
-import { Advantages } from '@/components/Advantages';
-import data from '@/data/cases.json';
-import common from '@/data/common.json';
-
-import s from '@/views/ExampleSection/ExampleSection.module.css';
 import { SocialsMenu } from '@/components/ui/SocialsMenu';
 import { Icon } from '@/components/ui/Icon';
+import { CaseCard } from '@/components/CaseCard';
+import { Accordion } from '@/components/Accordion';
+import { Form } from '@/components/Form';
+import { Advantages } from '@/components/Advantages';
+
+import cases from '@/data/cases.json';
+import common from '@/data/common.json';
+import expertiseData from '@/data/expertise.json';
+
+import s from '@/views/ExampleSection/ExampleSection.module.css';
+
+const { messages } = expertiseData;
+
+const mnemocode = ['🥐', '👔', '⚖️', '💅', '🏠'];
 
 export const ExampleSection = () => (
   <section
@@ -78,13 +87,47 @@ export const ExampleSection = () => (
 
     {/* Приклад списку кейсів, пропси на картку без назви, просто розпилити */}
     <ul className="flex flex-wrap gap-5">
-      {data.cases.slice(-3).map((cardProps, idx) => (
+      {cases.cases.slice(-3).map((cardProps, idx) => (
         <CaseCard key={idx} {...cardProps} />
       ))}
     </ul>
     {/* аккoрдeon */}
     <Accordion />
+
+    {/* Form */}
+
+    <Form className="mx-auto mt-10" />
+
+    {/* мнемокод vs png */}
+
+    <p className="mt-10 text-center">PNG</p>
+
+    <ul className="mx-auto mt-10 flex justify-center gap-4">
+      {messages.map(({ decorImage, username }) => {
+        const styles = { backgroundImage: `url(${decorImage})` };
+
+        const className = classNames('h-6 w-6 bg-cover bg-center bg-no-repeat');
+
+        return (
+          <li key={username}>
+            <div className={className} style={styles}></div>
+          </li>
+        );
+      })}
+    </ul>
+
+    <p className="mt-10 text-center">Мнемокод</p>
+
+    <ul className="mx-auto mt-10 flex justify-center gap-4">
+      {mnemocode.map(decorImageCode => (
+        <li key={decorImageCode}>
+          <p className="text-xl">{decorImageCode}</p>
+        </li>
+      ))}
+    </ul>
+
     <Advantages />
+
     {/* Елемент для тестування скролу */}
     <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
   </section>
