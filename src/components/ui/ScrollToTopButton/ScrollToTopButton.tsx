@@ -15,7 +15,7 @@ export const ScrollToTopButton = ({ sectionIdStart }) => {
          shadow-button transition-opacity btn-transition ${
            isVisible ? 'opacity-100' : 'opacity-0'
          }`}
-      onClick={(e: React.MouseEvent) => smoothScroll(e)}
+      onClick={(e: React.MouseEvent) => smoothScroll(e, undefined)}
       aria-label="Повернутись догори"
       role="button"
     ></a>
