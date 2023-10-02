@@ -4,11 +4,8 @@ import { motion } from 'framer-motion';
 import React from 'react';
 
 import stats from '@/data/statistics.json';
+import { StatisticsProps } from './types';
 import { fadeInUp } from './variants';
-
-interface StatisticsProps {
-  className?: string;
-}
 
 export const Statistics: React.FC<StatisticsProps> = ({ className }) => {
   return (
