@@ -22,13 +22,13 @@
 /* Hide overflow slides */
 
 @media (min-width: 1280px) {
+  .swiper.cases .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.5 !important;
+  }
   .swiper.cases .swiper-slide:not(.swiper-slide-visible) {
     opacity: 0 !important;
   }
 
-  .swiper.cases .swiper-slide:not(.swiper-slide-active) {
-    opacity: 0.5;
-  }
 }
 
 /* Overwriting default swiper styles */

@@ -118,7 +118,7 @@ export const ExampleSection = () => (
     
 
     {/* Slider in cases section */}
-     <Slider section="cases" data={cases.cases} element={CaseCard} navigation={true} className='cases'/>
+     <Slider section="cases" data={cases.cases} element={CaseCard} navigation={true} className='cases' slideClassName='casesSlide'/>
  </section>
  
 );
