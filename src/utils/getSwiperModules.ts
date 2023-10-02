@@ -7,7 +7,7 @@ import {
     EffectCoverflow,
   } from 'swiper/modules';
 
-export function getModules(section: any, width: any): SwiperModule[] {
+export function getSwiperModules(section: any, width: any): SwiperModule[] {
     let modules = [Pagination, Navigation];
 
     if (section === 'cases') {

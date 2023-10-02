@@ -11,6 +11,7 @@ import 'swiper/css/effect-coverflow';
 import './styles.css';
 import useWindowSize from '@/utils/useWindowSize';
 import { getSliderBreakpointsOptions } from '@/utils/getSliderBreakpointsOptions';
+import { getSwiperModules } from '@/utils/getSwiperModules';
 
 export const Slider: React.FC<SliderProps> = ({
   section,
@@ -34,10 +35,6 @@ export const Slider: React.FC<SliderProps> = ({
     }
   }, [width, section]);
 
-
-    function getSwiperModules(section: string, width: number): import("swiper/types").SwiperModule[] | undefined {
-        throw new Error('Function not implemented.');
-    }
 
   return (
     <Swiper

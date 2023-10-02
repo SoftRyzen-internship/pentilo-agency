@@ -46,23 +46,28 @@
 
 /* services */
 
-.swiper.services .swiper-wrapper > .swiper-slide {
+.swiper.services .swiper-wrapper > .swiper-slide,
+.swiper.expertise .swiper-wrapper > .swiper-slide {
   width: auto;
   display: flex;
   justify-content: center;
 }
 
 .swiper.services
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper.expertise
   .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   top: 0;
 }
 
-.swiper.services .swiper-wrapper {
+.swiper.services .swiper-wrapper,
+.swiper.expertise .swiper-wrapper {
   padding-top: 40px;
 }
 
 @media (min-width: 1280px) {
-  .swiper.services .swiper-wrapper {
+  .swiper.services .swiper-wrapper,
+  .swiper.expertise .swiper-wrapper {
     padding-top: 0;
     display: flex !important;
     justify-content: center !important;
