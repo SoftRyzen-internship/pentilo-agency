@@ -19,6 +19,8 @@ export const Slider: React.FC<SliderProps> = ({
   element: Element,
   navigation,
   className = '',
+  slideClassName = '',
+
 }) => {
   const swiperRef: any = useRef<typeof Swiper | null>(null);
 
@@ -71,12 +73,12 @@ export const Slider: React.FC<SliderProps> = ({
           : false
       }
       modules={getSwiperModules(section, width)}
-      className={className}
+      className={`${className}`}
     >
       <div className="wrapper bg-slate-400">
         {data?.map((item: any, idx: number) => {
           return (
-            <SwiperSlide key={idx} className="flex justify-center z-10">
+            <SwiperSlide key={idx}  className={`flex justify-center z-10 ${slideClassName}`}>
               <Element {...item} className="elementSlider" />
             </SwiperSlide>
           );

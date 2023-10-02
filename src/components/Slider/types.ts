@@ -9,7 +9,6 @@ export interface SliderProps extends SectionProps {
   autoplay?: boolean;
   data: any;
   element: any;
-  allowTouchMove?: boolean;
   className?: string;
   slideClassName?: string;
 }
