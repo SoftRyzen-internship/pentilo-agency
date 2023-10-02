@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import { SocialsMenu } from '@/components/ui/SocialsMenu';
-import NavigationRow from '@/components/ui/NavigationRow/NavigationRow';
 import { Icon } from '@/components/ui/Icon';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
@@ -28,7 +27,6 @@ export const ExampleSection = () => (
     id="expertise"
     className={`${s.section}  text-shadow-xxs container relative h-[150vh]`}
   >
-    <NavigationRow variant="header" />
     <h2 className="mt-[100px]">This is example of section</h2>
     <Countdown into="hero" />
     {/* Кнопка консультації */}
@@ -70,10 +68,10 @@ export const ExampleSection = () => (
     <Button tag="a" accent={false} className="mb-[10px]">
       {common.buttonsText.v5}
       <Icon
-        icon="arrowDown"
+        icon="arrow"
         width={8}
         height={8}
-        className="ml-[5px] inline-block"
+        className="ml-[5px] inline-block -rotate-[135deg]"
       />
     </Button>
     {/* Кнопки соціальні із свг */}
