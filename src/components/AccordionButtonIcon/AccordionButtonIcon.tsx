@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import Passive from 'public/icons/icon_arrowdown.svg';
+import Arrow from 'public/icons/icon_arrow.svg';
 
 import { transition, variants } from './variants';
 
@@ -13,7 +13,7 @@ export const AccordionButtonIcon = ({ state }: IAccordionButtonProps) => {
       variants={variants}
       transition={transition}
     >
-      <Passive className="h-3 w-3  stroke-[4] " />
+      <Arrow width={20} height={20} className="h-3 w-3  stroke-[2] " />
     </motion.div>
   );
 };

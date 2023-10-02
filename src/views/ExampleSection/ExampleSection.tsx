@@ -75,10 +75,10 @@ export const ExampleSection = () => (
     <Button tag="a" accent={false} className="mb-[10px]">
       {common.buttonsText.v5}
       <Icon
-        icon="arrowDown"
+        icon="arrow"
         width={8}
         height={8}
-        className="ml-[5px] inline-block"
+        className="ml-[5px] inline-block -rotate-[135deg]"
       />
     </Button>
 

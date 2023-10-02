@@ -1,6 +1,6 @@
 export const variants = {
-  up: { stroke: '#B454FF', rotate: 90 },
-  down: { stroke: 'white', rotate: 0 },
+  up: { stroke: '#B454FF', rotate: -45 },
+  down: { stroke: 'white', rotate: -135 },
 };
 
 export const transition = {

@@ -30,8 +30,8 @@ export const CaseCard: React.FC<CaseCardProps> = ({ title, link, list }) => {
           <Icon
             height={10}
             width={10}
-            icon="arrowUp"
-            className=" ml-[5px] inline-block h-[10px] w-[10px] xl:ml-[7px] xl:h-[15px] xl:w-[15px]"
+            icon="arrow"
+            className=" ml-[5px] inline-block h-[10px] w-[10px] -rotate-[135deg] xl:ml-[7px] xl:h-[15px] xl:w-[15px]"
           />
         </h3>
         <Icon
