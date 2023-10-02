@@ -5,14 +5,16 @@ import classNames from 'classnames';
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import { SocialsMenu } from '@/components/ui/SocialsMenu';
+import { Icon } from '@/components/ui/Icon';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
 import { Form } from '@/components/Form';
+import { Advantages } from '@/components/Advantages';
 
-import data from '@/data/cases.json';
+import cases from '@/data/cases.json';
+import common from '@/data/common.json';
 import expertiseData from '@/data/expertise.json';
 
-import Arrow from 'public/icons/icon_arrowdown.svg';
 import s from '@/views/ExampleSection/ExampleSection.module.css';
 
 const { messages } = expertiseData;
@@ -26,55 +28,58 @@ export const ExampleSection = () => (
   >
     <h2 className="mt-[100px]">This is example of section</h2>
     <Countdown into="hero" />
+
     {/* Кнопка консультації */}
     <Button
       tag="a"
       accent={false}
       href="/"
-      content="КОНСУЛЬТАЦІЯ"
-      className="mb-[10px] hidden xl:block xl:w-[129px] xl:px-[10px] xl:py-[3.5px]"
-      fontStyle="xl:text-xs"
-    />
+      className="mb-[10px] hidden uppercase xl:block xl:w-[129px] xl:px-[10px] xl:py-[8px] xl:text-xs"
+    >
+      {common.buttonsText.v1}
+    </Button>
+
     {/* Кнопка детальніше */}
     <Button
       tag="a"
       accent={false}
       href="customId"
-      content="TEST SCROLL"
-      className="mb-[10px] hidden xl:block xl:w-[150px] xl:py-[16px] "
-    />
+      className="mb-[10px] hidden xl:block xl:w-[150px] xl:py-[16.5px] xl:text-l_small"
+    >
+      {common.buttonsText.v2}
+    </Button>
+
     {/* Кнопка Залишити заявку */}
-    <Button
-      tag="a"
-      accent={true}
-      href="/"
-      content="Залишити заявку"
-      className="mb-[10px] xl:w-[180px]"
-    />
-    {/* Кнопка Залишити заявку */}
-    <Button
-      tag="button"
-      accent={true}
-      buttonType="submit"
-      content="Обговорити запит"
-      className="mb-[10px] xl:w-[279px]"
-    />
+    <Button tag="a" accent={true} href="/" className="mb-[10px] xl:w-[180px]">
+      {common.buttonsText.v3}
+    </Button>
+
+    {/* Кнопка Обговорити запит */}
+    <Button tag="a" href="/" accent={true} className="mb-[10px] xl:w-[279px]">
+      {common.buttonsText.v4}
+    </Button>
+
     {/* Кнопка для форми, як баттон */}
     <Button
       tag="button"
       accent={true}
       buttonType="submit"
-      content="Залишити заявку"
       className="mb-[10px] xl:w-[279px]"
-    />
+    >
+      {common.buttonsText.v3}
+    </Button>
+
     {/* Кнопка із свг */}
-    <Button
-      tag="a"
-      accent={false}
-      content="І разом з ними ми досягли ось таких результатів в проектах"
-      icon={Arrow}
-      className="mb-[10px]"
-    />
+    <Button tag="a" accent={false} className="mb-[10px]">
+      {common.buttonsText.v5}
+      <Icon
+        icon="arrowDown"
+        width={8}
+        height={8}
+        className="ml-[5px] inline-block"
+      />
+    </Button>
+
     {/* Кнопки соціальні із свг */}
     <SocialsMenu />
     {/* Кнопки усі із свг icon="назва"*/}
@@ -82,11 +87,10 @@ export const ExampleSection = () => (
 
     {/* Приклад списку кейсів, пропси на картку без назви, просто розпилити */}
     <ul className="flex flex-wrap gap-5">
-      {data.cases.slice(-3).map((cardProps, idx) => (
+      {cases.cases.slice(-3).map((cardProps, idx) => (
         <CaseCard key={idx} {...cardProps} />
       ))}
     </ul>
-
     {/* аккoрдeon */}
     <Accordion />
 
@@ -121,6 +125,8 @@ export const ExampleSection = () => (
         </li>
       ))}
     </ul>
+
+    <Advantages />
 
     {/* Елемент для тестування скролу */}
     <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>

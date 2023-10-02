@@ -101,14 +101,11 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
         accent={true}
         // disbaled={isLoading}
         buttonType="submit"
-        content={isLoading ? onLoadingMessage : commonData.buttonsText.v3}
         className="mx-auto md:w-[328px] xl:w-[279px]"
-      />
-
-      <div className="mx-auto mt-3 flex items-baseline justify-center gap-[24px]">
-        <p className="text-l_middle">{onLoadingMessage}</p>
-        <Loader />
-      </div>
+      >
+        {isLoading ? onLoadingMessage : commonData.buttonsText.v4}
+        {isLoading ? <Loader /> : null}
+      </Button>
     </form>
   );
 };
