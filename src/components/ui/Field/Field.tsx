@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { FieldError } from '../FieldError';
 import { FieldProps } from './types';
 
@@ -12,9 +13,13 @@ export const Field: React.FC<FieldProps> = ({
 }) => {
   const isError = errors[name];
 
+  const fieldClasses = classNames('field h-[40px]', {
+    error: isError,
+  });
+
   return (
     <>
-      <div className="field h-[40px]">
+      <div className={fieldClasses}>
         <input
           className="field-input"
           id={id}
