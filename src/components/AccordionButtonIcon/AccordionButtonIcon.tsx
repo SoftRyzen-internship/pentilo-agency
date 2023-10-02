@@ -1,24 +1,19 @@
 import { motion } from 'framer-motion';
 
-// import { IAccordionProps } from './types';
+import Passive from 'public/icons/icon_arrowdown.svg';
+
 import { transition, variants } from './variants';
+
 import { IAccordionButtonProps } from './type';
 
-export const AccordionButtonIcon = ({
-  children,
-  ind,
-}: IAccordionButtonProps) => {
+export const AccordionButtonIcon = ({ state }: IAccordionButtonProps) => {
   return (
     <motion.div
-      key={ind}
-      initial="collapsed"
-      animate="open"
-      exit="collapsed"
+      animate={state ? 'up' : 'down'}
       variants={variants}
       transition={transition}
-      className=" flex flex-col gap-2"
     >
-      {children}
+      <Passive className="h-3 w-3  stroke-[4] " />
     </motion.div>
   );
 };
