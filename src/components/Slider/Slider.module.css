@@ -1,0 +1,10 @@
+.slider-controller .wrap {
+    display: none !important;
+}
+
+
+@media (min-width: 1280px){
+    .slider-controller .wrap{
+    display: block !important;
+  }
+  }

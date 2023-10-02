@@ -43,12 +43,17 @@ body {
 } 
 
 
-
-.swiper-button-next.slider-arrow{
-  width: 20px;
-  height: 20px;
-
+/* .slider-arrow{
+  display: none !important;
 }
+
+
+@media (min-width: 1280px){
+  .slider-arrow{
+    display: block !important;
+  }
+  } */
+
 .swiper-button-next.slider-arrow::after {
   content: url('/icons/icon_arrowright.svg');
   position: absolute;
@@ -85,7 +90,11 @@ padding-bottom: 40px;
 
   
   .swiper-slide:not(.swiper-slide-visible){
-  opacity: 0 !important
-}
+    opacity: 0 !important
+  }
+
+  .swiper-slide:not(.swiper-slide-active){
+    opacity: 0.5;
+  }
 
 }
