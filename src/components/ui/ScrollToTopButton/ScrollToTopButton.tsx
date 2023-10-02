@@ -1,7 +1,7 @@
 'use client';
 
 import { useScrollVisibility } from '@/utils/useScrollVisibility';
-// import { smoothScroll } from '@/utils';
+import { smoothScroll } from '@/utils';
 
 import css from './ScrollToTopButton.module.css';
 
@@ -17,7 +17,7 @@ export const ScrollToTopButton = ({ sectionIdStart }) => {
          shadow-button transition-opacity hover:bg-purple-hover ${
            isVisible ? 'opacity-100' : 'opacity-0'
          }`}
-      // onClick={(e: React.MouseEvent) => smoothScroll(e)}
+      onClick={(e: React.MouseEvent) => smoothScroll(e, undefined)}
       aria-label="Повернутись догори"
       role="button"
     ></a>
