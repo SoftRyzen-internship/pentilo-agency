@@ -13,7 +13,7 @@ export const AccordionButtonIcon = ({ state }: IAccordionButtonProps) => {
       variants={variants}
       transition={transition}
     >
-      <Passive className="h-3 w-3  stroke-[4] " />
+      <Passive className="h-3 w-3  stroke-[2] " />
     </motion.div>
   );
 };
