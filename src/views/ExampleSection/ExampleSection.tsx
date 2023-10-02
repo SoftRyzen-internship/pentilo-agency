@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import { SocialsMenu } from '@/components/ui/SocialsMenu';
+import NavigationRow from '@/components/ui/NavigationRow/NavigationRow';
 import { Icon } from '@/components/ui/Icon';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
@@ -26,6 +27,7 @@ export const ExampleSection = () => (
     id="expertise"
     className={`${s.section}  text-shadow-xxs container relative h-[150vh]`}
   >
+    <NavigationRow variant="header" />
     <h2 className="mt-[100px]">This is example of section</h2>
     <Countdown into="hero" />
 
@@ -83,8 +85,7 @@ export const ExampleSection = () => (
     {/* Кнопки соціальні із свг */}
     <SocialsMenu />
     {/* Кнопки усі із свг icon="назва"*/}
-    {/* <Icon icon="star" width={24} height={24} />; */}
-
+    <Icon icon="arrow" width={24} height={24} />
     {/* Приклад списку кейсів, пропси на картку без назви, просто розпилити */}
     <ul className="flex flex-wrap gap-5">
       {cases.cases.slice(-3).map((cardProps, idx) => (
@@ -127,8 +128,13 @@ export const ExampleSection = () => (
     </ul>
 
     <Advantages />
-
     {/* Елемент для тестування скролу */}
     <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
+    <div
+      id="about"
+      className={`${s.div} text-shadow-xxs container relative  h-[350vh] w-[100%] bg-[url('/images/bg/bgdesk.webp')]`}
+    >
+      Тестовий сектор id=about для перевірки роботи навігації
+    </div>
   </section>
 );

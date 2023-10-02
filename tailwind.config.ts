@@ -28,7 +28,8 @@ const config: Config = {
 
     extend: {
       fontFamily: {
-        open_sans: ['var(----font-open-sans)'],
+        open_sans: ['var(--font-open-sans)'],
+        inter: ['var(--font-inter)'],
         dela_gothic: ['var(--font-dela-gothic)'],
       },
       fontSize: {

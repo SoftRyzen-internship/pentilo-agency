@@ -1,5 +1,6 @@
 type SocialMenuVariants = 'mobile-menu' | 'default';
 export type IconNames =
+  | 'arrow'
   | 'arrowDown'
   | 'arrowUp'
   | 'burger'
