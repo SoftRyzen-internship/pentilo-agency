@@ -69,8 +69,8 @@ export const MLogoSvg: React.FC = () => {
       initial="initial"
       animate="animate"
       width="101"
-      height="39"
-      viewBox="0 0 101 39"
+      height="38"
+      viewBox="0 0 101 38"
       fill="none"
     >
       <motion.path

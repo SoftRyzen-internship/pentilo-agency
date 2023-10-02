@@ -14,13 +14,11 @@ export const headerVariants = {
     y: 0,
     x: '-50%',
     transition: {
-      // staggerChildren: 2,
-      // delayChildren: 10,
-
-      // when: 'beforeChildren',
       type: 'spring',
       stiffness: 35,
-      ease: 'easeInOut',
+      // duration: 0.5,
+      // type: 'linear',
+      // ease: 'easeInOut',
     },
   },
 };
