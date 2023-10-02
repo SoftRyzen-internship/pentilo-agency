@@ -22,17 +22,17 @@ export const AdvantagesList: React.FC = () => {
         <motion.li
           variants={fadeInUp}
           key={idx}
-          className={`w-full max-w-[328px] rounded-[16px] px-[30px] pb-[30px] pt-[40px] 
-            md:h-[207px] md:max-w-[380px] md:pr-6 ${css.border} advant${idx}`}
+          className={`w-full max-w-[328px] rounded-[16px] px-[27px] pb-[30px] pt-[40px] 
+            md:h-[207px] md:max-w-[380px] md:pr-5 ${css.border} advant${idx}`}
         >
           <Icon
             width={12}
             height={12}
-            icon="arrowDown"
-            className="mb-9 ml-auto h-[12px] w-[12px]"
+            icon="arrow"
+            className="ml-auto h-[12px] w-[12px] -rotate-[135deg]"
           />
 
-          <p className=" text-s_big md:text-l_big">{text}</p>
+          <p className=" mt-9 text-s_big md:text-l_big">{text}</p>
         </motion.li>
       ))}
     </motion.ul>
