@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 import React from 'react';
 
@@ -19,23 +18,20 @@ export const AdvantagesList: React.FC = () => {
       className="mx-auto grid max-w-[328px] gap-4 md:max-w-[380px] md:gap-6 
     xl:max-w-max xl:grid-cols-3 xl:gap-5"
     >
-      {data.advantages.map(({ icon, text, path }, idx) => (
+      {data.advantages.map(({ text }, idx) => (
         <motion.li
           variants={fadeInUp}
           key={idx}
-          className={`w-full max-w-[328px] rounded-[16px] px-[30px] pb-[30px] 
-          pt-[22px] md:h-[207px] md:max-w-[380px] md:pr-6 ${css.border}`}
+          className={`w-full max-w-[328px] rounded-[16px] px-[30px] pb-[30px] pt-[40px] 
+            md:h-[207px] md:max-w-[380px] md:pr-6 ${css.border} advant${idx}`}
         >
-          <div className="mb-4 flex items-center justify-between">
-            <Image
-              src={path}
-              width={48}
-              height={48}
-              alt={icon}
-              className=" h-[48px] w-[48px]"
-            />
-            <Icon icon="arrowDown" className="h-[12px] w-[12px]" />
-          </div>
+          <Icon
+            width={12}
+            height={12}
+            icon="arrowDown"
+            className="mb-9 ml-auto h-[12px] w-[12px]"
+          />
+
           <p className=" text-s_big md:text-l_big">{text}</p>
         </motion.li>
       ))}
