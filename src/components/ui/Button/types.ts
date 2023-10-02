@@ -1,12 +1,10 @@
 export interface ButtonProps {
   tag: 'a' | 'button';
   accent: boolean;
-  content: string;
-  icon?: any;
+  children: React.ReactNode;
   href?: string;
   buttonType?: 'button' | 'submit';
   onClick?: () => void;
+  disabled?: boolean;
   className?: string;
-  classNameText?: string;
-  fontStyle?: string;
 }

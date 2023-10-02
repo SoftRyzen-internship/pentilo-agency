@@ -1,18 +1,18 @@
 .scrollBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .scrollBtn::before {
-    content: '';
-    width: 12px;
-    height: 12px;
-    transform: rotate(135deg);
-    background-image: url('/icons/icon_arrowdown.svg');
-    background-size: cover;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollBtn::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  transform: rotate(135deg);
+  background-image: url('/icons/icon_arrowdown.svg');
+  background-size: cover;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
