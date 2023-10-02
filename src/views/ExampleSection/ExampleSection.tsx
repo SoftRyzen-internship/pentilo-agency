@@ -8,7 +8,6 @@ import { SocialsMenu } from '@/components/ui/SocialsMenu';
 import { Icon } from '@/components/ui/Icon';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
-import { Form } from '@/components/Form';
 import { Advantages } from '@/components/Advantages';
 
 import cases from '@/data/cases.json';
@@ -72,10 +71,6 @@ export const ExampleSection = () => (
     </ul>
     {/* аккoрдeon */}
     <Accordion />
-
-    {/* Form */}
-
-    <Form className="mx-auto mt-10" />
 
     {/* мнемокод vs png */}
 

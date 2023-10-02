@@ -13,22 +13,16 @@ import { Field } from '../ui/Field';
 import { TextArea } from '../ui/TextArea/TextArea';
 import { Countdown } from '../ui/Countdown';
 import { Button } from '../ui/Button';
+import { Loader } from '../ui/Loader';
 
 import { FormProps, PopUpType, StatusVariants } from './types';
 import { schema } from './schema';
 import data from '@/data/form.json';
-import commonData from '@/data/common.json';
-
-import './form.css';
-import { Loader } from '../ui/Loader';
+import common from '@/data/common.json';
 
 const { form, timerText, notifications, onLoadingMessage } = data;
 const { inputs, textarea } = form;
 const { onSuccess, onError } = notifications;
-
-// TODO:
-// 1) loader on loading (waiting for btn update)
-// 2) disable btn when loading (waiting for btn update)
 
 export const Form: React.FC<FormProps> = ({ className = '' }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -77,6 +71,10 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
   };
 
   const formClassName = classNames('md:w-[380px]', className);
+  const btnClasses = classNames(
+    'mx-auto flex items-baseline justify-center gap-[24px] md:w-[328px] xl:w-[279px] duration-300 ease-in-out',
+    { 'bg-opacity-50': isLoading },
+  );
 
   return (
     <form className={formClassName} onSubmit={handleSubmit(onSubmit)}>
@@ -99,11 +97,11 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
       <Button
         tag="button"
         accent={true}
-        // disbaled={isLoading}
+        disabled={isLoading}
         buttonType="submit"
-        className="mx-auto md:w-[328px] xl:w-[279px]"
+        className={btnClasses}
       >
-        {isLoading ? onLoadingMessage : commonData.buttonsText.v4}
+        {isLoading ? onLoadingMessage : common.buttonsText.v3}
         {isLoading ? <Loader /> : null}
       </Button>
     </form>
