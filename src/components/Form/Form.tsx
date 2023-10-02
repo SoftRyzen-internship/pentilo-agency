@@ -92,13 +92,15 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
         <p>{timerText}</p>
         <Countdown into="form" />
       </div>
+
       <Button
         tag="button"
         accent={true}
         buttonType="submit"
-        content={btndata.buttonsText.v3}
         className="mx-auto md:w-[328px] xl:w-[279px]"
-      />
+      >
+        {btndata.buttonsText.v3}
+      </Button>
     </form>
   );
 };
