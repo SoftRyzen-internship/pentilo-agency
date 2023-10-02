@@ -1,8 +1,8 @@
-// export interface SectionProps {
-//   section: 'cases' | 'services' | 'expertise';
-// }
+export interface SectionProps {
+  section: 'cases' | 'services' | 'expertise';
+}
 
-export interface SliderProps {
+export interface SliderProps extends SectionProps {
   section: 'cases' | 'services' | 'expertise';
   pagination?: boolean;
   navigation?: boolean;

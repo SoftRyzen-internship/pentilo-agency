@@ -1,12 +1,6 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  EffectCoverflow,
-} from 'swiper/modules';
 import { SliderProps } from './types';
 import { useEffect, useRef } from 'react';
 import 'swiper/css';
@@ -16,7 +10,7 @@ import 'swiper/css/effect-coverflow';
 
 import './styles.css';
 import useWindowSize from '@/utils/useWindowSize';
-import { SwiperModule } from 'swiper/types';
+import { getSliderBreakpointsOptions } from '@/utils/getSliderBreakpointsOptions';
 
 export const Slider: React.FC<SliderProps> = ({
   section,
@@ -40,17 +34,10 @@ export const Slider: React.FC<SliderProps> = ({
     }
   }, [width, section]);
 
-  function getModules(section: any): SwiperModule[] {
-    let modules = [Pagination, Navigation];
 
-    if (section === 'cases') {
-      modules.push(EffectCoverflow);
+    function getSwiperModules(section: string, width: number): import("swiper/types").SwiperModule[] | undefined {
+        throw new Error('Function not implemented.');
     }
-    if (section != 'cases' && width !== null && width < 1440) {
-      modules.push(Autoplay);
-    }
-    return modules;
-  }
 
   return (
     <Swiper
@@ -65,18 +52,7 @@ export const Slider: React.FC<SliderProps> = ({
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }}
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          initialSlide: 0,
-        },
-        1440: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-          initialSlide: 1,
-        },
-      }}
+      breakpoints={getSliderBreakpointsOptions()}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
@@ -97,7 +73,7 @@ export const Slider: React.FC<SliderProps> = ({
             }
           : false
       }
-      modules={getModules(section)}
+      modules={getSwiperModules(section, width)}
       className={className}
     >
       <div className="wrapper bg-slate-400">
