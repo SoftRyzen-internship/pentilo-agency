@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 
 import {
-  Autoplay,
+//   Autoplay,
   Navigation,
   Pagination,
   EffectCoverflow,
@@ -18,7 +18,7 @@ import {
 import './styles.css';
 import useWindowSize from '@/utils/useWindowSize';
 import { getSliderBreakpointsOptions } from '@/utils/getSliderBreakpointsOptions';
-import { getSwiperModules } from '@/utils/getSwiperModules';
+// import { getSwiperModules } from '@/utils/getSwiperModules';
 
 export const Slider: React.FC<SliderProps> = ({
   section,
@@ -31,6 +31,8 @@ export const Slider: React.FC<SliderProps> = ({
   const swiperRef: any = useRef<typeof Swiper | null>(null);
 
   const { width } = useWindowSize();
+
+
 
 //   useEffect(() => {
 //     if (
@@ -62,17 +64,17 @@ console.log(swiperRef.current.swiper)
   return (
     <Swiper
       ref={swiperRef}
-      updateOnWindowResize={true}
+    //   updateOnWindowResize={true}
     //   effect={'coverflow'}
-      grabCursor={true}
+    //   grabCursor={true}
       centeredSlides={true}
-      slideToClickedSlide={true}
+    //   slideToClickedSlide={true}
     //   autoplay={{
     //     delay: 3000,
     //     disableOnInteraction: false,
     //     pauseOnMouseEnter: true,
     //   }}
-      breakpoints={getSliderBreakpointsOptions()}
+    //   breakpoints={getSliderBreakpointsOptions()}
     //   coverflowEffect={{
     //     rotate: 0,
     //     stretch: 0,
@@ -94,7 +96,7 @@ console.log(swiperRef.current.swiper)
           : false
       }
     //   modules={getSwiperModules(section, width)}
-      modules={[Navigation, Pagination, EffectCoverflow]}
+      modules={[Navigation, Pagination]}
       className={`${className}`}
     >
       <div className="wrapper bg-slate-400">
@@ -102,7 +104,7 @@ console.log(swiperRef.current.swiper)
           return (
             <SwiperSlide
               key={idx}
-              className={`${slideClassName}`}
+              className={`${slideClassName} z-10`}
             >
               <Element {...item} className="elementSlider" />
             </SwiperSlide>

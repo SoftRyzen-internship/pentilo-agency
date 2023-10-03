@@ -130,6 +130,9 @@ textarea + .field-label {
 
 /* Slider */
 
-.swiper .swiper-wrapper > .swiper-slide {
-  display: flex 
+
+.swiper .swiper-wrapper > .swiper-slide.casesSlide{
+  /* width: auto !important; */
+  display: flex !important;
+  justify-content: center !important;
 }
