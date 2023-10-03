@@ -2,17 +2,20 @@
 
 import { CaseCard } from '@/components/CaseCard';
 import { Slider } from '@/components/Slider';
+import { Button } from '@/components/ui/Button';
+import { apply } from '@/constants';
 import cases from '@/data/cases.json';
+import common from '@/data/common.json';
 import classNames from 'classnames';
 
 export const CasesSection: React.FC = () => {
 
     const titleClasses = classNames(
-        'relative w-[328px] mx-auto mb-10 text-center font-dela_gothic text-xxl_middle uppercase',
-        'text-shadow-text md:w-[500px] xl:mb-20 xl:w-[800px] xl:text-xxxl_small',
+        'relative mx-auto mb-6 text-center font-dela_gothic text-xxl_middle uppercase',
+        'text-shadow-text xl:mb-20 xl:w-[800px] xl:text-xxxl_small',
       );
   return (
-    <section>
+    <section className="my-[50px] xl:my-[75px]">
         <h2 className={titleClasses}>{cases.title}</h2>
       <div className="container">
         <Slider
@@ -20,10 +23,18 @@ export const CasesSection: React.FC = () => {
           data={cases.cases}
           element={CaseCard}
           navigation={true}
-          className="cases"
+          className="cases mb-4 xl:mb-14"
           slideClassName="casesSlide"
         />
-      </div>
+     
+      <Button
+          tag="a"
+          href={apply}
+          accent={true}
+          className="mx-auto xl:w-[279px]"
+        >
+          {common.buttonsText.v3}
+        </Button> </div>
     </section>
   );
 };

@@ -16,7 +16,5 @@ export function getSwiperModules(section: any, width: any): SwiperModule[] {
   if (section != 'cases' && width !== null && width < 1440) {
     modules.push(Autoplay);
   }
-
-  console.log(modules)
   return modules;
 }
