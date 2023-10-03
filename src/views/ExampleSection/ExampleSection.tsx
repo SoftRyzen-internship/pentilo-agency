@@ -16,6 +16,7 @@ import common from '@/data/common.json';
 import expertiseData from '@/data/expertise.json';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
+import { AboutSection } from '../AboutSection';
 import { Slider } from '@/components/Slider';
 
 const { messages } = expertiseData;
@@ -29,7 +30,15 @@ export const ExampleSection = () => (
   >
     <h2 className="mt-[100px]">This is example of section</h2>
     <Countdown into="hero" />
-
+    {/* Кнопка консультації */}
+    <Button
+      tag="a"
+      accent={false}
+      href="/"
+      className="mb-[10px] hidden uppercase xl:block xl:w-[129px] xl:px-[10px] xl:py-[8px] xl:text-xs"
+    >
+      {common.buttonsText.v1}
+    </Button>
     {/* Кнопка детальніше */}
     <Button
       tag="a"
@@ -39,17 +48,23 @@ export const ExampleSection = () => (
     >
       {common.buttonsText.v2}
     </Button>
-
     {/* Кнопка Залишити заявку */}
     <Button tag="a" accent={true} href="/" className="mb-[10px] xl:w-[180px]">
       {common.buttonsText.v3}
     </Button>
-
     {/* Кнопка Обговорити запит */}
     <Button tag="a" href="/" accent={true} className="mb-[10px] xl:w-[279px]">
       {common.buttonsText.v4}
     </Button>
-
+    {/* Кнопка для форми, як баттон */}
+    <Button
+      tag="button"
+      accent={true}
+      buttonType="submit"
+      className="mb-[10px] xl:w-[279px]"
+    >
+      {common.buttonsText.v3}
+    </Button>
     {/* Кнопка із свг */}
     <Button tag="a" accent={false} className="mb-[10px]">
       {common.buttonsText.v5}
@@ -74,11 +89,11 @@ export const ExampleSection = () => (
     </ul>
     {/* аккoрдeon */}
     <Accordion />
+    {/* Form */}
+    <Form className="mx-auto mt-10" />
 
     {/* мнемокод vs png */}
-
     <p className="mt-10 text-center">PNG</p>
-
     <ul className="mx-auto mt-10 flex justify-center gap-4">
       {messages.map(({ decorImage, username }) => {
         const styles = { backgroundImage: `url(${decorImage})` };
@@ -92,9 +107,7 @@ export const ExampleSection = () => (
         );
       })}
     </ul>
-
     <p className="mt-10 text-center">Мнемокод</p>
-
     <ul className="mx-auto mt-10 flex justify-center gap-4">
       {mnemocode.map(decorImageCode => (
         <li key={decorImageCode}>
@@ -102,8 +115,11 @@ export const ExampleSection = () => (
         </li>
       ))}
     </ul>
-
     <Advantages />
+    <AboutSection />
+    {/* Елемент для тестування скролу */}
+    <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
+    {/* <div
 
     {/* Елемент для тестування скролу */}
     <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>
@@ -112,6 +128,8 @@ export const ExampleSection = () => (
       className={`${s.div} text-shadow-xxs container relative  h-[350vh] w-[100%] bg-[url('/images/bg/bgdesk.webp')]`}
     >
       Тестовий сектор id=about для перевірки роботи навігації
+    </div> */}
+  </section>
     </div>
     
 
