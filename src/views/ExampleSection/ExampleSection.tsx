@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import { SocialsMenu } from '@/components/ui/SocialsMenu';
-import NavigationRow from '@/components/ui/NavigationRow/NavigationRow';
+import { NavigationRow } from '@/components/ui/NavigationRow/NavigationRow';
 import { Icon } from '@/components/ui/Icon';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
@@ -30,7 +30,6 @@ export const ExampleSection = () => (
     <NavigationRow variant="header" />
     <h2 className="mt-[100px]">This is example of section</h2>
     <Countdown into="hero" />
-
     {/* Кнопка консультації */}
     <Button
       tag="a"
@@ -40,7 +39,6 @@ export const ExampleSection = () => (
     >
       {common.buttonsText.v1}
     </Button>
-
     {/* Кнопка детальніше */}
     <Button
       tag="a"
@@ -50,17 +48,14 @@ export const ExampleSection = () => (
     >
       {common.buttonsText.v2}
     </Button>
-
     {/* Кнопка Залишити заявку */}
     <Button tag="a" accent={true} href="/" className="mb-[10px] xl:w-[180px]">
       {common.buttonsText.v3}
     </Button>
-
     {/* Кнопка Обговорити запит */}
     <Button tag="a" href="/" accent={true} className="mb-[10px] xl:w-[279px]">
       {common.buttonsText.v4}
     </Button>
-
     {/* Кнопка для форми, як баттон */}
     <Button
       tag="button"
@@ -70,7 +65,6 @@ export const ExampleSection = () => (
     >
       {common.buttonsText.v3}
     </Button>
-
     {/* Кнопка із свг */}
     <Button tag="a" accent={false} className="mb-[10px]">
       {common.buttonsText.v5}
@@ -81,7 +75,6 @@ export const ExampleSection = () => (
         className="ml-[5px] inline-block -rotate-[135deg]"
       />
     </Button>
-
     {/* Кнопки соціальні із свг */}
     <SocialsMenu />
     {/* Кнопки усі із свг icon="назва"*/}
@@ -94,15 +87,10 @@ export const ExampleSection = () => (
     </ul>
     {/* аккoрдeon */}
     <Accordion />
-
     {/* Form */}
-
     <Form className="mx-auto mt-10" />
-
     {/* мнемокод vs png */}
-
     <p className="mt-10 text-center">PNG</p>
-
     <ul className="mx-auto mt-10 flex justify-center gap-4">
       {messages.map(({ decorImage, username }) => {
         const styles = { backgroundImage: `url(${decorImage})` };
@@ -116,9 +104,7 @@ export const ExampleSection = () => (
         );
       })}
     </ul>
-
     <p className="mt-10 text-center">Мнемокод</p>
-
     <ul className="mx-auto mt-10 flex justify-center gap-4">
       {mnemocode.map(decorImageCode => (
         <li key={decorImageCode}>
@@ -126,9 +112,8 @@ export const ExampleSection = () => (
         </li>
       ))}
     </ul>
-
     <Advantages />
-    {/* Елемент для тестування скролу */}
+    Елемент для тестування скролу
     <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
     <div
       id="about"

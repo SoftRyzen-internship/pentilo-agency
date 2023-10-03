@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import { useScrollVisibility } from '@/utils/useScrollVisibility';
@@ -19,11 +21,11 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
   return (
     <li
       onClick={handleClick}
-      className={`cursor-pointer font-inter font-normal transition hover:text-purple-light focus:text-purple-light ${
+      className={` cursor-pointer font-inter font-normal transition hover:text-purple-light focus:text-purple-light ${
         isVisible ? 'text-purple-light' : 'text-grey'
       }`}
     >
-      {title}
+      <p>{title}</p>
     </li>
   );
 };

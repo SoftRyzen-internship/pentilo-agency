@@ -5,8 +5,8 @@ import { useScroll, useMotionValueEvent, motion } from 'framer-motion';
 
 import { SCROLL_HEIGHT } from '@/constants/scroll';
 
-import { Logo } from '@/components/ui/Logo';
 import { blur } from './variants';
+import { Logo } from '@/components/ui/Logo';
 
 export const Header = () => {
   const [isBlur, setIsBlur] = useState(false);

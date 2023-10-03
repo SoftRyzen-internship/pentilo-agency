@@ -19,6 +19,7 @@ export const SocialsMenu: React.FC<SocialsMenuProps> = ({
   const iconSizes = {
     default: { width: 20, height: 20 },
     'mobile-menu': { width: 24, height: 24 },
+    footer: { width: 20, height: 20 },
   };
 
   const { width: iconWidth, height: iconHeight } = iconSizes[variant];
@@ -28,6 +29,7 @@ export const SocialsMenu: React.FC<SocialsMenuProps> = ({
       'fixed bottom-[80px] right-0 z-10 xl:hidden flex flex-row gap-4':
         variant === 'default',
       'flex gap-5': variant === 'mobile-menu',
+      'flex gap-4': variant === 'footer',
     },
     className,
   );
@@ -44,7 +46,7 @@ export const SocialsMenu: React.FC<SocialsMenuProps> = ({
           >
             <Icon
               icon={icon}
-              variant={variant}
+              // variant={variant}
               width={iconWidth}
               height={iconHeight}
             />
