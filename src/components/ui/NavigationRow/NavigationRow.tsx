@@ -8,6 +8,7 @@ import { NavigationRowProps } from '@/components/ui/NavigationRow/types';
 export const NavigationRow: React.FC<NavigationRowProps> = ({
   variant,
   className,
+  onClick,
 }) => {
   const NavigationRowClasses = classNames(`flex ${className}`, {
     'text-white text-center text-s_xs flex-col gap-6 xl:hidden':
@@ -21,7 +22,12 @@ export const NavigationRow: React.FC<NavigationRowProps> = ({
   return (
     <ul className={NavigationRowClasses}>
       {navLinks.map((link, index) => (
-        <NavigationRowLink key={index} title={link.title} href={link.href} />
+        <NavigationRowLink
+          key={index}
+          title={link.title}
+          href={link.href}
+          onClick={onClick}
+        />
       ))}
     </ul>
   );

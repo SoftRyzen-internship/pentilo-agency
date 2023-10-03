@@ -6,6 +6,7 @@ import { NavigationRowLinkProps } from '@/components/ui/NavigationRowLink/types'
 export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
   title,
   href,
+  onClick,
 }) => {
   const isVisible = useScrollVisibility(title);
 
@@ -13,6 +14,7 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
     const sectionElement = document.querySelector(href);
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: 'smooth' });
+      if (onClick) onClick();
     }
   };
 

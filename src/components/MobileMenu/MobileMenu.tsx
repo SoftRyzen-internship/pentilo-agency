@@ -55,14 +55,15 @@ export const MobileMenu: React.FC = () => {
             </MobileMenuBtn>
             <NavigationRow
               variant="mobile-menu"
+              onClick={() => setOpenMenu(false)}
               className="mx-auto mt-[153px] max-w-max"
             />
             <Button
               tag="a"
               accent={true}
-              href="/"
+              href="about"
               onClick={() => setOpenMenu(false)}
-              className="mx-auto mt-8 max-w-[153px] text-xs uppercase"
+              className="mx-auto mt-8 w-[153px] text-xs uppercase"
             >
               {common.buttonsText.v1}
             </Button>
