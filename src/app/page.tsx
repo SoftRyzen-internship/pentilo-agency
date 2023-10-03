@@ -9,7 +9,7 @@ export default function Home() {
     <>
       {/* <ExampleSection />
       <ScrollToTopButton sectionIdStart="advantages" /> */}
-      <div className="h-[800px]" id="advantages"></div>
+      <div className="h-[100px]"></div>
       <div className="pt-[56px]"></div>
       <Expertise />
       <ApplyForm />
