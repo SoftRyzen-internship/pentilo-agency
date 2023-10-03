@@ -7,7 +7,7 @@
   position: absolute;
   inset: 0;
   border-radius: 24px;
-  padding: 1px;
+  padding: 1.5px;
   background: linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
