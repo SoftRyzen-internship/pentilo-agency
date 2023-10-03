@@ -21,11 +21,13 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
   return (
     <li
       onClick={handleClick}
-      className={` cursor-pointer font-inter font-normal transition hover:text-purple-light focus:text-purple-light ${
-        isVisible ? 'text-purple-light' : 'text-grey'
-      }`}
+      // className={` cursor-pointer font-inter font-normal transition hover:text-purple-light focus:text-purple-light ${
+      //   isVisible ? 'text-purple-light' : 'text-grey'
+      // }`}
+      className={`btn-transition cursor-pointer font-inter font-normal transition hover:text-purple-light focus:text-purple-light 
+      ${isVisible ? 'text-purple-light' : 'text-grey'}`}
     >
-      <p>{title}</p>
+      <p>{title}</p>n
     </li>
   );
 };

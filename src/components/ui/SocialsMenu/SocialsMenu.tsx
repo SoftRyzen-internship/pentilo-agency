@@ -26,8 +26,7 @@ export const SocialsMenu: React.FC<SocialsMenuProps> = ({
 
   const menuStyles = classNames(
     {
-      'fixed bottom-[80px] right-0 z-10 xl:hidden flex flex-row gap-4':
-        variant === 'default',
+      'xl:flex hidden gap-4': variant === 'default',
       'flex gap-5': variant === 'mobile-menu',
       'flex gap-4': variant === 'footer',
     },

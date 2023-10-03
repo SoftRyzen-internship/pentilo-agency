@@ -1,0 +1,74 @@
+.swiper-button-next.slider-arrow::after {
+  content: url('/icons/icon_arrowright.svg');
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.swiper-button-prev.slider-arrow::after {
+  content: url('/icons/icon_arrowleft.svg');
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal
+  > span.swiper-pagination-bullet {
+  background-color: white;
+}
+
+/* cases */
+
+/* Hide overflow slides */
+
+@media (min-width: 1280px) {
+  .swiper.cases .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.5 !important;
+  }
+  .swiper.cases .swiper-slide:not(.swiper-slide-visible) {
+    opacity: 0 !important;
+  }
+}
+
+/* Overwriting default swiper styles */
+
+.swiper.cases
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+}
+
+/* Show pagination at the bottom */
+
+.swiper.cases .swiper-wrapper {
+  padding-bottom: 40px;
+}
+
+/* services */
+
+.swiper.services .swiper-wrapper > .swiper-slide,
+.swiper.expertise .swiper-wrapper > .swiper-slide {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper.services
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper.expertise
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: 0;
+}
+
+.swiper.services .swiper-wrapper,
+.swiper.expertise .swiper-wrapper {
+  padding-top: 40px;
+}
+
+@media (min-width: 1280px) {
+  .swiper.services .swiper-wrapper,
+  .swiper.expertise .swiper-wrapper {
+    padding-top: 0;
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
