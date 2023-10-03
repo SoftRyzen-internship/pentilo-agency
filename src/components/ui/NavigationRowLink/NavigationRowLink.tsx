@@ -1,40 +1,33 @@
 'use client';
 
 import React from 'react';
-
-import { useScrollVisibility } from '@/utils/useScrollVisibility';
+import classNames from 'classnames';
 import { NavigationRowLinkProps } from '@/components/ui/NavigationRowLink/types';
-import styles from './NavigationRowLink.module.css';
 
 export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
   title,
   href,
   variant,
+  onClick,
 }) => {
-  const isVisible = useScrollVisibility(title);
-
   const handleClick = () => {
     const sectionElement = document.querySelector(href);
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const className =
-    variant === 'mobile-menu'
-      ? styles.mobileMenuHover
-      : variant === 'header' || variant === 'footer'
-      ? styles.defaultHover
-      : '';
+  const navlinkClasses = classNames(
+    'btn-transition cursor-pointer font-inter font-normal text-grey transition',
+    {
+      'hover:text-purple-light focus:text-purple-light':
+        variant === 'mobile-menu',
+      'hover:text-lightGray focus:text-lightGray': variant !== 'mobile-menu',
+    },
+  );
 
   return (
-    <li
-      onClick={handleClick}
-      className={`btn-transition cursor-pointer font-inter font-normal text-grey transition ${className} ${
-        isVisible ? 'text-grey' : ''
-      }`}
-    >
-      <p>{title}</p>
+    <li onClick={onClick} className={navlinkClasses}>
+      <a onClick={handleClick}>{title}</a>
     </li>
   );
 };
