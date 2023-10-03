@@ -1,4 +1,5 @@
 {
+  "title": "Звʼяжися з нами",
   "terms": {
     "text": "Terms of use",
     "href": ""
@@ -7,6 +8,11 @@
     "text": "Privacy Policy",
     "href": ""
   },
+  "email": {
+    "text": "pentilosmm@gmail.com",
+    "href": "mailto:pentilosmm@gmail.com"
+  },
+
   "rights": {
     "title": "All rights Reserved",
     "list": [

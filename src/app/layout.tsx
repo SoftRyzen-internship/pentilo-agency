@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { Open_Sans, Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+import { Toaster } from 'react-hot-toast';
 
 import './globals.css';
+
 import { Header } from '@/views/Header';
-import { Toaster } from 'react-hot-toast';
+import { Footer } from '@/views/Footer';
 
 const open_sans = Open_Sans({
   subsets: ['cyrillic', 'latin'],
@@ -39,6 +41,7 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
+        <Footer />
         <Toaster position="top-right" reverseOrder={true} />
       </body>
     </html>

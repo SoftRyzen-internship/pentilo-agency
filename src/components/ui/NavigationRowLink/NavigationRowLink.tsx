@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import { useScrollVisibility } from '@/utils/useScrollVisibility';
@@ -32,7 +34,7 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
         isVisible ? 'text-grey' : ''
       }`}
     >
-      {title}
+      <p>{title}</p>
     </li>
   );
 };
