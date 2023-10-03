@@ -30,11 +30,9 @@
   }
 }
 
-
-
 /* services */
 
-.swiper .swiper-wrapper > .swiper-slide.casesSlide{
+.swiper .swiper-wrapper > .swiper-slide.casesSlide {
   /* width: auto !important; */
   display: flex !important;
   justify-content: center !important;
@@ -54,18 +52,17 @@
 
 /* Show pagination at the bottom at desktop in cases section */
 
-@media (min-width: 1280px){
+@media (min-width: 1280px) {
   .swiper.cases .swiper-wrapper {
-  padding-top: 0;
-  padding-bottom: 40px;
-} 
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
 
-.swiper.cases
-  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 0;
-  top: auto;
-}
-
+  .swiper.cases
+    .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+    top: auto;
+  }
 }
 
 @media (min-width: 1280px) {

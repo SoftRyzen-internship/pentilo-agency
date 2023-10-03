@@ -127,11 +127,9 @@ textarea + .field-label {
   opacity: 1;
 }
 
-
 /* Slider */
 
-
-.swiper .swiper-wrapper > .swiper-slide.casesSlide{
+.swiper .swiper-wrapper > .swiper-slide.casesSlide {
   /* width: auto !important; */
   display: flex !important;
   justify-content: center !important;
