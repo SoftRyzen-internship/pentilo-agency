@@ -1,7 +1,9 @@
 import React from 'react';
 import { IconNames } from '@/components/ui/Icon/types';
 
-type SocialMenuVariants = 'mobile-menu' | 'default';
+// type SocialMenuVariants = 'mobile-menu' | 'default' | 'footer';
+
+type SocialMenuVariants = 'mobile-menu' | 'default' | 'footer';
 
 export type SocialContact = {
   name: string;
