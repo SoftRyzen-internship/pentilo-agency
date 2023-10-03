@@ -10,6 +10,16 @@ body {
   @apply transition duration-300 ease-in-out;
 }
 
+/* === Typography === */
+
+.heading2 {
+  @apply font-dela_gothic text-xxl_middle uppercase text-shadow-text xl:text-xxxl_small;
+}
+
+.section {
+  @apply py-[50px] xl:py-[75px];
+}
+
 /* === Advantages === */
 
 .advant0::before {
