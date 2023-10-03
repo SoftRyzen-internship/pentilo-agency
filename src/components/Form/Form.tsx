@@ -36,8 +36,7 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
     handleSubmit,
     formState: { errors },
   } = useForm<FieldValues>({
-    // @ts-expect-error RHF V7 limitation #7895
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema) as FieldValues | any,
   });
 
   useFormPersist(FORM_DATA_KEY, { watch, setValue });
