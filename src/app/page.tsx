@@ -1,7 +1,7 @@
 // import { ExampleSection } from '@/views/ExampleSection';
 // import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton';
-import { Expertise } from '@/views/Expertise';
-import { ApplyForm } from '@/views/ApplyForm';
+import { ExpertiseSection } from '@/views/ExpertiseSection';
+import { ApplyFormSection } from '@/views/ApplyFormSection';
 import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton';
 import { CasesSection } from '@/views/CasesSection';
 
@@ -12,9 +12,9 @@ export default function Home() {
       <ScrollToTopButton sectionIdStart="advantages" /> */}
       <div className="h-[100px]"></div>
       <div className="pt-[56px]"></div>
-      <Expertise />
+      <ExpertiseSection />
       <CasesSection />
-      <ApplyForm />
+      <ApplyFormSection />
       <ScrollToTopButton sectionIdStart="advantages" />
     </>
   );
