@@ -1,4 +1,5 @@
-type SocialMenuVariants = 'mobile-menu' | 'default';
+// type SocialMenuVariants = 'mobile-menu' | 'default' | 'footer';
+type SocialMenuVariants = 'mobile-menu' | 'default' | 'footer';
 
 export interface SocialButtonProps {
   link: string;

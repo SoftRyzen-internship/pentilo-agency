@@ -11,7 +11,7 @@ export const NavigationRow: React.FC<NavigationRowProps> = ({ variant }) => {
       variant === 'mobile-menu',
     'text-grey text-xs gap-8 flex-row smOnly:hidden mdOnly:hidden':
       variant === 'header',
-    'text-xs text-grey  smOnly:items-end md:items-start md:gap-4  flex-col gap-6 md:gap-5':
+    'text-xs text-grey  smOnly:items-end md:items-start md:gap-4  flex-col gap-6 md:gap-5 ':
       variant === 'footer',
   });
 

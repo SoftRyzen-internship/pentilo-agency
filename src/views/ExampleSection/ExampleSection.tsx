@@ -8,15 +8,17 @@ import { SocialsMenu } from '@/components/ui/SocialsMenu';
 import { Icon } from '@/components/ui/Icon';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
-import { Form } from '@/components/Form';
 import { Advantages } from '@/components/Advantages';
+import { Statistics } from '@/components/Statistics';
+import { AboutSection } from '../AboutSection';
+import { Slider } from '@/components/Slider';
+import { Form } from '@/components/Form';
 
 import cases from '@/data/cases.json';
 import common from '@/data/common.json';
 import expertiseData from '@/data/expertise.json';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
-import { AboutSection } from '../AboutSection';
 
 const { messages } = expertiseData;
 
@@ -74,6 +76,8 @@ export const ExampleSection = () => (
         className="ml-[5px] inline-block -rotate-[135deg]"
       />
     </Button>
+    <Statistics />
+
     {/* Кнопки соціальні із свг */}
     <SocialsMenu />
     {/* Кнопки усі із свг icon="назва"*/}
@@ -116,10 +120,22 @@ export const ExampleSection = () => (
     {/* Елемент для тестування скролу */}
     <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
     {/* <div
+
+    {/* Елемент для тестування скролу */}
+    <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
+    <div
       id="about"
       className={`${s.div} text-shadow-xxs container relative  h-[350vh] w-[100%] bg-[url('/images/bg/bgdesk.webp')]`}
-    >
-      Тестовий сектор id=about для перевірки роботи навігації
-    </div> */}
+    ></div>
+
+    {/* Slider in cases section */}
+    <Slider
+      section="cases"
+      data={cases.cases}
+      element={CaseCard}
+      navigation={true}
+      className="cases"
+      slideClassName="casesSlide"
+    />
   </section>
 );
