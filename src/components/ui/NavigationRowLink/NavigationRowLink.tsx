@@ -27,7 +27,7 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
       className={`btn-transition cursor-pointer font-inter font-normal transition hover:text-purple-light focus:text-purple-light 
       ${isVisible ? 'text-purple-light' : 'text-grey'}`}
     >
-      <p>{title}</p>n
+      <p>{title}</p>
     </li>
   );
 };
