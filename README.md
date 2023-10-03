@@ -222,6 +222,21 @@ component `Heading`
 | ---------------- | ----------- | --------------------------------------------- |
 | `sectionIdStart` | `undefined` | id of section where button should appear from |
 
+- ### Slider
+
+The `Slider` component is created using `swiper` library. 
+
+| Prop             | Default     | Description                                                           |
+| ---------------- | ----------- | --------------------------------------------------------------------- |
+| `section`        | `undefined` | choose the name of the section: `cases`, `services` or `expertise`    |
+| `pagination`     | `false`     | choose the pagination availability: `false` or `true`                 |
+| `navigation`     | `false`     | choose the navigation availability: `false` or `true`                 |
+| `autoplay`       | `false`     | choose the autoplay availability: `false` or `true`                   |
+| `data`           | `undefined` | any array of data for mapping                                         |
+| `element`        | `undefined` | the element that will be placed inside the slide                      |
+| `className`      | `undefined` | add any custom styles of `.swiper` element                            |
+| `slideClassName` | `undefined` | add any custom styles of `.swiper-slide` element                      |
+
 ```
 
 ```

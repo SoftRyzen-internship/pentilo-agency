@@ -16,6 +16,7 @@ import common from '@/data/common.json';
 import expertiseData from '@/data/expertise.json';
 
 import s from '@/views/ExampleSection/ExampleSection.module.css';
+import { Slider } from '@/components/Slider';
 
 const { messages } = expertiseData;
 
@@ -105,12 +106,17 @@ export const ExampleSection = () => (
     <Advantages />
 
     {/* Елемент для тестування скролу */}
-    <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
+    <div className="h-[1000px] bg-black-light mt-[800px]" id="customId"></div>
     <div
       id="about"
       className={`${s.div} text-shadow-xxs container relative  h-[350vh] w-[100%] bg-[url('/images/bg/bgdesk.webp')]`}
     >
       Тестовий сектор id=about для перевірки роботи навігації
     </div>
-  </section>
+    
+
+    {/* Slider in cases section */}
+     <Slider section="cases" data={cases.cases} element={CaseCard} navigation={true} className='cases' slideClassName='casesSlide'/>
+ </section>
+ 
 );
