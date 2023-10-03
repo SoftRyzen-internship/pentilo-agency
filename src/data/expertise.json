@@ -2,9 +2,9 @@
   "title": "Проблеми, з якими до нас приходили",
   "messages": [
     {
-      "decorAvatar": "/images/expertise/angelina.webp",
+      "decorAvatar": "angelina",
       "username": "АНГЕЛІНА – Пекарня",
-      "decorImage": "/images/expertise/cruasan.webp",
+      "decorImage": "cruasan",
       "time": "10m ago",
       "message": [
         "Ми попрощалися з минулим смм-спецаілістом.",
@@ -12,9 +12,9 @@
       ]
     },
     {
-      "decorAvatar": "/images/expertise/stas.webp",
+      "decorAvatar": "stas",
       "username": "СТАС – Бренд одягу",
-      "decorImage": "/images/expertise/shirt.webp",
+      "decorImage": "shirt",
       "time": "35m ago",
       "message": [
         "Нам потрібні продажі з інстаграм.",
@@ -22,9 +22,9 @@
       ]
     },
     {
-      "decorAvatar": "/images/expertise/oksana.webp",
+      "decorAvatar": "oksana",
       "username": "ОКСАНА – Юрист",
-      "decorImage": "/images/expertise/scales.webp",
+      "decorImage": "scales",
       "time": "1h ago",
       "message": [
         "Я займаюся легалізацією українців за кордоном. Мені потрібні клієнти і впізнаваність.",
@@ -32,9 +32,9 @@
       ]
     },
     {
-      "decorAvatar": "/images/expertise/hrystyna.webp",
+      "decorAvatar": "hrystyna",
       "username": "ХРИСТИНА – Нейл майстер",
-      "decorImage": "/images/expertise/nails.webp",
+      "decorImage": "nails",
       "time": "2h ago",
       "message": [
         "Давайте так, щоб сторінка велася, клієнти водилися.",
@@ -42,9 +42,9 @@
       ]
     },
     {
-      "decorAvatar": "/images/expertise/roman.webp",
+      "decorAvatar": "roman",
       "username": "РОМАН – Будівельний бізнес",
-      "decorImage": "/images/expertise/house.webp",
+      "decorImage": "house",
       "time": "4h ago",
       "message": [
         "Я знаю, що заявка в моїй ніші не дешева, мені важливо виділятися серед конкурентів.",
@@ -56,9 +56,9 @@
     "offer": {
       "text": "Ми вже зʼїли @ на цих задачах. Тож, знаємо мінімум по три варіанти вирішення кожного запиту і готові запропонувати їх тобі, щоб обрати найкращий.",
       "reactions": [
-        { "decorImage": "/images/expertise/fire.webp", "number": 56 },
-        { "decorImage": "/images/expertise/thumbup.webp", "number": 24 },
-        { "decorImage": "/images/expertise/heart.webp", "number": 12 }
+        { "decorImage": "fire", "number": 56 },
+        { "decorImage": "thumbup", "number": 24 },
+        { "decorImage": "heart", "number": 12 }
       ]
     },
     "typingText": "Pentilo agency is typing",
