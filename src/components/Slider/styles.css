@@ -32,35 +32,31 @@
 
 /* Overwriting default swiper styles */
 
-.swiper.cases
+/* .swiper.cases
   .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0;
 }
 
 /* Show pagination at the bottom */
 
-.swiper.cases .swiper-wrapper {
+/* .swiper.cases .swiper-wrapper {
   padding-bottom: 40px;
-}
+} */ */
 
 /* services */
 
-.swiper.services .swiper-wrapper > .swiper-slide,
-.swiper.expertise .swiper-wrapper > .swiper-slide {
-  width: auto;
-  display: flex;
-  justify-content: center;
+.swiper .swiper-wrapper > .swiper-slide.casesSlide{
+  /* width: auto !important; */
+  /* display: flex !important;
+  justify-content: center !important; */
 }
 
-.swiper.services
-  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper.expertise
+.swiper
   .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   top: 0;
 }
 
-.swiper.services .swiper-wrapper,
-.swiper.expertise .swiper-wrapper {
+.swiper .swiper-wrapper {
   padding-top: 40px;
 }
 

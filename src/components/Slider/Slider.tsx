@@ -8,6 +8,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 
+import {
+  Autoplay,
+  Navigation,
+  Pagination,
+  EffectCoverflow,
+} from 'swiper/modules';
+
 import './styles.css';
 import useWindowSize from '@/utils/useWindowSize';
 import { getSliderBreakpointsOptions } from '@/utils/getSliderBreakpointsOptions';
@@ -25,39 +32,55 @@ export const Slider: React.FC<SliderProps> = ({
 
   const { width } = useWindowSize();
 
-  useEffect(() => {
-    if (
-      width !== null &&
-      width >= 1440 &&
-      swiperRef.current &&
-      section != 'cases'
-    ) {
-      swiperRef.current.swiper.destroy(true, true);
-    }
-  }, [width, section]);
+//   useEffect(() => {
+//     if (
+//       width !== null &&
+//       width >= 1440 &&
+//       swiperRef.current &&
+//       section != 'cases'
+//     ) {
+//       swiperRef.current.swiper.destroy(true, true);
+//     }
+//   }, [width, section]);
+
+//   useEffect(() => {
+
+//     console.log(width)
+//     const isAutoplayEnabled = width >= 1440 ? false : true;
+
+//     if (swiperRef.current) {
+//       swiperRef.current.swiper.autoplay.enabled = isAutoplayEnabled;
+//     //   swiperRef.current.swiper.pause();
+//     }
+//   }, [width]);
+
+
+useEffect(() => {
+console.log(swiperRef.current.swiper)
+}, [])
 
   return (
     <Swiper
       ref={swiperRef}
       updateOnWindowResize={true}
-      effect={'coverflow'}
+    //   effect={'coverflow'}
       grabCursor={true}
       centeredSlides={true}
       slideToClickedSlide={true}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      }}
+    //   autoplay={{
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    //     pauseOnMouseEnter: true,
+    //   }}
       breakpoints={getSliderBreakpointsOptions()}
-      coverflowEffect={{
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        scale: 0.9,
-        modifier: 1.6,
-        slideShadows: false,
-      }}
+    //   coverflowEffect={{
+    //     rotate: 0,
+    //     stretch: 0,
+    //     depth: 100,
+    //     scale: 0.9,
+    //     modifier: 1.6,
+    //     slideShadows: false,
+    //   }}
       pagination={{
         el: '.swiper-pagination',
         clickable: true,
@@ -70,7 +93,8 @@ export const Slider: React.FC<SliderProps> = ({
             }
           : false
       }
-      modules={getSwiperModules(section, width)}
+    //   modules={getSwiperModules(section, width)}
+      modules={[Navigation, Pagination, EffectCoverflow]}
       className={`${className}`}
     >
       <div className="wrapper bg-slate-400">
@@ -78,7 +102,7 @@ export const Slider: React.FC<SliderProps> = ({
           return (
             <SwiperSlide
               key={idx}
-              className={`flex justify-center ${slideClassName}`}
+              className={`${slideClassName}`}
             >
               <Element {...item} className="elementSlider" />
             </SwiperSlide>

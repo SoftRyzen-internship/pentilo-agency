@@ -126,3 +126,10 @@ textarea + .field-label {
 .field input:not(:placeholder-shown) + label::before {
   opacity: 1;
 }
+
+
+/* Slider */
+
+.swiper .swiper-wrapper > .swiper-slide {
+  display: flex 
+}

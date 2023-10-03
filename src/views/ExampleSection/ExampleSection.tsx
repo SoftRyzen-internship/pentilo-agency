@@ -11,10 +11,8 @@ import { Accordion } from '@/components/Accordion';
 import { Advantages } from '@/components/Advantages';
 import { Statistics } from '@/components/Statistics';
 import { AboutSection } from '../AboutSection';
-import { Slider } from '@/components/Slider';
 import { Form } from '@/components/Form';
 
-import cases from '@/data/cases.json';
 import common from '@/data/common.json';
 import expertiseData from '@/data/expertise.json';
 
@@ -127,15 +125,5 @@ export const ExampleSection = () => (
       id="about"
       className={`${s.div} text-shadow-xxs container relative  h-[350vh] w-[100%] bg-[url('/images/bg/bgdesk.webp')]`}
     ></div>
-
-    {/* Slider in cases section */}
-    <Slider
-      section="cases"
-      data={cases.cases}
-      element={CaseCard}
-      navigation={true}
-      className="cases"
-      slideClassName="casesSlide"
-    />
   </section>
 );
