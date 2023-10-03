@@ -13,6 +13,7 @@ import { MobileMenuBottomLinks } from '../MobileMenuBottomLinks';
 
 import { mobileVariants } from './variants';
 import common from '@/data/common.json';
+import { apply } from '@/constants';
 
 export const MobileMenu: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -61,9 +62,9 @@ export const MobileMenu: React.FC = () => {
             <Button
               tag="a"
               accent={true}
-              href="about"
+              href={apply}
               onClick={() => setOpenMenu(false)}
-              className="mx-auto mt-8 max-w-[153px] text-xs uppercase"
+              className="mx-auto mt-8  w-[153px] text-xs uppercase md:w-[153px]"
             >
               {common.buttonsText.v1}
             </Button>
