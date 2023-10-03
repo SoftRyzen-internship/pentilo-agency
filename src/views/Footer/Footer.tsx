@@ -1,4 +1,4 @@
-import { CustomLink } from '@/components/ui/CustomLink.ts';
+import { CustomLink } from '@/components/ui/CustomLink';
 import { Logo } from '@/components/ui/Logo';
 import { NavigationRow } from '@/components/ui/NavigationRow/NavigationRow';
 import { SocialsMenu } from '@/components/ui/SocialsMenu';
