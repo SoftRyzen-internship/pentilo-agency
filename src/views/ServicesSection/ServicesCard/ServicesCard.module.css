@@ -1,0 +1,28 @@
+.border {
+  position: relative;
+  background:
+    linear-gradient(#141414, #141414) padding-box,
+    linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%) border-box;
+  border: 2px solid transparent;
+}
+.bordercheckbox {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background:
+    linear-gradient(#141414, #141414) padding-box,
+    linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%) border-box;
+  border: 2px solid transparent;
+  border-radius: 5.36px;
+  /* border: 1.34px; */
+}
+/* .border::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 48px;
+  height: 48px;
+  background-size: contain;
+  background-repeat: no-repeat;
+} */

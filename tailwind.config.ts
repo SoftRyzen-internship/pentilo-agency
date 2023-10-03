@@ -23,6 +23,7 @@ const config: Config = {
 
     boxShadow: {
       button: '0px 0px 35px 0px #AB40FF',
+      title: '0px 0px 15px 0px #AB40FFEB',
       input: '0px 5.36364px 25.47727px 0px rgba(171, 64, 255, 0.46)',
     },
 

@@ -10,6 +10,7 @@ export type IconNames =
   | 'star'
   | 'telegram'
   | 'tick'
+  | 'tickWhite'
   | 'caseArrowLeft'
   | 'caseArrowRight'
   | 'tickGroup'

@@ -7,6 +7,7 @@ import cross from 'public/icons/icon_cross.svg';
 import instagram from 'public/icons/icon_instagram.svg';
 import star from 'public/icons/icon_star.svg';
 import telegram from 'public/icons/icon_telegram.svg';
+import tickWhite from 'public/icons/icon_tickwhite.svg';
 import tick from 'public/icons/icon_tick.svg';
 import caseArrowLeft from 'public/icons/icon_arrowleft.svg';
 import caseArrowRight from 'public/icons/icon_arrowright.svg';
@@ -28,6 +29,7 @@ const icons = {
   star,
   telegram,
   tick,
+  tickWhite,
   caseArrowLeft,
   caseArrowRight,
   tickGroup,
