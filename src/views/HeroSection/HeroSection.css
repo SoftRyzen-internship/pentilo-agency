@@ -1,0 +1,40 @@
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    /* max-width: 1920px; */
+    background-image: image-set(
+      url(/images/hero/heromob.webp) 1x,
+      url(/images/hero/heromob@2x.webp) 2x
+    );
+  
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+    /* @media screen and (min-width: 480px) {
+      
+    } */
+
+    @media screen and (min-width: 744px) {
+      background-image: image-set(
+        url(/images/hero/heroipad.webp) 1x,
+        url(/images/hero/heroipad@2x.webp) 2x
+      );
+    }
+
+    @media screen and (min-width: 1280px) {
+      background-image: image-set(
+        url(/images/hero/herodesk.webp) 1x,
+        url(/images/hero/herodesk@2x.webp) 2x
+      );
+    }
+  }
