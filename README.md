@@ -209,19 +209,33 @@ component `Heading`
 | ------------ | ----------- | ------------------------------------------------------------------------------ |
 | `tag`        | `a`         | required,choose the tag of button you'd need: `a` or `button`                  |
 | `accent`     | `true`      | required,if you need purple button set accent ot true, or set false to another |
-| `content`    | `undefined` | required,text content for button or link                                       |
-| `icon`       | `undefined` | set reference to icon component if you need it                                 |
+| `children`   | `undefined` | required, add text content & icon                                              |
 | `href`       | `undefined` | set link href if you use tag `a`                                               |
 | `buttonType` | `undefined` | add button type 'button' or 'submit' if you use tag 'button'                   |
 | `onClick`    | `undefined` | click handler                                                                  |
+| `disabled`   | `false`     | boolean, if you'd need to disable button                                       |
 | `className`  | `undefined` | add custom or additional css class you'd need                                  |
-| `fontStyle`  | `undefined` | add custom or additional css to text                                           |
 
 - ### ScrollToTopButton
 
 | Prop             | Default     | Description                                   |
 | ---------------- | ----------- | --------------------------------------------- |
 | `sectionIdStart` | `undefined` | id of section where button should appear from |
+
+- ### Slider
+
+The `Slider` component is created using `swiper` library.
+
+| Prop             | Default     | Description                                                        |
+| ---------------- | ----------- | ------------------------------------------------------------------ |
+| `section`        | `undefined` | choose the name of the section: `cases`, `services` or `expertise` |
+| `pagination`     | `false`     | choose the pagination availability: `false` or `true`              |
+| `navigation`     | `false`     | choose the navigation availability: `false` or `true`              |
+| `autoplay`       | `false`     | choose the autoplay availability: `false` or `true`                |
+| `data`           | `undefined` | any array of data for mapping                                      |
+| `element`        | `undefined` | the element that will be placed inside the slide                   |
+| `className`      | `undefined` | add any custom styles of `.swiper` element                         |
+| `slideClassName` | `undefined` | add any custom styles of `.swiper-slide` element                   |
 
 ```
 
