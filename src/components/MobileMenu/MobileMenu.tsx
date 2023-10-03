@@ -63,7 +63,7 @@ export const MobileMenu: React.FC = () => {
               accent={true}
               href="about"
               onClick={() => setOpenMenu(false)}
-              className="mx-auto mt-8 w-[153px] text-xs uppercase"
+              className="mx-auto mt-8 max-w-[153px] text-xs uppercase"
             >
               {common.buttonsText.v1}
             </Button>
