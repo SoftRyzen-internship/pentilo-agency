@@ -35,7 +35,10 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <Tag
       onClick={(e: React.MouseEvent) => {
-        if (href) smoothScroll(e, href);
+        if (href) {
+          smoothScroll(e, href);
+          if (onClick) onClick();
+        }
         if (buttonType && onClick) onClick();
       }}
       href={href}
