@@ -2,10 +2,12 @@ import React from 'react';
 
 import { useScrollVisibility } from '@/utils/useScrollVisibility';
 import { NavigationRowLinkProps } from '@/components/ui/NavigationRowLink/types';
+import styles from './NavigationRowLink.module.css';
 
 export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
   title,
   href,
+  variant,
 }) => {
   const isVisible = useScrollVisibility(title);
 
@@ -16,11 +18,19 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
     }
   };
 
+  const className =
+    variant === 'mobile-menu'
+      ? styles.mobileMenuHover
+      : variant === 'header' || variant === 'footer'
+      ? styles.defaultHover
+      : '';
+
   return (
     <li
       onClick={handleClick}
-      className={`btn-transition cursor-pointer font-inter font-normal transition hover:text-purple-light focus:text-purple-light 
-      ${isVisible ? 'text-purple-light' : 'text-grey'}`}
+      className={`btn-transition cursor-pointer font-inter font-normal text-grey transition ${className} ${
+        isVisible ? 'text-grey' : ''
+      }`}
     >
       {title}
     </li>

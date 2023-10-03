@@ -18,7 +18,12 @@ export const NavigationRow: React.FC<NavigationRowProps> = ({ variant }) => {
   return (
     <ul className={NavigationRowClasses}>
       {navLinks.map((link, index) => (
-        <NavigationRowLink key={index} title={link.title} href={link.href} />
+        <NavigationRowLink
+          key={index}
+          title={link.title}
+          href={link.href}
+          variant={variant}
+        />
       ))}
     </ul>
   );
