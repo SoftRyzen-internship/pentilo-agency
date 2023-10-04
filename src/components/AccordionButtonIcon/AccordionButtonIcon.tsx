@@ -13,7 +13,7 @@ export const AccordionButtonIcon = ({ state }: IAccordionButtonProps) => {
       variants={variants}
       transition={transition}
     >
-      <Arrow width={20} height={20} className="h-3 w-3  stroke-[2] " />
+      <Arrow width={20} height={20} className="h-4 w-4   " />
     </motion.div>
   );
 };

@@ -7,6 +7,7 @@ import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton';
 import { CasesSection } from '@/views/CasesSection';
 import { AboutSection } from '@/views/AboutSection';
 import { TrustSection } from '@/views/TrustSection';
+import { QASection } from '@/views/QASection';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <CasesSection />
       <TrustSection />
       <TimelineSection />
+      <QASection />
       <ApplyFormSection />
       <ScrollToTopButton sectionIdStart="advantages" />
     </>
