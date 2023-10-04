@@ -1,0 +1,20 @@
+.mobile {
+  position: relative;
+}
+
+.mobile::before {
+  content: '';
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 49.5%;
+  transform: translateX(-50%);
+
+  width: 623px;
+  height: 1267px;
+
+  background-image: url('/images/expertise/phone.webp');
+
+  @apply smOnly:hidden;
+}

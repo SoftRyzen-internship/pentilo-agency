@@ -1,0 +1,60 @@
+.buble {
+  position: relative;
+  background: linear-gradient(
+    251deg,
+    rgb(255, 255, 255) 5.07%,
+    rgb(208, 148, 255) 96.82%
+  );
+  backdrop-filter: blur(17px);
+
+  /* use background-color and remove gradient */
+  @apply md:bg-[#ffffffb2] md:bg-none;
+}
+
+.buble::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -12px;
+
+  z-index: -1;
+
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-bottom: 36px solid rgb(208, 148, 255);
+
+  @apply md:hidden;
+}
+
+.decorImage {
+  position: relative;
+}
+
+.decorImage::before,
+.decorImage::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.decorImage::before {
+  left: 0;
+  width: 32px;
+  height: 32px;
+
+  border-radius: 8px;
+}
+
+.decorImage::after {
+  right: -23px;
+  width: 20px;
+  height: 20px;
+}
