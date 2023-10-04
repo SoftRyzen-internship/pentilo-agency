@@ -48,6 +48,7 @@ export const SocialsMenu: React.FC<SocialsMenuProps> = ({
               // variant={variant}
               width={iconWidth}
               height={iconHeight}
+              className="hover:fill-lightGray focus:fill-lightGray active:fill-grey"
             />
           </SocialButton>
         </li>
