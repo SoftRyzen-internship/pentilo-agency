@@ -3,21 +3,23 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SliderProps } from './types';
 import { useEffect, useRef } from 'react';
+
+import useWindowSize from '@/utils/useWindowSize';
+import { getSliderBreakpointsOptions } from '@/utils/getSliderBreakpointsOptions';
+import { getSwiperModules } from '@/utils/getSwiperModules';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
-
 import './styles.css';
-import useWindowSize from '@/utils/useWindowSize';
-import { getSliderBreakpointsOptions } from '@/utils/getSliderBreakpointsOptions';
-import { getSwiperModules } from '@/utils/getSwiperModules';
 
 export const Slider: React.FC<SliderProps> = ({
   section,
   data,
   element: Element,
   navigation,
+  autoplay,
   className = '',
   slideClassName = '',
 }) => {
@@ -44,11 +46,15 @@ export const Slider: React.FC<SliderProps> = ({
       grabCursor={true}
       centeredSlides={true}
       slideToClickedSlide={true}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      }}
+      autoplay={
+        autoplay
+          ? {
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }
+          : false
+      }
       breakpoints={getSliderBreakpointsOptions()}
       coverflowEffect={{
         rotate: 0,
@@ -76,10 +82,7 @@ export const Slider: React.FC<SliderProps> = ({
       <div className="wrapper bg-slate-400">
         {data?.map((item: any, idx: number) => {
           return (
-            <SwiperSlide
-              key={idx}
-              className={`flex justify-center ${slideClassName}`}
-            >
+            <SwiperSlide key={idx} className={`${slideClassName} z-10`}>
               <Element {...item} className="elementSlider" />
             </SwiperSlide>
           );
@@ -92,7 +95,6 @@ export const Slider: React.FC<SliderProps> = ({
             <div className="swiper-button-next slider-arrow"></div>
           </div>
         )}
-
         <div className="swiper-pagination"></div>
       </div>
     </Swiper>

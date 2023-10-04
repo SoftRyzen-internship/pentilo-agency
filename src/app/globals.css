@@ -166,3 +166,9 @@ textarea + .field-label {
 .timeline6::before {
   background-image: url('/images/start/calculatorlarge.webp');
 }
+
+.swiper .swiper-wrapper > .swiper-slide.casesSlide {
+  /* width: auto !important; */
+  display: flex !important;
+  justify-content: center !important;
+}
