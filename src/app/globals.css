@@ -37,35 +37,48 @@ body {
 /* === Expertise === */
 
 .angelina::before {
-  background-image: url('/images/expertise/angelina.webp');
+  background-image: url('/images/expertise/angelina.webp'),
+    linear-gradient(180deg, #d4d4ff 0%, #bee8ff 100%);
 }
 
 .stas::before {
-  background-image: url('/images/expertise/stas.webp');
+  background-image: url('/images/expertise/stas.webp'),
+    linear-gradient(180deg, #d4ffeb 0%, #dbffbe 100%);
 }
 
 .oksana::before {
-  background-image: url('/images/expertise/oksana.webp');
+  background-image: url('/images/expertise/oksana.webp'),
+    linear-gradient(180deg, #fff1d4 0%, #ffbebe 100%);
 }
 
 .hrystyna::before {
-  background-image: url('/images/expertise/hrystyna.webp');
+  background-image: url('/images/expertise/hrystyna.webp'),
+    linear-gradient(180deg, #ffd4f1 0%, #f6beff 100%);
 }
 
-.cruasan::before {
+.roman::before {
+  background-image: url('/images/expertise/roman.webp'),
+    linear-gradient(180deg, #ffd4d4 0%, #fff1be 100%);
+}
+
+.cruasan::after {
   background-image: url('/images/expertise/cruasan.webp');
 }
 
-.shirt::before {
+.shirt::after {
   background-image: url('/images/expertise/shirt.webp');
 }
 
-.scales::before {
+.scales::after {
   background-image: url('/images/expertise/scales.webp');
 }
 
-.nails::before {
+.nails::after {
   background-image: url('/images/expertise/nails.webp');
+}
+
+.house::after {
+  background-image: url('/images/expertise/house.webp');
 }
 
 .fire::before {
@@ -87,7 +100,7 @@ body {
 }
 
 .field.error {
-  /* remove bg gradient on error */
+  /* remove bg gradient to apply background-color */
   background-image: none;
   @apply bg-error;
 }

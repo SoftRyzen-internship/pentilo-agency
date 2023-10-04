@@ -22,7 +22,7 @@ export const TimeNow: React.FC<TimeNowProps> = ({ className }) => {
   }, []);
 
   const timeNowClasses = classNames(
-    'text-sm font-medium text-purple-light',
+    'text-sm font-medium text-purple-light opacity-50',
     className,
   );
 
