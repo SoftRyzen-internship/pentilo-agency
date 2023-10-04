@@ -15,7 +15,8 @@ export type IconNames =
   | 'tickGroup'
   | 'lock'
   | 'questionMark'
-  | 'starGroup';
+  | 'starGroup'
+  | 'check';
 
 export interface SocialIconProps {
   icon: IconNames;

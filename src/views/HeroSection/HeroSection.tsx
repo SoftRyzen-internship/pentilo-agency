@@ -7,15 +7,15 @@ import { Button } from '@/components/ui/Button';
 import { apply } from '@/constants';
 import common from '@/data/common.json';
 import { Slider } from '@/components/Slider';
-import { ExpertiseCard } from '@/components/ExpertiseCard';
+import { HeroCard } from '@/components/HeroCard';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section>
-      <div className="wrapper">
-        <div className="container">
+    <section className="pb-[168px]">
+      <div className="wrapper h-[634px] ">
+        <div className="container pt-[152px]">
           <h1 className="visually-hidden">{hero.header}</h1>
-          <h2 className="mb-28 mt-24 flex flex-col content-between gap-6">
+          <h2 className="mb-28 flex flex-col content-between gap-6">
             <span className="heading2 shadow-text max-w-xs">{hero.title}</span>
             <span className=" self-end text-shadow-tex max-w-xs text-right font-dela_gothic text-l uppercase">
               {hero.subtitle}
@@ -32,7 +32,9 @@ export const HeroSection: React.FC = () => {
         >
           {common.buttonsText.v3}
         </Button>
-        <Slider section="hero" element={ExpertiseCard} data={hero.services}/>
+        <Slider section="hero" element={HeroCard}
+        //  autoplay={true} 
+        data={hero.services}/>
         </div>
       </div>
     </section>

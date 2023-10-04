@@ -172,3 +172,13 @@ textarea + .field-label {
   display: flex !important;
   justify-content: center !important;
 }
+
+
+/* border gradient */
+
+.border-gradient {
+  background:
+    linear-gradient(#141414, #141414) padding-box,
+    linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%) border-box;
+  border: 1px solid transparent;
+}
