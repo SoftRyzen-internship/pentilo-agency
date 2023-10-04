@@ -136,3 +136,33 @@ textarea + .field-label {
 .field input:not(:placeholder-shown) + label::before {
   opacity: 1;
 }
+
+/* === Timeline === */
+
+.timeline0::before {
+  background-image: url('/images/start/microphone.webp');
+}
+
+.timeline1::before {
+  background-image: url('/images/start/planner.webp');
+}
+
+.timeline2::before {
+  background-image: url('/images/start/pencil.webp');
+}
+
+.timeline3::before {
+  background-image: url('/images/start/plantarget.webp');
+}
+
+.timeline4::before {
+  background-image: url('/images/start/avatar.webp');
+}
+
+.timeline5::before {
+  background-image: url('/images/start/speaker.webp');
+}
+
+.timeline6::before {
+  background-image: url('/images/start/calculatorlarge.webp');
+}
