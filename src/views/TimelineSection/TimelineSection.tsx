@@ -7,7 +7,10 @@ import { TimelineList } from '@/components/TimelineList';
 
 export const TimelineSection: React.FC = () => {
   return (
-    <section className="section xl:h-[1072px] xl:pb-[39px] xl:pt-[58px]">
+    <section
+      className="section xl:h-[1072px] xl:pb-[39px] xl:pt-[58px]"
+      id="timeline"
+    >
       <div className="container xl:relative xl:flex xl:h-full">
         <h2 className="hidden">{data.hiddenTitle}</h2>
 
