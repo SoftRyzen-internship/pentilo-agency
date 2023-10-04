@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
@@ -28,59 +29,66 @@ export const ServiceCard: React.FC<ServiceProps> = ({
   };
 
   return (
-    <li
-      className={`shadow-md ${css.border} relative mb-6 h-auto rounded-lg bg-white pb-8 pl-8 pr-[25px]`}
-    >
-      <div className="mb-6 flex items-start pt-6">
-        <h3 className=" w-[207px] font-dela_gothic text-base font-normal uppercase text-white">
-          {title}
-        </h3>
-        <Image src={getIconForService(icon)} alt={alt} width={48} height={48} />
-      </div>
+    <>
+      <li
+        className={`shadow-md ${css.border} relative mb-6 h-auto rounded-lg bg-white pb-8 pl-8 pr-[25px] md:max-w-[328px]`}
+      >
+        <div className="mb-6 flex items-start pt-6">
+          <h3 className=" w-[207px] font-dela_gothic text-base font-normal uppercase text-white">
+            {title}
+          </h3>
+          <Image
+            src={getIconForService(icon)}
+            alt={alt}
+            width={48}
+            height={48}
+          />
+        </div>
 
-      <ul className="h-auto w-[263px]">
-        {list.map((item, index) => (
-          <li key={index} className="mb-2 flex items-center">
-            <div className="flex items-baseline">
-              <span
-                className={`relative z-0 pl-[25px] ${css.pseudoCheckbox}`}
-              ></span>
-              <p className="font-open_sans text-base font-normal">
-                {item.text}
-                {item.toolTip && (
-                  <>
-                    <span
-                      className="ml-1 inline-block align-middle"
-                      onClick={() => handleTooltipToggle(index)}
-                      onMouseEnter={() => setActiveTooltipIndex(index)}
-                      onMouseLeave={() => setActiveTooltipIndex(null)}
-                    >
-                      <Icon icon="questionMark" className="align-middle" />
-                    </span>
-                    {activeTooltipIndex === index && (
+        <ul className="h-auto w-[263px]">
+          {list.map((item, index) => (
+            <li key={index} className="mb-2 flex items-center">
+              <div className="flex items-baseline">
+                <span
+                  className={`relative z-0 pl-[25px] ${css.pseudoCheckbox}`}
+                ></span>
+                <p className="font-open_sans text-base font-normal">
+                  {item.text}
+                  {item.toolTip && (
+                    <>
                       <span
-                        className={`relative ml-2 cursor-pointer ${
-                          index === 0
-                            ? `${css.tooltipLeft}`
-                            : `${css.tooltipRight}`
-                        }`}
+                        className="ml-1 inline-block align-middle"
+                        onClick={() => handleTooltipToggle(index)}
+                        onMouseEnter={() => setActiveTooltipIndex(index)}
+                        onMouseLeave={() => setActiveTooltipIndex(null)}
                       >
+                        <Icon icon="questionMark" className="align-middle" />
+                      </span>
+                      {activeTooltipIndex === index && (
                         <span
-                          className={`absolute left-[10px] top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs ${
-                            index === 0 ? 'left-[10px]' : 'left-[-90px]'
+                          className={`relative ml-2 cursor-pointer ${
+                            index === 0
+                              ? `${css.tooltipLeft}`
+                              : `${css.tooltipRight}`
                           }`}
                         >
-                          {item.toolTip}
+                          <span
+                            className={`absolute left-[10px] top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs ${
+                              index === 0 ? 'left-[10px]' : 'left-[-90px]'
+                            }`}
+                          >
+                            {item.toolTip}
+                          </span>
                         </span>
-                      </span>
-                    )}
-                  </>
-                )}
-              </p>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </li>
+                      )}
+                    </>
+                  )}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </li>
+    </>
   );
 };

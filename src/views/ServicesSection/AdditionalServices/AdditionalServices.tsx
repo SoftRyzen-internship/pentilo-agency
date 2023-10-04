@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';
 
-import css from '@/views/ServicesSection/AdditionalServices/AdditionalServices.module.css'; // Припустимо, що у вас є такий файл
+import css from '@/views/ServicesSection/AdditionalServices/AdditionalServices.module.css';
 import { Icon } from '@/components/ui/Icon';
 
 import { AdditionalServicesProps } from '@/views/ServicesSection/AdditionalServices/types';
@@ -10,7 +11,7 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
   extras,
 }) => {
   return (
-    <div className="mb-[32px]">
+    <div className="mx-auto my-0 mb-[32px] md:max-w-[330px]">
       <div className="mb-10 flex w-[328px] items-center justify-center gap-[12px]">
         <Icon icon="starGroup" className="mr-0" width={34} height={48} />
         <h3 className="relative  w-[235px] font-dela_gothic text-base font-normal uppercase text-white">
