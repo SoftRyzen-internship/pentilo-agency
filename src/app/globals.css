@@ -167,10 +167,9 @@ textarea + .field-label {
   background-image: url('/images/start/calculatorlarge.webp');
 }
 
-.swiper .swiper-wrapper > .swiper-slide.casesSlide {
-  /* width: auto !important; */
-  display: flex !important;
-  justify-content: center !important;
+.swiper .swiper-wrapper > .swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 
 
