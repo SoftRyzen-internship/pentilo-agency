@@ -136,3 +136,11 @@ textarea + .field-label {
 .field input:not(:placeholder-shown) + label::before {
   opacity: 1;
 }
+
+/* Slider */
+
+.swiper .swiper-wrapper > .swiper-slide.casesSlide {
+  /* width: auto !important; */
+  display: flex !important;
+  justify-content: center !important;
+}
