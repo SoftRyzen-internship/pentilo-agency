@@ -1,0 +1,8 @@
+.timeline {
+  @apply md:flex md:w-[523px] md:items-center xl:w-[500px];
+}
+
+.timeline::before {
+  @apply mx-auto mb-6 block h-[72px] w-[70px] bg-contain bg-no-repeat content-[""];
+  @apply shrink-0 md:mb-0 md:mr-5 md:h-[100px] md:w-[100px];
+}
