@@ -16,8 +16,9 @@ export default function Home() {
 
       <AboutSection />
       <ExpertiseSection />
-      <TrustSection />
+
       <CasesSection />
+      <TrustSection />
       <TimelineSection />
       <ApplyFormSection />
       <ScrollToTopButton sectionIdStart="advantages" />
