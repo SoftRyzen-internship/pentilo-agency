@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/Button';
 import { ServiceCard } from './ServicesCard';
 import styles from '@/views/ServicesSection/ServicesSection.module.css';
 import { AdditionalServices } from './AdditionalServices';
+import { Slider } from '@/components/Slider';
 
 export const ServicesSection: React.FC = () => {
   return (
@@ -23,7 +24,7 @@ export const ServicesSection: React.FC = () => {
         <span className={styles.gradientborder}>{data.descspanmobile}</span>
       </p>
 
-      <ul className="mb-[60px]">
+      {/* <ul className="mb-[60px]">
         {data.services.map((service, idx) => (
           <ServiceCard
             key={idx}
@@ -34,7 +35,15 @@ export const ServicesSection: React.FC = () => {
             list={service.list}
           />
         ))}
-      </ul>
+      </ul> */}
+      <Slider
+        data={data.services}
+        element={ServiceCard}
+        className="mb-[60px]"
+        navigation={true}
+        section="services"
+      ></Slider>
+
       <AdditionalServices subtitle2={data.subtitle2} extras={data.extras} />
 
       <Button tag="a" accent={true} href="/" className="mb-[10px] xl:w-[180px]">
