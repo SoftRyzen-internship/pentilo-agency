@@ -23,6 +23,8 @@ export const Slider: React.FC<SliderProps> = ({
 }) => {
   const swiperRef: any = useRef<typeof Swiper | null>(null);
 
+  console.log(data)
+
   const { width } = useWindowSize();
 
   useEffect(() => {
@@ -75,6 +77,7 @@ export const Slider: React.FC<SliderProps> = ({
     >
       <div className="wrapper bg-slate-400">
         {data?.map((item: any, idx: number) => {
+          console.log(item)
           return (
             <SwiperSlide
               key={idx}
