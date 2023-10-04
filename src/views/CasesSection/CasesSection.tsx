@@ -14,7 +14,7 @@ export const CasesSection: React.FC = () => {
     'text-shadow-text xl:mb-20 xl:w-[800px] xl:text-xxxl_small',
   );
   return (
-    <section className="my-[50px] xl:my-[75px]">
+    <section className="py-[50px] xl:py-[75px]">
       <h2 className={titleClasses}>{cases.title}</h2>
       <div className="container">
         <Slider
