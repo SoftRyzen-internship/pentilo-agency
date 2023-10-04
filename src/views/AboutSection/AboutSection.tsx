@@ -10,7 +10,7 @@ import common from '@/data/common.json';
 import { Button } from '@/components/ui/Button';
 import { fadeInUp } from '@/views/AboutSection/variants';
 import { highlightWords } from '@/utils/highlightWords';
-import { StarIconAfter, StarIconBefore } from '@/views/AboutSection/StarIcon';
+import { StarIconAfter, StarIconBefore } from '@/components/StarIcon';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -20,16 +20,16 @@ export const AboutSection: React.FC = () => {
       initial="hide"
       whileInView="show"
       viewport={{ amount: 0.25, once: true }}
-      className="mx-auto mt-[100px] flex  flex-col items-center xl:max-w-screen-xl xl:flex-row xl:justify-between"
+      className="container mx-auto my-[50px] flex flex-col  items-center xl:my-[75px] xl:max-w-screen-xl xl:flex-row xl:justify-between"
     >
       <motion.div
         variants={fadeInUp}
-        className="mb-8 w-full xl:w-1/2 xl:max-w-[480px]"
+        className=" mb-8 w-full xl:w-1/2 xl:max-w-[480px]"
       >
         <Image
           src={data.src}
           alt={data.alt}
-          className="relative mx-auto h-[284px] w-[328px] md:h-[284px] md:w-[328px] xl:mx-0 xl:h-[463px] xl:w-[480px]"
+          className="relative mx-auto h-[284px] w-[328px] md:h-[284px] md:w-[328px] xl:mx-0 xl:xl:h-auto xl:min-h-[463px] xl:w-[480px]"
           width={480}
           height={463}
         />
@@ -50,7 +50,7 @@ export const AboutSection: React.FC = () => {
             <motion.li
               key={index}
               variants={fadeInUp}
-              className="flex min-h-[72px] max-w-[100%] items-center md:min-h-full md:max-w-[479px] "
+              className="flex min-h-[72px] max-w-[299px] items-center md:min-h-full md:max-w-[479px] xl:max-w-[380px] "
             >
               {index % 2 === 0 ? <StarIconBefore /> : null}
               <p className="font-open_sans text-s_xs font-normal xl:text-l_middle">
