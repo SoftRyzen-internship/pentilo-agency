@@ -17,6 +17,7 @@ import { Loader } from '../ui/Loader';
 
 import { FormProps, PopUpType, StatusVariants } from './types';
 import { schema } from './schema';
+
 import data from '@/data/form.json';
 import common from '@/data/common.json';
 
@@ -27,6 +28,7 @@ const { onSuccess, onError } = notifications;
 export const Form: React.FC<FormProps> = ({ className = '' }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [popUpType, setPopUpType] = useState<PopUpType>('default');
+  const [count, setCount] = useState<number>(0);
 
   const {
     register,
@@ -40,6 +42,12 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
   });
 
   useFormPersist(FORM_DATA_KEY, { watch, setValue });
+
+  const data = watch(textarea.name);
+
+  useEffect(() => {
+    setCount(data?.length || 0);
+  }, [data, watch]);
 
   useEffect(() => {
     switch (popUpType) {
@@ -84,7 +92,12 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
           </li>
         ))}
         <li>
-          <TextArea {...textarea} register={register} errors={errors} />
+          <TextArea
+            {...textarea}
+            register={register}
+            errors={errors}
+            count={count}
+          />
         </li>
       </ul>
 

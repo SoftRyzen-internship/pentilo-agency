@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { Message } from '../ui/Message';
 import { PhoneMessagesProps } from './types';
 
+import { stagger, zoom } from '@/variants';
 import data from '@/data/expertise.json';
 import css from './PhoneMessages.module.css';
-import { stagger, zoomIn } from './variants';
 
 const { messages } = data;
 
@@ -26,7 +26,7 @@ export const PhoneMassages: React.FC<PhoneMessagesProps> = ({ className }) => {
       className={listClasses}
     >
       {messages.map(message => (
-        <motion.li variants={zoomIn} key={message.username}>
+        <motion.li variants={zoom.in} key={message.username}>
           <Message {...message} />
         </motion.li>
       ))}

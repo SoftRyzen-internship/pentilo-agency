@@ -140,13 +140,13 @@ textarea + .field-label {
 
 /* when label is focused or the user has entered some text */
 
-.field:focus-within > label,
-.field input:not(:placeholder-shown) + label {
+.field:focus-within > .field-label,
+.field .field-input:not(:placeholder-shown) + .field-label {
   @apply absolute left-[33px] -translate-y-[30px] text-[12px] leading-[18px];
 }
 
-.field:focus-within > label::before,
-.field input:not(:placeholder-shown) + label::before {
+.field:focus-within > .field-label::before,
+.field .field-input:not(:placeholder-shown) + .field-label::before {
   opacity: 1;
 }
 

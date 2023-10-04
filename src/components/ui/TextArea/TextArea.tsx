@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { FieldError } from '../FieldError';
 import { TextAreaProps } from './types';
+import data from '@/data/form.json';
 
 export const TextArea: React.FC<TextAreaProps> = ({
   id,
@@ -9,12 +10,18 @@ export const TextArea: React.FC<TextAreaProps> = ({
   placeholder,
   register,
   errors,
+  count,
 }) => {
   const isError = errors[name];
 
   const fieldClasses = classNames('field h-[111px]', {
     error: isError,
   });
+
+  const countClasses = classNames(
+    'absolute bottom-2 right-4 text-[10px] opacity-50',
+    { 'text-error': isError },
+  );
 
   return (
     <>
@@ -29,6 +36,10 @@ export const TextArea: React.FC<TextAreaProps> = ({
         <label className="field-label" htmlFor={id}>
           {label}
         </label>
+
+        <span className={countClasses}>
+          {count}/{data.form.validation.question.maxLength.value}
+        </span>
       </div>
 
       {isError && <FieldError name={name} errors={errors} />}
