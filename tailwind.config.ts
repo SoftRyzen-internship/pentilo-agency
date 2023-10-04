@@ -20,6 +20,9 @@ const config: Config = {
       mdOnly: { min: '744px', max: '1279.98px' },
       mediaHover: { raw: '(hover: hover)' },
     },
+    maxWidth: {
+      'fit-content': 'fit-content',
+    },
 
     boxShadow: {
       button: '0px 0px 35px 0px #AB40FF',
@@ -84,6 +87,7 @@ const config: Config = {
           active: '#781EBF',
           hoverSec: '#b454ff33',
           activeSec: '#b454ff80',
+          tooltip: '#B075DF',
         },
         lightGray: '#EAEAEA',
         grey: '#D3D3D3',

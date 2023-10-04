@@ -1,18 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
 import css from '@/views/ServicesSection/ServicesCard/ServicesCard.module.css';
-
-export interface ServiceProps {
-  title: string;
-  src: string;
-  alt: string;
-  icon: string;
-  list: Array<{
-    text: string;
-    toolTip?: string;
-  }>;
-}
+import { ServiceProps } from '@/views/ServicesSection/ServicesCard/types';
 
 export const ServiceCard: React.FC<ServiceProps> = ({
   title,
@@ -21,22 +11,25 @@ export const ServiceCard: React.FC<ServiceProps> = ({
   src,
   alt,
 }) => {
-  const getIconForService = (imageName: string) => {
-    switch (imageName) {
-      case 'cursor':
-        return src;
-      case 'targetSmall':
-        return src;
-      case 'cursorTurget':
-        return src;
-      default:
-        return '';
+  const [activeTooltipIndex, setActiveTooltipIndex] = useState<number | null>(
+    null,
+  );
+  const handleTooltipToggle = (index: number) => {
+    if (activeTooltipIndex === index) {
+      setActiveTooltipIndex(null);
+    } else {
+      setActiveTooltipIndex(index);
     }
   };
 
+  const getIconForService = (imageName: string) => {
+    const allowedImageNames = ['cursor', 'targetSmall', 'cursorTurget'];
+    return allowedImageNames.includes(imageName) ? src : '';
+  };
+
   return (
-    <div
-      className={`shadow-md ${css.border} mb-6 h-auto rounded-lg bg-white pb-8 pl-8 pr-[25px]`}
+    <li
+      className={`shadow-md ${css.border} relative mb-6 h-auto rounded-lg bg-white pb-8 pl-8 pr-[25px]`}
     >
       <div className="mb-6 flex items-start pt-6">
         <h3 className=" w-[207px] font-dela_gothic text-base font-normal uppercase text-white">
@@ -48,35 +41,46 @@ export const ServiceCard: React.FC<ServiceProps> = ({
       <ul className="h-auto w-[263px]">
         {list.map((item, index) => (
           <li key={index} className="mb-2 flex items-center">
-            <div>
-              <span className="font-open_sans text-base font-normal">
-                <p>
-                  <span className="relative inline-block before:left-[-100%] before:top-[-50%] before:mr-2 before:block before:h-[24px] before:w-[24px] before:content-['']">
-                    <Icon
-                      icon="checkbox"
-                      className="absolute -left-[100%] -top-[50%] h-[76px] w-[76px]"
-                    />
-                  </span>
-                  {item.text}
-                  <span className="relative ml-1 inline-block after:ml-2 after:block after:h-[16px] after:w-[16px] after:content-['']">
-                    <Icon
-                      icon="questionMark"
-                      className="absolute right-0 top-0 h-[26px] w-[27px]"
-                    />
-                  </span>
-                </p>
-              </span>
-              {item.toolTip && (
-                <span className="relative ml-2 hidden cursor-pointer">
-                  <span className="absolute -top-8 left-1/2 z-10 -translate-x-1/2 transform rounded-md border bg-white p-2 text-xs">
-                    <p>{item.toolTip}</p>
-                  </span>
-                </span>
-              )}
+            <div className="flex items-baseline">
+              <span
+                className={`relative z-0 pl-[25px] ${css.pseudoCheckbox}`}
+              ></span>
+              <p className="font-open_sans text-base font-normal">
+                {item.text}
+                {item.toolTip && (
+                  <>
+                    <span
+                      className="ml-1 inline-block align-middle"
+                      onClick={() => handleTooltipToggle(index)}
+                      onMouseEnter={() => setActiveTooltipIndex(index)}
+                      onMouseLeave={() => setActiveTooltipIndex(null)}
+                    >
+                      <Icon icon="questionMark" className="align-middle" />
+                    </span>
+                    {activeTooltipIndex === index && (
+                      <span
+                        className={`relative ml-2 cursor-pointer ${
+                          index === 0
+                            ? `${css.tooltipLeft}`
+                            : `${css.tooltipRight}`
+                        }`}
+                      >
+                        <span
+                          className={`absolute left-[10px] top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs ${
+                            index === 0 ? 'left-[10px]' : 'left-[-90px]'
+                          }`}
+                        >
+                          {item.toolTip}
+                        </span>
+                      </span>
+                    )}
+                  </>
+                )}
+              </p>
             </div>
           </li>
         ))}
       </ul>
-    </div>
+    </li>
   );
 };

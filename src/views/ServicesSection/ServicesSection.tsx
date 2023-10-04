@@ -5,6 +5,8 @@ import common from '@/data/common.json';
 import { Button } from '@/components/ui/Button';
 import { ServiceCard } from './ServicesCard';
 import styles from '@/views/ServicesSection/ServicesSection.module.css';
+import { AdditionalServices } from './AdditionalServices';
+
 export const ServicesSection: React.FC = () => {
   return (
     <section id="services" className="px-4 py-8">
@@ -21,16 +23,19 @@ export const ServicesSection: React.FC = () => {
         <span className={styles.gradientborder}>{data.descspanmobile}</span>
       </p>
 
-      {data.services.map((service, idx) => (
-        <ServiceCard
-          key={idx}
-          title={service.title}
-          src={service.src}
-          alt={service.alt}
-          icon={service.icon}
-          list={service.list}
-        />
-      ))}
+      <ul className="mb-[60px]">
+        {data.services.map((service, idx) => (
+          <ServiceCard
+            key={idx}
+            title={service.title}
+            src={service.src}
+            alt={service.alt}
+            icon={service.icon}
+            list={service.list}
+          />
+        ))}
+      </ul>
+      <AdditionalServices subtitle2={data.subtitle2} extras={data.extras} />
 
       <Button tag="a" accent={true} href="/" className="mb-[10px] xl:w-[180px]">
         {common.buttonsText.v3}

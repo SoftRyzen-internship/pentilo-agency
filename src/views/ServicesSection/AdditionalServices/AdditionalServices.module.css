@@ -1,0 +1,23 @@
+.pseudoStars::before {
+  content: '';
+  position: absolute;
+  width: 34px;
+  height: 48px;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('/icons/icon_threestar.svg') no-repeat center;
+  background-size: contain;
+}
+
+.pseudoCheckbox::before {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  left: -80%;
+  top: 0%;
+  transform: translateY(-50%);
+  background: url('/icons/icon_checked.svg') no-repeat center;
+  background-size: contain;
+}
