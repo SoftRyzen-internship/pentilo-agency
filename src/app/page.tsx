@@ -12,7 +12,7 @@ export default function Home() {
     <>
       {/* <ExampleSection />
       <ScrollToTopButton sectionIdStart="advantages" /> */}
-      
+
       <AboutSection />
       <ExpertiseSection />
       <TrustSection />
