@@ -13,6 +13,7 @@ import { Statistics } from '@/components/Statistics';
 import { AboutSection } from '../AboutSection';
 import { Form } from '@/components/Form';
 
+import cases from '@/data/cases.json';
 import common from '@/data/common.json';
 import expertiseData from '@/data/expertise.json';
 
