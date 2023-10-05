@@ -4,6 +4,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+import { apply } from '@/constants';
+
 import data from '@/data/about.json';
 import common from '@/data/common.json';
 
@@ -64,7 +66,7 @@ export const AboutSection: React.FC = () => {
         <Button
           tag="a"
           accent={true}
-          href="/"
+          href={apply}
           className="mb-[10px] xl:w-[180px]"
         >
           {common.buttonsText.v3}
