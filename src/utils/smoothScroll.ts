@@ -8,9 +8,12 @@ export const smoothScroll = (
 
   if (href) {
     elem = document.getElementById(href.replace(/[/#]/g, ''));
+    if (elem) elem.scrollIntoView({ behavior: 'smooth' });
+    return;
   }
+
   window.scrollTo({
-    top: href ? elem?.getBoundingClientRect().top : 0,
+    top: 0,
     behavior: 'smooth',
   });
 };

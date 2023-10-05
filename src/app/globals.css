@@ -10,6 +10,16 @@ body {
   @apply transition duration-300 ease-in-out;
 }
 
+/* === Typography === */
+
+.heading2 {
+  @apply font-dela_gothic text-xxl_middle uppercase text-shadow-text xl:text-xxxl_small;
+}
+
+.section {
+  @apply py-[50px] xl:py-[75px];
+}
+
 /* === Advantages === */
 
 .advant0::before {
@@ -27,35 +37,48 @@ body {
 /* === Expertise === */
 
 .angelina::before {
-  background-image: url('/images/expertise/angelina.webp');
+  background-image: url('/images/expertise/angelina.webp'),
+    linear-gradient(180deg, #d4d4ff 0%, #bee8ff 100%);
 }
 
 .stas::before {
-  background-image: url('/images/expertise/stas.webp');
+  background-image: url('/images/expertise/stas.webp'),
+    linear-gradient(180deg, #d4ffeb 0%, #dbffbe 100%);
 }
 
 .oksana::before {
-  background-image: url('/images/expertise/oksana.webp');
+  background-image: url('/images/expertise/oksana.webp'),
+    linear-gradient(180deg, #fff1d4 0%, #ffbebe 100%);
 }
 
 .hrystyna::before {
-  background-image: url('/images/expertise/hrystyna.webp');
+  background-image: url('/images/expertise/hrystyna.webp'),
+    linear-gradient(180deg, #ffd4f1 0%, #f6beff 100%);
 }
 
-.cruasan::before {
+.roman::before {
+  background-image: url('/images/expertise/roman.webp'),
+    linear-gradient(180deg, #ffd4d4 0%, #fff1be 100%);
+}
+
+.cruasan::after {
   background-image: url('/images/expertise/cruasan.webp');
 }
 
-.shirt::before {
+.shirt::after {
   background-image: url('/images/expertise/shirt.webp');
 }
 
-.scales::before {
+.scales::after {
   background-image: url('/images/expertise/scales.webp');
 }
 
-.nails::before {
+.nails::after {
   background-image: url('/images/expertise/nails.webp');
+}
+
+.house::after {
+  background-image: url('/images/expertise/house.webp');
 }
 
 .fire::before {
@@ -77,7 +100,7 @@ body {
 }
 
 .field.error {
-  /* remove bg gradient on error */
+  /* remove bg gradient to apply background-color */
   background-image: none;
   @apply bg-error;
 }
@@ -125,4 +148,40 @@ textarea + .field-label {
 .field:focus-within > label::before,
 .field input:not(:placeholder-shown) + label::before {
   opacity: 1;
+}
+
+/* === Timeline === */
+
+.timeline0::before {
+  background-image: url('/images/start/microphone.webp');
+}
+
+.timeline1::before {
+  background-image: url('/images/start/planner.webp');
+}
+
+.timeline2::before {
+  background-image: url('/images/start/pencil.webp');
+}
+
+.timeline3::before {
+  background-image: url('/images/start/plantarget.webp');
+}
+
+.timeline4::before {
+  background-image: url('/images/start/avatar.webp');
+}
+
+.timeline5::before {
+  background-image: url('/images/start/speaker.webp');
+}
+
+.timeline6::before {
+  background-image: url('/images/start/calculatorlarge.webp');
+}
+
+.swiper .swiper-wrapper > .swiper-slide.casesSlide {
+  /* width: auto !important; */
+  display: flex !important;
+  justify-content: center !important;
 }

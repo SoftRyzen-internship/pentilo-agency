@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -16,7 +18,7 @@ export const AboutSection: React.FC = () => {
       id="about"
       variants={fadeInUp}
       initial="hide"
-      animate="show"
+      whileInView="show"
       viewport={{ amount: 0.25, once: true }}
       className="mx-auto mt-[100px] flex  flex-col items-center xl:max-w-screen-xl xl:flex-row xl:justify-between"
     >
@@ -30,7 +32,6 @@ export const AboutSection: React.FC = () => {
           className="relative mx-auto h-[284px] w-[328px] md:h-[284px] md:w-[328px] xl:mx-0 xl:h-[463px] xl:w-[480px]"
           width={480}
           height={463}
-          priority={false}
         />
       </motion.div>
       <motion.div

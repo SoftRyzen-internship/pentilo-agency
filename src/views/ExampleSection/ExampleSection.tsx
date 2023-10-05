@@ -11,7 +11,6 @@ import { Accordion } from '@/components/Accordion';
 import { Advantages } from '@/components/Advantages';
 import { Statistics } from '@/components/Statistics';
 import { AboutSection } from '../AboutSection';
-import { Slider } from '@/components/Slider';
 import { Form } from '@/components/Form';
 
 import cases from '@/data/cases.json';
@@ -44,7 +43,7 @@ export const ExampleSection = () => (
     <Button
       tag="a"
       accent={false}
-      href="customId"
+      href="about"
       className="mb-[10px] hidden xl:block xl:w-[150px] xl:py-[16.5px] xl:text-l_small"
     >
       {common.buttonsText.v2}
@@ -122,20 +121,9 @@ export const ExampleSection = () => (
     {/* <div
 
     {/* Елемент для тестування скролу */}
-    <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
     <div
       id="about"
       className={`${s.div} text-shadow-xxs container relative  h-[350vh] w-[100%] bg-[url('/images/bg/bgdesk.webp')]`}
     ></div>
-
-    {/* Slider in cases section */}
-    <Slider
-      section="cases"
-      data={cases.cases}
-      element={CaseCard}
-      navigation={true}
-      className="cases"
-      slideClassName="casesSlide"
-    />
   </section>
 );
