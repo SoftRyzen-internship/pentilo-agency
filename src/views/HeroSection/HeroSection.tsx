@@ -4,7 +4,6 @@ import hero from '@/data/hero.json';
 import './HeroSection.css';
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
-import { apply } from '@/constants';
 import common from '@/data/common.json';
 import { HeroCardsList } from '@/components/HeroCardsList';
 

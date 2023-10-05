@@ -3,7 +3,7 @@
 import { CaseCard } from '@/components/CaseCard';
 import { Slider } from '@/components/Slider';
 import { Button } from '@/components/ui/Button';
-import { apply, cases as casesId } from '@/constants';
+import { apply } from '@/constants';
 import cases from '@/data/cases.json';
 import common from '@/data/common.json';
 import classNames from 'classnames';
