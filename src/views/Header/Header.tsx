@@ -30,15 +30,7 @@ export const Header = () => {
       animate="animate"
       className=" container fixed left-1/2 top-0 z-10 flex w-full -translate-x-1/2 items-center pb-[8px] pt-[10px] xl:px-[50px]"
     >
-      <Logo
-        className="xl:mr-[273px]"
-        onClick={() =>
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-          })
-        }
-      />
+      <Logo className="xl:mr-[273px]" />
       <NavigationRow variant="header" />
       <SocialsMenu className="ml-[202px]" />
 
