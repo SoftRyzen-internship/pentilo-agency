@@ -7,7 +7,7 @@ import React from 'react';
 import css from './Timeline.module.css';
 import data from '@/data/timeline.json';
 import { TimelineListItem } from '../TimelineListItem';
-import { fadeInUp } from '@/variantsCommon/fadeInUp';
+import { fadeInUp } from '@/variants';
 
 export const TimelineList: React.FC = () => {
   return (

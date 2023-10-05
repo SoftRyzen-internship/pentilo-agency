@@ -7,7 +7,7 @@ import Ticker from 'framer-motion-ticker';
 import data from '@/data/partners.json';
 import { useWindowWidth } from '@/hooks';
 
-import { fadeInUp } from '@/variantsCommon/fadeInUp';
+import { fadeInUp } from '@/variants';
 
 const { title, partners } = data;
 

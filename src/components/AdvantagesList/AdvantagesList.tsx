@@ -4,7 +4,7 @@ import React from 'react';
 
 import data from '@/data/advantages.json';
 import css from './AdvantagesList.module.css';
-import { fadeInUp } from '@/variantsCommon/fadeInUp';
+import { fadeInUp } from '@/variants';
 
 import { Icon } from '../ui/Icon';
 
