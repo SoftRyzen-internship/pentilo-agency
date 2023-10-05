@@ -1,10 +1,11 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-// import { Icon } from '@/components/ui/Icon';
+import { getIconForService } from '@/utils/getIconForService';
+import { handleTooltipToggle } from '@/utils/handleTooltipToggle';
 import css from '@/views/ServicesSection/ServicesCard/ServicesCard.module.css';
 import { ServiceProps } from '@/views/ServicesSection/ServicesCard/types';
-import { ServiceCardToolTip } from '../ServiceCardTool';
+import { ServiceCardToolTip } from '@/views/ServicesSection/ServiceCardToolTip/ServiceCardToolTip';
 
 export const ServiceCard: React.FC<ServiceProps> = ({
   title,
@@ -16,17 +17,6 @@ export const ServiceCard: React.FC<ServiceProps> = ({
   const [activeTooltipIndex, setActiveTooltipIndex] = useState<number | null>(
     null,
   );
-  const handleTooltipToggle = (index: number) => {
-    if (activeTooltipIndex === index) {
-      setActiveTooltipIndex(null);
-    } else {
-      setActiveTooltipIndex(index);
-    }
-  };
-  const getIconForService = (imageName: string) => {
-    const allowedImageNames = ['cursor', 'targetSmall', 'cursorTurget'];
-    return allowedImageNames.includes(imageName) ? src : '';
-  };
 
   return (
     <li
@@ -36,7 +26,12 @@ export const ServiceCard: React.FC<ServiceProps> = ({
         <h3 className=" w-[207px] font-dela_gothic text-base font-normal uppercase text-white">
           {title}
         </h3>
-        <Image src={getIconForService(icon)} alt={alt} width={48} height={48} />
+        <Image
+          src={getIconForService(icon, src)}
+          alt={alt}
+          width={48}
+          height={48}
+        />
       </div>
 
       <ul className="h-auto w-[263px]">
@@ -53,7 +48,13 @@ export const ServiceCard: React.FC<ServiceProps> = ({
                     toolTip={item.toolTip}
                     index={index}
                     activeIndex={activeTooltipIndex}
-                    handleTooltipToggle={() => handleTooltipToggle(index)}
+                    handleTooltipToggle={() =>
+                      handleTooltipToggle(
+                        index,
+                        activeTooltipIndex,
+                        setActiveTooltipIndex,
+                      )
+                    }
                     handleMouseEnter={() => setActiveTooltipIndex(index)}
                     handleMouseLeave={() => setActiveTooltipIndex(null)}
                   />

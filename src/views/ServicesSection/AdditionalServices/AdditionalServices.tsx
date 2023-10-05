@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 
+import { timeline } from '@/constants';
 import css from '@/views/ServicesSection/AdditionalServices/AdditionalServices.module.css';
 import { Icon } from '@/components/ui/Icon';
 
@@ -35,7 +36,7 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
                   {index === group.length - 1 &&
                   groupIndex === extras.length - 1 ? (
                     <a
-                      href="#"
+                      href={timeline}
                       className={`${css.decorArrow} hover:fill-lightGray focus:fill-grey active:fill-lightGray`}
                     ></a>
                   ) : null}

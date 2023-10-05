@@ -25,9 +25,9 @@
   border-style: solid;
   border-width: 0 10px 10px 10px;
   border-color: transparent transparent #b075df transparent;
-  top: 22px;
+  top: 24px;
   left: 50%;
-  transform: translateX(-145%) rotate(0deg);
+  transform: translateX(-155%) rotate(0deg);
 }
 .tooltipRight::before {
   content: '';
@@ -37,7 +37,7 @@
   border-style: solid;
   border-width: 0 10px 10px 10px;
   border-color: transparent transparent #b075df transparent;
-  top: 22px;
+  top: 24px;
   left: 50%;
-  transform: translateX(-145%) rotate(0deg);
+  transform: translateX(-155%) rotate(0deg);
 }

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Icon } from '@/components/ui/Icon';
 import css from '@/views/ServicesSection/ServicesCard/ServicesCard.module.css';
-import { ServiceCardToolTipProps } from '@/views/ServicesSection/ServiceCardTool/types';
+import { ServiceCardToolTipProps } from '@/views/ServicesSection/ServiceCardToolTip/types';
 
 export const ServiceCardToolTip: React.FC<ServiceCardToolTipProps> = ({
   toolTip,
@@ -23,13 +23,20 @@ export const ServiceCardToolTip: React.FC<ServiceCardToolTipProps> = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <Icon icon="questionMark" className="align-middle" />
+        <Icon
+          icon="questionMark"
+          className=" cursor-pointer align-middle transition-transform hover:scale-150 focus:scale-110"
+          width={24}
+          height={24}
+        />
       </span>
       {isActive && (
         <span className={`relative ml-2 cursor-pointer ${positionClass}`}>
           <span
-            className={`absolute top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs ${
-              positionClass === css.tooltipLeft ? 'left-[10px]' : 'left-[-90px]'
+            className={`absolute top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs xl:min-w-[300px] ${
+              positionClass === css.tooltipLeft
+                ? 'left-[10px] xl:left-[50px]'
+                : 'left-[-90px] xl:left-[-50px]'
             }`}
           >
             {toolTip}
