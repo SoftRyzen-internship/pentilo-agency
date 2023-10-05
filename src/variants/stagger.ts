@@ -1,7 +1,7 @@
 export const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 1,
       type: 'spring',
       stiffness: 35,
     },

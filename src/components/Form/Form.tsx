@@ -85,7 +85,7 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
 
   return (
     <form className={formClassName} onSubmit={handleSubmit(onSubmit)}>
-      <ul className="flex flex-col gap-3">
+      <ul className="mb-7 flex flex-col gap-10">
         {inputs.map(input => (
           <li key={input.id}>
             <Field {...input} register={register} errors={errors} />
@@ -101,7 +101,7 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
         </li>
       </ul>
 
-      <div className="mb-[40px] mt-6 flex justify-center gap-1 ">
+      <div className="mb-10 flex justify-center gap-1 ">
         <p>{timerText}</p>
         <Countdown into="form" />
       </div>
