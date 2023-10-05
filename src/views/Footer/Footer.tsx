@@ -10,7 +10,7 @@ import data from '@/data/footer.json';
 export const Footer = () => {
   const { title, terms, email, policy, rights } = data;
   const hoverFooter = classNames(
-    'ease-linear duration-200 hover:text-hover focus:text-hover hover:underline focus:underline',
+    'ease-[cubic-bezier(0.4,0,0.2,1)] duration-300 hover:text-hover focus:text-hover hover:underline focus:underline',
   );
   return (
     <footer className="container py-8 md:relative">
@@ -19,7 +19,7 @@ export const Footer = () => {
         <div className="text-xs md:order-2 md:pl-[91px] xl:pl-[111px] ">
           <h2 className="mb-4 font-bold text-grey ">{title}</h2>
           <CustomLink
-            className={`${hoverFooter} mb-5 inline-block  text-grey `}
+            className={`${hoverFooter}  mb-5 inline-block  text-grey `}
             href={email.href}
             text={email.text}
           />

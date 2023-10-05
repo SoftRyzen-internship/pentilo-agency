@@ -20,7 +20,7 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
         variant === 'mobile-menu',
     },
     'flex items-center cursor-pointer justify-center transition-colors duration-300',
-    'ease-linear duration-200 transition-transform hover:scale-[1.1] focus:scale-[1.1]  hover:text-hover focus:text-hover',
+    'ease-[cubic-bezier(0.4,0,0.2,1)] duration-300 transition-transform hover:scale-[1.1] focus:scale-[1.1]  hover:text-hover focus:text-hover',
     className,
   );
 
