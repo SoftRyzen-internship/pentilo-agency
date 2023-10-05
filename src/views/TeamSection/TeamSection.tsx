@@ -29,10 +29,10 @@ export const TeamSection: React.FC = () => {
         >
           {common.buttonsText.v5}
           <Icon
-            icon="arrow"
+            icon="caseArr"
             width={8}
             height={8}
-            className="ml-[5px] inline-block -rotate-[135deg]"
+            className="ml-[5px] inline-block -rotate-180"
           />
         </Button>
       </div>
