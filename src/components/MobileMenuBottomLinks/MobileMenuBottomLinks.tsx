@@ -6,7 +6,7 @@ import outer from '@/data/footer.json';
 
 export const MobileMenuBottomLinks: React.FC = () => {
   return (
-    <div className="absolute bottom-8 left-0 flex w-full justify-between px-4">
+    <div className=" mx-auto mt-[121px] flex w-full max-w-[328px] justify-between pb-[32px]">
       <div>
         <span className="block font-inter text-xs text-grey">
           {outer.rights.title}

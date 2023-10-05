@@ -31,7 +31,7 @@ export const Countdown: React.FC<CountdownProps> = ({
   }, []);
 
   const timerStyle = classNames('text-purple-middle', {
-    'font-dela_gothic text-xxl_middle md:text-timer_small xl:text-timer xl:text-black-dark xl:text-shadow-timer':
+    'font-dela_gothic text-xxl_middle md:text-timer_small xl:text-timer xl:max-w-max xl:text-black-dark xl:text-shadow-timer':
       into === 'hero',
     'text-l_middle font-bold': into === 'form',
   });

@@ -10,6 +10,8 @@ import { CasesSection } from '@/views/CasesSection';
 import { AboutSection } from '@/views/AboutSection';
 import { TrustSection } from '@/views/TrustSection';
 import { QASection } from '@/views/QASection';
+import { StatisticsSection } from '@/views/StatisticsSection';
+import { AdvantagesSection } from '@/views/AdvantagesSection';
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       {/* <ExampleSection />
       <ScrollToTopButton sectionIdStart="advantages" /> */}
 
+      <StatisticsSection />
+      <AdvantagesSection />
       <AboutSection />
       <ExpertiseSection />
       <TeamSection />

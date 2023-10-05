@@ -1,6 +1,8 @@
 @media (min-width: 1280px) {
   .stroke {
-    -webkit-text-stroke-color: #ab40ff;
-    -webkit-text-stroke-width: 1px;
+    background-clip: text;
+    background-image: linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%);
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 2px;
   }
 }
