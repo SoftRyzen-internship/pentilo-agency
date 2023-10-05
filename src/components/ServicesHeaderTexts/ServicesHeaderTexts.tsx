@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 
+import { fadeInUp } from '@/variants';
 import { ServicesHeaderTextsProps } from '@/components/ServicesHeaderTexts/types';
-
 import styles from '@/components/ServicesHeaderTexts/ServicesHeaderTexts.module.css';
 
 const TITLE_STYLE = `${styles.textShadowTitle} xl:min-w-[420px] xl:text-xxxl_small mb-6 max-w-[328px] text-center font-dela_gothic text-3xl font-normal uppercase text-white md:mx-auto md:my-0 md:mb-6 md:max-w-[464px] xl:text-left`;
@@ -18,10 +19,23 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
   descspanmobile,
   decsspandesctop,
 }) => (
-  <div className="flex flex-col gap-y-6 xl:flex-row xl:items-center xl:justify-between xl:gap-x-[49px]">
-    <h2 className={TITLE_STYLE}>{title}</h2>
-    <p className={SUBTITLE_STYLE + ' xl:flex-1 xl:text-left'}>{subtitle1}</p>
-    <p className={DESCRIPTION_STYLE}>
+  <motion.div
+    variants={fadeInUp}
+    initial="hide"
+    whileInView="show"
+    viewport={{ amount: 0.25, once: false }}
+    className="flex flex-col gap-y-6 xl:flex-row xl:items-center xl:justify-between xl:gap-x-[49px]"
+  >
+    <motion.h2 variants={fadeInUp} className={TITLE_STYLE}>
+      {title}
+    </motion.h2>
+    <motion.p
+      variants={fadeInUp}
+      className={SUBTITLE_STYLE + ' xl:flex-1 xl:text-left'}
+    >
+      {subtitle1}
+    </motion.p>
+    <motion.p variants={fadeInUp} className={DESCRIPTION_STYLE}>
       {description}
       <span className={`xl:hidden ${styles.gradientborder}`}>
         {descspanmobile}
@@ -31,6 +45,6 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
       >
         {decsspandesctop}
       </span>
-    </p>
-  </div>
+    </motion.p>
+  </motion.div>
 );

@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 
+import { fadeIn } from '@/variants';
 import { Icon } from '@/components/ui/Icon';
 import { ServiceCardToolTipProps } from '@/components/ServiceCardToolTip/types';
 
@@ -19,7 +21,8 @@ export const ServiceCardToolTip: React.FC<ServiceCardToolTipProps> = ({
 
   return (
     <>
-      <span
+      <motion.span
+        variants={fadeIn}
         className="ml-1 inline-block align-middle"
         onClick={handleTooltipToggle}
         onMouseEnter={handleMouseEnter}
@@ -31,9 +34,14 @@ export const ServiceCardToolTip: React.FC<ServiceCardToolTipProps> = ({
           width={24}
           height={24}
         />
-      </span>
+      </motion.span>
       {isActive && (
-        <span className={`relative ml-2 cursor-pointer ${positionClass}`}>
+        <motion.span
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          className={`relative ml-2 cursor-pointer ${positionClass}`}
+        >
           <span
             className={`absolute top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs xl:min-w-[300px] ${
               positionClass === css.tooltipLeft
@@ -43,7 +51,7 @@ export const ServiceCardToolTip: React.FC<ServiceCardToolTipProps> = ({
           >
             {toolTip}
           </span>
-        </span>
+        </motion.span>
       )}
     </>
   );

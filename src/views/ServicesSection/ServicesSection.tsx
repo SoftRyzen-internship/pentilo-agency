@@ -1,6 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
+import { fadeInUp } from '@/variants';
 import data from '@/data/services.json';
 import common from '@/data/common.json';
 
@@ -62,11 +64,17 @@ export const ServicesSection: React.FC = () => {
             section="services"
           />
         )}
-        <ul className="mb-[60px] hidden grid-cols-1 items-start gap-x-[20px] gap-y-[20px] xl:grid xl:grid-cols-3">
+        <motion.ul
+          variants={fadeInUp}
+          initial="hide"
+          whileInView="show"
+          viewport={{ amount: 0.25, once: false }}
+          className="mb-[60px] hidden grid-cols-1 items-start gap-x-[20px] gap-y-[20px] xl:grid xl:grid-cols-3"
+        >
           {services.map((service, idx) => (
             <ServiceCard key={idx} {...service} />
           ))}
-        </ul>
+        </motion.ul>
         <AdditionalServices subtitle2={subtitle2} extras={extras} />
         <Button
           tag="a"
