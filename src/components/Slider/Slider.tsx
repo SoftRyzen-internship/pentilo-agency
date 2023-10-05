@@ -70,7 +70,6 @@ export const Slider: React.FC<SliderProps> = ({
     >
       <div className="wrapper bg-slate-400">
         {data?.map((item: any, idx: number) => {
-          console.log(item)
           return (
             <SwiperSlide key={idx} className={`${slideClassName} z-10`}>
               <Element {...item} className="elementSlider" />
