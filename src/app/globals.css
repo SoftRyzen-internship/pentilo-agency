@@ -126,3 +126,25 @@ textarea + .field-label {
 .field input:not(:placeholder-shown) + label::before {
   opacity: 1;
 }
+
+/* //Swiper// */
+.swiper .swiper-wrapper > .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* //Swiper #services// */
+#services > div.container > .swiper .swiper-wrapper > .swiper-slide {
+  display: block;
+}
+@media (min-width: 768px) {
+  #services > div.container > .swiper .swiper-wrapper > .swiper-slide {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+@media (min-width: 1280px) {
+  #services > div.container > .swiper {
+    display: none;
+  }
+}

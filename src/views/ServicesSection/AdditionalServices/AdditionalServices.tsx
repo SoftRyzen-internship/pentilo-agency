@@ -26,12 +26,19 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
               {group.map((item, index) => (
                 <p
                   key={index}
-                  className="relative mb-[14px] flex items-baseline font-open_sans text-base font-normal"
+                  className={`relative mb-[14px] flex items-baseline font-open_sans text-base font-normal`}
                 >
                   <span
                     className={`relative pl-[25px] ${css.pseudoCheckbox}`}
                   ></span>
                   {item}
+                  {index === group.length - 1 &&
+                  groupIndex === extras.length - 1 ? (
+                    <a
+                      href="#"
+                      className={`${css.decorArrow} hover:fill-lightGray focus:fill-grey active:fill-lightGray`}
+                    ></a>
+                  ) : null}
                 </p>
               ))}
             </li>

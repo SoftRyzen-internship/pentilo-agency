@@ -21,3 +21,25 @@
   background: url('/icons/icon_checked.svg') no-repeat center;
   background-size: contain;
 }
+
+.decorArrow {
+  position: relative;
+}
+
+.decorArrow::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  right: 22px;
+  transform: translateY(-50%) rotate(-135deg);
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url('/icons/icon_arrow.svg');
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @apply bottom-[-10px] right-[-20px];
+}
