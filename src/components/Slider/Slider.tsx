@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SliderProps } from './types';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 import useWindowSize from '@/utils/useWindowSize';
 import { getSliderBreakpointsOptions } from '@/utils/getSliderBreakpointsOptions';
