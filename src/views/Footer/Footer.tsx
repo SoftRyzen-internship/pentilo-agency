@@ -14,7 +14,7 @@ export const Footer = () => {
         <div className="text-xs md:order-2 md:pl-[91px] xl:pl-[111px] ">
           <h2 className="mb-4 font-bold text-grey ">{title}</h2>
           <CustomLink
-            className="mb-5 block text-grey"
+            className="mb-5 inline-block text-grey"
             href={email.href}
             text={email.text}
           />
@@ -28,22 +28,22 @@ export const Footer = () => {
             />
           </div>
         </div>
-        <div className="text-xs text-grey md:order-1 md:pl-[175px] xl:pl-[300px]">
+        <div className="flex flex-col items-end text-xs text-grey md:order-1 md:pl-[175px] xl:pl-[300px]">
           <NavigationRow variant="footer" />
           <div className=" md:absolute md:left-[32px] md:top-[100px] xl:left-[50px]">
             <CustomLink
-              className="mt-6 block text-right md:mt-0"
+              className="mt-6 block md:mt-0"
               href={terms.href}
               text={terms.text}
             />
             <CustomLink
-              className="mt-6  block text-right md:mt-4"
+              className="mt-6  block md:mt-4"
               href={policy.href}
               text={policy.text}
             />
           </div>
           <CustomLink
-            className="right-[32px] top-[96px]  mt-6 block text-right md:absolute md:mt-0 xl:right-[50px] "
+            className="right-[32px] top-[96px]  ml-auto mt-6 block  md:absolute md:mt-0 xl:right-[50px] "
             href={rights.list[1].href}
             text={rights.list[1].text}
           />

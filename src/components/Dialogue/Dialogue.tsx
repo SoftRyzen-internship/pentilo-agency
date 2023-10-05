@@ -2,13 +2,13 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 
 import { ReactionsCounter } from '../ReactionsCounter';
-import { TimeNow } from '../TimeNow';
+// import { TimeNow } from '../TimeNow';
 import { Loader } from '../ui/Loader';
 
+import { zoom } from '@/variants';
 import { DialogueProps } from './types';
 import data from '@/data/expertise.json';
 import css from './Dialogue.module.css';
-import { zoomIn, zoomOut } from './variants';
 
 const { offer, response, typingText } = data.dialogue;
 
@@ -28,7 +28,7 @@ export const Dialogue: React.FC<DialogueProps> = ({ className }) => {
 
   return (
     <motion.div
-      variants={zoomIn}
+      variants={zoom.in}
       initial="initial"
       whileInView="animate"
       viewport={{ amount: 0.25, once: true }}
@@ -37,10 +37,10 @@ export const Dialogue: React.FC<DialogueProps> = ({ className }) => {
       <div className={offerClasses}>
         <p className="pb-3 md:text-l">{offer.text}</p>
         <ReactionsCounter />
-        <TimeNow className="absolute bottom-[6px] right-14 md:bottom-5" />
+        {/* <TimeNow className="absolute bottom-[6px] right-14 md:bottom-5" /> */}
       </div>
       <motion.div
-        variants={zoomOut}
+        variants={zoom.out}
         transition={{ delay: 3 }}
         className="mb-4 flex items-baseline justify-center gap-6 font-medium"
       >
@@ -48,7 +48,7 @@ export const Dialogue: React.FC<DialogueProps> = ({ className }) => {
         <Loader />
       </motion.div>
       <motion.div
-        variants={zoomIn}
+        variants={zoom.in}
         transition={{ delay: 3 }}
         className={responseClasses}
       >

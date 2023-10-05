@@ -7,4 +7,5 @@ export interface TextAreaProps {
   placeholder: string;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
+  count: number;
 }
