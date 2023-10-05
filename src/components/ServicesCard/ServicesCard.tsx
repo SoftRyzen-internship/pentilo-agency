@@ -1,11 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
+
 import { getIconForService } from '@/utils/getIconForService';
 import { handleTooltipToggle } from '@/utils/handleTooltipToggle';
-import css from '@/views/ServicesSection/ServicesCard/ServicesCard.module.css';
-import { ServiceProps } from '@/views/ServicesSection/ServicesCard/types';
-import { ServiceCardToolTip } from '@/views/ServicesSection/ServiceCardToolTip/ServiceCardToolTip';
+
+import { ServiceProps } from '@/components/ServicesCard/types';
+import { ServiceCardToolTip } from '@/components/ServiceCardToolTip';
+
+import css from '@/components/ServicesCard/ServicesCard.module.css';
 
 export const ServiceCard: React.FC<ServiceProps> = ({
   title,

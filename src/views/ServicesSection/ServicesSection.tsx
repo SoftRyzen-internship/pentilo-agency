@@ -1,12 +1,15 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+
 import data from '@/data/services.json';
 import common from '@/data/common.json';
+
 import { Button } from '@/components/ui/Button';
-import { ServiceCard } from './ServicesCard';
-import { AdditionalServices } from './AdditionalServices';
+import { ServiceCard } from '@/components/ServicesCard';
+import { AdditionalServices } from '@/components/AdditionalServices';
 import { Slider } from '@/components/Slider';
-import { ServicesHeaderTexts } from '@/views/ServicesSection/ServicesHeaderTexts';
+import { ServicesHeaderTexts } from '@/components/ServicesHeaderTexts';
+
 import '@/components/Slider/styles.css';
 
 export const ServicesSection: React.FC = () => {

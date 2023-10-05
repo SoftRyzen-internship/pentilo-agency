@@ -137,6 +137,9 @@ textarea + .field-label {
 #services > div.container > .swiper .swiper-wrapper > .swiper-slide {
   display: block;
 }
+#services > div.container > .swiper {
+  margin-bottom: 0px !important;
+}
 
 @media (min-width: 768px) {
   #services > div.container > .swiper .swiper-wrapper > .swiper-slide {

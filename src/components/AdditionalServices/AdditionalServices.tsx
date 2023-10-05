@@ -2,10 +2,10 @@
 import React from 'react';
 
 import { timeline } from '@/constants';
-import css from '@/views/ServicesSection/AdditionalServices/AdditionalServices.module.css';
 import { Icon } from '@/components/ui/Icon';
+import { AdditionalServicesProps } from '@/components/AdditionalServices/types';
 
-import { AdditionalServicesProps } from '@/views/ServicesSection/AdditionalServices/types';
+import css from '@/components/AdditionalServices/AdditionalServices.module.css';
 
 export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
   subtitle2,
@@ -16,7 +16,7 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
       <div className="mx-auto my-0 mb-[32px] md:max-w-[330px] xl:w-full xl:max-w-fit-content">
         <div className="mb-10 flex w-[328px] items-center justify-center gap-[12px] xl:w-full">
           <Icon icon="starGroup" className="mr-0" width={34} height={48} />
-          <h3 className="relative  w-[235px] font-dela_gothic text-base font-normal uppercase text-white xl:text-xxl_small">
+          <h3 className="relative  w-[235px] font-dela_gothic text-base font-normal uppercase text-white xl:w-[352px] xl:text-xxl_small">
             {subtitle2}
           </h3>
         </div>

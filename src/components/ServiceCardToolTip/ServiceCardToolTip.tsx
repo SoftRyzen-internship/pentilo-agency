@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
+
 import { Icon } from '@/components/ui/Icon';
-import css from '@/views/ServicesSection/ServicesCard/ServicesCard.module.css';
-import { ServiceCardToolTipProps } from '@/views/ServicesSection/ServiceCardToolTip/types';
+import { ServiceCardToolTipProps } from '@/components/ServiceCardToolTip/types';
+
+import css from '@/components/ServicesCard/ServicesCard.module.css';
 
 export const ServiceCardToolTip: React.FC<ServiceCardToolTipProps> = ({
   toolTip,

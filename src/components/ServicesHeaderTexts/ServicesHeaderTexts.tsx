@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 
-import { ServicesHeaderTextsProps } from '@/views/ServicesSection/ServicesHeaderTexts/types';
-import styles from '@/views/ServicesSection/ServicesHeaderTexts/ServicesHeaderTexts.module.css';
+import { ServicesHeaderTextsProps } from '@/components/ServicesHeaderTexts/types';
+
+import styles from '@/components/ServicesHeaderTexts/ServicesHeaderTexts.module.css';
 
 const TITLE_STYLE = `${styles.textShadowTitle} xl:min-w-[420px] xl:text-xxxl_small mb-6 max-w-[328px] text-center font-dela_gothic text-3xl font-normal uppercase text-white md:mx-auto md:my-0 md:mb-6 md:max-w-[464px] xl:text-left`;
 const SUBTITLE_STYLE =
