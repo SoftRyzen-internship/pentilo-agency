@@ -1,0 +1,76 @@
+.buble_offer,
+.buble_response,
+.decorArrow {
+  position: relative;
+}
+
+.buble_offer::before,
+.buble_response::before,
+.buble_offer::after,
+.buble_response::after,
+.decorArrow::before {
+  content: '';
+  position: absolute;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.buble_offer::before,
+.buble_response::before {
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.buble_offer::before {
+  width: 328px;
+  height: 188px;
+
+  background-image: url('/icons/icon_buble_offer_sm.svg');
+
+  @apply md:h-[154px] md:w-[595px] md:bg-[url('/icons/icon_buble_offer_lg.svg')];
+}
+
+.buble_response::before {
+  width: 335px;
+  height: 47px;
+
+  background-image: url('/icons/icon_buble_response_sm.svg');
+
+  @apply md:h-[48px] md:w-[394px]  md:bg-[url('/icons/icon_buble_response_lg.svg')];
+}
+
+.buble_offer::after,
+.buble_response::after {
+  width: 24px;
+  height: 12px;
+
+  background-image: url('/icons/icon_duble_tick.svg');
+}
+
+.buble_offer::after {
+  bottom: 12px;
+  right: 27px;
+
+  @apply md:bottom-[25px];
+}
+
+.buble_response::after {
+  bottom: 10px;
+  right: 21px;
+
+  @apply md:bottom-[11px] md:right-[27px];
+}
+
+.decorArrow::before {
+  top: 50%;
+  right: -26px;
+  transform: translateY(-50%) rotate(-135deg);
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url('/icons/icon_arrow.svg');
+  @apply md:right-[-30px];
+}

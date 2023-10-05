@@ -30,7 +30,7 @@ export const Accordion = () => {
   };
 
   return (
-    <ul className="flex flex-col gap-10 text-s_middle md:w-[508px] xl:w-[580px]">
+    <ul className="text-s_middle_middle flex w-full flex-col gap-10 md:w-[508px] xl:w-[580px]">
       {accordeon.map(({ title, description }, ind) => (
         <li key={ind}>
           <button

@@ -9,11 +9,13 @@ import { TimeNowProps } from './types';
 const ONE_SECOND = 1000;
 
 export const TimeNow: React.FC<TimeNowProps> = ({ className }) => {
-  const [dateNow, setDateNow] = useState(new Date());
+  const [timeNow, setTimeNow] = useState<string>(
+    getFormattedTimeNow(new Date()),
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDateNow(new Date());
+      setTimeNow(getFormattedTimeNow(new Date()));
     }, ONE_SECOND);
 
     return () => {
@@ -22,9 +24,9 @@ export const TimeNow: React.FC<TimeNowProps> = ({ className }) => {
   }, []);
 
   const timeNowClasses = classNames(
-    'text-sm font-medium text-purple-light',
+    'text-sm font-medium text-purple-light opacity-50',
     className,
   );
 
-  return <div className={timeNowClasses}>{getFormattedTimeNow(dateNow)}</div>;
+  return <div className={timeNowClasses}>{timeNow}</div>;
 };

@@ -28,7 +28,7 @@ export const Header = () => {
       variants={isBlur ? blur : headerVariants}
       initial="initial"
       animate="animate"
-      className=" container fixed left-1/2 top-0 z-10 flex w-full -translate-x-1/2 items-center pb-[8px] pt-[10px] xl:px-[50px]"
+      className="container fixed left-1/2 top-0 z-10 flex w-full -translate-x-1/2 items-center pb-[8px] pt-[10px] xl:px-[50px]"
     >
       <Logo className="xl:mr-[273px]" />
       <NavigationRow variant="header" />

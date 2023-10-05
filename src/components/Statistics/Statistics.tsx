@@ -5,7 +5,7 @@ import React from 'react';
 
 import stats from '@/data/statistics.json';
 import { StatisticsProps } from './types';
-import { fadeInUp } from './variants';
+import { fadeInUp } from '@/variants';
 
 export const Statistics: React.FC<StatisticsProps> = ({ className }) => {
   return (
