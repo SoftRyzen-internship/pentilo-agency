@@ -18,7 +18,7 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
     }
   };
   const navlinkClasses = classNames(
-    'btn-transition cursor-pointer font-inter font-normal text-grey transition hover:text-lightGray focus:text-lightGray',
+    'btn-transition cursor-pointer font-inter font-normal text-grey hover:text-hover focus:text-hover transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.1] focus:scale-[1.1]',
     {
       'hover:text-purple-light focus:text-purple-light':
         variant === 'mobile-menu',
@@ -27,7 +27,14 @@ export const NavigationRowLink: React.FC<NavigationRowLinkProps> = ({
 
   return (
     <li onClick={onClick} className={navlinkClasses}>
-      <a onClick={handleClick}>{title}</a>
+      <a
+        className={navlinkClasses}
+        href={href}
+        onClick={handleClick}
+        aria-label={title}
+      >
+        {title}
+      </a>
     </li>
   );
 };
