@@ -17,6 +17,7 @@ export type IconNames =
   | 'questionMark'
   | 'starGroup'
   | 'check';
+  | 'caseArr';
 
 export interface SocialIconProps {
   icon: IconNames;
