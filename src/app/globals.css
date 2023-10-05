@@ -185,3 +185,21 @@ textarea + .field-label {
   display: flex !important;
   justify-content: center !important;
 }
+
+/* === Team === */
+.team0::before {
+  background-image: url('/images/team/project.webp');
+}
+
+.team1::before {
+  background-image: url('/images/team/content1.webp');
+}
+.team2::before {
+  background-image: url('/images/team/content2.webp');
+}
+.team3::before {
+  background-image: url('/images/team/ceo.webp');
+}
+.team4::before {
+  background-image: url('/images/team/targetolog.webp');
+}
