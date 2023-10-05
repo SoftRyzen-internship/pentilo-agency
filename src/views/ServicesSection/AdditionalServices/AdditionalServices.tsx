@@ -16,7 +16,7 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
       <div className="mx-auto my-0 mb-[32px] md:max-w-[330px] xl:w-full xl:max-w-fit-content">
         <div className="mb-10 flex w-[328px] items-center justify-center gap-[12px] xl:w-full">
           <Icon icon="starGroup" className="mr-0" width={34} height={48} />
-          <h3 className="relative  w-[235px] font-dela_gothic text-base font-normal uppercase text-white">
+          <h3 className="relative  w-[235px] font-dela_gothic text-base font-normal uppercase text-white xl:text-xxl_small">
             {subtitle2}
           </h3>
         </div>
@@ -27,7 +27,7 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
               {group.map((item, index) => (
                 <p
                   key={index}
-                  className={`relative mb-[14px] flex items-baseline font-open_sans text-base font-normal`}
+                  className={`relative mb-[14px] flex items-baseline font-open_sans text-base font-normal xl:text-l_small`}
                 >
                   <span
                     className={`relative pl-[25px] ${css.pseudoCheckbox}`}
