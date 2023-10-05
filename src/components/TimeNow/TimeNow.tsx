@@ -9,9 +9,7 @@ import { TimeNowProps } from './types';
 const FIVE_SECONDS = 5000;
 
 export const TimeNow: React.FC<TimeNowProps> = ({ className }) => {
-  const [timeNow, setTimeNow] = useState<string>(
-    getFormattedTimeNow(new Date()),
-  );
+  const [timeNow, setTimeNow] = useState<string>('00:00');
 
   useEffect(() => {
     const interval = setInterval(() => {
