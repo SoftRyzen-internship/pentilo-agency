@@ -38,7 +38,7 @@ export const Header = () => {
         tag="a"
         accent={false}
         href={apply}
-        className="ml-auto hidden uppercase xl:block xl:h-[31px] xl:w-[129px] xl:px-[10px] xl:py-[8px] xl:text-xs"
+        className="ml-auto border-gradient  hidden shadow-transparent uppercase xl:block xl:h-[31px] xl:w-[129px] xl:px-[10px] xl:py-[8px] xl:text-xs"
       >
         {common.buttonsText.v1}
       </Button>

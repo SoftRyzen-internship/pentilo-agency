@@ -6,10 +6,11 @@ import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import { apply } from '@/constants';
 import common from '@/data/common.json';
-import { Slider } from '@/components/Slider';
-import { HeroCard } from '@/components/HeroCard';
+import { HeroCardsList } from '@/components/HeroCardsList';
+
 
 export const HeroSection: React.FC = () => {
+
   return (
     <section className="pb-[168px]">
       <div className="wrapper h-[634px] max-w-[1280px] xl:h-[657px] ">
@@ -21,27 +22,33 @@ export const HeroSection: React.FC = () => {
               {hero.subtitle}
             </span>
           </h2>
-          <div className="text-center xl:flex">
+          <div className="text-center xl:flex xl:justify-between">
             <div className="mb-4 xl:mb-0 xl:flex">
-              <Countdown into="hero" className="mb-1 xl:mr-3" />
-              <p className="">{hero.timerText}</p>
+              <Countdown into="hero" className="mb-1 xl:mr-3 xl:mb-0" />
+              <p className="timer-text relative text-left xl:max-w-[160px]">
+                {hero.timerText}
+              </p>
             </div>
+            <div className="flex">
             <Button
               tag="a"
-              href={apply}
+              accent={false}
+              href="about"
+              className="mb-[10px] xl:mb-0 border-gradient shadow-transparent hidden xl:mr-5 xl:block xl:w-[150px] xl:py-[16.5px] xl:text-l_small"
+            >
+              {common.buttonsText.v2}
+            </Button>
+            <Button
+              tag="a"
               accent={true}
-              className="mx-auto mb-6 xl:w-[279px]"
+              href="/"
+              className=" xl:w-[180px]"
             >
               {common.buttonsText.v3}
-            </Button>
+            </Button></div>
           </div>
 
-          <Slider
-            section="hero"
-            element={HeroCard}
-            //  autoplay={true}
-            data={hero.services}
-          />
+        <HeroCardsList/>
         </div>
       </div>
     </section>
