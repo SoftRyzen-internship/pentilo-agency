@@ -41,13 +41,13 @@ export const ServicesSection: React.FC = () => {
           <Slider
             data={data.services}
             element={ServiceCard}
-            className="mb-[60px] md:mx-auto md:my-0 md:max-w-[330px]"
+            className="mb-[60px] md:mx-auto md:my-0 md:max-w-[340px]"
             navigation={true}
             autoplay={false}
             section="services"
           ></Slider>
         ) : (
-          <ul className="mb-[60px] grid grid-cols-1 items-start gap-x-[20px] gap-y-[20px] xl:grid-cols-3">
+          <ul className="mb-[60px] grid grid-cols-1 items-start gap-x-[100px] gap-y-[20px] xl:grid-cols-3">
             {data.services.map((service, idx) => (
               <ServiceCard
                 key={idx}

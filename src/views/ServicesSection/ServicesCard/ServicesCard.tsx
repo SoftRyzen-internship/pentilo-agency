@@ -74,7 +74,7 @@ export const ServiceCard: React.FC<ServiceProps> = ({
                         >
                           <span
                             className={`absolute left-[10px] top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs ${
-                              index === 0 ? 'left-[10px]' : 'left-[-90px]'
+                              index === 0 ? 'left-[-90px]' : 'left-[-90px]'
                             }`}
                           >
                             {item.toolTip}
