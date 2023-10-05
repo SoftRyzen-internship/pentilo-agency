@@ -31,7 +31,7 @@ export const ServiceCard: React.FC<ServiceProps> = ({
   return (
     <>
       <li
-        className={`shadow-md ${css.border} relative mb-6 h-auto rounded-lg bg-white pb-8 pl-8 pr-[25px] md:max-w-[328px]`}
+        className={`shadow-md ${css.border} relative mb-6 h-auto rounded-lg bg-white pb-8 pl-8 pr-[25px] md:max-w-[328px] xl:max-w-[380px]`}
       >
         <div className="mb-6 flex items-start pt-6">
           <h3 className=" w-[207px] font-dela_gothic text-base font-normal uppercase text-white">
@@ -73,8 +73,8 @@ export const ServiceCard: React.FC<ServiceProps> = ({
                           }`}
                         >
                           <span
-                            className={`absolute left-[10px] top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs ${
-                              index === 0 ? 'left-[-90px]' : 'left-[-90px]'
+                            className={`absolute top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs ${
+                              index === 0 ? 'left-[10px]' : 'left-[-90px]'
                             }`}
                           >
                             {item.toolTip}

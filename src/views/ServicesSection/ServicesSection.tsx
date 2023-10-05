@@ -47,7 +47,7 @@ export const ServicesSection: React.FC = () => {
             section="services"
           ></Slider>
         ) : (
-          <ul className="mb-[60px] grid grid-cols-1 items-start gap-x-[100px] gap-y-[20px] xl:grid-cols-3">
+          <ul className="mb-[60px] grid grid-cols-1 items-start gap-x-[20px] gap-y-[20px] xl:grid-cols-3">
             {data.services.map((service, idx) => (
               <ServiceCard
                 key={idx}
