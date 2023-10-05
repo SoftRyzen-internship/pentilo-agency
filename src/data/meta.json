@@ -1,0 +1,14 @@
+{
+  "title": "Pentilo Agency",
+  "description": "Стратегічний маркетинг, який подарує життя твоєму бізнесу. Агенство цифрового маркетингу",
+  "keywords": "Pentilo Agency, агенство цифрового маркетингу, SMM, СММ",
+  "locale": "uk_UA",
+  "images": [
+    {
+      "url": "/meta/opengraph-image.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Pentilo Agency - Агенство цифрового маркетингу"
+    }
+  ]
+}

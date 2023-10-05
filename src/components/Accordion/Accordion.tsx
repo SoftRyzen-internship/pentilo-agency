@@ -30,17 +30,17 @@ export const Accordion = () => {
   };
 
   return (
-    <ul className="flex flex-col gap-10 text-s_middle md:w-[508px] xl:w-[580px]">
+    <ul className="text-s_middle_middle flex w-full flex-col gap-10 md:w-[508px] xl:w-[580px]">
       {accordeon.map(({ title, description }, ind) => (
         <li key={ind}>
           <button
-            className="mb-[18px] flex w-[100%] items-center justify-between  xl:mb-6"
+            className="mb-[18px] flex w-[100%] items-center justify-between font-dela_gothic uppercase  xl:mb-6"
             type="button"
             onClick={() => {
               onClickShow(ind);
             }}
           >
-            <h2 className="font-dela_gothic uppercase ">{title}</h2>
+            {title}
             <AnimatePresence mode="wait" initial={false}>
               {ind === 0 && <AccordionButtonIcon state={firstShown} />}
               {ind === 1 && <AccordionButtonIcon state={secondShown} />}

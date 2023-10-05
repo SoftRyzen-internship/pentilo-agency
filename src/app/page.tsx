@@ -1,21 +1,36 @@
 // import { ExampleSection } from '@/views/ExampleSection';
 // import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton';
-// import { Expertise } from '@/views/Expertise';
-// import { ApplyForm } from '@/views/ApplyForm';
-// import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton';
+
+import { ExpertiseSection } from '@/views/ExpertiseSection';
 import { ServicesSection } from '@/views/ServicesSection';
+import { ApplyFormSection } from '@/views/ApplyFormSection';
+import { TimelineSection } from '@/views/TimelineSection';
+import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton';
+import { TeamSection } from '@/views/TeamSection';
+import { CasesSection } from '@/views/CasesSection';
+import { AboutSection } from '@/views/AboutSection';
+import { TrustSection } from '@/views/TrustSection';
+import { QASection } from '@/views/QASection';
+import { StatisticsSection } from '@/views/StatisticsSection';
+import { AdvantagesSection } from '@/views/AdvantagesSection';
 
 export default function Home() {
   return (
     <>
       {/* <ExampleSection />
       <ScrollToTopButton sectionIdStart="advantages" /> */}
-      <div className="h-[100px]"></div>
-      <div className="pt-[56px]"></div>
+      <StatisticsSection />
+      <AdvantagesSection />
+      <AboutSection />
+      <ExpertiseSection />
       <ServicesSection />
-      {/* <Expertise /> */}
-      {/* <ApplyForm /> */}
-      {/* <ScrollToTopButton sectionIdStart="advantages" /> */}
+      <TeamSection />
+      <CasesSection />
+      <TrustSection />
+      <TimelineSection />
+      <QASection />
+      <ApplyFormSection />
+      <ScrollToTopButton sectionIdStart="advantages" />
     </>
   );
 }

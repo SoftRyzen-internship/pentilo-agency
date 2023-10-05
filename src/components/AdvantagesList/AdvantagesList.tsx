@@ -1,10 +1,11 @@
+'use client';
 import { motion } from 'framer-motion';
 
 import React from 'react';
 
 import data from '@/data/advantages.json';
 import css from './AdvantagesList.module.css';
-import { fadeInUp } from './variants';
+import { fadeInUp } from '@/variants';
 
 import { Icon } from '../ui/Icon';
 
@@ -14,7 +15,7 @@ export const AdvantagesList: React.FC = () => {
       variants={fadeInUp}
       initial="hide"
       whileInView="show"
-      viewport={{ amount: 0.25, once: true }}
+      viewport={{ amount: 0.25, once: false }}
       className="xl:max-w-max mx-auto grid max-w-[328px] gap-4 md:max-w-[380px] 
     md:gap-6 xl:grid-cols-3 xl:gap-5"
     >

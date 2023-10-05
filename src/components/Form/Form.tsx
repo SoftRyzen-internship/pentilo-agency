@@ -17,6 +17,7 @@ import { Loader } from '../ui/Loader';
 
 import { FormProps, PopUpType, StatusVariants } from './types';
 import { schema } from './schema';
+
 import data from '@/data/form.json';
 import common from '@/data/common.json';
 
@@ -27,6 +28,7 @@ const { onSuccess, onError } = notifications;
 export const Form: React.FC<FormProps> = ({ className = '' }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [popUpType, setPopUpType] = useState<PopUpType>('default');
+  const [count, setCount] = useState<number>(0);
 
   const {
     register,
@@ -36,11 +38,16 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
     handleSubmit,
     formState: { errors },
   } = useForm<FieldValues>({
-    // @ts-expect-error RHF V7 limitation #7895
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema) as FieldValues | any,
   });
 
   useFormPersist(FORM_DATA_KEY, { watch, setValue });
+
+  const data = watch(textarea.name);
+
+  useEffect(() => {
+    setCount(data?.length || 0);
+  }, [data, watch]);
 
   useEffect(() => {
     switch (popUpType) {
@@ -78,18 +85,23 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
 
   return (
     <form className={formClassName} onSubmit={handleSubmit(onSubmit)}>
-      <ul className="flex flex-col gap-3">
+      <ul className="mb-7 flex flex-col gap-10">
         {inputs.map(input => (
           <li key={input.id}>
             <Field {...input} register={register} errors={errors} />
           </li>
         ))}
         <li>
-          <TextArea {...textarea} register={register} errors={errors} />
+          <TextArea
+            {...textarea}
+            register={register}
+            errors={errors}
+            count={count}
+          />
         </li>
       </ul>
 
-      <div className="mb-[40px] mt-6 flex justify-center gap-1 ">
+      <div className="mb-10 flex justify-center gap-1 ">
         <p>{timerText}</p>
         <Countdown into="form" />
       </div>
