@@ -35,7 +35,7 @@ const icons = {
   lock,
   questionMark,
   starGroup,
-  check
+  check,
 };
 
 export const Icon: React.FC<SocialIconProps> = ({

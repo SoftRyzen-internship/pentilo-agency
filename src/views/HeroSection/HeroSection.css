@@ -26,14 +26,14 @@
       url(/images/hero/heroipad.webp) 1x,
       url(/images/hero/heroipad@2x.webp) 2x
     );
-   
   }
 
   @media screen and (min-width: 1280px) {
     background-image: image-set(
       url(/images/hero/herodesk.webp) 1x,
       url(/images/hero/herodesk@2x.webp) 2x
-    ); border-radius: 0 0 24px 24px;
+    );
+    border-radius: 0 0 24px 24px;
   }
 }
 
@@ -42,6 +42,6 @@
     content: '→';
     transform: translateX(50%);
     position: absolute;
-    width: 10px
+    width: 10px;
   }
 }

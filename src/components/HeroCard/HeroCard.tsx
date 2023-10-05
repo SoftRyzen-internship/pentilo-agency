@@ -1,7 +1,7 @@
 import css from './HeroCard.module.css';
 import { Icon } from '../ui/Icon';
 
-export const HeroCard: React.FC<{text: string}> = ({ text }) => {
+export const HeroCard: React.FC<{ text: string }> = ({ text }) => {
   return (
     <div
       className={`border-gradient relative flex h-[108px] w-full max-w-[328px]
