@@ -41,21 +41,21 @@ export const TrustSection = () => {
             ))}
           </motion.ul>
         )}
-        {!isScreenDesktop && (
-          <Ticker duration={20}>
-            {partners.map((el, index) => (
-              <div key={index} className="mr-[59px] flex items-center">
-                <Image
-                  src={el.src}
-                  alt={el.alt}
-                  width={el.width}
-                  height={el.height}
-                />
-              </div>
-            ))}
-          </Ticker>
-        )}
       </div>
+      {!isScreenDesktop && (
+        <Ticker duration={20}>
+          {partners.map((el, index) => (
+            <div key={index} className="ml-[59px] flex items-center">
+              <Image
+                src={el.src}
+                alt={el.alt}
+                width={el.width}
+                height={el.height}
+              />
+            </div>
+          ))}
+        </Ticker>
+      )}
     </section>
   );
 };
