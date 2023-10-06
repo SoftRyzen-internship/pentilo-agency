@@ -20,9 +20,7 @@ const config: Config = {
       mdOnly: { min: '744px', max: '1279.98px' },
       mediaHover: { raw: '(hover: hover)' },
     },
-    maxWidth: {
-      'fit-content': 'fit-content',
-    },
+
     boxShadow: {
       title: '0px 0px 15px 0px #AB40FFEB',
       button: '0px 0px 35px 0px #AB40FF',
@@ -34,6 +32,9 @@ const config: Config = {
         open_sans: ['var(--font-open-sans)'],
         inter: ['var(--font-inter)'],
         dela_gothic: ['var(--font-dela-gothic)'],
+      },
+      maxWidth: {
+        'fit-content': 'fit-content',
       },
       fontSize: {
         xs: ['12px', '1.27'],

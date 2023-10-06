@@ -58,7 +58,7 @@ export const MobileMenu: React.FC = () => {
                 <NavigationRow
                   variant="mobile-menu"
                   onClick={() => setOpenMenu(false)}
-                  className="max-w-max mx-auto mt-[153px]"
+                  className="mx-auto mt-[153px] max-w-max"
                 />
                 <Button
                   tag="a"
