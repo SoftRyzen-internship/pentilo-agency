@@ -8,6 +8,9 @@ import { HeroCard } from '../HeroCard/HeroCard';
 import data from '@/data/hero.json';
 import { SCREEN_DESKTOP } from '@/constants';
 
+import { motion } from 'framer-motion';
+import { list } from '@/variants';
+
 export const HeroCardsList: React.FC = () => {
   const { width } = useWindowSize();
 
@@ -15,7 +18,13 @@ export const HeroCardsList: React.FC = () => {
     const heroCards = data.services.map(({ text }, idx) => (
       <HeroCard key={idx} text={text} />
     ));
-    return <div className="flex justify-center gap-[28px]">{heroCards}</div>;
+    return <motion.div 
+    initial="hidden"
+    animate="visible"
+    variants={list}
+    viewport={{ amount: 0.25, once: false }}
+    
+    className="flex justify-center gap-[28px]">{heroCards}</motion.div>;
   } else
     return (
       <Slider

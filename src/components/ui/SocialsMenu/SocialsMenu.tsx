@@ -43,12 +43,7 @@ export const SocialsMenu: React.FC<SocialsMenuProps> = ({
             aria_label={ariaLabelText}
             onClick={onClick}
           >
-            <Icon
-              icon={icon}
-              // variant={variant}
-              width={iconWidth}
-              height={iconHeight}
-            />
+            <Icon icon={icon} width={iconWidth} height={iconHeight} />
           </SocialButton>
         </li>
       ))}

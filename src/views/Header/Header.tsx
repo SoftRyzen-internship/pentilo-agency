@@ -28,21 +28,23 @@ export const Header = () => {
       variants={isBlur ? blur : headerVariants}
       initial="initial"
       animate="animate"
-      className="container fixed left-1/2 top-0 z-10 flex w-full -translate-x-1/2 items-center pb-[8px] pt-[10px] xl:px-[50px]"
+      className=" fixed left-1/2 top-0 z-10  w-full -translate-x-1/2  pb-[8px] pt-[10px]"
     >
-      <Logo className="xl:mr-[273px]" />
-      <NavigationRow variant="header" />
-      <SocialsMenu className="ml-[202px]" />
+      <div className="container relative flex items-center">
+        <Logo className="xl:mr-[273px]" />
+        <NavigationRow variant="header" />
+        <SocialsMenu className="ml-[202px]" />
 
-      <Button
-        tag="a"
-        accent={false}
-        href={apply}
-        className="border-gradient ml-auto  hidden uppercase shadow-transparent xl:block xl:h-[31px] xl:w-[129px] xl:px-[10px] xl:py-[8px] xl:text-xs"
-      >
-        {common.buttonsText.v1}
-      </Button>
-      <MobileMenu />
+        <Button
+          tag="a"
+          accent={false}
+          href={apply}
+          className="ml-auto hidden uppercase xl:block xl:h-[31px] xl:w-[129px] xl:px-[10px] xl:py-[8px] xl:text-xs"
+        >
+          {common.buttonsText.v1}
+        </Button>
+        <MobileMenu />
+      </div>
     </motion.header>
   );
 };

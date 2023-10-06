@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 
 import { ReactionsCounter } from '../ReactionsCounter';
-// import { TimeNow } from '../TimeNow';
+import { TimeNow } from '../TimeNow';
 import { Loader } from '../ui/Loader';
 
 import { zoom } from '@/variants';
@@ -37,7 +37,7 @@ export const Dialogue: React.FC<DialogueProps> = ({ className }) => {
       <div className={offerClasses}>
         <p className="pb-3 md:text-l">{offer.text}</p>
         <ReactionsCounter />
-        {/* <TimeNow className="absolute bottom-[6px] right-14 md:bottom-5" /> */}
+        <TimeNow className="absolute bottom-[6px] right-14 md:bottom-5" />
       </div>
       <motion.div
         variants={zoom.out}
