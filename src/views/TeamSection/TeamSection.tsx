@@ -25,7 +25,7 @@ export const TeamSection: React.FC = () => {
           tag="a"
           href={cases}
           accent={false}
-          className="mx-auto mt-[48px] md:mt-8 xl:mt-[43px]"
+          className="mx-auto mt-[48px] shadow-input after:content-[''] md:mt-8 xl:mt-[43px]"
         >
           {common.buttonsText.v5}
           <Icon
