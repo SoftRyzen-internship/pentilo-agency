@@ -80,7 +80,7 @@ export const ServicesSection: React.FC = () => {
           tag="a"
           accent={true}
           href={apply}
-          className="mb-[10px] md:mx-auto md:my-0 xl:w-[180px] "
+          className="mx-auto my-0 mb-[10px] xl:w-[180px] "
         >
           {common.buttonsText.v3}
         </Button>

@@ -19,12 +19,12 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
         initial="hide"
         whileInView="show"
         viewport={{ amount: 0.25, once: true }}
-        className="mx-auto my-0 mb-[32px] md:max-w-[330px] xl:w-full xl:max-w-fit"
+        className="mx-auto my-0 mb-[32px] flex flex-col items-center justify-center md:max-w-[330px] xl:max-w-full"
       >
-        <div className="flex xl:h-full xl:items-center xl:justify-center">
+        <div className="flex items-center justify-center xl:h-full">
           <motion.div
             variants={fadeInUp}
-            className="mx-0 my-auto flex max-w-fit items-center justify-center gap-[12px] pb-10 xl:mx-0 xl:my-auto xl:w-full"
+            className="flex max-w-fit items-center gap-[12px] pb-10"
           >
             <Icon icon="starGroup" className="mr-0" width={34} height={48} />
             <motion.h3
@@ -38,13 +38,13 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
 
         <motion.ul
           variants={fadeInUp}
-          className="min-w-full gap-[70px] xl:flex xl:items-center xl:justify-between"
+          className="flex max-w-[328px] flex-col items-start xl:max-w-[368px] xl:flex-row xl:items-center xl:justify-center xl:gap-[70px]"
         >
           {extras.map((group, groupIndex) => (
             <motion.li
               variants={fadeInUp}
               key={groupIndex}
-              className="xl:max-w-[368px]"
+              className="xl:min-w-fit"
             >
               {group.map((item, index) => (
                 <p
