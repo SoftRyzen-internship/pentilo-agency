@@ -1,5 +1,15 @@
 .innerCheckbox {
   box-shadow: inset 0 0 20px #ab40ff4d;
+
+}
+
+.innerCheckbox::before {
+content: '';
+  background-image: url('/icons/icon_check.svg');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
 .star::after {
