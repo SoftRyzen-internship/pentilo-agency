@@ -23,7 +23,7 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
     variants={fadeInUp}
     initial="hide"
     whileInView="show"
-    viewport={{ amount: 0.25, once: false }}
+    viewport={{ amount: 0.25, once: true }}
     className="flex flex-col gap-y-6 xl:flex-row xl:items-center xl:justify-between xl:gap-x-[49px]"
   >
     <motion.h2 variants={fadeInUp} className={TITLE_STYLE}>

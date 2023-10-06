@@ -68,7 +68,7 @@ export const ServicesSection: React.FC = () => {
           variants={fadeInUp}
           initial="hide"
           whileInView="show"
-          viewport={{ amount: 0.25, once: false }}
+          viewport={{ amount: 0.25, once: true }}
           className="mb-[60px] hidden grid-cols-1 items-start gap-x-[20px] gap-y-[20px] xl:grid xl:grid-cols-3"
         >
           {services.map((service, idx) => (

@@ -3,7 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { fadeInUp } from '@/variants';
-import { timeline } from '@/constants';
 import { Icon } from '@/components/ui/Icon';
 import { AdditionalServicesProps } from '@/components/AdditionalServices/types';
 
@@ -19,21 +18,23 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
         variants={fadeInUp}
         initial="hide"
         whileInView="show"
-        viewport={{ amount: 0.25, once: false }}
-        className="mx-auto my-0 mb-[32px] md:max-w-[330px] xl:w-full xl:max-w-fit-content"
+        viewport={{ amount: 0.25, once: true }}
+        className="mx-auto my-0 mb-[32px] md:max-w-[330px] xl:w-full xl:max-w-fit"
       >
-        <motion.div
-          variants={fadeInUp}
-          className="mx-0 my-auto flex max-w-fit-content items-center justify-center gap-[12px] pb-10 xl:w-full"
-        >
-          <Icon icon="starGroup" className="mr-0" width={34} height={48} />
-          <motion.h3
+        <div className="flex xl:h-full xl:items-center xl:justify-center">
+          <motion.div
             variants={fadeInUp}
-            className="relative   w-[235px] font-dela_gothic text-base font-normal uppercase text-white xl:w-[352px] xl:text-xxl_small"
+            className="mx-0 my-auto flex max-w-fit items-center justify-center gap-[12px] pb-10 xl:mx-0 xl:my-auto xl:w-full"
           >
-            {subtitle2}
-          </motion.h3>
-        </motion.div>
+            <Icon icon="starGroup" className="mr-0" width={34} height={48} />
+            <motion.h3
+              variants={fadeInUp}
+              className="relative w-[235px] font-dela_gothic text-base font-normal uppercase text-white xl:w-[352px] xl:text-xxl_small"
+            >
+              {subtitle2}
+            </motion.h3>
+          </motion.div>
+        </div>
 
         <motion.ul
           variants={fadeInUp}
@@ -56,10 +57,7 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
                   {item}
                   {index === group.length - 1 &&
                   groupIndex === extras.length - 1 ? (
-                    <a
-                      href={timeline}
-                      className={`${css.decorArrow} hover:fill-lightGray focus:fill-grey active:fill-lightGray`}
-                    ></a>
+                    <span className={css.decorArrow}></span>
                   ) : null}
                 </p>
               ))}

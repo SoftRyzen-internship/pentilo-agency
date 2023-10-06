@@ -33,9 +33,6 @@ const config: Config = {
         inter: ['var(--font-inter)'],
         dela_gothic: ['var(--font-dela-gothic)'],
       },
-      maxWidth: {
-        'fit-content': 'fit-content',
-      },
       fontSize: {
         xs: ['12px', '1.27'],
 
@@ -87,12 +84,12 @@ const config: Config = {
           active: '#781EBF',
           hoverSec: '#b454ff33',
           activeSec: '#b454ff80',
+          tooltip: '#B075DF',
         },
         lightGray: '#EAEAEA',
         grey: '#D3D3D3',
         error: '#B65947',
         hover: '#d2a0f8',
-        tooltip: '#B075DF',
       },
       borderRadius: {
         button: '32px',

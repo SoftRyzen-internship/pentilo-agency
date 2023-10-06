@@ -43,7 +43,7 @@ export const ServiceCardToolTip: React.FC<ServiceCardToolTipProps> = ({
           className={`relative ml-2 cursor-pointer ${positionClass}`}
         >
           <span
-            className={`border-purple-tooltip bg-purple-tooltip absolute top-[2rem] h-auto min-w-[204px] max-w-fit-content -translate-x-1/2 transform rounded-[1rem] border p-2 font-open_sans text-s_xs xl:min-w-[300px] ${
+            className={`absolute top-[2rem] h-auto min-w-[204px] max-w-fit -translate-x-1/2 transform rounded-[1rem] border border-purple-tooltip bg-purple-tooltip p-2 font-open_sans text-s_xs xl:min-w-[300px] ${
               positionClass === css.tooltipLeft
                 ? 'left-[10px] xl:left-[50px]'
                 : 'left-[-90px] xl:left-[-50px]'
