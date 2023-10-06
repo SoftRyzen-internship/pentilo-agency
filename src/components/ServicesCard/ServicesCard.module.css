@@ -27,7 +27,7 @@
   border-color: transparent transparent #b075df transparent;
   top: 24px;
   left: 50%;
-  transform: translateX(-155%) rotate(0deg);
+  transform: translateX(-152%) rotate(0deg);
 }
 .tooltipRight::before {
   content: '';
@@ -39,5 +39,5 @@
   border-color: transparent transparent #b075df transparent;
   top: 24px;
   left: 50%;
-  transform: translateX(-155%) rotate(0deg);
+  transform: translateX(-152%) rotate(0deg);
 }
