@@ -14,6 +14,8 @@ export const fadeInUp = {
   },
 };
 
+
+
 export const list = {
   visible: { opacity: 1,
     transition: {

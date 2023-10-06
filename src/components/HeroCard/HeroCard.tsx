@@ -2,7 +2,7 @@ import css from './HeroCard.module.css';
 import { Icon } from '../ui/Icon';
 
 import { motion } from 'framer-motion';
-import { fadeInUpHero, item } from '@/variants';
+import { item } from '@/variants';
 
 export const HeroCard: React.FC<{ text: string }> = ({ text }) => {
   return (
