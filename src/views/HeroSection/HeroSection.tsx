@@ -27,8 +27,10 @@ export const HeroSection: React.FC = () => {
                 into="hero"
                 className="mb-1 xl:mb-0 xl:mr-3 xl:min-w-[230px]"
               />
-              <p className="timer-text relative xl:max-w-[160px] xl:text-left">
-                {hero.timerText}
+              <p className="timer-text relative flex justify-center xl:block xl:max-w-[160px] xl:text-left">
+                <span>{hero.timerTextStart}</span>
+                <span className="block xl:hidden">&nbsp;–&nbsp;</span>
+                <span>{hero.timerTextFinish}</span>
               </p>
             </div>
             <div className="flex justify-center">
@@ -40,7 +42,7 @@ export const HeroSection: React.FC = () => {
               >
                 {common.buttonsText.v2}
               </Button>
-              <Button tag="a" accent={true} href="/" className=" xl:w-[180px]">
+              <Button tag="a" accent={true} href="/" className="xl:w-[180px]">
                 {common.buttonsText.v3}
               </Button>
             </div>
