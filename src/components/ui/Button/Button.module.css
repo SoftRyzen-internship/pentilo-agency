@@ -1,12 +1,32 @@
 .border {
-  @apply relative rounded-buttonSec;
-}
-.border::after {
-  content: '';
-  @apply absolute left-[-2px] top-[-2px] z-[-2] h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-buttonSec bg-grad_300;
+  position: relative;
 }
 
-.border:before {
-  content: '';
-  @apply absolute left-0 top-0 z-[-1] h-full w-full rounded-buttonSec bg-body;
+.border::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  border-radius: 32px;
+}
+
+.border::after {
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+  border-radius: 24px;
+  background:
+    linear-gradient(#141414, #141414) padding-box,
+    linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%) border-box;
+  border: 2px solid transparent;
 }
