@@ -44,40 +44,37 @@ export const MobileMenu: React.FC = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed left-0 top-0 h-screen w-full overflow-auto bg-body pt-[10px] xl:hidden"
+            className="container fixed left-0  top-0 h-[100vh] w-[100vw] bg-body px-4 pb-[32px] pt-[9px] xl:hidden"
           >
-            <div className="container relative grid h-full grid-rows-[1fr_auto] ">
-              <div>
-                <Logo />
-                <MobileMenuBtn
-                  onClick={() => setOpenMenu(false)}
-                  aria={common.mobileMenu.closeBtnAriaText}
-                >
-                  <Icon icon="cross" width={12} height={12} />
-                </MobileMenuBtn>
-                <NavigationRow
-                  variant="mobile-menu"
-                  onClick={() => setOpenMenu(false)}
-                  className="mx-auto mt-[153px] max-w-max"
-                />
-                <Button
-                  tag="a"
-                  accent={true}
-                  href={apply}
-                  onClick={() => setOpenMenu(false)}
-                  className="mx-auto mt-8 text-xs uppercase smOnly:max-w-[153px] mdOnly:max-w-[153px] mdOnly:py-[12.5px]"
-                >
-                  {common.buttonsText.v1}
-                </Button>
+            <Logo />
 
-                <SocialsMenu
-                  variant="mobile-menu"
-                  className=" mt-8 justify-center"
-                />
-              </div>
+            <MobileMenuBtn
+              onClick={() => setOpenMenu(false)}
+              aria={common.mobileMenu.closeBtnAriaText}
+            >
+              <Icon icon="cross" width={12} height={12} />
+            </MobileMenuBtn>
+            <NavigationRow
+              variant="mobile-menu"
+              onClick={() => setOpenMenu(false)}
+              className="mx-auto mt-[153px] max-w-max"
+            />
+            <Button
+              tag="a"
+              accent={true}
+              href={apply}
+              onClick={() => setOpenMenu(false)}
+              className="mx-auto mt-8 text-xs uppercase smOnly:max-w-[153px] mdOnly:max-w-[153px] mdOnly:py-[12.5px]"
+            >
+              {common.buttonsText.v1}
+            </Button>
 
-              <MobileMenuBottomLinks />
-            </div>
+            <SocialsMenu
+              variant="mobile-menu"
+              className=" mt-8 justify-center"
+            />
+
+            <MobileMenuBottomLinks />
           </motion.div>
         )}
       </AnimatePresence>

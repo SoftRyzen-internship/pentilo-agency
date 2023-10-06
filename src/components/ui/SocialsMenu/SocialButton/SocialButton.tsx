@@ -19,8 +19,9 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
       'w-[24px] h-[24px] text-body  rounded-normal text-white':
         variant === 'mobile-menu',
     },
-    'flex items-center cursor-pointer justify-center transition-colors duration-300',
-    'ease-[cubic-bezier(0.4,0,0.2,1)] duration-300 transition-transform hover:scale-[1.1] focus:scale-[1.1]  hover:text-hover focus:text-hover',
+    'fill-current flex items-center cursor-pointer justify-center transition-colors duration-300',
+    'hover:text-grey-light active:text-grey-light',
+    'focus:text-grey-dark ',
     className,
   );
 

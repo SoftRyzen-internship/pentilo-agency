@@ -13,7 +13,7 @@ export const MobileMenuBtn: React.FC<MobileMenuBtnProps> = ({
       type="button"
       onClick={onClick}
       aria-label={aria}
-      className={`absolute right-0 top-[-10px] inline-flex h-[56px] w-[56px] 
+      className={`absolute right-0 top-0 inline-flex h-[56px] w-[56px] 
       items-center justify-center ${className}`}
     >
       {children}

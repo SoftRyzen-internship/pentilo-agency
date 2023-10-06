@@ -1,4 +1,3 @@
-'use client';
 import classNames from 'classnames';
 
 import React from 'react';
@@ -25,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
         accent === true,
       ' hover:bg-purple-hover focus:bg-purple-hover active:bg-purple-active btn-transition text-l_small':
         accent === true,
-      'rounded-buttonSec py-[8.5px] px-[20px] max-w-[280px] text-s_middle':
+      'rounded-buttonSec shadow-input py-[8.5px] px-[20px] max-w-[280px] text-s_middle':
         accent === false,
       'hover:bg-purple-hoverSec focus:bg-purple-hoverSec active:bg-purple-activeSec btn-transition':
         accent === false,

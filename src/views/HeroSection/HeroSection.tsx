@@ -23,10 +23,7 @@ export const HeroSection: React.FC = () => {
           </h2>
           <div className="mb-6 text-center md:mb-8 xl:mb-[150px] xl:flex xl:justify-between">
             <div className="mb-4 xl:mb-0 xl:flex">
-              <Countdown
-                into="hero"
-                className="mb-1 xl:mb-0 xl:mr-3 xl:min-w-[230px]"
-              />
+              <Countdown into="hero" className="mb-1 xl:mb-0 xl:mr-3 xl:w-[223px]" />
               <p className="timer-text relative xl:max-w-[160px] xl:text-left">
                 {hero.timerText}
               </p>

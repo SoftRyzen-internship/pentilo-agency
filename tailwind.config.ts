@@ -87,7 +87,6 @@ const config: Config = {
         lightGray: '#EAEAEA',
         grey: '#D3D3D3',
         error: '#B65947',
-        hover: '#d2a0f8',
       },
       borderRadius: {
         button: '32px',

@@ -8,8 +8,6 @@
   height: 2px;
   background-repeat: no-repeat;
   background-size: cover;
-
-  @apply xl:h-[3px] xl:last-of-type:w-[calc(100%+24px)];
 }
 
 .cardline {

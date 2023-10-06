@@ -15,7 +15,6 @@ import lock from 'public/icons/icon_lock.svg';
 import questionMark from 'public/icons/icon_questionmark.svg';
 import starGroup from 'public/icons/icon_threestar.svg';
 import check from 'public/icons/icon_check.svg';
-import caseArr from 'public/icons/case_arrow.svg';
 
 import { SocialIconProps } from '@/components/ui/Icon/types';
 
@@ -37,7 +36,6 @@ const icons = {
   questionMark,
   starGroup,
   check,
-  caseArr,
 };
 
 export const Icon: React.FC<SocialIconProps> = ({

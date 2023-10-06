@@ -34,13 +34,13 @@ export const Accordion = () => {
       {accordeon.map(({ title, description }, ind) => (
         <li key={ind}>
           <button
-            className="mb-[18px] flex w-[100%] items-center justify-between font-dela_gothic uppercase  xl:mb-6"
+            className="mb-[18px] flex w-[100%] items-center justify-between  xl:mb-6"
             type="button"
             onClick={() => {
               onClickShow(ind);
             }}
           >
-            {title}
+            <h2 className="font-dela_gothic uppercase ">{title}</h2>
             <AnimatePresence mode="wait" initial={false}>
               {ind === 0 && <AccordionButtonIcon state={firstShown} />}
               {ind === 1 && <AccordionButtonIcon state={secondShown} />}
