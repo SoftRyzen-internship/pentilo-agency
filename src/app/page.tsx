@@ -6,6 +6,7 @@ import { ServicesSection } from '@/views/ServicesSection';
 import { ApplyFormSection } from '@/views/ApplyFormSection';
 import { TimelineSection } from '@/views/TimelineSection';
 import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton';
+import { HeroSection } from '@/views/HeroSection';
 import { TeamSection } from '@/views/TeamSection';
 import { CasesSection } from '@/views/CasesSection';
 import { AboutSection } from '@/views/AboutSection';
@@ -19,6 +20,8 @@ export default function Home() {
     <>
       {/* <ExampleSection />
       <ScrollToTopButton sectionIdStart="advantages" /> */}
+      
+      <HeroSection />
       <StatisticsSection />
       <AdvantagesSection />
       <AboutSection />

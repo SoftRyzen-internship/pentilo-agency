@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SliderProps } from './types';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 import useWindowSize from '@/utils/useWindowSize';
 import { getSliderBreakpointsOptions } from '@/utils/getSliderBreakpointsOptions';
@@ -26,17 +26,6 @@ export const Slider: React.FC<SliderProps> = ({
   const swiperRef: any = useRef<typeof Swiper | null>(null);
 
   const { width } = useWindowSize();
-
-  useEffect(() => {
-    if (
-      width !== null &&
-      width >= 1440 &&
-      swiperRef.current &&
-      section != 'cases'
-    ) {
-      swiperRef.current.swiper.destroy(true, true);
-    }
-  }, [width, section]);
 
   return (
     <Swiper

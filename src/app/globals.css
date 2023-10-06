@@ -195,10 +195,18 @@ textarea + .field-label {
   background-image: url('/images/start/calculatorlarge.webp');
 }
 
-.swiper .swiper-wrapper > .swiper-slide.casesSlide {
-  /* width: auto !important; */
-  display: flex !important;
-  justify-content: center !important;
+.swiper .swiper-wrapper > .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* border gradient */
+
+.border-gradient {
+  background:
+    linear-gradient(#141414, #141414) padding-box,
+    linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%) border-box;
+  border: 1px solid transparent;
 }
 
 /* === Team === */
