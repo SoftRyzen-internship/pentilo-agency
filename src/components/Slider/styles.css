@@ -67,7 +67,7 @@
 
 @media (min-width: 1280px) {
   .swiper.services .swiper-wrapper,
-  .swiper.expertise .swiper-wrapper {
+  .swiper.hero .swiper-wrapper {
     padding-top: 0;
     display: flex !important;
     justify-content: center !important;
