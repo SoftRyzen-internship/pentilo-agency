@@ -8,9 +8,9 @@ import styles from '@/components/ServicesHeaderTexts/ServicesHeaderTexts.module.
 
 const TITLE_STYLE = `${styles.textShadowTitle} xl:min-w-[420px] xl:text-xxxl_small mb-6  text-center font-dela_gothic text-3xl font-normal uppercase text-white md:mx-auto md:my-0 md:mb-6 md:max-w-[464px] xl:text-left`;
 const SUBTITLE_STYLE =
-  'xl:text-xxl_small mb-6  text-center font-dela_gothic text-base font-normal uppercase text-white md:mx-auto md:my-0 md:mb-6 md:max-w-[418px] xl:text-left';
+  'xl:text-xxl_small mb-6  text-center font-dela_gothic text-base font-normal uppercase text-white md:mx-auto md:my-0 md:mb-6  xl:text-left';
 const DESCRIPTION_STYLE =
-  'xl:text-l_middle mb-10  text-center font-open_sans text-base font-normal text-white md:mx-auto md:my-0 md:mb-10 md:max-w-[400px] xl:max-w-[379px] xl:text-left';
+  'xl:text-l_middle mb-10  text-center font-open_sans text-base font-normal text-white md:mx-auto md:my-0 md:mb-10 md:max-w-[508px] xl:max-w-[379px] xl:text-left';
 
 export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
   title,
@@ -24,7 +24,7 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
     initial="hide"
     whileInView="show"
     viewport={{ amount: 0.25, once: true }}
-    className="flex flex-col gap-y-6 xl:flex-row xl:items-center xl:justify-between xl:gap-x-[49px]"
+    className="flex flex-col gap-y-6 md:gap-0 xl:flex-row xl:items-center xl:justify-between xl:gap-x-[49px]"
   >
     <motion.h2 variants={fadeInUp} className={TITLE_STYLE}>
       {title}
