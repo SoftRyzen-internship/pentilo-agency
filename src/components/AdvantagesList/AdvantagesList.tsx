@@ -16,8 +16,8 @@ export const AdvantagesList: React.FC = () => {
       initial="hide"
       whileInView="show"
       viewport={{ amount: 0.25, once: false }}
-      className="xl:max-w-max mx-auto grid max-w-[328px] gap-4 md:max-w-[380px] 
-    md:gap-6 xl:grid-cols-3 xl:gap-5"
+      className="mx-auto grid max-w-[328px] gap-4 md:max-w-[380px] md:gap-6 
+    xl:max-w-fit-content xl:grid-cols-3 xl:gap-5"
     >
       {data.advantages.map(({ text }, idx) => (
         <motion.li
