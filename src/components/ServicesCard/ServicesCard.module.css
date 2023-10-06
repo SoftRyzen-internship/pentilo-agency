@@ -1,0 +1,43 @@
+.border {
+  background:
+    linear-gradient(#141414, #141414) padding-box,
+    linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%) border-box;
+  border: 2px solid transparent;
+}
+.pseudoCheckbox::before {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  left: -80%;
+  top: 0%;
+  z-index: -1;
+  transform: translateY(-50%);
+  background: url('/icons/icon_checked.svg') no-repeat center;
+  background-size: contain;
+}
+
+.tooltipLeft::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #b075df transparent;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-155%) rotate(0deg);
+}
+.tooltipRight::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #b075df transparent;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-155%) rotate(0deg);
+}

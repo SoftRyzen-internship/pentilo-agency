@@ -14,7 +14,7 @@ export const TeamSection: React.FC = () => {
     <section className="section">
       <div className="container">
         <h2
-          className="mb-[56px] max-w-max whitespace-break-spaces text-center font-dela_gothic
+          className="max-w-max mb-[56px] whitespace-break-spaces text-center font-dela_gothic
          text-xxl_middle uppercase text-shadow-text md:mb-[40px] xl:mb-[48px] xl:text-xxxl_small"
         >
           {team.title[0]}&shy;{team.title[1]}

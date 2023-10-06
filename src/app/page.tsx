@@ -2,7 +2,7 @@
 // import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton';
 
 import { ExpertiseSection } from '@/views/ExpertiseSection';
-// import { ServicesSection } from '@/views/ServicesSection';
+import { ServicesSection } from '@/views/ServicesSection';
 import { ApplyFormSection } from '@/views/ApplyFormSection';
 import { TimelineSection } from '@/views/TimelineSection';
 import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton';
@@ -25,7 +25,7 @@ export default function Home() {
       <AdvantagesSection />
       <AboutSection />
       <ExpertiseSection />
-      {/* <ServicesSection /> */}
+      <ServicesSection />
       <TeamSection />
       <CasesSection />
       <TrustSection />

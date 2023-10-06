@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
             <span className="heading2 shadow-text max-w-xs md:text-xxxl_small">
               {hero.title}
             </span>
-            <span className=" max-w-xs self-end text-right font-dela_gothic text-l uppercase text-shadow-text md:max-w-xl md:text-xxl_big xl:max-w-sm xl:text-xxl">
+            <span className=" max-w-xs md:max-w-xl xl:max-w-sm self-end text-right font-dela_gothic text-l uppercase text-shadow-text md:text-xxl_big xl:text-xxl">
               {hero.subtitle}
             </span>
           </h2>

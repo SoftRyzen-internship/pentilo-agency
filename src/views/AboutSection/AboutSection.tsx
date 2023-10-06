@@ -20,7 +20,7 @@ export const AboutSection: React.FC = () => {
       initial="hide"
       whileInView="show"
       viewport={{ amount: 0.25, once: true }}
-      className="container mx-auto my-[50px] flex flex-col  items-center xl:my-[75px] xl:max-w-screen-xl xl:flex-row xl:justify-between"
+      className="xl:max-w-screen-xl container mx-auto my-[50px] flex  flex-col items-center xl:my-[75px] xl:flex-row xl:justify-between"
     >
       <motion.div
         variants={fadeInUp}

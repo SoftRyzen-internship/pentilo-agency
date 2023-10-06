@@ -16,7 +16,7 @@ export const TimelineList: React.FC = () => {
       initial="hide"
       whileInView="show"
       viewport={{ amount: 0.1, once: true }}
-      className={`" mx-auto flex max-w-max flex-col gap-10 md:gap-11 xl:-order-1 
+      className={`" max-w-max mx-auto flex flex-col gap-10 md:gap-11 xl:-order-1 
       xl:ml-[80px] xl:mr-[50px]`}
     >
       {data.timeline.map((props, idx) => {
