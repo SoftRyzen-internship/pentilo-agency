@@ -65,7 +65,7 @@ const config: Config = {
       textShadow: {
         text: '0px 0px 14.859999656677246px rgba(171, 64, 255, 0.92)',
         title: '0px 0px 12.859999656677246px #FF00C7',
-        timer: '0px 0px 31.860158920288086px #ab40ff',
+        timer: '0px 0px 31.860158920288086px #ab40ff75',
       },
       colors: {
         body: '#131313',

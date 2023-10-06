@@ -8,7 +8,6 @@ import { Icon } from '../ui/Icon';
 import { CasePriceList } from '../CasePriceList';
 import { CaseCardProps } from './types';
 
-// Just spread props on CaseCard component like <CaseCardProps {...props}/>
 export const CaseCard: React.FC<CaseCardProps> = ({ title, link, list }) => {
   return (
     <div
@@ -36,13 +35,10 @@ export const CaseCard: React.FC<CaseCardProps> = ({ title, link, list }) => {
           rel="noopener noreferrer nofollow"
           target="_blank"
           aria-label={title.join(' ')}
+          className="scale-1 mt-2 h-5 max-h-max transition-all duration-300 hover:scale-[1.1] 
+          hover:text-hover focus:scale-[1.1] focus:text-hover"
         >
-          <Icon
-            height={20}
-            width={20}
-            icon="instagram"
-            className=" btn-transition mt-2 h-5 w-5 hover:text-lightGray focus:text-lightGray active:text-grey "
-          />
+          <Icon height={20} width={20} icon="instagram" className="h-5 w-5" />
         </Link>
       </div>
       <CasePriceList list={list} />
