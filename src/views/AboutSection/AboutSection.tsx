@@ -36,7 +36,7 @@ export const AboutSection: React.FC = () => {
       </motion.div>
       <motion.div
         variants={fadeInUp}
-        className="grid w-full place-items-center xl:mt-0 xl:h-[100%] xl:w-1/2  xl:place-items-start"
+        className="grid w-full place-items-center xl:mt-0 xl:h-[100%]  xl:w-[480px] xl:place-items-start"
       >
         <h2 className="hidden h-0">{data.hiddenTitle}</h2>
         <h3 className="mb-8 min-h-[72px] max-w-[324px] font-dela_gothic text-base font-normal uppercase text-white md:max-w-[495px] md:text-xxl_small xl:mb-10  xl:min-h-[108px] xl:max-w-[480px] xl:text-xxl_small">
@@ -44,7 +44,7 @@ export const AboutSection: React.FC = () => {
         </h3>
         <motion.ul
           variants={fadeInUp}
-          className="mb-10 grid gap-6 md:gap-8 xl:mb-14"
+          className="mb-10 grid gap-6    md:gap-8 xl:mb-14  "
         >
           {data.description.map((paragraph, index) => (
             <motion.li
@@ -65,7 +65,7 @@ export const AboutSection: React.FC = () => {
           tag="a"
           accent={true}
           href={apply}
-          className="mb-[10px] xl:w-[180px]"
+          className="mb-[10px] xl:w-[280px] "
         >
           {common.buttonsText.v3}
         </Button>
