@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 
+import { fadeInUp } from '@/variants';
 import { timeline } from '@/constants';
 import { Icon } from '@/components/ui/Icon';
 import { AdditionalServicesProps } from '@/components/AdditionalServices/types';
@@ -13,17 +15,36 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
 }) => {
   return (
     <>
-      <div className="mx-auto my-0 mb-[32px] md:max-w-[330px] xl:w-full xl:max-w-fit-content">
-        <div className="mb-10 flex w-[328px] items-center justify-center gap-[12px] xl:w-full">
+      <motion.div
+        variants={fadeInUp}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.25, once: false }}
+        className="mx-auto my-0 mb-[32px] md:max-w-[330px] xl:w-full xl:max-w-fit-content"
+      >
+        <motion.div
+          variants={fadeInUp}
+          className="mb-10 flex w-[328px] items-center justify-center gap-[12px] xl:w-full"
+        >
           <Icon icon="starGroup" className="mr-0" width={34} height={48} />
-          <h3 className="relative  w-[235px] font-dela_gothic text-base font-normal uppercase text-white xl:w-[352px] xl:text-xxl_small">
+          <motion.h3
+            variants={fadeInUp}
+            className="relative  w-[235px] font-dela_gothic text-base font-normal uppercase text-white xl:w-[352px] xl:text-xxl_small"
+          >
             {subtitle2}
-          </h3>
-        </div>
+          </motion.h3>
+        </motion.div>
 
-        <ul className="min-w-full gap-[70px] xl:flex xl:items-center xl:justify-between">
+        <motion.ul
+          variants={fadeInUp}
+          className="min-w-full gap-[70px] xl:flex xl:items-center xl:justify-between"
+        >
           {extras.map((group, groupIndex) => (
-            <li key={groupIndex} className="xl:max-w-[368px]">
+            <motion.li
+              variants={fadeInUp}
+              key={groupIndex}
+              className="xl:max-w-[368px]"
+            >
               {group.map((item, index) => (
                 <p
                   key={index}
@@ -42,10 +63,10 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
                   ) : null}
                 </p>
               ))}
-            </li>
+            </motion.li>
           ))}
-        </ul>
-      </div>
+        </motion.ul>
+      </motion.div>
     </>
   );
 };
