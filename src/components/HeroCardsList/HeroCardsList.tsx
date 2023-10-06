@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import useWindowSize from '@/utils/useWindowSize';
 import { Slider } from '../Slider';
@@ -11,12 +11,18 @@ import { SCREEN_DESKTOP } from '@/constants';
 export const HeroCardsList: React.FC = () => {
   const { width } = useWindowSize();
 
-  if (width >= SCREEN_DESKTOP) {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (hasMounted && width >= SCREEN_DESKTOP) {
     const heroCards = data.services.map(({ text }, idx) => (
       <HeroCard key={idx} text={text} />
     ));
     return <div className="flex justify-center gap-[28px]">{heroCards}</div>;
-  } else
+  } else if (hasMounted && width < SCREEN_DESKTOP)
     return (
       <Slider
         section="hero"
