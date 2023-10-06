@@ -2,12 +2,12 @@ import css from './HeroCard.module.css';
 import { Icon } from '../ui/Icon';
 
 import { motion } from 'framer-motion';
-import { item } from '@/variants';
+import { fadeInUpHero } from '@/variants';
 
 export const HeroCard: React.FC<{ text: string }> = ({ text }) => {
   return (
     <motion.div
-    variants={item}
+    variants={fadeInUpHero}
       className={`border-gradient relative flex h-[108px] w-full max-w-[328px]
      gap-[14px] rounded-card pb-[14px] pl-[21px]  pr-[13px]
  pt-4 ${css.star}

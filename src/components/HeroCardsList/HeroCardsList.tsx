@@ -9,7 +9,7 @@ import data from '@/data/hero.json';
 import { SCREEN_DESKTOP } from '@/constants';
 
 import { motion } from 'framer-motion';
-import { list } from '@/variants';
+import { fadeInUpHero } from '@/variants';
 
 export const HeroCardsList: React.FC = () => {
   const { width } = useWindowSize();
@@ -19,9 +19,9 @@ export const HeroCardsList: React.FC = () => {
       <HeroCard key={idx} text={text} />
     ));
     return <motion.div 
-    initial="hidden"
-    animate="visible"
-    variants={list}
+    variants={fadeInUpHero}
+    initial="hide"
+    whileInView="show"
     viewport={{ amount: 0.25, once: false }}
     
     className="flex justify-center gap-[28px]">{heroCards}</motion.div>;

@@ -7,7 +7,7 @@ export const fadeInLeft = {
       opacity: 1,
       x: 0,
       transition: {
-        ease: "easeOut", duration: 0.5, stiffness: 2000,
+        ease: "easeOut", duration: 0.5
       },
     },
   };
@@ -22,7 +22,6 @@ export const fadeInLeft = {
       x: 0,
       transition: {
          delay: 0.5,
-         stiffness: 2000,
         ease: "easeOut", duration: 0.5
       },
     },
@@ -38,7 +37,7 @@ export const fadeInLeft = {
       y: 0,
       transition: {
          delay: 1,
-        ease: "easeOut", duration: 0.5, stiffness: 2000,
+        ease: "easeOut", duration: 0.5,
         staggerChildren: 0.5,
       },
     },
