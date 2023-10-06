@@ -22,6 +22,7 @@ const config: Config = {
     },
 
     boxShadow: {
+      title: '0px 0px 15px 0px #AB40FFEB',
       button: '0px 0px 35px 0px #AB40FF',
       input: '0px 5.36364px 25.47727px 0px rgba(171, 64, 255, 0.46)',
     },
@@ -83,6 +84,7 @@ const config: Config = {
           active: '#781EBF',
           hoverSec: '#b454ff33',
           activeSec: '#b454ff80',
+          tooltip: '#B075DF',
         },
         lightGray: '#EAEAEA',
         grey: '#D3D3D3',
