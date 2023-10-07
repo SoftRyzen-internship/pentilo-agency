@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Button } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
 import { TeamList } from '@/components/TeamList';
@@ -11,7 +9,7 @@ import team from '@/data/team.json';
 
 export const TeamSection: React.FC = () => {
   return (
-    <section className="section">
+    <section className="section bg team">
       <div className="container">
         <h2
           className="mb-[56px] max-w-max whitespace-break-spaces text-center font-dela_gothic

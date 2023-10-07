@@ -1,16 +1,15 @@
 'use client';
+
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 
-import React from 'react';
-
-import stats from '@/data/statistics.json';
-import { StatisticsProps } from './types';
 import { fadeInUp } from '@/variants';
+import { StatisticsProps } from './types';
+import stats from '@/data/statistics.json';
 
 export const StatisticsSection: React.FC<StatisticsProps> = ({ className }) => {
   return (
-    <section className="section">
+    <section className="section bg statistics">
       <div className="container">
         <h2 className=" hidden">{stats.hiddenTitle}</h2>
         <motion.ul
