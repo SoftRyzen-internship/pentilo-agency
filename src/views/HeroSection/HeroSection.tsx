@@ -1,5 +1,5 @@
 'use client';
-
+import { motion } from 'framer-motion';
 import hero from '@/data/hero.json';
 import './HeroSection.css';
 import { Countdown } from '@/components/ui/Countdown';
@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button';
 import common from '@/data/common.json';
 import { apply, about } from '@/constants';
 import { HeroCardsList } from '@/components/HeroCardsList';
+import { fadeInLeft, fadeInRight, fadeInUp } from './variants';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -15,18 +16,33 @@ export const HeroSection: React.FC = () => {
         <div className="container pt-[152px] md:pt-[302px] xl:pt-[167px]">
           <h1 className="visually-hidden">{hero.header}</h1>
           <h2 className="mb-28 flex flex-col content-between gap-6 md:mb-[234px]  md:gap-10 xl:mb-[88px] xl:flex-row xl:justify-between">
-            <span className="heading2 shadow-text max-w-xs md:text-xxxl_small">
+            <motion.span
+              variants={fadeInLeft}
+              initial="initial"
+              animate="animate"
+              className="heading2 shadow-text max-w-xs md:text-xxxl_small"
+            >
               {hero.title}
-            </span>
-            <span className=" max-w-xs self-end text-right font-dela_gothic text-l uppercase text-shadow-text md:max-w-xl md:text-xxl_big xl:max-w-sm xl:text-xxl">
+            </motion.span>
+            <motion.span
+              variants={fadeInRight}
+              initial="initial"
+              animate="animate"
+              className=" max-w-xs self-end text-right font-dela_gothic text-l uppercase text-shadow-text md:max-w-xl md:text-xxl_big xl:max-w-sm xl:text-xxl"
+            >
               {hero.subtitle}
-            </span>
+            </motion.span>
           </h2>
-          <div className="mb-6 text-center md:mb-8 xl:mb-[150px] xl:flex xl:justify-between">
+          <motion.div
+            variants={fadeInUp}
+            initial="initial"
+            animate="animate"
+            className="mb-6 text-center md:mb-8 xl:mb-[150px] xl:flex xl:justify-between"
+          >
             <div className="mb-4 xl:mb-0 xl:flex">
               <Countdown
                 into="hero"
-                className="mb-1 xl:mb-0 xl:mr-3 xl:min-w-[230px]"
+                className="mb-1 xl:mb-0 xl:mr-3 xl:w-[223px]"
               />
               <p className="timer-text relative flex justify-center xl:block xl:max-w-[160px] xl:text-left">
                 <span>{hero.timerTextStart}</span>
@@ -52,7 +68,7 @@ export const HeroSection: React.FC = () => {
                 {common.buttonsText.v3}
               </Button>
             </div>
-          </div>
+          </motion.div>
 
           <HeroCardsList />
         </div>

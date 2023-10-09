@@ -2,11 +2,11 @@
 
 import classNames from 'classnames';
 
-import { apply } from '@/constants';
 
 import { CaseCard } from '@/components/CaseCard';
 import { Slider } from '@/components/Slider';
 import { Button } from '@/components/ui/Button';
+import { apply, cases as casesSectionId } from '@/constants';
 
 import cases from '@/data/cases.json';
 import common from '@/data/common.json';
@@ -18,7 +18,8 @@ export const CasesSection: React.FC = () => {
   );
 
   return (
-    <section className="section bg cases">
+
+    <section className="section bg cases" id={casesSectionId}>
       <h2 className={titleClasses}>{cases.title}</h2>
       <div className="container">
         <Slider

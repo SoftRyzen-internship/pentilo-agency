@@ -8,6 +8,9 @@ import { HeroCard } from '../HeroCard/HeroCard';
 import data from '@/data/hero.json';
 import { SCREEN_DESKTOP } from '@/constants';
 
+import { motion } from 'framer-motion';
+import { fadeInUpHero } from '@/variants';
+
 export const HeroCardsList: React.FC = () => {
   const { width } = useWindowSize();
 
@@ -17,12 +20,23 @@ export const HeroCardsList: React.FC = () => {
     setHasMounted(true);
   }, []);
 
+  if (!hasMounted) return null;
   if (hasMounted && width >= SCREEN_DESKTOP) {
     const heroCards = data.services.map(({ text }, idx) => (
       <HeroCard key={idx} text={text} />
     ));
-    return <div className="flex justify-center gap-[28px]">{heroCards}</div>;
-  } else if (hasMounted && width < SCREEN_DESKTOP)
+    return (
+      <motion.div
+        variants={fadeInUpHero}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.25, once: false }}
+        className="flex justify-center gap-[28px]"
+      >
+        {heroCards}
+      </motion.div>
+    );
+  } else
     return (
       <Slider
         section="hero"
