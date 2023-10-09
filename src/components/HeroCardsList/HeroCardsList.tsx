@@ -36,13 +36,13 @@ export const HeroCardsList: React.FC = () => {
         {heroCards}
       </motion.div>
     );
-  } else 
-     return (
+  } else
+    return (
       <Slider
         section="hero"
         element={HeroCard}
         autoplay={true}
         data={data.services}
       />
-    )
+    );
 };
