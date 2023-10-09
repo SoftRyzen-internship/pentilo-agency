@@ -55,6 +55,8 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
                 css.pseudoCheckbox,
               );
 
+              const decorArrow = classNames('mdOnly:hidden', css.decorArrow);
+
               return (
                 <p
                   key={index}
@@ -62,7 +64,7 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
                 >
                   <span className={checkboxClasses} />
                   {item}
-                  {isArrow ? <span className={css.decorArrow} /> : null}
+                  {isArrow ? <span className={decorArrow} /> : null}
                 </p>
               );
             })}
