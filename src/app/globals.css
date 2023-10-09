@@ -10,7 +10,6 @@ main {
   position: relative;
 }
 
-/* backdrop-filter: brightness(150%); */
 main::before {
   content: '';
   position: absolute;
@@ -485,8 +484,8 @@ textarea + .field-label {
   height: 832px;
 
   background-image: image-set(
-    url('/bg/hands_sm_1@x1.png') 1x,
-    url('/bg/hands_sm_1@x2.png') 2x
+    url('/bg/hands_sm_1@x1.webp') 1x,
+    url('/bg/hands_sm_1@x2.webp') 2x
   );
 }
 
@@ -498,8 +497,8 @@ textarea + .field-label {
   height: 820px;
 
   background-image: image-set(
-    url('/bg/hands_sm_2@x1.png') 1x,
-    url('/bg/hands_sm_2@x2.png') 2x
+    url('/bg/hands_sm_2@x1.webp') 1x,
+    url('/bg/hands_sm_2@x2.webp') 2x
   );
 }
 
@@ -511,8 +510,8 @@ textarea + .field-label {
     height: 535px;
 
     background-image: image-set(
-      url('/bg/hands_lg@x1.png') 1x,
-      url('/bg/hands_lg@x2.png') 2x
+      url('/bg/hands_lg@x1.webp') 1x,
+      url('/bg/hands_lg@x2.webp') 2x
     );
   }
 

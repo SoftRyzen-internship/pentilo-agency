@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SliderProps } from './types';
 import { useRef } from 'react';
+import classNames from 'classnames';
 
 import useWindowSize from '@/utils/useWindowSize';
 import { getSliderBreakpointsOptions } from '@/utils/getSliderBreakpointsOptions';
@@ -26,6 +27,8 @@ export const Slider: React.FC<SliderProps> = ({
   const swiperRef: any = useRef<typeof Swiper | null>(null);
 
   const { width } = useWindowSize();
+
+  const slideClasses = classNames(slideClassName, 'z-10');
 
   return (
     <Swiper
@@ -71,7 +74,7 @@ export const Slider: React.FC<SliderProps> = ({
       <div className="wrapper bg-slate-400">
         {data?.map((item: any, idx: number) => {
           return (
-            <SwiperSlide key={idx} className={`${slideClassName} z-10`}>
+            <SwiperSlide key={idx} className={slideClasses}>
               <Element {...item} className="elementSlider" />
             </SwiperSlide>
           );

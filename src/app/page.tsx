@@ -1,4 +1,4 @@
-// import { ExampleSection } from '@/views/ExampleSection';
+import { advantages } from '@/constants';
 
 import { ExpertiseSection } from '@/views/ExpertiseSection';
 import { ServicesSection } from '@/views/ServicesSection';
@@ -17,7 +17,6 @@ import { AdvantagesSection } from '@/views/AdvantagesSection';
 export default function Home() {
   return (
     <>
-      {/* <ExampleSection />*/}
       <HeroSection />
       <StatisticsSection />
       <AdvantagesSection />
@@ -30,7 +29,7 @@ export default function Home() {
       <TimelineSection />
       <QASection />
       <ApplyFormSection />
-      <ScrollToTopButton sectionIdStart="advantages" />
+      <ScrollToTopButton sectionIdStart={advantages} />
     </>
   );
 }
