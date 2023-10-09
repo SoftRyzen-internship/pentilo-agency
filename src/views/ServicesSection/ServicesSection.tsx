@@ -20,6 +20,7 @@ export const ServicesSection: React.FC = () => {
     subtitle1,
     description,
     descspanmobile,
+    alternativespan,
     decsspandesctop,
     services,
     subtitle2,
@@ -51,6 +52,7 @@ export const ServicesSection: React.FC = () => {
             subtitle1,
             description,
             descspanmobile,
+            alternativespan,
             decsspandesctop,
           }}
         />

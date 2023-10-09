@@ -17,6 +17,7 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
   subtitle1,
   description,
   descspanmobile,
+  alternativespan,
   decsspandesctop,
 }) => (
   <motion.div
@@ -37,6 +38,7 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
     </motion.p>
     <motion.p variants={fadeInUp} className={DESCRIPTION_STYLE}>
       {description}
+      <span className={`xl:hidden`}>{alternativespan}</span>
       <span className={`xl:hidden ${styles.gradientborder}`}>
         {descspanmobile}
       </span>
