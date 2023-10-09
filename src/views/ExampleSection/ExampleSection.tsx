@@ -8,8 +8,6 @@ import { SocialsMenu } from '@/components/ui/SocialsMenu';
 import { Icon } from '@/components/ui/Icon';
 import { CaseCard } from '@/components/CaseCard';
 import { Accordion } from '@/components/Accordion';
-import { Advantages } from '@/components/Advantages';
-import { Statistics } from '@/components/Statistics';
 import { AboutSection } from '../AboutSection';
 import { Form } from '@/components/Form';
 
@@ -75,7 +73,6 @@ export const ExampleSection = () => (
         className="ml-[5px] inline-block -rotate-[135deg]"
       />
     </Button>
-    <Statistics />
 
     {/* Кнопки соціальні із свг */}
     <SocialsMenu />
@@ -114,16 +111,9 @@ export const ExampleSection = () => (
         </li>
       ))}
     </ul>
-    <Advantages />
+
     <AboutSection />
     {/* Елемент для тестування скролу */}
     <div className="mt-[800px] h-[1000px] bg-black-light" id="customId"></div>
-    {/* <div
-
-    {/* Елемент для тестування скролу */}
-    <div
-      id="about"
-      className={`${s.div} text-shadow-xxs container relative  h-[350vh] w-[100%] bg-[url('/images/bg/bgdesk.webp')]`}
-    ></div>
   </section>
 );

@@ -140,13 +140,13 @@ textarea + .field-label {
 
 /* when label is focused or the user has entered some text */
 
-.field:focus-within > label,
-.field input:not(:placeholder-shown) + label {
+.field:focus-within > .field-label,
+.field .field-input:not(:placeholder-shown) + .field-label {
   @apply absolute left-[33px] -translate-y-[30px] text-[12px] leading-[18px];
 }
 
-.field:focus-within > label::before,
-.field input:not(:placeholder-shown) + label::before {
+.field:focus-within > .field-label::before,
+.field .field-input:not(:placeholder-shown) + .field-label::before {
   opacity: 1;
 }
 
@@ -180,8 +180,49 @@ textarea + .field-label {
   background-image: url('/images/start/calculatorlarge.webp');
 }
 
-.swiper .swiper-wrapper > .swiper-slide.casesSlide {
-  /* width: auto !important; */
-  display: flex !important;
-  justify-content: center !important;
+.swiper .swiper-wrapper > .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+/* //Swiper #services// */
+#services > div.container > .swiper .swiper-wrapper > .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+#services > div.container > .swiper {
+  margin-bottom: 0px !important;
+}
+
+/* @media (min-width: 768px) {
+  #services > div.container > .swiper .swiper-wrapper > .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+} */
+
+/* border gradient */
+
+.border-gradient {
+  background:
+    linear-gradient(#141414, #141414) padding-box,
+    linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%) border-box;
+  border: 1px solid transparent;
+}
+
+/* === Team === */
+.team0::before {
+  background-image: url('/images/team/project.webp');
+}
+
+.team1::before {
+  background-image: url('/images/team/content1.webp');
+}
+.team2::before {
+  background-image: url('/images/team/content2.webp');
+}
+.team3::before {
+  background-image: url('/images/team/ceo.webp');
+}
+.team4::before {
+  background-image: url('/images/team/targetolog.webp');
 }

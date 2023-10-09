@@ -6,15 +6,15 @@ import classNames from 'classnames';
 import { getFormattedTimeNow } from '@/utils/getFormattedTimeNow';
 import { TimeNowProps } from './types';
 
-const ONE_SECOND = 1000;
+const FIVE_SECONDS = 5000;
 
 export const TimeNow: React.FC<TimeNowProps> = ({ className }) => {
-  const [dateNow, setDateNow] = useState(new Date());
+  const [timeNow, setTimeNow] = useState<string>('00:00');
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDateNow(new Date());
-    }, ONE_SECOND);
+      setTimeNow(getFormattedTimeNow(new Date()));
+    }, FIVE_SECONDS);
 
     return () => {
       clearInterval(interval);
@@ -26,5 +26,5 @@ export const TimeNow: React.FC<TimeNowProps> = ({ className }) => {
     className,
   );
 
-  return <div className={timeNowClasses}>{getFormattedTimeNow(dateNow)}</div>;
+  return <div className={timeNowClasses}>{timeNow}</div>;
 };

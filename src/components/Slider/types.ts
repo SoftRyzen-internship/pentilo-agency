@@ -1,9 +1,9 @@
 export interface SectionProps {
-  section: 'cases' | 'services' | 'expertise';
+  section: 'cases' | 'services' | 'hero';
 }
 
 export interface SliderProps extends SectionProps {
-  section: 'cases' | 'services' | 'expertise';
+  section: 'cases' | 'services' | 'hero';
   pagination?: boolean;
   navigation?: boolean;
   autoplay?: boolean;

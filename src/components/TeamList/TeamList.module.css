@@ -1,0 +1,7 @@
+.team {
+  @apply flex max-w-[160px] flex-col text-center font-dela_gothic text-s_middle uppercase;
+}
+
+.team::before {
+  @apply mx-auto mb-3 block  h-[144px] w-[150px] shrink-0 bg-contain bg-no-repeat content-[""];
+}

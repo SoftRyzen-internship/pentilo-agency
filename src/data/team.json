@@ -1,5 +1,5 @@
 {
-  "title": "Над твоїм результатом працюватимуть:",
+  "title": ["Над твоїм результатом працюва", "тимуть"],
   "team": [
     { "decorImage": "/images/team/project.webp", "name": "проджект-менеджер" },
     { "decorImage": "/images/team/content1.webp", "name": "контент-менеджер" },
