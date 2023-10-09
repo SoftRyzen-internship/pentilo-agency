@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import useWindowSize from '@/utils/useWindowSize';
 import { Slider } from '../Slider';
@@ -14,7 +14,13 @@ import { fadeInUpHero } from '@/variants';
 export const HeroCardsList: React.FC = () => {
   const { width } = useWindowSize();
 
-  if (width >= SCREEN_DESKTOP) {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (hasMounted && width >= SCREEN_DESKTOP) {
     const heroCards = data.services.map(({ text }, idx) => (
       <HeroCard key={idx} text={text} />
     ));

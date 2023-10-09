@@ -184,6 +184,21 @@ textarea + .field-label {
   display: flex;
   justify-content: center;
 }
+/* //Swiper #services// */
+#services > div.container > .swiper .swiper-wrapper > .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+#services > div.container > .swiper {
+  margin-bottom: 0px !important;
+}
+
+/* @media (min-width: 768px) {
+  #services > div.container > .swiper .swiper-wrapper > .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+} */
 
 /* border gradient */
 

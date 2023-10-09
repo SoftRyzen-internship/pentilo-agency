@@ -22,6 +22,7 @@ const config: Config = {
     },
 
     boxShadow: {
+      title: '0px 0px 15px 0px #AB40FFEB',
       button: '0px 0px 35px 0px #AB40FF',
       input: '0px 5.36364px 25.47727px 0px rgba(171, 64, 255, 0.46)',
     },
@@ -65,7 +66,7 @@ const config: Config = {
       textShadow: {
         text: '0px 0px 14.859999656677246px rgba(171, 64, 255, 0.92)',
         title: '0px 0px 12.859999656677246px #FF00C7',
-        timer: '0px 0px 31.860158920288086px #ab40ff',
+        timer: '0px 0px 31.860158920288086px #ab40ff75',
       },
       colors: {
         body: '#131313',
@@ -83,6 +84,7 @@ const config: Config = {
           active: '#781EBF',
           hoverSec: '#b454ff33',
           activeSec: '#b454ff80',
+          tooltip: '#B075DF',
         },
         lightGray: '#EAEAEA',
         grey: '#D3D3D3',
