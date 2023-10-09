@@ -1,6 +1,6 @@
 const LINKS = {
   home: '/',
-  advantages: 'advatages',
+  advantages: 'advantages',
   about: 'about',
   expertise: 'expertise',
   services: 'services',
