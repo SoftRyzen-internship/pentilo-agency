@@ -1,30 +1,28 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
+import { about, apply } from '@/constants';
+import { highlightWords } from '@/utils/highlightWords';
+
+import { Button } from '@/components/ui/Button';
+import { StarIconAfter, StarIconBefore } from '@/components/StarIcon';
+
+import { fadeInUp } from './variants';
 import data from '@/data/about.json';
 import common from '@/data/common.json';
-import { apply } from '@/constants';
-import { Button } from '@/components/ui/Button';
-import { fadeInUp } from '@/views/AboutSection/variants';
-import { highlightWords } from '@/utils/highlightWords';
-import { StarIconAfter, StarIconBefore } from '@/components/StarIcon';
 
 export const AboutSection: React.FC = () => {
   return (
-    <motion.section
-      id="about"
-      variants={fadeInUp}
-      initial="hide"
-      whileInView="show"
-      viewport={{ amount: 0.25, once: true }}
-      className="section"
-    >
+
+    <section id={about} className="section bg about">
       <motion.div
-        className="container flex flex-col items-center xl:flex-row xl:justify-between"
         variants={fadeInUp}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.25, once: true }}
+        className="container flex flex-col items-center xl:flex-row xl:justify-between"
       >
         <motion.div
           variants={fadeInUp}
@@ -33,7 +31,8 @@ export const AboutSection: React.FC = () => {
           <Image
             src={data.src}
             alt={data.alt}
-            className="relative mx-auto h-[284px] w-[328px] md:h-[284px] md:w-[328px] xl:mx-0 xl:xl:h-auto xl:min-h-[463px] xl:w-[480px]"
+
+            className="relative mx-auto h-auto w-[328px] md:h-auto md:w-[328px] xl:mx-0 xl:h-auto xl:min-h-[500px] xl:w-[480px]"
             width={480}
             height={463}
           />
@@ -75,6 +74,6 @@ export const AboutSection: React.FC = () => {
           </Button>
         </motion.div>
       </motion.div>
-    </motion.section>
+    </section>
   );
 };

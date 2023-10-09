@@ -6,6 +6,29 @@ body {
   @apply bg-body font-open_sans;
 }
 
+main {
+  position: relative;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.2;
+  mix-blend-mode: darken;
+  background-size: contain;
+  background-image: image-set(
+    url('/bg/noise@x1.webp') 1x,
+    url('/bg/noise@x2.webp') 2x
+  );
+}
+
 .btn-transition {
   @apply transition duration-300 ease-in-out;
 }
@@ -218,4 +241,274 @@ textarea + .field-label {
 }
 .team4::before {
   background-image: url('/images/team/targetolog.webp');
+}
+
+/* === BG === */
+
+.bg {
+  position: relative;
+}
+
+.hero::before,
+.statistics::before,
+.advantages::before,
+.about::before,
+.expertise::before,
+.services::before,
+.services::after,
+.team::before,
+.cases::before,
+.cases::after,
+.timeline::before,
+.timeline::after,
+.qa::before,
+.qa::after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: image-set(
+    url('/bg/spot@x1.webp') 1x,
+    url('/bg/spot@x2.webp') 2x
+  );
+}
+
+.hero::before {
+  display: none;
+
+  top: -250px;
+  right: 0;
+  transform: rotate(180deg);
+
+  width: calc(50% - 350px);
+  max-width: 1030px;
+  height: 660px;
+
+  background-position: right;
+
+  @apply xl:block;
+}
+
+.statistics::before {
+  top: -125px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+
+  width: 100%;
+  height: 460px;
+
+  @apply md:top-0 md:h-[480px] md:w-[744px];
+  @apply xl:left-0 xl:top-[-440px] xl:h-[660px] xl:w-[calc(50%-150px)] xl:max-w-[1030px] xl:translate-x-0 xl:rotate-180 xl:bg-left;
+}
+
+.advantages::before {
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg) scaleX(-1);
+
+  width: 100%;
+  height: 460px;
+
+  @apply mdOnly:hidden;
+  @apply xl:left-[20%] xl:top-[100px] xl:h-[350px] xl:w-[600px] xl:translate-x-0 xl:rotate-180;
+}
+
+.about::before {
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg) scaleX(-1);
+
+  width: 100%;
+  height: 460px;
+
+  @apply md:top-[-320px] md:h-[480px] md:w-[744px] md:-translate-x-1/2 md:rotate-180;
+  @apply xl:left-[50%] xl:top-[200px] xl:h-[660px] xl:w-[50%] xl:max-w-[1030px] xl:translate-x-0 xl:bg-right;
+}
+
+.expertise::before {
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+
+  width: 100%;
+  height: 460px;
+
+  @apply md:hidden;
+}
+
+.services::before {
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+
+  width: 100%;
+  height: 460px;
+
+  @apply md:h-[480px] md:w-[744px];
+  @apply xl:left-[calc((100vw-1280px)/2)] xl:top-[-400px] xl:h-[660px] xl:w-[1030px] xl:translate-x-0;
+}
+
+.services::after {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 460px;
+
+  @apply md:h-[480px] md:w-[744px];
+  @apply xl:hidden;
+}
+
+.team::before {
+  top: 460px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+
+  width: 100%;
+  height: 460px;
+
+  @apply md:top-[180px] md:h-[480px] md:w-[744px];
+  @apply xl:top-0 xl:h-[660px] xl:w-[1030px] xl:-translate-x-1/2;
+}
+
+.cases::before {
+  display: none;
+
+  top: 200px;
+  left: 0;
+
+  width: calc(50% - 250px);
+  max-width: 1000px;
+  height: 623px;
+
+  background-position: right;
+
+  @apply xl:block;
+}
+
+.cases::after {
+  display: none;
+
+  top: 100px;
+  right: 0;
+  transform: rotate(180deg);
+
+  width: calc(50% - 250px);
+  max-width: 1000px;
+  height: 623px;
+
+  background-position: right;
+
+  @apply xl:block;
+}
+
+.timeline::before {
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+
+  width: 100%;
+  height: 460px;
+
+  @apply md:top-[270px] md:h-[480px] md:w-[744px];
+  @apply xl:left-[calc((100vw-1280px)/2)] xl:top-[200px] xl:h-[830px] xl:w-[1280px] xl:translate-x-0;
+}
+
+.timeline::after {
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 460px;
+
+  @apply md:hidden;
+}
+
+.qa::before {
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+
+  width: 100%;
+  height: 460px;
+
+  @apply md:h-[480px] md:w-[744px];
+  @apply xl:left-0 xl:top-[260px] xl:h-[623px] xl:w-[calc(50%-250px)] xl:max-w-[1000px]  xl:translate-x-0 xl:bg-right;
+}
+
+.qa::after {
+  display: none;
+
+  top: 400px;
+  right: 0;
+  transform: rotate(180deg);
+
+  width: calc(50% - 250px);
+  max-width: 1000px;
+  height: 623px;
+
+  background-position: right;
+
+  @apply xl:block;
+}
+
+/* TEAM SECTION BG */
+
+.hands::before,
+.hands::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hands::before {
+  top: 145px;
+  left: 0;
+
+  width: 138px;
+  height: 832px;
+
+  background-image: image-set(
+    url('/bg/hands_sm_1@x1.webp') 1x,
+    url('/bg/hands_sm_1@x2.webp') 2x
+  );
+}
+
+.hands::after {
+  top: 245px;
+  right: 0;
+
+  width: 138px;
+  height: 820px;
+
+  background-image: image-set(
+    url('/bg/hands_sm_2@x1.webp') 1x,
+    url('/bg/hands_sm_2@x2.webp') 2x
+  );
+}
+
+@media (min-width: 744px) {
+  .hands::before,
+  .hands::after {
+    top: 100px;
+    width: 213px;
+    height: 535px;
+
+    background-image: image-set(
+      url('/bg/hands_lg@x1.webp') 1x,
+      url('/bg/hands_lg@x2.webp') 2x
+    );
+  }
+
+  .hands::after {
+    transform: rotate(180deg);
+  }
 }
