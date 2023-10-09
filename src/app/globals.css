@@ -257,8 +257,8 @@ textarea + .field-label {
 .services::before,
 .services::after,
 .team::before,
-.cases::before,
-.cases::after,
+.case::before,
+.case::after,
 .timeline::before,
 .timeline::after,
 .qa::before,
@@ -375,7 +375,7 @@ textarea + .field-label {
   @apply xl:top-0 xl:h-[660px] xl:w-[1030px] xl:-translate-x-1/2;
 }
 
-.cases::before {
+.case::before {
   display: none;
 
   top: 200px;
@@ -390,7 +390,7 @@ textarea + .field-label {
   @apply xl:block;
 }
 
-.cases::after {
+.case::after {
   display: none;
 
   top: 100px;
