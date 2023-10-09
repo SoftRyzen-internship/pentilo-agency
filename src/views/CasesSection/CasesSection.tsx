@@ -2,7 +2,6 @@
 
 import classNames from 'classnames';
 
-
 import { CaseCard } from '@/components/CaseCard';
 import { Slider } from '@/components/Slider';
 import { Button } from '@/components/ui/Button';
@@ -18,7 +17,6 @@ export const CasesSection: React.FC = () => {
   );
 
   return (
-
     <section className="section bg cases" id={casesSectionId}>
       <h2 className={titleClasses}>{cases.title}</h2>
       <div className="container">

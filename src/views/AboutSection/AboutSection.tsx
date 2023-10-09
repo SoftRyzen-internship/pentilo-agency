@@ -15,7 +15,6 @@ import common from '@/data/common.json';
 
 export const AboutSection: React.FC = () => {
   return (
-
     <section id={about} className="section bg about">
       <motion.div
         variants={fadeInUp}
@@ -31,7 +30,6 @@ export const AboutSection: React.FC = () => {
           <Image
             src={data.src}
             alt={data.alt}
-
             className="relative mx-auto h-auto w-[328px] md:h-auto md:w-[328px] xl:mx-0 xl:h-auto xl:min-h-[500px] xl:w-[480px]"
             width={480}
             height={463}

@@ -1,5 +1,3 @@
-import classNames from 'classnames';
-
 import { CustomLink } from '@/components/ui/CustomLink';
 import { Logo } from '@/components/ui/Logo';
 import { NavigationRow } from '@/components/ui/NavigationRow/NavigationRow';
@@ -9,9 +7,8 @@ import data from '@/data/footer.json';
 
 export const Footer = () => {
   const { title, terms, email, policy, rights } = data;
-  const hoverFooter = classNames(
-    'ease-[cubic-bezier(0.4,0,0.2,1)] duration-300 hover:text-hover focus:text-hover hover:underline focus:underline',
-  );
+  const hoverFooter =
+    'ease-[cubic-bezier(0.4,0,0.2,1)] duration-300 hover:text-hover focus:text-hover hover:underline focus:underline';
   return (
     <footer className="container py-8 md:relative">
       <Logo className="mx-auto mb-8 block w-[101px] md:absolute md:left-[32px]  xl:left-[50px]" />

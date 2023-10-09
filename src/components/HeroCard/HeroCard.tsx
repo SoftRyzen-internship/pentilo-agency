@@ -18,16 +18,13 @@ export const HeroCard: React.FC<{ text: string }> = ({ text }) => {
   );
 
   return (
-
-         <motion.div
-      variants={fadeInUpHero}
-   className={cardClasses}>
+    <motion.div variants={fadeInUpHero} className={cardClasses}>
       <div className="border-gradient relative mt-[8px] h-[24px] w-[24px] rounded-md shadow-input">
         <div className={checkBoxClasses}>
           <Icon icon="check" width={14} height={14} />
         </div>
       </div>
       <h3 className="text-s_big">{text}</h3>
-      </motion.div>
+    </motion.div>
   );
 };
