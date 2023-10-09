@@ -29,8 +29,8 @@ export const AdvantagesList: React.FC = () => {
           <Icon
             width={12}
             height={12}
-            icon="arrow"
-            className="ml-auto h-[12px] w-[12px] -rotate-[135deg]"
+            icon="caseArr"
+            className="ml-auto h-[13px] w-[13px] -rotate-[180deg]"
           />
 
           <p className=" mt-9 text-s_big md:text-l_big">{text}</p>
