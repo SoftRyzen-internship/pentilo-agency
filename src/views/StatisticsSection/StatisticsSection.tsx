@@ -8,17 +8,22 @@ import { StatisticsProps } from './types';
 import stats from '@/data/statistics.json';
 
 export const StatisticsSection: React.FC<StatisticsProps> = ({ className }) => {
+  const listClasses = classNames(
+    'mx-auto flex flex-col content-center items-center gap-12',
+    'md:h-[254px] md:flex-wrap xl:h-auto xl:flex-row xl:justify-between',
+    className,
+  );
+
   return (
     <section className="section bg statistics">
       <div className="container">
-        <h2 className=" hidden">{stats.hiddenTitle}</h2>
+        <h2 className="hidden">{stats.hiddenTitle}</h2>
         <motion.ul
           variants={fadeInUp}
           initial="hide"
           whileInView="show"
           viewport={{ amount: 0.25, once: false }}
-          className={`mx-auto flex flex-col content-center items-center gap-12 md:h-[254px] 
-        md:flex-wrap xl:h-auto xl:flex-row xl:justify-between ${className}`}
+          className={listClasses}
         >
           {stats.statistics.map(({ textAccent, description }, idx) => {
             const textStyles = classNames(
