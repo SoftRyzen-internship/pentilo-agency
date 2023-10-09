@@ -57,7 +57,7 @@ export const AdditionalServices: React.FC<AdditionalServicesProps> = ({
                   {item}
                   {index === group.length - 1 &&
                   groupIndex === extras.length - 1 ? (
-                    <span className={css.decorArrow}></span>
+                    <span className={`mdOnly:hidden ${css.decorArrow}`}></span>
                   ) : null}
                 </p>
               ))}
