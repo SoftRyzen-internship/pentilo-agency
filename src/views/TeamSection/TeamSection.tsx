@@ -10,7 +10,7 @@ import team from '@/data/team.json';
 export const TeamSection: React.FC = () => {
   return (
     <section className="section bg team">
-      <div className="container">
+      <div className="bg hands container">
         <h2
           className="mb-[56px] max-w-max whitespace-break-spaces text-center font-dela_gothic
          text-xxl_middle uppercase text-shadow-text md:mb-[40px] xl:mb-[48px] xl:text-xxxl_small"

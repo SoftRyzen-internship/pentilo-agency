@@ -10,6 +10,7 @@ main {
   position: relative;
 }
 
+/* backdrop-filter: brightness(150%); */
 main::before {
   content: '';
   position: absolute;
@@ -19,8 +20,10 @@ main::before {
 
   width: 100%;
   height: 100%;
-  opacity: 0.1;
-  backdrop-filter: brightness(150%);
+
+  opacity: 0.2;
+  mix-blend-mode: darken;
+  background-size: contain;
   background-image: image-set(
     url('/bg/noise@x1.webp') 1x,
     url('/bg/noise@x2.webp') 2x
@@ -460,4 +463,60 @@ textarea + .field-label {
   background-position: right;
 
   @apply xl:block;
+}
+
+/* TEAM SECTION BG */
+
+.hands::before,
+.hands::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hands::before {
+  top: 145px;
+  left: 0;
+
+  width: 138px;
+  height: 832px;
+
+  background-image: image-set(
+    url('/bg/hands_sm_1@x1.png') 1x,
+    url('/bg/hands_sm_1@x2.png') 2x
+  );
+}
+
+.hands::after {
+  top: 245px;
+  right: 0;
+
+  width: 138px;
+  height: 820px;
+
+  background-image: image-set(
+    url('/bg/hands_sm_2@x1.png') 1x,
+    url('/bg/hands_sm_2@x2.png') 2x
+  );
+}
+
+@media (min-width: 744px) {
+  .hands::before,
+  .hands::after {
+    top: 100px;
+    width: 213px;
+    height: 535px;
+
+    background-image: image-set(
+      url('/bg/hands_lg@x1.png') 1x,
+      url('/bg/hands_lg@x2.png') 2x
+    );
+  }
+
+  .hands::after {
+    transform: rotate(180deg);
+  }
 }
