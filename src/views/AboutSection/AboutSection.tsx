@@ -20,9 +20,12 @@ export const AboutSection: React.FC = () => {
       initial="hide"
       whileInView="show"
       viewport={{ amount: 0.25, once: true }}
-      className="mx-auto flex flex-col items-center  py-[50px] xl:max-w-screen-xl xl:flex-row xl:justify-between xl:py-[75px]"
+      className="py-[50px]  xl:py-[75px]"
     >
-      <motion.div variants={fadeInUp} className="container">
+      <motion.div
+        variants={fadeInUp}
+        className="container mx-auto flex flex-col items-center xl:max-w-screen-xl xl:flex-row xl:justify-between  "
+      >
         <motion.div
           variants={fadeInUp}
           className="mb-8 w-full xl:w-1/2 xl:max-w-[480px]"
@@ -30,7 +33,7 @@ export const AboutSection: React.FC = () => {
           <Image
             src={data.src}
             alt={data.alt}
-            className="relative mx-auto h-[284px] w-[328px] md:h-[284px] md:w-[328px] xl:mx-0 xl:xl:h-auto xl:min-h-[463px] xl:w-[480px]"
+            className="relative mx-auto h-auto w-[328px] md:h-auto md:w-[328px] xl:mx-0 xl:xl:h-auto xl:min-h-[463px] xl:w-[480px]"
             width={480}
             height={463}
           />
