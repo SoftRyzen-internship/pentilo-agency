@@ -1,30 +1,27 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
+import { about, apply } from '@/constants';
+import { highlightWords } from '@/utils/highlightWords';
+
+import { Button } from '@/components/ui/Button';
+import { StarIconAfter, StarIconBefore } from '@/components/StarIcon';
+
+import { fadeInUp } from './variants';
 import data from '@/data/about.json';
 import common from '@/data/common.json';
-import { apply } from '@/constants';
-import { Button } from '@/components/ui/Button';
-import { fadeInUp } from '@/views/AboutSection/variants';
-import { highlightWords } from '@/utils/highlightWords';
-import { StarIconAfter, StarIconBefore } from '@/components/StarIcon';
 
 export const AboutSection: React.FC = () => {
   return (
-    <motion.section
-      id="about"
-      variants={fadeInUp}
-      initial="hide"
-      whileInView="show"
-      viewport={{ amount: 0.25, once: true }}
-      className="py-[50px]  xl:py-[75px]"
-    >
+    <section id={about} className="section bg about">
       <motion.div
         variants={fadeInUp}
-        className="container mx-auto flex flex-col items-center xl:max-w-screen-xl xl:flex-row xl:justify-between  "
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.25, once: true }}
+        className="container flex flex-col items-center xl:flex-row xl:justify-between"
       >
         <motion.div
           variants={fadeInUp}
@@ -75,6 +72,6 @@ export const AboutSection: React.FC = () => {
           </Button>
         </motion.div>
       </motion.div>
-    </motion.section>
+    </section>
   );
 };

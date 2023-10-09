@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { advantages } from '@/constants';
 import data from '@/data/advantages.json';
 import css from './Advantages.module.css';
 
@@ -8,7 +7,7 @@ import { AdvantagesList } from '@/components/AdvantagesList';
 
 export const AdvantagesSection: React.FC = () => {
   return (
-    <section className="section" id="advantages">
+    <section className="section bg advantages" id={advantages}>
       <div className="container">
         <h2
           className=" mx-auto mb-4 max-w-[287px] text-center font-dela_gothic uppercase 
