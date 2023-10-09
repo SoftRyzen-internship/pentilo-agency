@@ -40,6 +40,9 @@
         "minLength": { "value": 3, "message": "Не менше 3 символів" },
         "maxLength": { "value": 70, "message": "Не більше 70 символів" }
       },
+      "socialLink": {
+        "maxLength": { "value": 70, "message": "Не більше  символів" }
+      },
       "phoneNumber": {
         "format": {
           "reg": "^\\+[0-9]+$",
