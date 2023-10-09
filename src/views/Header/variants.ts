@@ -17,7 +17,8 @@ export const headerVariants = {
       // type: 'tween',
       // duration: 1,
       // delay: 0.2,
-      ease: "easeOut", duration: 0.5
+      ease: 'easeOut',
+      duration: 0.5,
     },
   },
 };

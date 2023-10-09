@@ -1,24 +1,18 @@
 'use client';
-import { useScroll, useMotionValueEvent, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import hero from '@/data/hero.json';
 import './HeroSection.css';
 import { Countdown } from '@/components/ui/Countdown';
 import { Button } from '@/components/ui/Button';
 import common from '@/data/common.json';
 import { HeroCardsList } from '@/components/HeroCardsList';
-import { parent, child, fadeInLeft, fadeInRight, fadeInUp } from './variants';
+import { fadeInLeft, fadeInRight, fadeInUp } from './variants';
 
 export const HeroSection: React.FC = () => {
   return (
     <section className="pb-[168px]">
       <div className="wrapper h-[634px] max-w-[1280px] md:h-[1046px] xl:h-[657px] ">
-        <div
-          // variants={parent}
-          // initial="initial"
-          // animate="animate"
-
-          className="container pt-[152px] md:pt-[302px] xl:pt-[167px]"
-        >
+        <div className="container pt-[152px] md:pt-[302px] xl:pt-[167px]">
           <h1 className="visually-hidden">{hero.header}</h1>
           <h2 className="mb-28 flex flex-col content-between gap-6 md:mb-[234px]  md:gap-10 xl:mb-[88px] xl:flex-row xl:justify-between">
             <motion.span

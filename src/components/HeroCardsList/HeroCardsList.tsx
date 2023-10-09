@@ -18,13 +18,17 @@ export const HeroCardsList: React.FC = () => {
     const heroCards = data.services.map(({ text }, idx) => (
       <HeroCard key={idx} text={text} />
     ));
-    return <motion.div 
-    variants={fadeInUpHero}
-    initial="hide"
-    whileInView="show"
-    viewport={{ amount: 0.25, once: false }}
-    
-    className="flex justify-center gap-[28px]">{heroCards}</motion.div>;
+    return (
+      <motion.div
+        variants={fadeInUpHero}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.25, once: false }}
+        className="flex justify-center gap-[28px]"
+      >
+        {heroCards}
+      </motion.div>
+    );
   } else
     return (
       <Slider

@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       {/* <ExampleSection />*/}
-      <HeroSection /> 
+      <HeroSection />
       <StatisticsSection />
       <AdvantagesSection />
       <AboutSection />
