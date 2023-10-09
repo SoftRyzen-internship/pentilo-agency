@@ -33,7 +33,7 @@ export const AboutSection: React.FC = () => {
           <Image
             src={data.src}
             alt={data.alt}
-            className="relative mx-auto h-auto w-[328px] md:h-auto md:w-[328px] xl:mx-0 xl:h-auto xl:min-h-[463px] xl:w-[480px]"
+            className="relative mx-auto h-auto w-[328px] md:h-auto md:w-[328px] xl:mx-0 xl:h-auto xl:min-h-[500px] xl:w-[480px]"
             width={480}
             height={463}
           />
