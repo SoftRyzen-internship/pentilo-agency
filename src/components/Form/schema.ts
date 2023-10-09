@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import data from '@/data/form.json';
 
 const { validation } = data.form;
-const { userName, phoneNumber, question, common } = validation;
+const { userName, socialLink, phoneNumber, question, common } = validation;
 
 export const schema = Yup.object().shape({
   userName: Yup.string()
@@ -11,7 +11,9 @@ export const schema = Yup.object().shape({
     .matches(RegExp(userName.format.reg), userName.format.message)
     .min(userName.minLength.value, userName.minLength.message)
     .max(userName.maxLength.value, userName.maxLength.message),
-  socialLink: Yup.string().required(common.required),
+  socialLink: Yup.string()
+    .required(common.required)
+    .max(socialLink.maxLength.value, socialLink.maxLength.message),
   phoneNumber: Yup.string()
     .matches(RegExp(phoneNumber.format.reg), {
       message: phoneNumber.format.message,

@@ -13,7 +13,7 @@ export function getSwiperModules(section: any, width: any): SwiperModule[] {
   if (section === 'cases') {
     modules.push(EffectCoverflow);
   }
-  if (section === 'expertise' && width !== null && width < 1440) {
+  if (section === 'hero' && width !== null && width < 1440) {
     modules.push(Autoplay);
   }
 

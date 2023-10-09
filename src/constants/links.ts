@@ -1,5 +1,6 @@
 const LINKS = {
   home: '/',
+  advantages: 'advantages',
   about: 'about',
   expertise: 'expertise',
   services: 'services',
@@ -8,5 +9,13 @@ const LINKS = {
   apply: 'apply',
 };
 
-export const { home, about, expertise, services, cases, timeline, apply } =
-  LINKS;
+export const {
+  home,
+  advantages,
+  about,
+  expertise,
+  services,
+  cases,
+  timeline,
+  apply,
+} = LINKS;

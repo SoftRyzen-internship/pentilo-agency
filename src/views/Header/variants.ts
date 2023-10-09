@@ -6,7 +6,7 @@ export const blur = {
 export const headerVariants = {
   initial: {
     opacity: 0,
-    y: -200,
+    y: -50,
     x: '-50%',
   },
   animate: {
@@ -14,8 +14,11 @@ export const headerVariants = {
     y: 0,
     x: '-50%',
     transition: {
-      type: 'spring',
-      stiffness: 35,
+      // type: 'tween',
+      // duration: 1,
+      // delay: 0.2,
+      ease: 'easeOut',
+      duration: 0.5,
     },
   },
 };

@@ -1,14 +1,11 @@
 import Image from 'next/image';
-
-import React from 'react';
-
-import data from '@/data/timeline.json';
 import { timeline } from '@/constants';
 import { TimelineList } from '@/components/TimelineList';
+import data from '@/data/timeline.json';
 
 export const TimelineSection: React.FC = () => {
   return (
-    <section className="section xl:h-[1130px]" id={timeline}>
+    <section className="section bg timeline xl:h-[1130px]" id={timeline}>
       <div className="container xl:relative xl:flex xl:h-full">
         <h2 className="hidden">{data.hiddenTitle}</h2>
 
