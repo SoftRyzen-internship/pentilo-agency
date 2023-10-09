@@ -7,7 +7,7 @@ import css from './TeamList.module.css';
 
 export const TeamList = () => {
   return (
-    <ul className="relative mx-auto flex max-w-[328px] flex-col md:max-w-[680px] md:flex-row md:flex-wrap">
+    <ul className="relative mx-auto flex max-w-[328px] flex-col md:max-w-[640px] md:flex-row md:flex-wrap xl:max-w-[680px]">
       {team.team.map((person, idx) => {
         const itemStyles = classNames(
           {

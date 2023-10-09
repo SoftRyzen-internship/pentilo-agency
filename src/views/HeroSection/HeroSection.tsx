@@ -10,7 +10,7 @@ import { HeroCardsList } from '@/components/HeroCardsList';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="pb-[168px]">
+    <section className="bg hero pb-[128px]">
       <div className="wrapper h-[634px] max-w-[1280px] md:h-[1046px] xl:h-[657px] ">
         <div className="container pt-[152px] md:pt-[302px] xl:pt-[167px]">
           <h1 className="visually-hidden">{hero.header}</h1>
