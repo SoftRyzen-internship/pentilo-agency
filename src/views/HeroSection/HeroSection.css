@@ -22,10 +22,6 @@
 
 @media screen and (min-width: 744px) {
   .wrapper {
-    background-image: image-set(
-      url(/images/hero/heroipad.webp) 1x,
-      url(/images/hero/heroipad@2x.webp) 2x
-    );
     border-radius: 0 0 24px 24px;
   }
 }
