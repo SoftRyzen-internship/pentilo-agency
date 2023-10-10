@@ -7,8 +7,8 @@ import { fadeInUpHero } from '@/variants';
 
 export const HeroCard: React.FC<{ text: string }> = ({ text }) => {
   const cardClasses = classNames(
-    'border-gradient relative flex h-[108px] w-full max-w-[328px]  gap-[14px]',
-    'rounded-card pb-[14px] pl-[21px] pr-[13px] pt-4',
+    'border-gradient relative flex h-[108px] w-full max-w-[328px]  gap-[12px]',
+    'rounded-card pb-[14px] pl-[18px] pr-[13px] pt-4',
     css.star,
   );
 
