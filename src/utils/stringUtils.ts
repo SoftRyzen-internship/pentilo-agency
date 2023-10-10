@@ -4,6 +4,5 @@ export function splitDescription(description: string) {
   const secondPart = arr.slice(8, 15).join(' ');
   const thirdPart = arr.slice(15, -4).join(' ');
 
-  console.log(thirdPart)
   return [firstPart, secondPart, thirdPart];
 }
