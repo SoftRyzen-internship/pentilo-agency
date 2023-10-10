@@ -14,8 +14,8 @@ export const Reaction: React.FC<ReactionProps> = ({ decorImage, number }) => {
   const reactionClass = classNames(
     css.decorImage,
     decorImage,
-    'h-[24px] w-[53px] rounded-[29px] bg-purple-light bg-opacity-[0.23] px-2 text-right text-purple-light',
-    'hover:bg-opacity-30 transition duration-300 ease-in-out',
+    'h-[24px] w-[53px] rounded-[29px] bg-purple-light bg-opacity-[0.23] px-2',
+    'text-sm text-right text-purple-light hover:bg-opacity-30 btn-transition',
     { 'bg-opacity-40': count !== number },
   );
 
