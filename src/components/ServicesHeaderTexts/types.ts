@@ -3,6 +3,5 @@ export type ServicesHeaderTextsProps = {
   subtitle1: string;
   description: string;
   descspanmobile: string;
-  alternativespan: string;
   decsspandesctop: string;
 };

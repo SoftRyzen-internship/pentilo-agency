@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { TimelineListItemProps } from './types';
 
 export const TimelineListItem: React.FC<TimelineListItemProps> = ({
@@ -7,7 +9,10 @@ export const TimelineListItem: React.FC<TimelineListItemProps> = ({
 }) => {
   return (
     <div>
-      <h2 className="mb-4 text-center font-dela_gothic text-s_middle uppercase md:mb-3 md:text-left md:text-xxl_small">
+      <h2
+        className="mb-4 text-center font-dela_gothic text-s_middle uppercase 
+                md:mb-3 md:text-left md:text-xxl_small"
+      >
         <span className="mr-1 text-purple-light">{number}</span>
         {title}
       </h2>

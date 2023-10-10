@@ -1,35 +1,31 @@
 'use client';
-
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { fadeInUp } from '@/variants';
-import { apply, services as servicesLisk } from '@/constants';
-
+import data from '@/data/services.json';
+import common from '@/data/common.json';
+import { apply } from '@/constants';
 import { Button } from '@/components/ui/Button';
 import { ServiceCard } from '@/components/ServicesCard';
 import { AdditionalServices } from '@/components/AdditionalServices';
 import { Slider } from '@/components/Slider';
 import { ServicesHeaderTexts } from '@/components/ServicesHeaderTexts';
 
-import data from '@/data/services.json';
-import common from '@/data/common.json';
-
 import '@/components/Slider/styles.css';
 
-const {
-  title,
-  subtitle1,
-  description,
-  descspanmobile,
-  alternativespan,
-  decsspandesctop,
-  services,
-  subtitle2,
-  extras,
-} = data;
-
 export const ServicesSection: React.FC = () => {
+  const {
+    title,
+    subtitle1,
+    description,
+    descspanmobile,
+    decsspandesctop,
+    services,
+    subtitle2,
+    extras,
+  } = data;
+
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
   useEffect(() => {
@@ -47,15 +43,14 @@ export const ServicesSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="section bg services" id={servicesLisk}>
-      <div className="container">
+    <section className="section " id="services">
+      <div className="container ">
         <ServicesHeaderTexts
           {...{
             title,
             subtitle1,
             description,
             descspanmobile,
-            alternativespan,
             decsspandesctop,
           }}
         />
@@ -85,7 +80,7 @@ export const ServicesSection: React.FC = () => {
           tag="a"
           accent={true}
           href={apply}
-          className="mx-auto my-0 mb-[10px] xl:w-[280px]"
+          className="mx-auto my-0 mb-[10px] xl:w-[280px] "
         >
           {common.buttonsText.v3}
         </Button>

@@ -31,7 +31,6 @@ export const Button: React.FC<ButtonProps> = ({
         accent === false,
       [css.border]: accent === false,
     },
-    className,
   );
 
   return (
@@ -45,7 +44,7 @@ export const Button: React.FC<ButtonProps> = ({
       }}
       href={href}
       type={buttonType}
-      className={btnStyles}
+      className={`${btnStyles} ${className} `}
       disabled={disabled}
     >
       {children}

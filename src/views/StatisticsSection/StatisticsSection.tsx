@@ -1,29 +1,25 @@
 'use client';
-
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 
-import { fadeInUp } from '@/variants';
-import { StatisticsProps } from './types';
+import React from 'react';
+
 import stats from '@/data/statistics.json';
+import { StatisticsProps } from './types';
+import { fadeInUp } from '@/variants';
 
 export const StatisticsSection: React.FC<StatisticsProps> = ({ className }) => {
-  const listClasses = classNames(
-    'mx-auto flex flex-col content-center items-center gap-12',
-    'md:h-[254px] md:flex-wrap xl:h-auto xl:flex-row xl:justify-between',
-    className,
-  );
-
   return (
-    <section className="section bg statistics">
+    <section className="section">
       <div className="container">
-        <h2 className="hidden">{stats.hiddenTitle}</h2>
+        <h2 className=" hidden">{stats.hiddenTitle}</h2>
         <motion.ul
           variants={fadeInUp}
           initial="hide"
           whileInView="show"
-          viewport={{ amount: 0.25, once: true }}
-          className={listClasses}
+          viewport={{ amount: 0.25, once: false }}
+          className={`mx-auto flex flex-col content-center items-center gap-12 md:h-[254px] 
+        md:flex-wrap xl:h-auto xl:flex-row xl:justify-between ${className}`}
         >
           {stats.statistics.map(({ textAccent, description }, idx) => {
             const textStyles = classNames(

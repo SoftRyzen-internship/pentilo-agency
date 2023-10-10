@@ -28,26 +28,24 @@ export const Dialogue: React.FC<DialogueProps> = ({ className }) => {
 
   return (
     <motion.div
+      variants={zoom.in}
       initial="initial"
       whileInView="animate"
       viewport={{ amount: 0.25, once: true }}
-      transition={{ delay: 0.5, staggerChildren: 0.5 }}
       className={wraperClasses}
     >
-      <motion.div variants={zoom.in} className={offerClasses}>
+      <div className={offerClasses}>
         <p className="pb-3 md:text-l">{offer.text}</p>
         <ReactionsCounter />
         <TimeNow className="absolute bottom-[6px] right-14 md:bottom-5" />
-      </motion.div>
-      <motion.div variants={zoom.out} transition={{ delay: 3 }}>
-        <motion.div
-          variants={zoom.in}
-          transition={{ delay: 0.5 }}
-          className="mb-4 flex items-baseline justify-center gap-6 font-medium"
-        >
-          {typingText}
-          <Loader />
-        </motion.div>
+      </div>
+      <motion.div
+        variants={zoom.out}
+        transition={{ delay: 3 }}
+        className="mb-4 flex items-baseline justify-center gap-6 font-medium"
+      >
+        {typingText}
+        <Loader />
       </motion.div>
       <motion.div
         variants={zoom.in}

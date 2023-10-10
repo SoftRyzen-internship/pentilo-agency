@@ -19,7 +19,7 @@ export const ExpertiseSection = () => {
   );
 
   return (
-    <section className="section bg expertise" id={expertise}>
+    <section className="section" id={expertise}>
       <div className="container">
         <h2 className={titleClasses}>{data.title}</h2>
         <PhoneMassages className="mx-auto mb-6 md:mb-10" />

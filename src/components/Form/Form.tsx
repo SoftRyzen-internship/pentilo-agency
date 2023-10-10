@@ -43,11 +43,11 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
 
   useFormPersist(FORM_DATA_KEY, { watch, setValue });
 
-  const textAteaData = watch(textarea.name);
+  const data = watch(textarea.name);
 
   useEffect(() => {
-    setCount(textAteaData?.length || 0);
-  }, [textAteaData, watch]);
+    setCount(data?.length || 0);
+  }, [data, watch]);
 
   useEffect(() => {
     switch (popUpType) {
@@ -79,7 +79,7 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
 
   const formClassName = classNames('md:w-[380px]', className);
   const btnClasses = classNames(
-    'btn-transition mx-auto flex items-baseline justify-center gap-[24px] md:w-[328px] xl:w-[279px]',
+    'mx-auto flex items-baseline justify-center gap-[24px] md:w-[328px] xl:w-[279px] duration-300 ease-in-out',
     { 'bg-opacity-50': isLoading },
   );
 
@@ -101,7 +101,7 @@ export const Form: React.FC<FormProps> = ({ className = '' }) => {
         </li>
       </ul>
 
-      <div className="mb-10 flex justify-center gap-1">
+      <div className="mb-10 flex justify-center gap-1 ">
         <p>{timerText}</p>
         <Countdown into="form" />
       </div>

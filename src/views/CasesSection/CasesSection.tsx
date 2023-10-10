@@ -1,23 +1,20 @@
 'use client';
 
-import classNames from 'classnames';
-
 import { CaseCard } from '@/components/CaseCard';
 import { Slider } from '@/components/Slider';
 import { Button } from '@/components/ui/Button';
-import { apply, cases as casesSectionId } from '@/constants';
-
+import { apply } from '@/constants';
 import cases from '@/data/cases.json';
 import common from '@/data/common.json';
+import classNames from 'classnames';
 
 export const CasesSection: React.FC = () => {
   const titleClasses = classNames(
     'relative mx-auto mb-6 text-center font-dela_gothic text-xxl_middle uppercase',
     'text-shadow-text xl:mb-20 xl:w-[800px] xl:text-xxxl_small',
   );
-
   return (
-    <section className="section bg case" id={casesSectionId}>
+    <section className="py-[50px] xl:py-[75px]">
       <h2 className={titleClasses}>{cases.title}</h2>
       <div className="container">
         <Slider
@@ -35,7 +32,7 @@ export const CasesSection: React.FC = () => {
           className="mx-auto xl:w-[279px]"
         >
           {common.buttonsText.v3}
-        </Button>
+        </Button>{' '}
       </div>
     </section>
   );
