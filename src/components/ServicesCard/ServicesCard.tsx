@@ -24,7 +24,7 @@ export const ServiceCard: React.FC<ServiceProps> = ({
   );
 
   return (
-    <motion.li
+    <motion.div
       variants={fadeInUp}
       className={`shadow-md ${css.border} relative mb-6 h-auto max-w-[300px] rounded-buttonSec bg-white pb-8 pl-8 pr-[25px] md:max-w-[328px] xl:max-w-[380px]`}
     >
@@ -70,6 +70,6 @@ export const ServiceCard: React.FC<ServiceProps> = ({
           </li>
         ))}
       </ul>
-    </motion.li>
+    </motion.div>
   );
 };
