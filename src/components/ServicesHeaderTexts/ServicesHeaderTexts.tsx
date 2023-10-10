@@ -35,7 +35,7 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
       <>
         <span className="block">{arr[0]}</span>
         <span className="block">{arr[1]}</span>
-        <span>{arr[3]}</span>
+        <span>{arr[2]}</span>
       </>
     );
     lastWord = description.split(' ').slice(-4).join(' ') || ' ';
