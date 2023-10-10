@@ -69,17 +69,19 @@ export const ServicesSection: React.FC = () => {
             section="services"
           />
         )}
-        <motion.ul
-          variants={fadeInUp}
-          initial="hide"
-          whileInView="show"
-          viewport={{ amount: 0.25, once: true }}
-          className="mb-[15px] hidden grid-cols-1 items-start gap-x-[20px] gap-y-[20px] xl:grid xl:grid-cols-3"
-        >
-          {services.map((service, idx) => (
-            <ServiceCard key={idx} {...service} />
-          ))}
-        </motion.ul>
+        {windowWidth && windowWidth > 1280 && (
+          <motion.div
+            variants={fadeInUp}
+            initial="hide"
+            whileInView="show"
+            viewport={{ amount: 0.25, once: true }}
+            className="mb-[15px] grid-cols-1 items-start gap-x-[20px] gap-y-[20px] xl:grid xl:grid-cols-3"
+          >
+            {services.map((service, idx) => (
+              <ServiceCard key={idx} {...service} />
+            ))}
+          </motion.div>
+        )}
         <AdditionalServices subtitle2={subtitle2} extras={extras} />
         <Button
           tag="a"
