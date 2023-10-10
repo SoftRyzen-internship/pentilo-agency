@@ -17,17 +17,7 @@ import common from '@/data/common.json';
 
 import '@/components/Slider/styles.css';
 
-const {
-  title,
-  subtitle1,
-  description,
-  descspanmobile,
-  alternativespan,
-  decsspandesctop,
-  services,
-  subtitle2,
-  extras,
-} = data;
+const { title, subtitle1, description, services, subtitle2, extras } = data;
 
 export const ServicesSection: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
@@ -54,9 +44,6 @@ export const ServicesSection: React.FC = () => {
             title,
             subtitle1,
             description,
-            descspanmobile,
-            alternativespan,
-            decsspandesctop,
           }}
         />
         {windowWidth && windowWidth < 1280 && (
