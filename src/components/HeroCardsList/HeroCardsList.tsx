@@ -20,6 +20,7 @@ export const HeroCardsList: React.FC = () => {
     setHasMounted(true);
   }, []);
 
+  if (!hasMounted) return null;
   if (hasMounted && width >= SCREEN_DESKTOP) {
     const heroCards = data.services.map(({ text }, idx) => (
       <HeroCard key={idx} text={text} />
