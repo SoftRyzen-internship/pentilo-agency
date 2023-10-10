@@ -10,7 +10,7 @@ import css from './PhoneMessages.module.css';
 
 const { messages } = data;
 
-export const PhoneMassages: React.FC<PhoneMessagesProps> = ({ className }) => {
+export const PhoneMessages: React.FC<PhoneMessagesProps> = ({ className }) => {
   const listClasses = classNames(
     'flex flex-col items-center gap-4 md:gap-6 md:pb-[63px] md:pt-[207px]',
     css.mobile,
