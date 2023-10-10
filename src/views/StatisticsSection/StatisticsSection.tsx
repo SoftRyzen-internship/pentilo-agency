@@ -22,7 +22,7 @@ export const StatisticsSection: React.FC<StatisticsProps> = ({ className }) => {
           variants={fadeInUp}
           initial="hide"
           whileInView="show"
-          viewport={{ amount: 0.25, once: false }}
+          viewport={{ amount: 0.25, once: true }}
           className={listClasses}
         >
           {stats.statistics.map(({ textAccent, description }, idx) => {

@@ -17,7 +17,7 @@ export const CasesSection: React.FC = () => {
   );
 
   return (
-    <section className="section bg cases" id={casesSectionId}>
+    <section className="section bg case" id={casesSectionId}>
       <h2 className={titleClasses}>{cases.title}</h2>
       <div className="container">
         <Slider
