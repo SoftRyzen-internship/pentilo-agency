@@ -59,7 +59,7 @@ export const ServicesSection: React.FC = () => {
             decsspandesctop,
           }}
         />
-        {windowWidth && windowWidth < 1440 && (
+        {windowWidth && windowWidth < 1280 && (
           <Slider
             data={services}
             element={ServiceCard}
