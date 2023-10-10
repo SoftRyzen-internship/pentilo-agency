@@ -41,7 +41,7 @@
         "maxLength": { "value": 70, "message": "Не більше 70 символів" }
       },
       "socialLink": {
-        "maxLength": { "value": 70, "message": "Не більше  символів" }
+        "maxLength": { "value": 70, "message": "Не більше 70 символів" }
       },
       "phoneNumber": {
         "format": {
