@@ -29,7 +29,7 @@
 @media (min-width: 744px) {
   .focusTitle::before {
     left: 232px;
-    width: 139px;
+    width: 139;
   }
 
   .focusTitle::after {
