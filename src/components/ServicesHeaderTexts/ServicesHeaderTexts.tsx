@@ -7,6 +7,7 @@ import { fadeInUp } from '@/variants';
 import { ServicesHeaderTextsProps } from '@/components/ServicesHeaderTexts/types';
 import styles from '@/components/ServicesHeaderTexts/ServicesHeaderTexts.module.css';
 import { splitDescription } from '@/utils/stringUtils';
+import { SCREEN_DESKTOP } from '@/constants';
 
 const TITLE_STYLE = `${styles.textShadowTitle} xl:min-w-[420px] xl:text-xxxl_small mb-6  text-center font-dela_gothic text-3xl font-normal uppercase text-white md:mx-auto md:my-0 md:mb-6 md:max-w-[464px] xl:max-w-[420px] xl:text-left`;
 const SUBTITLE_STYLE =
@@ -25,7 +26,7 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
   const [restOfDescription, setRestOfDescription] = useState('');
 
   useEffect(() => {
-    if (width < 1440) {
+    if (width < SCREEN_DESKTOP) {
       const arr = description.split(' ');
       setLastWord(arr.pop() || ' ');
       setRestOfDescription(arr.join(' ') + ' ');
