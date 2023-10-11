@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import { AnimatePresence } from 'framer-motion';
 
 import { FieldError } from '../FieldError';
 import { FieldProps } from './types';
@@ -15,9 +14,12 @@ export const Field: React.FC<FieldProps> = ({
 }) => {
   const isError = !!errors[name];
 
-  const fieldClasses = classNames('field h-[40px]', {
-    error: isError,
-  });
+  const fieldClasses = classNames(
+    'field h-[40px] transition duration-300 ease-in-out',
+    {
+      error: isError,
+    },
+  );
 
   return (
     <div className="relative">
@@ -34,14 +36,12 @@ export const Field: React.FC<FieldProps> = ({
         </label>
       </div>
 
-      <AnimatePresence mode="wait" initial={false}>
-        <FieldError
-          name={name}
-          errors={errors}
-          isError={isError}
-          className="absolute -bottom-7 left-0 z-[-1]"
-        />
-      </AnimatePresence>
+      <FieldError
+        name={name}
+        errors={errors}
+        isError={isError}
+        className="absolute -bottom-7 left-0 z-[-1]"
+      />
     </div>
   );
 };

@@ -43,6 +43,21 @@ main::before {
   @apply py-[50px] xl:py-[75px];
 }
 
+/* === NOTIFY === */
+
+.appear {
+  animation: 300ms appear ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* === Advantages === */
 
 .advant0::before {
