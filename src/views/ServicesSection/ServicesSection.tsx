@@ -17,17 +17,7 @@ import common from '@/data/common.json';
 
 import '@/components/Slider/styles.css';
 
-const {
-  title,
-  subtitle1,
-  description,
-  descspanmobile,
-  alternativespan,
-  decsspandesctop,
-  services,
-  subtitle2,
-  extras,
-} = data;
+const { title, subtitle1, description, services, subtitle2, extras } = data;
 
 export const ServicesSection: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
@@ -54,12 +44,9 @@ export const ServicesSection: React.FC = () => {
             title,
             subtitle1,
             description,
-            descspanmobile,
-            alternativespan,
-            decsspandesctop,
           }}
         />
-        {windowWidth && windowWidth < 1440 && (
+        {windowWidth && windowWidth < 1280 && (
           <Slider
             data={services}
             element={ServiceCard}
@@ -69,17 +56,19 @@ export const ServicesSection: React.FC = () => {
             section="services"
           />
         )}
-        <motion.ul
-          variants={fadeInUp}
-          initial="hide"
-          whileInView="show"
-          viewport={{ amount: 0.25, once: true }}
-          className="mb-[15px] hidden grid-cols-1 items-start gap-x-[20px] gap-y-[20px] xl:grid xl:grid-cols-3"
-        >
-          {services.map((service, idx) => (
-            <ServiceCard key={idx} {...service} />
-          ))}
-        </motion.ul>
+        {windowWidth && windowWidth > 1280 && (
+          <motion.div
+            variants={fadeInUp}
+            initial="hide"
+            whileInView="show"
+            viewport={{ amount: 0.25, once: true }}
+            className="mb-[15px] grid-cols-1 items-start gap-x-[20px] gap-y-[20px] xl:grid xl:grid-cols-3"
+          >
+            {services.map((service, idx) => (
+              <ServiceCard key={idx} {...service} />
+            ))}
+          </motion.div>
+        )}
         <AdditionalServices subtitle2={subtitle2} extras={extras} />
         <Button
           tag="a"

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { apply, expertise } from '@/constants';
 
-import { PhoneMassages } from '@/components/PhoneMessages';
+import { PhoneMessages } from '@/components/PhoneMessages';
 import { Dialogue } from '@/components/Dialogue';
 import { Button } from '@/components/ui/Button';
 
@@ -22,7 +22,7 @@ export const ExpertiseSection = () => {
     <section className="section bg expertise" id={expertise}>
       <div className="container">
         <h2 className={titleClasses}>{data.title}</h2>
-        <PhoneMassages className="mx-auto mb-6 md:mb-10" />
+        <PhoneMessages className="mx-auto mb-6 md:mb-10" />
 
         <Dialogue className="mx-auto mb-[40px] md:mb-[56px]" />
 

@@ -1,1 +1,1 @@
-export * from './PhoneMassages';
+export * from './PhoneMessages';

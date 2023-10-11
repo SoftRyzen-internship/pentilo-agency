@@ -11,14 +11,14 @@ export const ScrollToTopButton = ({ sectionIdStart }) => {
 
   const arrowClasses = classNames(
     css.scrollBtn,
-    'btn-transition fixed bottom-10 right-10 h-14 w-14 cursor-pointer bg-purple-light text-white',
-    'rounded-full shadow-button transition-opacity hover:bg-purple-hover',
+    'btn-transition fixed bottom-10 right-1 h-14 w-14 cursor-pointer bg-purple-light text-white',
+    'rounded-full shadow-button transition-opacity hover:bg-purple-hover z-[2]',
     { 'opacity-0': !isVisible },
   );
 
   return (
     <a
-      href="#top"
+      href="/"
       className={arrowClasses}
       onClick={(e: React.MouseEvent) => smoothScroll(e)}
       aria-label="Повернутись догори"
