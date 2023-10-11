@@ -10,11 +10,11 @@
   background: linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%);
 
   -webkit-mask-image:
-  linear-gradient(to bottom, #fff #fff) content-box,
-  linear-gradient( to bottom, #fff #fff);
+  linear-gradient(to bottom, #ffffff #ffffff) content-box,
+  linear-gradient( to bottom, #ffffff #ffffff);
    mask-image:
-  linear-gradient(to bottom, #fff #fff) content-box,
-  linear-gradient(to bottom, #fff #fff);
+  linear-gradient(to bottom, #ffffff #ffffff) content-box,
+  linear-gradient(to bottom, #ffffff #ffffff);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   border-radius: 32px;
