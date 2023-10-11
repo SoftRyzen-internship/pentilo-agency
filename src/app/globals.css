@@ -515,12 +515,9 @@ textarea + .field-label {
 
 
 .testAnimation{
-  /* position: relative; */
   animation: moveDown 0.5s ease-in-out forwards;
   background-color: transparent;
   transition: background-color 0.5 ease-in-out;
-  /* background-color: #00000080; */
-  /* backdropFilter: 'blur(7px)'  */
 }
 
 .animated{
