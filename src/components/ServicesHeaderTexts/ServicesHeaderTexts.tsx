@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import useWindowSize from '@/utils/useWindowSize';
@@ -7,6 +7,7 @@ import { fadeInUp } from '@/variants';
 import { ServicesHeaderTextsProps } from '@/components/ServicesHeaderTexts/types';
 import styles from '@/components/ServicesHeaderTexts/ServicesHeaderTexts.module.css';
 import { splitDescription } from '@/utils/stringUtils';
+import { SCREEN_DESKTOP } from '@/constants';
 
 const TITLE_STYLE = `${styles.textShadowTitle} xl:min-w-[420px] xl:text-xxxl_small mb-6  text-center font-dela_gothic text-3xl font-normal uppercase text-white md:mx-auto md:my-0 md:mb-6 md:max-w-[464px] xl:max-w-[420px] xl:text-left`;
 const SUBTITLE_STYLE =
@@ -21,25 +22,27 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
 }) => {
   const { width } = useWindowSize();
 
-  let lastWord: string = '';
-  let restOfDescription: any = '';
+  const [lastWord, setLastWord] = useState('');
+  const [restOfDescription, setRestOfDescription] = useState('');
 
-  if (width < 1440) {
-    const arr = description.split(' ');
-    lastWord = arr.pop() || ' ';
-    restOfDescription = arr.join(' ') + ' ';
-  } else {
-    const arr = splitDescription(description);
+  useEffect(() => {
+    if (width < SCREEN_DESKTOP) {
+      const arr = description.split(' ');
+      setLastWord(arr.pop() || ' ');
+      setRestOfDescription(arr.join(' ') + ' ');
+    } else {
+      const arr = splitDescription(description);
 
-    restOfDescription = (
-      <>
-        <span className="block">{arr[0]}</span>
-        <span className="block">{arr[1]}</span>
-        <span>{arr[2]}</span>
-      </>
-    );
-    lastWord = description.split(' ').slice(-4).join(' ') || ' ';
-  }
+      setRestOfDescription(
+        ` 
+            <span class="block">${arr[0]}</span>
+            <span class="block">${arr[1]}</span>
+            <span>${arr[2]}</span>
+          `,
+      );
+      setLastWord(description.split(' ').slice(-4).join(' ') || ' ');
+    }
+  }, [width, description]);
 
   return (
     <motion.div
@@ -58,10 +61,10 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
       >
         {subtitle1}
       </motion.p>
-      <p className={DESCRIPTION_STYLE}>
-        {restOfDescription}
+      <motion.p variants={fadeInUp} className={DESCRIPTION_STYLE}>
+        <span dangerouslySetInnerHTML={{ __html: restOfDescription }}></span>
         <span className={`${styles.gradientborder}`}>{lastWord}</span>
-      </p>
+      </motion.p>
     </motion.div>
   );
 };
