@@ -21,7 +21,6 @@ main::before {
   height: 100%;
 
   opacity: 0.2;
-
   background-image: url('/bg/noise.png');
 }
 
