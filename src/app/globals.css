@@ -266,10 +266,7 @@ textarea + .field-label {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: image-set(
-    url('/bg/spot@x1.webp') 1x,
-    url('/bg/spot@x2.webp') 2x
-  );
+  background-image: url('/bg/spot@x1.webp');
 }
 
 .hero::before {
