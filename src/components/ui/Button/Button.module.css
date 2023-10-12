@@ -8,13 +8,11 @@
   inset: 0;
   padding: 2px;
   background: linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+
+  mask-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+  mask-mode: alpha, alpha;
+  mask-clip: content-box, border-box;
+
   mask-composite: exclude;
   border-radius: 32px;
 }
