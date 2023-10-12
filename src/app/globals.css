@@ -21,7 +21,7 @@ main::before {
   height: 100%;
 
   mix-blend-mode: darken;
-  background-image: url('/bg/noise.png');
+  background-image: url('/bg/noise.webp');
 }
 
 .btn-transition {
