@@ -30,7 +30,7 @@ export const HeroCardsList: React.FC = () => {
         variants={fadeInUpHero}
         initial="hide"
         whileInView="show"
-        viewport={{ amount: 0.25, once: false }}
+        viewport={{ amount: 0.25, once: true }}
         className="flex justify-center gap-[28px]"
       >
         {heroCards}
