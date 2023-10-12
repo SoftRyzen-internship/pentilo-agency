@@ -7,17 +7,33 @@
   z-index: -1;
   inset: 0;
   padding: 2px;
-  background: linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%);
+  /* background: linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%); */
 
-  -webkit-mask:
+  /* -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  mask-composite: exclude; */
   border-radius: 32px;
+
+  /* border-radius: 50px; */
+  border: 2px solid transparent;
+  background: linear-gradient(271.75deg, #8430ac 2.23%, #fac4ff 92.14%)
+    border-box;
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: destination-out;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+
+  /* mask-composite: exclude; */
 }
 
 .border::after {
