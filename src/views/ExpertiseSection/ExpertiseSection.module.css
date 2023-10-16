@@ -5,17 +5,17 @@
 .decorArrow::before {
   content: '';
   position: absolute;
-  bottom: -10px;
-  right: 13px;
-  transform: translateY(-50%) rotate(-135deg);
+  bottom: -3px;
+  right: 17px;
+  transform: translateY(-50%) rotate(180deg);
 
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 
-  background-image: url('/icons/icon_arrow.svg');
+  background-image: url('/icons/case_arrow.svg');
 
   background-size: contain;
   background-repeat: no-repeat;
 
-  @apply md:right-[55px] xl:bottom-[-17px] xl:right-[91px] xl:h-[38px] xl:w-[38px];
+  @apply md:bottom-[-7px] md:right-[50px] md:h-6 md:w-6 xl:bottom-[-11px] xl:right-[80px] xl:h-[38px] xl:w-[38px];
 }
