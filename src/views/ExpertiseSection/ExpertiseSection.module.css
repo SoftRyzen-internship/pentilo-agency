@@ -19,15 +19,3 @@
 
   @apply md:bottom-[-7px] md:right-[50px] md:h-6 md:w-6 xl:bottom-[-11px] xl:right-[80px] xl:h-[38px] xl:w-[38px];
 }
-
-.decorArrow::after {
-  content: '';
-  position: absolute;
-  bottom: 5px;
-  right: 31px;
-  height: 2px;
-  width: 2px;
-  background-color: #ffffff;
-
-  @apply md:bottom-[5px] md:right-[71px] md:h-[3px] md:w-[3px] xl:bottom-[7.5px] xl:right-[113px] xl:h-[5px] xl:w-[5px];
-}
