@@ -64,13 +64,13 @@
 }
 
 .decorArrow::before {
-  top: 50%;
-  right: -26px;
-  transform: translateY(-50%) rotate(-135deg);
+  top: 55%;
+  right: -22px;
+  transform: translateY(-50%) rotate(180deg);
 
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
 
-  background-image: url('/icons/icon_arrow.svg');
-  @apply md:right-[-30px];
+  background-image: url('/icons/case_arrow.svg');
+  @apply md:right-[-26px];
 }
