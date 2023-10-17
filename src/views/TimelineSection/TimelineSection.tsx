@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import { timeline } from '@/constants';
 import { TimelineList } from '@/components/TimelineList';
+import { Parallax } from '@/components/ui/Parallax';
 import data from '@/data/timeline.json';
 
 export const TimelineSection: React.FC = () => {
   return (
-    <section className="section bg timeline xl:h-[1130px]" id={timeline}>
+    <section className="section bg  xl:h-[1130px]" id={timeline}>
+      <Parallax offset={250} damping={40} stiffness={500} div={true}>
+        <div className=" timeline absolute h-full w-full"></div>
+      </Parallax>
       <div className="container xl:relative xl:flex xl:h-full">
         <h2 className="hidden">{data.hiddenTitle}</h2>
 

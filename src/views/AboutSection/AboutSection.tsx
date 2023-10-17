@@ -8,6 +8,7 @@ import { highlightWords } from '@/utils/highlightWords';
 
 import { Button } from '@/components/ui/Button';
 import { StarIconAfter, StarIconBefore } from '@/components/StarIcon';
+import { Parallax } from '@/components/ui/Parallax';
 
 import { fadeInUp } from './variants';
 import data from '@/data/about.json';
@@ -15,7 +16,10 @@ import common from '@/data/common.json';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id={about} className="section bg about">
+    <section id={about} className="section bg ">
+      <Parallax offset={150} damping={40} stiffness={500} div={true}>
+        <div className=" about absolute h-full w-full"></div>
+      </Parallax>
       <motion.div
         variants={fadeInUp}
         initial="hide"

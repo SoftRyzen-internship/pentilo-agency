@@ -15,11 +15,17 @@ import { ParallaxProps } from './types';
 export const Parallax: React.FC<ParallaxProps> = ({
   children,
   offset = 50,
+  damping = 90,
+  stiffness = 400,
+  div = false,
 }) => {
   const prefersReducedMotion = useReducedMotion();
   const [elementTop, setElementTop] = useState(0);
   const [clientHeight, setClientHeight] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
+  // const ref = useRef<HTMLSpanElement | HTMLDivElement>(null);
+
+  const refDiv = useRef<HTMLDivElement>(null);
+  const refSpan = useRef<HTMLSpanElement>(null);
 
   const { scrollY } = useScroll();
 
@@ -27,10 +33,10 @@ export const Parallax: React.FC<ParallaxProps> = ({
   const final = elementTop + offset;
 
   const yRange = useTransform(scrollY, [initial, final], [offset, -offset]);
-  const y = useSpring(yRange, { stiffness: 400, damping: 90 });
+  const y = useSpring(yRange, { stiffness, damping });
 
   useLayoutEffect(() => {
-    const element: HTMLElement | null = ref.current;
+    const element: HTMLElement | null = refSpan.current || refDiv.current;
     if (!element) return;
 
     const onResize = () => {
@@ -42,15 +48,19 @@ export const Parallax: React.FC<ParallaxProps> = ({
     onResize();
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
-  }, [ref]);
+  }, [refDiv, refSpan]);
 
   // Don't parallax if the user has "reduced motion" enabled
   if (prefersReducedMotion) {
     return <>{children}</>;
   }
 
-  return (
-    <motion.span ref={ref} style={{ y }} className="block">
+  return div ? (
+    <motion.div ref={refDiv} style={{ y }}>
+      {children}
+    </motion.div>
+  ) : (
+    <motion.span ref={refSpan} style={{ y }} className="block">
       {children}
     </motion.span>
   );
