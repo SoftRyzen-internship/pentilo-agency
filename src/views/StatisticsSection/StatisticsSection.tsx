@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { fadeInUp } from '@/variants';
 import { StatisticsProps } from './types';
 import stats from '@/data/statistics.json';
+import { Parallax } from '@/components/ui/Parallax';
 
 export const StatisticsSection: React.FC<StatisticsProps> = ({ className }) => {
   const listClasses = classNames(
@@ -15,7 +16,11 @@ export const StatisticsSection: React.FC<StatisticsProps> = ({ className }) => {
   );
 
   return (
-    <section className="section bg statistics">
+    <section className="section bg">
+      <Parallax offset={150} damping={40} stiffness={500} div={true}>
+        <div className=" statistics absolute h-full w-full"></div>
+      </Parallax>
+
       <div className="container">
         <h2 className="hidden">{stats.hiddenTitle}</h2>
         <motion.ul

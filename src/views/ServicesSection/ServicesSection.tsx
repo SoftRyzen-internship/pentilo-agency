@@ -11,6 +11,7 @@ import { ServiceCard } from '@/components/ServicesCard';
 import { AdditionalServices } from '@/components/AdditionalServices';
 import { Slider } from '@/components/Slider';
 import { ServicesHeaderTexts } from '@/components/ServicesHeaderTexts';
+import { Parallax } from '@/components/ui/Parallax';
 
 import data from '@/data/services.json';
 import common from '@/data/common.json';
@@ -37,7 +38,10 @@ export const ServicesSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="section bg services" id={servicesLisk}>
+    <section className="section bg " id={servicesLisk}>
+      <Parallax offset={150} damping={40} stiffness={500} div={true}>
+        <div className=" services absolute h-full w-full"></div>
+      </Parallax>
       <div className="container">
         <ServicesHeaderTexts
           {...{
