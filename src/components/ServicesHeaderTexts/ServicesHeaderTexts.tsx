@@ -50,7 +50,7 @@ export const ServicesHeaderTexts: React.FC<ServicesHeaderTextsProps> = ({
       initial="hide"
       whileInView="show"
       viewport={{ amount: 0.25, once: true }}
-      className="flex flex-col gap-y-[37px] md:gap-0 xl:flex-row xl:items-center xl:justify-between xl:gap-x-[38px]"
+      className="flex flex-col  xl:flex-row xl:items-center xl:justify-between xl:gap-x-[38px]"
     >
       <motion.h2 variants={fadeInUp} className={TITLE_STYLE}>
         {title}
