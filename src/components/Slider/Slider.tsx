@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SliderProps } from './types';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import classNames from 'classnames';
 
 import useWindowSize from '@/utils/useWindowSize';
@@ -25,10 +25,18 @@ export const Slider: React.FC<SliderProps> = ({
   slideClassName = '',
 }) => {
   const swiperRef: any = useRef<typeof Swiper | null>(null);
-
   const { width } = useWindowSize();
-
   const slideClasses = classNames(slideClassName, 'z-10');
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      Array.from(document.querySelectorAll('.swiper-pagination-bullet'))
+        .slice(4)
+        .map(bullet => {
+          bullet.classList.add('hide');
+        });
+    }
+  }, []);
 
   return (
     <Swiper
@@ -70,6 +78,18 @@ export const Slider: React.FC<SliderProps> = ({
       }
       modules={getSwiperModules(section, width)}
       className={`${className}`}
+      loop={true}
+      onSlideChange={swiper => {
+        const dots = Array.from(
+          document.querySelectorAll('.swiper-pagination-bullet'),
+        );
+
+        if (swiper.realIndex >= 4) {
+          dots[swiper.realIndex - 4].classList.add(
+            'swiper-pagination-bullet-active',
+          );
+        }
+      }}
     >
       <div className="wrapper bg-slate-400">
         {data?.map((item: any, idx: number) => {
