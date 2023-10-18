@@ -56,7 +56,11 @@ export const Parallax: React.FC<ParallaxProps> = ({
   }
 
   return div ? (
-    <motion.div ref={refDiv} style={{ y }}>
+    <motion.div
+      ref={refDiv}
+      style={{ y }}
+      className=" absolute -z-10 h-full w-full"
+    >
       {children}
     </motion.div>
   ) : (
