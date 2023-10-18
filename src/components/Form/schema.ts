@@ -21,7 +21,7 @@ export const schema = Yup.object().shape({
     })
     .test('phoneNumber', phoneNumber.minLength.message, function (value) {
       if (!value) return true;
-      const schema = Yup.string().min(3);
+      const schema = Yup.string().min(phoneNumber.minLength.value);
       return schema.isValidSync(value);
     })
     .max(phoneNumber.maxLength.value, phoneNumber.maxLength.message),
@@ -32,7 +32,7 @@ export const schema = Yup.object().shape({
     })
     .test('question', question.minLength.message, function (value) {
       if (!value) return true;
-      const schema = Yup.string().min(3);
+      const schema = Yup.string().min(question.minLength.value);
       return schema.isValidSync(value);
     })
     .max(question.maxLength.value, question.maxLength.message),

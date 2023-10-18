@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import { CaseCard } from '@/components/CaseCard';
 import { Slider } from '@/components/Slider';
 import { Button } from '@/components/ui/Button';
+import { Parallax } from '@/components/ui/Parallax';
 import { apply, cases as casesSectionId } from '@/constants';
 
 import cases from '@/data/cases.json';
@@ -17,7 +18,10 @@ export const CasesSection: React.FC = () => {
   );
 
   return (
-    <section className="section bg case" id={casesSectionId}>
+    <section className="section bg " id={casesSectionId}>
+      <Parallax offset={200} damping={40} stiffness={500} div={true}>
+        <div className=" case absolute h-full w-full"></div>
+      </Parallax>
       <h2 className={titleClasses}>{cases.title}</h2>
       <div className="container">
         <Slider

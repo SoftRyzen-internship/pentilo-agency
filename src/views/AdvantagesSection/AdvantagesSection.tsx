@@ -15,7 +15,10 @@ export const AdvantagesSection: React.FC = () => {
   );
 
   return (
-    <section className="section bg advantages" id={advantages}>
+    <section className="section bg " id={advantages}>
+      <Parallax offset={150} damping={40} stiffness={500} div={true}>
+        <div className=" advantages absolute h-full w-full"></div>
+      </Parallax>
       <div className="container">
         <h2
           className=" mx-auto mb-4 max-w-[287px] text-center font-dela_gothic uppercase 
