@@ -40,14 +40,24 @@ export const Slider: React.FC<SliderProps> = ({
     }
   }, []);
 
+  // useEffect(()=>{
+  //   if (swiperRef){
+  //   swiperRef.current.tap((slider, e)=> console.log(e))}
+  // })
+
   return (
     <Swiper
       ref={swiperRef}
       updateOnWindowResize={true}
       effect={'coverflow'}
-      grabCursor={true}
+      grabCursor={className.includes("hero") ? false : true}
       centeredSlides={true}
-      slideToClickedSlide={true}
+      // slideToClickedSlide={true}
+      // onTap={(swiper, event)=> {
+      //   console.log(event)
+      // }}
+      // tap={(slider, event)=> console.log(event)}
+      allowTouchMove={className.includes("hero") ? false : true}
       autoplay={
         autoplay
           ? {
@@ -80,13 +90,13 @@ export const Slider: React.FC<SliderProps> = ({
       }
       modules={getSwiperModules(section, width)}
       className={`${className}`}
-      loop={className.includes("cases") ? true : false}
+      loop={className.includes("cases") || className.includes("hero") ? true : false}
+      // loop={true}
         // Slider in Cases section should move with loop. As there were 4 cards with 3 per screen, cards in data written twice and unnecessary bullets were hidden to get around the limitations in the slider documentation
       onSlideChange={className.includes("cases") ? swiper => {
         const dots = Array.from(
-          document.querySelectorAll('.swiper-pagination-bullet'),
+          document.querySelectorAll('.swiper.cases .swiper-pagination-bullet'),
         );
-
         if (swiper.realIndex >= 4) {
           dots[swiper.realIndex - 4].classList.add(
             'swiper-pagination-bullet-active',

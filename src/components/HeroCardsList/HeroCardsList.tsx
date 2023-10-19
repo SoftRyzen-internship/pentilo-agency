@@ -43,6 +43,8 @@ export const HeroCardsList: React.FC = () => {
         element={HeroCard}
         autoplay={true}
         data={data.services}
+        className={'hero'}
+        slideClassName={'heroSlide'}
       />
     );
 };
