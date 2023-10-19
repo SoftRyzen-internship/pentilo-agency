@@ -42,6 +42,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Toaster position="top-right" reverseOrder={true} />
+        <div id="popup" />
       </body>
     </html>
   );

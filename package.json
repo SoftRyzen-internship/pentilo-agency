@@ -20,6 +20,7 @@
     "@hookform/resolvers": "^3.3.1",
     "axios": "^1.5.1",
     "classnames": "^2.3.2",
+    "cookies-next": "^4.0.0",
     "framer-motion": "^10.16.4",
     "framer-motion-ticker": "^1.0.19",
     "next": "13.5.2",
