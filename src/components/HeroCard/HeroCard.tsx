@@ -24,7 +24,7 @@ export const HeroCard: React.FC<{ text: string }> = ({ text }) => {
           <Icon icon="check" width={14} height={14} />
         </div>
       </div>
-      <h3 className="text-s_big">{text}</h3>
+      <h3 className="select-none text-s_big">{text}</h3>
     </motion.div>
   );
 };

@@ -54,7 +54,7 @@ export const ServicesSection: React.FC = () => {
           <Slider
             data={services}
             element={ServiceCard}
-            className="mb-[60px] md:mx-auto md:my-0 md:max-w-[345px]"
+            className="mb-[60px] md:mx-auto md:my-0"
             navigation={true}
             autoplay={false}
             section="services"

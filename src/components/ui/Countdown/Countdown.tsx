@@ -21,10 +21,16 @@ export const Countdown: React.FC<CountdownProps> = ({
       localStorage.setItem('timer', JSON.stringify(offerTime));
     }
 
-    const offerTime = Number(localStorage.getItem('timer'));
+    let offerTime = Number(localStorage.getItem('timer'));
+
     const interval: ReturnType<typeof setInterval> = setInterval(() => {
       setTime(offerTime - Date.now());
-      if (offerTime <= Date.now()) clearInterval(interval);
+
+      if (offerTime <= Date.now()) {
+        offerTime = Date.now() + data.countdown * 60 * 60 * 1000 - 1;
+        localStorage.setItem('timer', JSON.stringify(offerTime));
+        setTime(offerTime - Date.now());
+      }
     }, 1000);
 
     return () => clearInterval(interval);
