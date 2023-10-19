@@ -237,7 +237,7 @@ The `Slider` component is created using `swiper` library.
 | `className`      | `undefined` | add any custom styles of `.swiper` element                         |
 | `slideClassName` | `undefined` | add any custom styles of `.swiper-slide` element                   |
 | `className`      | `undefined` | add any custom styles of `.swiper` element                         |
-| `loop`           | `false`     | choose the loop enabled:  `false` or `true`                        |
+| `loop`           | `false`     | choose the loop enabled: `false` or `true`                         |
 
 ```
 
