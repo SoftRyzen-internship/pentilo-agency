@@ -26,11 +26,12 @@ export const CasesSection: React.FC = () => {
       <div className="container">
         <Slider
           section="cases"
-          data={cases.cases}
+          data={[...cases.cases, ...cases.cases]}
           element={CaseCard}
           navigation={true}
           className="cases mb-4 xl:mb-14"
           slideClassName="casesSlide"
+          loop={true}
         />
         <Button
           tag="a"

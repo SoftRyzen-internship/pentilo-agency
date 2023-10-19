@@ -11,4 +11,5 @@ export interface SliderProps extends SectionProps {
   element: any;
   className?: string;
   slideClassName?: string;
+  loop?: boolean;
 }
