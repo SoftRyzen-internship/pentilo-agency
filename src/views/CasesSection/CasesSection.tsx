@@ -31,6 +31,7 @@ export const CasesSection: React.FC = () => {
           navigation={true}
           className="cases mb-4 xl:mb-14"
           slideClassName="casesSlide"
+          loop={true}
         />
         <Button
           tag="a"

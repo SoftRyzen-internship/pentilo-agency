@@ -45,6 +45,7 @@ export const HeroCardsList: React.FC = () => {
         data={data.services}
         className={'hero'}
         slideClassName={'heroSlide'}
+        loop={true}
       />
     );
 };

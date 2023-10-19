@@ -21,6 +21,7 @@ export const Slider: React.FC<SliderProps> = ({
   element: Element,
   navigation,
   autoplay,
+  loop = false,
   className = '',
   slideClassName = '',
 }) => {
@@ -30,7 +31,9 @@ export const Slider: React.FC<SliderProps> = ({
 
   useEffect(() => {
     // Slider in Cases section should move with loop. As there were 4 cards with 3 per screen, cards in data written twice and unnecessary bullets were hidden to get around the limitations in the slider documentation
-    const bullets = document.querySelectorAll('.swiper.cases .swiper-pagination-bullet');
+    const bullets = document.querySelectorAll(
+      '.swiper.cases .swiper-pagination-bullet',
+    );
     if (swiperRef.current) {
       Array.from(bullets)
         .slice(4)
@@ -40,24 +43,20 @@ export const Slider: React.FC<SliderProps> = ({
     }
   }, []);
 
-  // useEffect(()=>{
-  //   if (swiperRef){
-  //   swiperRef.current.tap((slider, e)=> console.log(e))}
-  // })
-
   return (
     <Swiper
       ref={swiperRef}
       updateOnWindowResize={true}
       effect={'coverflow'}
-      grabCursor={className.includes("hero") ? false : true}
+      grabCursor={className.includes('hero') ? false : true}
       centeredSlides={true}
-      // slideToClickedSlide={true}
-      // onTap={(swiper, event)=> {
-      //   console.log(event)
-      // }}
-      // tap={(slider, event)=> console.log(event)}
-      allowTouchMove={className.includes("hero") ? false : true}
+      onTouchStart={swiper => {
+        swiper.autoplay.pause();
+      }}
+      onTap={swiper => {
+        swiper.autoplay.resume();
+      }}
+      allowTouchMove={className.includes('hero') ? false : true}
       autoplay={
         autoplay
           ? {
@@ -90,19 +89,24 @@ export const Slider: React.FC<SliderProps> = ({
       }
       modules={getSwiperModules(section, width)}
       className={`${className}`}
-      loop={className.includes("cases") || className.includes("hero") ? true : false}
-      // loop={true}
-        // Slider in Cases section should move with loop. As there were 4 cards with 3 per screen, cards in data written twice and unnecessary bullets were hidden to get around the limitations in the slider documentation
-      onSlideChange={className.includes("cases") ? swiper => {
-        const dots = Array.from(
-          document.querySelectorAll('.swiper.cases .swiper-pagination-bullet'),
-        );
-        if (swiper.realIndex >= 4) {
-          dots[swiper.realIndex - 4].classList.add(
-            'swiper-pagination-bullet-active',
-          );
-        }
-      } : undefined}
+      loop={loop}
+      // Slider in Cases section should move with loop. As there were 4 cards with 3 per screen, cards in data written twice and unnecessary bullets were hidden to get around the limitations in the slider documentation
+      onSlideChange={
+        className.includes('cases')
+          ? swiper => {
+              const dots = Array.from(
+                document.querySelectorAll(
+                  '.swiper.cases .swiper-pagination-bullet',
+                ),
+              );
+              if (swiper.realIndex >= 4) {
+                dots[swiper.realIndex - 4].classList.add(
+                  'swiper-pagination-bullet-active',
+                );
+              }
+            }
+          : undefined
+      }
     >
       <div className="wrapper bg-slate-400">
         {data?.map((item: any, idx: number) => {
