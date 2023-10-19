@@ -29,8 +29,10 @@ export const Slider: React.FC<SliderProps> = ({
   const slideClasses = classNames(slideClassName, 'z-10');
 
   useEffect(() => {
+    // Slider in Cases section should move with loop. As there were 4 cards with 3 per screen, cards in data written twice and unnecessary bullets were hidden to get around the limitations in the slider documentation
+    const bullets = document.querySelectorAll('.swiper.cases .swiper-pagination-bullet');
     if (swiperRef.current) {
-      Array.from(document.querySelectorAll('.swiper-pagination-bullet'))
+      Array.from(bullets)
         .slice(4)
         .map(bullet => {
           bullet.classList.add('hide');
@@ -78,8 +80,9 @@ export const Slider: React.FC<SliderProps> = ({
       }
       modules={getSwiperModules(section, width)}
       className={`${className}`}
-      loop={true}
-      onSlideChange={swiper => {
+      loop={className.includes("cases") ? true : false}
+        // Slider in Cases section should move with loop. As there were 4 cards with 3 per screen, cards in data written twice and unnecessary bullets were hidden to get around the limitations in the slider documentation
+      onSlideChange={className.includes("cases") ? swiper => {
         const dots = Array.from(
           document.querySelectorAll('.swiper-pagination-bullet'),
         );
@@ -89,7 +92,7 @@ export const Slider: React.FC<SliderProps> = ({
             'swiper-pagination-bullet-active',
           );
         }
-      }}
+      } : undefined}
     >
       <div className="wrapper bg-slate-400">
         {data?.map((item: any, idx: number) => {
