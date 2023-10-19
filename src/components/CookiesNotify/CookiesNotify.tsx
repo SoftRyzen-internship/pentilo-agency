@@ -32,7 +32,7 @@ export const CookiesNotify = ({ onClose, isHidden }) => {
             accent={false}
             buttonType="button"
             onClick={onClose}
-            className="mx-auto h-[31px] w-[129px] rounded-button px-[10px] py-[8px] text-xs uppercase before:content-['']"
+            className="mx-auto !h-[31px] !w-[129px] rounded-button px-2 py-2 text-xs uppercase before:content-['']"
           >
             {buttonText}
           </Button>
