@@ -51,10 +51,10 @@ export const Slider: React.FC<SliderProps> = ({
       grabCursor={className.includes('hero') ? false : true}
       centeredSlides={true}
       onTouchStart={swiper => {
-        swiper.autoplay.pause();
+        swiper.autoplay?.pause();
       }}
       onTap={swiper => {
-        swiper.autoplay.resume();
+        swiper.autoplay?.resume();
       }}
       allowTouchMove={className.includes('hero') ? false : true}
       autoplay={
