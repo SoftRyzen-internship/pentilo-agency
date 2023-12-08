@@ -10,7 +10,7 @@ const meta: Metadata = {
   description: description,
   keywords: keywords,
   other: {
-    facebookDomainVerification: 'onwgvsjpfq2q0r4y1k8tjjhojkpya9',
+    'facebook-domain-verification': 'onwgvsjpfq2q0r4y1k8tjjhojkpya9',
   },
   metadataBase: new URL(BASE_URL as string),
   alternates: {
