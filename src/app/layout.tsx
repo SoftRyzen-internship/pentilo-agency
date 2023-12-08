@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast';
 
 import { Header } from '@/views/Header';
 import { Footer } from '@/views/Footer';
+import { FacebookPixel } from '@/components/FacebookPixel';
 
 import meta from '@/data/meta';
 import './globals.css';
@@ -39,7 +40,10 @@ export default function RootLayout({
         className={`${open_sans.variable} ${inter.variable} ${dela_gothic.variable} text-white`}
       >
         <Header />
-        <main>{children}</main>
+        <main>
+          {children}
+          <FacebookPixel />
+        </main>
         <Footer />
         <Toaster position="top-right" reverseOrder={true} />
         <div id="popup" />

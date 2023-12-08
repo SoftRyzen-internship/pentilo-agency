@@ -30,7 +30,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/ui/CustomLink"
+    "src/components/ui/CustomLink",
+    "src/utils/fpixel.js"
   ],
   "exclude": ["node_modules"]
 }
